@@ -1,6 +1,6 @@
 # `@findeth/web`
 
-[![Travis CI](https://travis-ci.com/FindETH/web.svg?branch=master)](https://travis-ci.com/FindETH/web) [![codecov](https://codecov.io/gh/FindETH/web/branch/master/graph/badge.svg)](https://codecov.io/gh/FindETH/web)
+![License](https://img.shields.io/github/license/FindETH/core) [![Travis CI](https://travis-ci.com/FindETH/web.svg?branch=master)](https://travis-ci.com/FindETH/web) [![codecov](https://codecov.io/gh/FindETH/web/branch/master/graph/badge.svg)](https://codecov.io/gh/FindETH/web)
 
 
 This repository contains the website of FindETH. Other FindETH-related repositories can be found here:
