@@ -8,7 +8,7 @@ export interface FlowComponentProps<T extends object = {}> {
   onNext(result?: T): void;
 }
 
-const useFlow = <T extends object>(
+export const useFlow = <T extends object>(
   components: Array<ComponentType<FlowComponentProps<T>>>,
   onDone: (state: Partial<T>) => void
 ): [ReactElement | null] => {
@@ -41,5 +41,3 @@ const useFlow = <T extends object>(
 
   return [null];
 };
-
-export default useFlow;
