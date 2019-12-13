@@ -1,4 +1,6 @@
 import React, { ComponentType, ReactElement, useEffect, useState } from 'react';
+import { setFlow } from '../store/derivation';
+import { useDispatch } from './useDispatch';
 
 export interface FlowComponentProps<T extends object = {}> {
   state: Partial<T>;
@@ -12,9 +14,14 @@ const useFlow = <T extends object>(
 ): [ReactElement | null] => {
   const [current, setCurrent] = useState(0);
   const [result, setResult] = useState<Partial<T>>({});
+  const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(setFlow(true));
+
     if (components.length <= current) {
+      dispatch(setFlow(false));
+
       onDone(result);
     }
   }, [current]);

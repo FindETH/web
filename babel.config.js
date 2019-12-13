@@ -16,6 +16,7 @@ module.exports = {
     "react-hot-loader/babel",
     "babel-plugin-styled-components",
     "@babel/plugin-proposal-nullish-coalescing-operator",
+    "@babel/plugin-proposal-optional-chaining",
     [
       "@babel/plugin-transform-runtime",
       {
