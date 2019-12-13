@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flow renders 1`] = `
+<Fragment>
+  <Container>
+    <Heading
+      as="h1"
+    >
+      Search for Ether
+    </Heading>
+  </Container>
+  <SelectWallet
+    key="flow-component"
+    onNext={[Function]}
+    state={Object {}}
+  />
+</Fragment>
+`;

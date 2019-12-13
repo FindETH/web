@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PanelItem renders 1`] = `
+<PanelItemstyles__ItemContainer>
+  <PanelItemstyles__FlexWrapper
+    highlight={false}
+  >
+    <PanelItemstyles__ItemIcon
+      alt="Foo"
+      src="Baz"
+    />
+    <PanelItemstyles__ItemDescription>
+      <PanelItemstyles__ItemHeading>
+        Foo
+      </PanelItemstyles__ItemHeading>
+      <Typography>
+        Bar
+      </Typography>
+    </PanelItemstyles__ItemDescription>
+  </PanelItemstyles__FlexWrapper>
+</PanelItemstyles__ItemContainer>
+`;
+
+exports[`PanelItem renders 2`] = `
+<PanelItemstyles__ItemContainer>
+  <PanelItemstyles__FlexWrapper
+    highlight={true}
+  >
+    <PanelItemstyles__ItemIcon
+      alt="Foo"
+      src="Baz"
+    />
+    <PanelItemstyles__ItemDescription>
+      <PanelItemstyles__ItemHeading>
+        Foo
+      </PanelItemstyles__ItemHeading>
+      <Typography>
+        Bar
+      </Typography>
+    </PanelItemstyles__ItemDescription>
+  </PanelItemstyles__FlexWrapper>
+</PanelItemstyles__ItemContainer>
+`;

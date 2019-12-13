@@ -1,0 +1,27 @@
+language: node_js
+
+before_install:
+  - npm install -g yarn
+
+install:
+  - yarn --silent
+
+script:
+  - yarn run test
+  - yarn run codecov -f coverage/*.json
+  - yarn run lint
+
+before_deploy:
+  - pip install --user awscli
+  - yarn run build
+
+deploy:
+  provider: script
+  script: ~/.local/bin/aws s3 sync dist s3://beta.findeth.io --region=eu-west-1 --delete
+  skip-cleanup: true
+  on:
+    branch: master
+
+after_deploy:
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"

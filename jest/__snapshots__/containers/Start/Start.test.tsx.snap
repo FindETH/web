@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Start renders 1`] = `
+<Fragment>
+  <Container>
+    <Heading
+      as="h1"
+    >
+      What are you looking for?
+    </Heading>
+    <Typography>
+      Choose whether you're looking for an address, or Ether or tokens.
+    </Typography>
+  </Container>
+  <Container
+    small={true}
+  >
+    <List>
+      <PanelItemLink
+        description="Search for a specific address"
+        icon="file-stub"
+        title="Address"
+        to="/flow/address"
+      />
+      <PanelItemLink
+        description="Search for Ether on any address"
+        icon="file-stub"
+        title="Ether"
+        to="/flow/ether"
+      />
+      <PanelItemLink
+        description="Search for ERC-20 based tokens on any address"
+        icon="file-stub"
+        title="ERC-20 Tokens"
+        to="/flow/tokens"
+      />
+    </List>
+  </Container>
+</Fragment>
+`;
