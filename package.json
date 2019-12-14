@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.6",
-    "@findeth/core": "https://github.com/FindETH/core.git",
+    "@findeth/core": "git+https://github.com/FindETH/core.git",
     "@hot-loader/react-dom": "^16.11.0",
     "@reach/router": "^1.2.1",
     "@reduxjs/toolkit": "^1.1.0",

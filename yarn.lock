@@ -1070,6 +1070,15 @@
     "@ethersproject/properties" ">=5.0.0-beta.131"
     "@ethersproject/strings" ">=5.0.0-beta.130"
 
+"@findeth/core@git+https://github.com/FindETH/core.git":
+  version "0.1.0"
+  uid "7dad19ffac687545512258e3df81ebc81e1aaf28"
+  resolved "git+https://github.com/FindETH/core.git#7dad19ffac687545512258e3df81ebc81e1aaf28"
+  dependencies:
+    "@ethersproject/hdnode" "^5.0.0-beta.135"
+    "@ethersproject/providers" "^5.0.0-beta.146"
+    "@mycrypto/eth-scan" "^1.1.0"
+
 "@findeth/core@https://github.com/FindETH/core.git":
   version "0.1.0"
   resolved "https://github.com/FindETH/core.git#7dad19ffac687545512258e3df81ebc81e1aaf28"
