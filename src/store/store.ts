@@ -8,10 +8,7 @@ export interface ApplicationState {
   derivation: DerivationState;
 }
 
-const middleware = [
-  ...getDefaultMiddleware(),
-  ...(IS_DEVELOPMENT ? [logger] : [])
-];
+const middleware = [...getDefaultMiddleware(), ...(IS_DEVELOPMENT ? [logger] : [])];
 
 export const store = configureStore<ApplicationState>({
   reducer,

@@ -1072,16 +1072,7 @@
 
 "@findeth/core@git+https://github.com/FindETH/core.git":
   version "0.1.0"
-  uid "7dad19ffac687545512258e3df81ebc81e1aaf28"
   resolved "git+https://github.com/FindETH/core.git#7dad19ffac687545512258e3df81ebc81e1aaf28"
-  dependencies:
-    "@ethersproject/hdnode" "^5.0.0-beta.135"
-    "@ethersproject/providers" "^5.0.0-beta.146"
-    "@mycrypto/eth-scan" "^1.1.0"
-
-"@findeth/core@https://github.com/FindETH/core.git":
-  version "0.1.0"
-  resolved "https://github.com/FindETH/core.git#7dad19ffac687545512258e3df81ebc81e1aaf28"
   dependencies:
     "@ethersproject/hdnode" "^5.0.0-beta.135"
     "@ethersproject/providers" "^5.0.0-beta.146"
@@ -1623,6 +1614,13 @@
   integrity sha512-oV9qiCuowhVR/ehqUobWWkXJjohontbDGLV88Be/7T4bqMQ3kjXwkFNL7doIIqlbg3X2PC5WPziZ8/j/QHNQ4A==
   dependencies:
     redux "^3.6.0"
+
+"@types/redux-mock-store@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/redux-mock-store/-/redux-mock-store-1.0.1.tgz#90ca701d640aef7c007f564a9a4f8dc03180b0f7"
+  integrity sha512-1egEnh2/+sRRKImnCo5EMVm0Uxu4fBHeLHk/inhSp/VpE93It8lk3gYeNfehUgXd6OzqP5LLA9kzO9x7o3WfwA==
+  dependencies:
+    redux "^4.0.0"
 
 "@types/relateurl@*":
   version "0.2.28"
@@ -6354,6 +6352,11 @@ lodash.isequal@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
   integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
 
+lodash.isplainobject@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+  integrity sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=
+
 lodash.memoize@4.x:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -8245,6 +8248,13 @@ redux-logger@^3.0.6:
   integrity sha1-91VZZvMJjzyIYExEnPC69XeCdL8=
   dependencies:
     deep-diff "^0.3.5"
+
+redux-mock-store@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/redux-mock-store/-/redux-mock-store-1.5.4.tgz#90d02495fd918ddbaa96b83aef626287c9ab5872"
+  integrity sha512-xmcA0O/tjCLXhh9Fuiq6pMrJCwFRaouA8436zcikdIpYWWCjU76CRk+i2bHx8EeiSiMGnB85/lZdU3wIJVXHTA==
+  dependencies:
+    lodash.isplainobject "^4.0.6"
 
 redux-thunk@^2.3.0:
   version "2.3.0"

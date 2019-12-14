@@ -13,12 +13,12 @@ import theme from './theme';
 export const App: FunctionComponent = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Wrapper>
-        <Header/>
-        <Routes/>
+        <Header />
+        <Routes />
       </Wrapper>
-      <Footer/>
+      <Footer />
     </ThemeProvider>
   </Provider>
 );
