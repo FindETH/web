@@ -1,4 +1,6 @@
 import React, { ComponentType, ReactElement, useEffect, useState } from 'react';
+import { setFlow } from '../store/derivation';
+import { useDispatch } from './useDispatch';
 
 export interface FlowComponentProps<T extends object = {}> {
   state: Partial<T>;
@@ -6,15 +8,20 @@ export interface FlowComponentProps<T extends object = {}> {
   onNext(result?: T): void;
 }
 
-const useFlow = <T extends object>(
+export const useFlow = <T extends object>(
   components: Array<ComponentType<FlowComponentProps<T>>>,
   onDone: (state: Partial<T>) => void
 ): [ReactElement | null] => {
   const [current, setCurrent] = useState(0);
   const [result, setResult] = useState<Partial<T>>({});
+  const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(setFlow(true));
+
     if (components.length <= current) {
+      dispatch(setFlow(false));
+
       onDone(result);
     }
   }, [current]);
@@ -34,5 +41,3 @@ const useFlow = <T extends object>(
 
   return [null];
 };
-
-export default useFlow;
