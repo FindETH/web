@@ -1072,7 +1072,7 @@
 
 "@findeth/core@git+https://github.com/FindETH/core.git":
   version "0.1.0"
-  resolved "git+https://github.com/FindETH/core.git#7dad19ffac687545512258e3df81ebc81e1aaf28"
+  resolved "git+https://github.com/FindETH/core.git#76a895093fe14652f363945ea7c2fb9acbfbcc6d"
   dependencies:
     "@ethersproject/hdnode" "^5.0.0-beta.135"
     "@ethersproject/providers" "^5.0.0-beta.146"
