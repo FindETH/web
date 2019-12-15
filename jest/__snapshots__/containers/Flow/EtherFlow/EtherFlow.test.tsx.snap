@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Flow renders 1`] = `
+.c3 {
+  padding: 4rem 0;
+}
+
+.c3:last-of-type {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .c0 {
   width: 1200px;
   max-width: 100%;
@@ -49,16 +59,6 @@ exports[`Flow renders 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.c3 {
-  padding: 4rem 0;
-}
-
-.c3:last-of-type {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
 }
 
 .c8 {

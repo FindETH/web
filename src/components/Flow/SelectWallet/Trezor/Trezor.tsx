@@ -1,15 +1,15 @@
+import { WalletType } from '@findeth/core';
 import React, { FunctionComponent } from 'react';
-import trezorIcon from '../../../assets/images/logos/trezor.svg';
-import { Wallet } from '../../../containers/Flow/EtherFlow/EtherFlow';
-import PanelItem from '../../PanelItem';
+import trezorIcon from '../../../../assets/images/logos/trezor.svg';
+import PanelItem from '../../../PanelItem';
 
 interface Props {
-  onSelect(wallet: Wallet): void;
+  onSelect(wallet: WalletType): void;
 }
 
 const Trezor: FunctionComponent<Props> = ({ onSelect }) => {
   const handleSelect = () => {
-    onSelect(Wallet.Trezor);
+    onSelect(WalletType.Trezor);
   };
 
   return (

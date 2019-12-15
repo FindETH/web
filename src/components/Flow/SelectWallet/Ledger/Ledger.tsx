@@ -1,14 +1,14 @@
+import { WalletType } from '@findeth/core';
 import { AnimatePresence } from 'framer-motion';
 import React, { FunctionComponent, useState } from 'react';
-import ledgerIcon from '../../../assets/images/logos/ledger.svg';
-import { Wallet } from '../../../containers/Flow/EtherFlow/EtherFlow';
-import PanelItem from '../../PanelItem';
-import Heading from '../../ui/Heading';
-import Typography from '../../ui/Typography';
+import ledgerIcon from '../../../../assets/images/logos/ledger.svg';
+import PanelItem from '../../../PanelItem';
+import Heading from '../../../ui/Heading';
+import Typography from '../../../ui/Typography';
 import { LedgerMenu, LedgerMenuItem } from './Ledger.styles';
 
 interface Props {
-  onSelect(wallet: Wallet): void;
+  onSelect(wallet: WalletType): void;
 }
 
 const Ledger: FunctionComponent<Props> = ({ onSelect }) => {
@@ -19,11 +19,11 @@ const Ledger: FunctionComponent<Props> = ({ onSelect }) => {
   };
 
   const handleSelectUSB = () => {
-    onSelect(Wallet.LedgerUSB);
+    onSelect(WalletType.LedgerWebUSB);
   };
 
   const handleSelectBLE = () => {
-    onSelect(Wallet.LedgerBLE);
+    onSelect(WalletType.LedgerWebBLE);
   };
 
   return (

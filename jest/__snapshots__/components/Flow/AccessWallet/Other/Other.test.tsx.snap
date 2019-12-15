@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Other renders 1`] = `
+<Fragment>
+  <Container>
+    <Heading
+      as="h2"
+    >
+      Connecting to your wallet...
+    </Heading>
+    <Typography>
+      Make sure your wallet is connected and available.
+    </Typography>
+  </Container>
+  <Container
+    small={true}
+  >
+    <Typography>
+      Not connected
+    </Typography>
+  </Container>
+</Fragment>
+`;
+
+exports[`Other renders 2`] = `
+<Fragment>
+  <Container>
+    <Heading
+      as="h2"
+    >
+      Connecting to your wallet...
+    </Heading>
+    <Typography>
+      Make sure your wallet is connected and available.
+    </Typography>
+  </Container>
+  <Container
+    small={true}
+  >
+    <Typography>
+      Not connected
+    </Typography>
+  </Container>
+</Fragment>
+`;

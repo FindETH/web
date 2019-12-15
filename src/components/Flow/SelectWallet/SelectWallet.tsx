@@ -1,18 +1,18 @@
+import { WalletType } from '@findeth/core';
 import React, { FunctionComponent } from 'react';
-import { Wallet } from '../../containers/Flow/EtherFlow/EtherFlow';
-import { FlowComponentProps } from '../../hooks/useFlow';
-import Container from '../ui/Container';
-import Heading from '../ui/Heading';
-import List from '../ui/List';
-import Section from '../ui/Section';
-import Typography from '../ui/Typography';
+import { FlowComponentProps } from '../../../hooks';
+import Container from '../../ui/Container';
+import Heading from '../../ui/Heading';
+import List from '../../ui/List';
+import Section from '../../ui/Section';
+import Typography from '../../ui/Typography';
 import Ledger from './Ledger';
 import Trezor from './Trezor';
 
-type Props = FlowComponentProps<{ wallet: Wallet }>;
+type Props = FlowComponentProps<{ wallet: WalletType }>;
 
 const SelectWallet: FunctionComponent<Props> = ({ onNext }) => {
-  const handleNext = (wallet: Wallet) => {
+  const handleNext = (wallet: WalletType) => {
     return onNext({ wallet });
   };
 

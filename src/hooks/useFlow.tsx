@@ -5,7 +5,7 @@ import { useDispatch } from './useDispatch';
 export interface FlowComponentProps<T extends object = {}> {
   state: Partial<T>;
 
-  onNext(result?: T): void;
+  onNext(result?: Partial<T>): void;
 }
 
 export const useFlow = <T extends object>(

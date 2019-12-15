@@ -1,4 +1,5 @@
 import 'react-hot-loader';
+import 'regenerator-runtime/runtime';
 import 'typeface-nunito';
 import 'typeface-open-sans';
 
