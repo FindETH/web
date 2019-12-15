@@ -8,7 +8,10 @@ module.exports = {
   setupFilesAfterEnv: ['./jest/setupTests.ts'],
   snapshotResolver: './jest/snapshotResolver.js',
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  'transform': {
+  transform: {
     '^.+\\.[t|j]sx?$': 'babel-jest'
-  }
+  },
+  transformIgnorePatterns: [
+    "/node_modules/(?!@findeth/core).+\\.js$"
+  ]
 };

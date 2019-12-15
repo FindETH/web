@@ -1,23 +1,16 @@
+import { WalletType } from '@findeth/core';
 import React, { FunctionComponent } from 'react';
-import SelectWallet from '../../../components/SelectWallet';
+import AccessWallet from '../../../components/Flow/AccessWallet';
+import SelectWallet from '../../../components/Flow/SelectWallet';
 import Container from '../../../components/ui/Container';
 import Heading from '../../../components/ui/Heading';
 import { useFlow } from '../../../hooks';
 
-// TODO: Move to `@findeth/core`
-export enum Wallet {
-  LedgerUSB,
-  LedgerBLE,
-  Trezor,
-  KeepKey,
-  MnemonicPhrase
-}
-
 interface FlowState {
-  wallet?: Wallet;
+  wallet?: WalletType;
 }
 
-const FLOW_COMPONENTS = [SelectWallet];
+const FLOW_COMPONENTS = [SelectWallet, AccessWallet];
 
 const EtherFlow: FunctionComponent = () => {
   const handleDone = () => {

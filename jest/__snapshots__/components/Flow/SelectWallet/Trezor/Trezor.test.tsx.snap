@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trezor renders 1`] = `
+<PanelItem
+  description="Use your Trezor Model One or T"
+  icon="file-stub"
+  onClick={[Function]}
+  title="Trezor Wallet"
+/>
+`;

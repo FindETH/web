@@ -20,7 +20,9 @@ module.exports = {
     [
       "@babel/plugin-transform-runtime",
       {
-        "useESModules": !IS_TEST
+        "useESModules": !IS_TEST,
+        "regenerator": true,
+        "corejs": 3
       }
     ]
   ]
