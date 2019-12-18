@@ -1,10 +1,16 @@
-const IS_TEST = process.env.NODE_ENV === 'test';
-
 module.exports = {
   "presets": [
     "@babel/preset-typescript",
     "@babel/preset-react",
-    "@babel/preset-env"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": "78",
+          "firefox": "70"
+        }
+      }
+    ]
   ],
   "plugins": [
     "react-hot-loader/babel",
@@ -19,7 +25,8 @@ module.exports = {
           "@babel/plugin-transform-runtime",
           {
             "useESModules": true,
-            "regenerator": true
+            "corejs": 3,
+            "version": "^7.7.6"
           }
         ]
       ]
@@ -30,7 +37,8 @@ module.exports = {
           "@babel/plugin-transform-runtime",
           {
             "useESModules": true,
-            "regenerator": true
+            "corejs": 3,
+            "version": "^7.7.6"
           }
         ]
       ]
