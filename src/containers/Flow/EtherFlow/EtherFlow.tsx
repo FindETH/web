@@ -1,4 +1,4 @@
-import { WalletType } from '@findeth/core';
+import { WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
 import AccessWallet from '../../../components/Flow/AccessWallet';
 import SelectWallet from '../../../components/Flow/SelectWallet';

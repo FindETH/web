@@ -1,4 +1,4 @@
-import { WalletType } from '@findeth/core';
+import { WalletType } from '@findeth/wallets';
 import { AnimatePresence } from 'framer-motion';
 import React, { FunctionComponent, useState } from 'react';
 import ledgerIcon from '../../../../assets/images/logos/ledger.svg';
@@ -19,11 +19,12 @@ const Ledger: FunctionComponent<Props> = ({ onSelect }) => {
   };
 
   const handleSelectUSB = () => {
-    onSelect(WalletType.LedgerWebUSB);
+    onSelect(WalletType.Ledger);
   };
 
   const handleSelectBLE = () => {
-    onSelect(WalletType.LedgerWebBLE);
+    // TODO
+    onSelect(WalletType.Ledger);
   };
 
   return (

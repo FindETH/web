@@ -1,4 +1,4 @@
-import { WalletType } from '@findeth/core';
+import { WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
 import { FlowComponentProps } from '../../../hooks';
 import Container from '../../ui/Container';

@@ -1,20 +1,29 @@
-import { getWalletImplementation, HardwareWallet, WalletType } from '@findeth/core';
+import { getLedgerTransport, getWalletImplementation, HardwareWallet, Ledger, WalletType } from '@findeth/wallets';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import Container from '../../../ui/Container';
 import Heading from '../../../ui/Heading';
 import Typography from '../../../ui/Typography';
 import { ComponentProps } from '../AccessWallet';
 
+type HardwareWalletType = Exclude<WalletType, WalletType.MnemonicPhrase>;
+
 const Other: FunctionComponent<ComponentProps> = ({ type }) => {
   const [implementation, setImplementation] = useState<HardwareWallet>();
   const [isConnected, setConnected] = useState(false);
 
-  useEffect(() => {
-    const WalletImplementation = getWalletImplementation<Exclude<WalletType, WalletType.MnemonicPhrase>>(
-      type as Exclude<WalletType, WalletType.MnemonicPhrase>
-    );
+  const getWalletInstance = async (walletType: HardwareWalletType) => {
+    if (walletType === WalletType.Ledger) {
+      const transport = await getLedgerTransport();
+      return new Ledger(transport);
+    }
 
-    setImplementation(new WalletImplementation());
+    const Implementation = getWalletImplementation(walletType);
+    return new Implementation();
+  };
+
+  useEffect(() => {
+    getWalletInstance(type as HardwareWalletType).then(setImplementation);
+    // TODO: Error handling
   }, [type]);
 
   useEffect(() => {
