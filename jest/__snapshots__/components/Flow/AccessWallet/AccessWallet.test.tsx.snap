@@ -4,7 +4,7 @@ exports[`AccessWallet renders 1`] = `
 <Section>
   <Other
     onDone={[Function]}
-    type="LedgerWebUSB"
+    type="Ledger"
   />
 </Section>
 `;

@@ -4,26 +4,41 @@ module.exports = {
   "presets": [
     "@babel/preset-typescript",
     "@babel/preset-react",
-    [
-      "@babel/preset-env",
-      {
-        "useBuiltIns": "entry",
-        "corejs": 3
-      }
-    ]
+    "@babel/preset-env"
   ],
   "plugins": [
     "react-hot-loader/babel",
     "babel-plugin-styled-components",
     "@babel/plugin-proposal-nullish-coalescing-operator",
-    "@babel/plugin-proposal-optional-chaining",
-    [
-      "@babel/plugin-transform-runtime",
-      {
-        "useESModules": !IS_TEST,
-        "regenerator": true,
-        "corejs": 3
-      }
-    ]
-  ]
+    "@babel/plugin-proposal-optional-chaining"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "@babel/plugin-transform-runtime",
+          {
+            "useESModules": true,
+            "regenerator": true
+          }
+        ]
+      ]
+    },
+    "production": {
+      "plugins": [
+        [
+          "@babel/plugin-transform-runtime",
+          {
+            "useESModules": true,
+            "regenerator": true
+          }
+        ]
+      ]
+    },
+    "test": {
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs"
+      ]
+    }
+  }
 };

@@ -1,4 +1,4 @@
-import { WalletType } from '@findeth/core';
+import { WalletType } from '@findeth/wallets';
 import { shallow } from 'enzyme';
 import React from 'react';
 import MnemonicPhrase from './MnemonicPhrase';

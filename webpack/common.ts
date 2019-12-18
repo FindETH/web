@@ -66,7 +66,10 @@ const common: Configuration = {
       filename: IS_DEVELOPMENT ? '[name].css' : '[name].[contenthash].css',
       chunkFilename: IS_DEVELOPMENT ? '[id].css' : '[id].[contenthash].css'
     })
-  ]
+  ],
+  node: {
+    fs: 'empty'
+  }
 };
 
 export default common;

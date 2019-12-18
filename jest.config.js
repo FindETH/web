@@ -12,6 +12,6 @@ module.exports = {
     '^.+\\.[t|j]sx?$': 'babel-jest'
   },
   transformIgnorePatterns: [
-    "/node_modules/(?!@findeth/core).+\\.js$"
+    "/node_modules/(?!(@findeth/wallets|@babel/runtime)).+\\.js$",
   ]
 };
