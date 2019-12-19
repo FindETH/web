@@ -198,746 +198,1474 @@ exports[`Flow renders 1`] = `
       </div>
     </StyledComponent>
   </Container>
-  <SelectWallet
-    key="flow-component"
-    onNext={[Function]}
-    state={Object {}}
-  >
-    <Section>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "Section-uqyogt-0",
-              "isStatic": false,
-              "lastClassName": "c3",
-              "rules": Array [
-                "padding:4rem 0;background:",
-                [Function],
-                ";:nth-child(odd){background:",
-                [Function],
-                ";}:last-of-type{flex:1;}",
-              ],
-            },
-            "displayName": "Section",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "Section-uqyogt-0",
-            "target": "section",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+  <PageTransition>
+    <AnimatePresence
+      exitBeforeEnter={true}
+      initial={true}
+    >
+      <PresenceChild
+        key=""
       >
-        <section
-          className="c3"
+        <SelectWallet
+          onNext={[Function]}
+          onReset={[Function]}
+          state={Object {}}
         >
-          <Container>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "Container-sc-1waynlo-0",
-                    "isStatic": false,
-                    "lastClassName": "c6",
-                    "rules": Array [
-                      "width:",
-                      [Function],
-                      ";max-width:100%;height:",
-                      [Function],
-                      ";box-sizing:border-box;margin:0 auto;padding:0 2rem;",
-                    ],
-                  },
-                  "displayName": "Container",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "Container-sc-1waynlo-0",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
+          <Section
+            animate="enter"
+            exit="exit"
+            initial="initial"
+            transition={
+              Object {
+                "duration": 0.6,
               }
-              forwardedRef={null}
-            >
-              <div
-                className="c0"
-              >
-                <Heading
-                  as="h2"
-                >
-                  <StyledComponent
-                    as="h2"
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "Heading-sc-1c3aww7-0",
-                          "isStatic": false,
-                          "lastClassName": "c4",
-                          "rules": Array [
-                            "display:block;font-size:",
-                            [Function],
-                            ";font-family:",
-                            [Function],
-                            ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
-                            "font-size:",
-                            [Function],
-                            ";font-family:",
-                            [Function],
-                            ";",
-                          ],
-                        },
-                        "displayName": "Heading",
-                        "foldedComponentIds": Array [
-                          "c1",
-                        ],
-                        "render": [Function],
-                        "styledComponentId": "Heading-sc-1c3aww7-0",
-                        "target": "p",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                  >
-                    <h2
-                      className="c1 c4"
-                    >
-                      Select a wallet type
-                    </h2>
-                  </StyledComponent>
-                </Heading>
-                <Typography>
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "c1",
-                          "isStatic": false,
-                          "lastClassName": "c5",
-                          "rules": Array [
-                            "display:block;font-size:",
-                            [Function],
-                            ";font-family:",
-                            [Function],
-                            ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
-                          ],
-                        },
-                        "displayName": "Typography",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "c1",
-                        "target": "p",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                  >
-                    <p
-                      className="c1 c5"
-                    >
-                      Choose one of the available wallet types from the list below.
-                    </p>
-                  </StyledComponent>
-                </Typography>
-              </div>
-            </StyledComponent>
-          </Container>
-          <Container
-            small={true}
+            }
+            variants={
+              Object {
+                "enter": Object {
+                  "opacity": 1,
+                },
+                "exit": Object {
+                  "opacity": 0,
+                },
+                "initial": Object {
+                  "opacity": 0,
+                },
+              }
+            }
           >
             <StyledComponent
+              animate="enter"
+              exit="exit"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "Container-sc-1waynlo-0",
+                    "componentId": "Section-uqyogt-0",
                     "isStatic": false,
-                    "lastClassName": "c6",
+                    "lastClassName": "c3",
                     "rules": Array [
-                      "width:",
+                      "padding:4rem 0;background:",
                       [Function],
-                      ";max-width:100%;height:",
+                      ";:nth-child(odd){background:",
                       [Function],
-                      ";box-sizing:border-box;margin:0 auto;padding:0 2rem;",
+                      ";}:last-of-type{flex:1;}",
                     ],
                   },
-                  "displayName": "Container",
+                  "displayName": "Section",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "Container-sc-1waynlo-0",
-                  "target": "div",
+                  "styledComponentId": "Section-uqyogt-0",
+                  "target": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
               }
               forwardedRef={null}
-              small={true}
+              initial="initial"
+              transition={
+                Object {
+                  "duration": 0.6,
+                }
+              }
+              variants={
+                Object {
+                  "enter": Object {
+                    "opacity": 1,
+                  },
+                  "exit": Object {
+                    "opacity": 0,
+                  },
+                  "initial": Object {
+                    "opacity": 0,
+                  },
+                }
+              }
             >
-              <div
-                className="c6"
+              <ForwardRef(MotionComponent)
+                animate="enter"
+                className="c3"
+                exit="exit"
+                initial="initial"
+                transition={
+                  Object {
+                    "duration": 0.6,
+                  }
+                }
+                variants={
+                  Object {
+                    "enter": Object {
+                      "opacity": 1,
+                    },
+                    "exit": Object {
+                      "opacity": 0,
+                    },
+                    "initial": Object {
+                      "opacity": 0,
+                    },
+                  }
+                }
               >
-                <List>
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "List-sc-1id8vwt-0",
-                          "isStatic": false,
-                          "lastClassName": "c7",
-                          "rules": Array [
-                            "margin:0;padding:0;list-style-type:none;",
-                          ],
-                        },
-                        "displayName": "List",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "List-sc-1id8vwt-0",
-                        "target": "ul",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
+                <section
+                  className="c3"
+                  style={
+                    Object {
+                      "opacity": 0,
                     }
-                    forwardedRef={null}
-                  >
-                    <ul
-                      className="c7"
+                  }
+                >
+                  <Container>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "Container-sc-1waynlo-0",
+                            "isStatic": false,
+                            "lastClassName": "c6",
+                            "rules": Array [
+                              "width:",
+                              [Function],
+                              ";max-width:100%;height:",
+                              [Function],
+                              ";box-sizing:border-box;margin:0 auto;padding:0 2rem;",
+                            ],
+                          },
+                          "displayName": "Container",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "Container-sc-1waynlo-0",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
                     >
-                      <Ledger
-                        onSelect={[Function]}
+                      <div
+                        className="c0"
                       >
-                        <PanelItem
-                          description="Use your Ledger Nano X or S"
-                          highlight={false}
-                          icon="file-stub"
-                          onClick={[Function]}
-                          title="Ledger Wallet"
+                        <Heading
+                          as="h2"
                         >
-                          <PanelItemstyles__ItemContainer>
-                            <StyledComponent
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [
-                                    Object {
-                                      "as": "li",
-                                    },
+                          <StyledComponent
+                            as="h2"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Heading-sc-1c3aww7-0",
+                                  "isStatic": false,
+                                  "lastClassName": "c4",
+                                  "rules": Array [
+                                    "display:block;font-size:",
+                                    [Function],
+                                    ";font-family:",
+                                    [Function],
+                                    ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
+                                    "font-size:",
+                                    [Function],
+                                    ";font-family:",
+                                    [Function],
+                                    ";",
                                   ],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "PanelItemstyles__ItemContainer-sc-144j5xz-0",
-                                    "isStatic": false,
-                                    "lastClassName": "c8",
-                                    "rules": Array [
-                                      "background:white;padding:1.5rem 2.25rem;box-shadow:rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;",
-                                      ".c1",
-                                      ":last-of-type{margin-bottom:0;}",
-                                      "padding:1rem;",
-                                    ],
-                                  },
-                                  "displayName": "PanelItemstyles__ItemContainer",
-                                  "foldedComponentIds": Array [
-                                    "Panel-thlxvf-0",
-                                  ],
-                                  "render": [Function],
-                                  "styledComponentId": "PanelItemstyles__ItemContainer-sc-144j5xz-0",
-                                  "target": "section",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
+                                },
+                                "displayName": "Heading",
+                                "foldedComponentIds": Array [
+                                  "c1",
+                                ],
+                                "render": [Function],
+                                "styledComponentId": "Heading-sc-1c3aww7-0",
+                                "target": "p",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
                               }
-                              forwardedRef={null}
+                            }
+                            forwardedRef={null}
+                          >
+                            <h2
+                              className="c1 c4"
                             >
-                              <li
-                                className="c8"
-                              >
-                                <PanelItemstyles__FlexWrapper
-                                  highlight={false}
-                                  onClick={[Function]}
-                                >
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "PanelItemstyles__FlexWrapper-sc-144j5xz-1",
-                                          "isStatic": false,
-                                          "lastClassName": "c9",
-                                          "rules": Array [
-                                            "display:flex;flex-direction:row;align-items:center;transition:color 0.3s;cursor:pointer;:hover{color:",
-                                            [Function],
-                                            ";}",
-                                            [Function],
-                                            ";",
-                                          ],
-                                        },
-                                        "displayName": "PanelItemstyles__FlexWrapper",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "PanelItemstyles__FlexWrapper-sc-144j5xz-1",
-                                        "target": "div",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                    highlight={false}
-                                    onClick={[Function]}
-                                  >
-                                    <div
-                                      className="c9"
-                                      onClick={[Function]}
-                                    >
-                                      <PanelItemstyles__ItemIcon
-                                        alt="Ledger Wallet"
-                                        src="file-stub"
-                                      >
-                                        <StyledComponent
-                                          alt="Ledger Wallet"
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "PanelItemstyles__ItemIcon-sc-144j5xz-3",
-                                                "isStatic": false,
-                                                "lastClassName": "c10",
-                                                "rules": Array [
-                                                  "min-width:50px;max-width:50px;max-height:50px;vertical-align:middle;",
-                                                ],
-                                              },
-                                              "displayName": "PanelItemstyles__ItemIcon",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "PanelItemstyles__ItemIcon-sc-144j5xz-3",
-                                              "target": "img",
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                            }
-                                          }
-                                          forwardedRef={null}
-                                          src="file-stub"
-                                        >
-                                          <img
-                                            alt="Ledger Wallet"
-                                            className="c10"
-                                            src="file-stub"
-                                          />
-                                        </StyledComponent>
-                                      </PanelItemstyles__ItemIcon>
-                                      <PanelItemstyles__ItemDescription>
-                                        <StyledComponent
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "PanelItemstyles__ItemDescription-sc-144j5xz-2",
-                                                "isStatic": false,
-                                                "lastClassName": "c11",
-                                                "rules": Array [
-                                                  "margin-left:1rem;",
-                                                  ".c1",
-                                                  "{margin:0;}",
-                                                ],
-                                              },
-                                              "displayName": "PanelItemstyles__ItemDescription",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "PanelItemstyles__ItemDescription-sc-144j5xz-2",
-                                              "target": "section",
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                            }
-                                          }
-                                          forwardedRef={null}
-                                        >
-                                          <section
-                                            className="c11"
-                                          >
-                                            <PanelItemstyles__ItemHeading>
-                                              <StyledComponent
-                                                forwardedComponent={
-                                                  Object {
-                                                    "$$typeof": Symbol(react.forward_ref),
-                                                    "attrs": Array [
-                                                      Object {
-                                                        "as": "h3",
-                                                      },
-                                                    ],
-                                                    "componentStyle": ComponentStyle {
-                                                      "componentId": "PanelItemstyles__ItemHeading-sc-144j5xz-4",
-                                                      "isStatic": false,
-                                                      "lastClassName": "c12",
-                                                      "rules": Array [
-                                                        "display:block;font-size:",
-                                                        [Function],
-                                                        ";font-family:",
-                                                        [Function],
-                                                        ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
-                                                        "font-size:",
-                                                        [Function],
-                                                        ";font-family:",
-                                                        [Function],
-                                                        ";",
-                                                        "margin:0;",
-                                                      ],
-                                                    },
-                                                    "displayName": "PanelItemstyles__ItemHeading",
-                                                    "foldedComponentIds": Array [
-                                                      "c1",
-                                                      "Heading-sc-1c3aww7-0",
-                                                    ],
-                                                    "render": [Function],
-                                                    "styledComponentId": "PanelItemstyles__ItemHeading-sc-144j5xz-4",
-                                                    "target": "p",
-                                                    "toString": [Function],
-                                                    "warnTooManyClasses": [Function],
-                                                    "withComponent": [Function],
-                                                  }
-                                                }
-                                                forwardedRef={null}
-                                              >
-                                                <h3
-                                                  className="c1 c12"
-                                                >
-                                                  Ledger Wallet
-                                                </h3>
-                                              </StyledComponent>
-                                            </PanelItemstyles__ItemHeading>
-                                            <Typography>
-                                              <StyledComponent
-                                                forwardedComponent={
-                                                  Object {
-                                                    "$$typeof": Symbol(react.forward_ref),
-                                                    "attrs": Array [],
-                                                    "componentStyle": ComponentStyle {
-                                                      "componentId": "c1",
-                                                      "isStatic": false,
-                                                      "lastClassName": "c5",
-                                                      "rules": Array [
-                                                        "display:block;font-size:",
-                                                        [Function],
-                                                        ";font-family:",
-                                                        [Function],
-                                                        ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
-                                                      ],
-                                                    },
-                                                    "displayName": "Typography",
-                                                    "foldedComponentIds": Array [],
-                                                    "render": [Function],
-                                                    "styledComponentId": "c1",
-                                                    "target": "p",
-                                                    "toString": [Function],
-                                                    "warnTooManyClasses": [Function],
-                                                    "withComponent": [Function],
-                                                  }
-                                                }
-                                                forwardedRef={null}
-                                              >
-                                                <p
-                                                  className="c1 c5"
-                                                >
-                                                  Use your Ledger Nano X or S
-                                                </p>
-                                              </StyledComponent>
-                                            </Typography>
-                                          </section>
-                                        </StyledComponent>
-                                      </PanelItemstyles__ItemDescription>
-                                    </div>
-                                  </StyledComponent>
-                                </PanelItemstyles__FlexWrapper>
-                                <AnimatePresence />
-                              </li>
-                            </StyledComponent>
-                          </PanelItemstyles__ItemContainer>
-                        </PanelItem>
-                      </Ledger>
-                      <Trezor
-                        onSelect={[Function]}
+                              Select a wallet type
+                            </h2>
+                          </StyledComponent>
+                        </Heading>
+                        <Typography>
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "c1",
+                                  "isStatic": false,
+                                  "lastClassName": "c5",
+                                  "rules": Array [
+                                    "display:block;font-size:",
+                                    [Function],
+                                    ";font-family:",
+                                    [Function],
+                                    ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
+                                  ],
+                                },
+                                "displayName": "Typography",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "c1",
+                                "target": "p",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                          >
+                            <p
+                              className="c1 c5"
+                            >
+                              Choose one of the available wallet types from the list below.
+                            </p>
+                          </StyledComponent>
+                        </Typography>
+                      </div>
+                    </StyledComponent>
+                  </Container>
+                  <Container
+                    small={true}
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "Container-sc-1waynlo-0",
+                            "isStatic": false,
+                            "lastClassName": "c6",
+                            "rules": Array [
+                              "width:",
+                              [Function],
+                              ";max-width:100%;height:",
+                              [Function],
+                              ";box-sizing:border-box;margin:0 auto;padding:0 2rem;",
+                            ],
+                          },
+                          "displayName": "Container",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "Container-sc-1waynlo-0",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      small={true}
+                    >
+                      <div
+                        className="c6"
                       >
-                        <PanelItem
-                          description="Use your Trezor Model One or T"
-                          icon="file-stub"
-                          onClick={[Function]}
-                          title="Trezor Wallet"
-                        >
-                          <PanelItemstyles__ItemContainer>
-                            <StyledComponent
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [
-                                    Object {
-                                      "as": "li",
-                                    },
+                        <List>
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "List-sc-1id8vwt-0",
+                                  "isStatic": false,
+                                  "lastClassName": "c7",
+                                  "rules": Array [
+                                    "margin:0;padding:0;list-style-type:none;",
                                   ],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "PanelItemstyles__ItemContainer-sc-144j5xz-0",
-                                    "isStatic": false,
-                                    "lastClassName": "c8",
-                                    "rules": Array [
-                                      "background:white;padding:1.5rem 2.25rem;box-shadow:rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;",
-                                      ".c1",
-                                      ":last-of-type{margin-bottom:0;}",
-                                      "padding:1rem;",
-                                    ],
-                                  },
-                                  "displayName": "PanelItemstyles__ItemContainer",
-                                  "foldedComponentIds": Array [
-                                    "Panel-thlxvf-0",
-                                  ],
-                                  "render": [Function],
-                                  "styledComponentId": "PanelItemstyles__ItemContainer-sc-144j5xz-0",
-                                  "target": "section",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
+                                },
+                                "displayName": "List",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "List-sc-1id8vwt-0",
+                                "target": "ul",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
                               }
-                              forwardedRef={null}
+                            }
+                            forwardedRef={null}
+                          >
+                            <ul
+                              className="c7"
                             >
-                              <li
-                                className="c8"
+                              <Ledger
+                                onSelect={[Function]}
                               >
-                                <PanelItemstyles__FlexWrapper
+                                <PanelItem
+                                  description="Use your Ledger Nano X or S"
                                   highlight={false}
+                                  icon="file-stub"
                                   onClick={[Function]}
+                                  title="Ledger Wallet"
                                 >
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "PanelItemstyles__FlexWrapper-sc-144j5xz-1",
-                                          "isStatic": false,
-                                          "lastClassName": "c9",
-                                          "rules": Array [
-                                            "display:flex;flex-direction:row;align-items:center;transition:color 0.3s;cursor:pointer;:hover{color:",
-                                            [Function],
-                                            ";}",
-                                            [Function],
-                                            ";",
+                                  <PanelItemstyles__ItemContainer>
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [
+                                            Object {
+                                              "as": "li",
+                                            },
                                           ],
-                                        },
-                                        "displayName": "PanelItemstyles__FlexWrapper",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "PanelItemstyles__FlexWrapper-sc-144j5xz-1",
-                                        "target": "div",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "PanelItemstyles__ItemContainer-sc-144j5xz-0",
+                                            "isStatic": false,
+                                            "lastClassName": "c8",
+                                            "rules": Array [
+                                              "background:white;padding:1.5rem 2.25rem;box-shadow:rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;",
+                                              ".c1",
+                                              ":last-of-type{margin-bottom:0;}",
+                                              "padding:1rem;",
+                                            ],
+                                          },
+                                          "displayName": "PanelItemstyles__ItemContainer",
+                                          "foldedComponentIds": Array [
+                                            "Panel-thlxvf-0",
+                                          ],
+                                          "render": [Function],
+                                          "styledComponentId": "PanelItemstyles__ItemContainer-sc-144j5xz-0",
+                                          "target": "section",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
                                       }
-                                    }
-                                    forwardedRef={null}
-                                    highlight={false}
-                                    onClick={[Function]}
-                                  >
-                                    <div
-                                      className="c9"
-                                      onClick={[Function]}
+                                      forwardedRef={null}
                                     >
-                                      <PanelItemstyles__ItemIcon
-                                        alt="Trezor Wallet"
-                                        src="file-stub"
+                                      <li
+                                        className="c8"
                                       >
-                                        <StyledComponent
-                                          alt="Trezor Wallet"
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "PanelItemstyles__ItemIcon-sc-144j5xz-3",
-                                                "isStatic": false,
-                                                "lastClassName": "c10",
-                                                "rules": Array [
-                                                  "min-width:50px;max-width:50px;max-height:50px;vertical-align:middle;",
-                                                ],
-                                              },
-                                              "displayName": "PanelItemstyles__ItemIcon",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "PanelItemstyles__ItemIcon-sc-144j5xz-3",
-                                              "target": "img",
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                            }
-                                          }
-                                          forwardedRef={null}
-                                          src="file-stub"
+                                        <PanelItemstyles__FlexWrapper
+                                          highlight={false}
+                                          onClick={[Function]}
                                         >
-                                          <img
-                                            alt="Trezor Wallet"
-                                            className="c10"
-                                            src="file-stub"
-                                          />
-                                        </StyledComponent>
-                                      </PanelItemstyles__ItemIcon>
-                                      <PanelItemstyles__ItemDescription>
-                                        <StyledComponent
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "PanelItemstyles__ItemDescription-sc-144j5xz-2",
-                                                "isStatic": false,
-                                                "lastClassName": "c11",
-                                                "rules": Array [
-                                                  "margin-left:1rem;",
-                                                  ".c1",
-                                                  "{margin:0;}",
-                                                ],
-                                              },
-                                              "displayName": "PanelItemstyles__ItemDescription",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "PanelItemstyles__ItemDescription-sc-144j5xz-2",
-                                              "target": "section",
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "PanelItemstyles__FlexWrapper-sc-144j5xz-1",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c9",
+                                                  "rules": Array [
+                                                    "display:flex;flex-direction:row;align-items:center;transition:color 0.3s;cursor:pointer;:hover{color:",
+                                                    [Function],
+                                                    ";}",
+                                                    [Function],
+                                                    ";",
+                                                  ],
+                                                },
+                                                "displayName": "PanelItemstyles__FlexWrapper",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "PanelItemstyles__FlexWrapper-sc-144j5xz-1",
+                                                "target": "div",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
                                             }
-                                          }
-                                          forwardedRef={null}
-                                        >
-                                          <section
-                                            className="c11"
+                                            forwardedRef={null}
+                                            highlight={false}
+                                            onClick={[Function]}
                                           >
-                                            <PanelItemstyles__ItemHeading>
-                                              <StyledComponent
-                                                forwardedComponent={
-                                                  Object {
-                                                    "$$typeof": Symbol(react.forward_ref),
-                                                    "attrs": Array [
-                                                      Object {
-                                                        "as": "h3",
+                                            <div
+                                              className="c9"
+                                              onClick={[Function]}
+                                            >
+                                              <PanelItemstyles__ItemIcon
+                                                alt="Ledger Wallet"
+                                                src="file-stub"
+                                              >
+                                                <StyledComponent
+                                                  alt="Ledger Wallet"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "PanelItemstyles__ItemIcon-sc-144j5xz-3",
+                                                        "isStatic": false,
+                                                        "lastClassName": "c10",
+                                                        "rules": Array [
+                                                          "min-width:50px;max-width:50px;max-height:50px;vertical-align:middle;",
+                                                        ],
                                                       },
-                                                    ],
-                                                    "componentStyle": ComponentStyle {
-                                                      "componentId": "PanelItemstyles__ItemHeading-sc-144j5xz-4",
-                                                      "isStatic": false,
-                                                      "lastClassName": "c12",
-                                                      "rules": Array [
-                                                        "display:block;font-size:",
-                                                        [Function],
-                                                        ";font-family:",
-                                                        [Function],
-                                                        ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
-                                                        "font-size:",
-                                                        [Function],
-                                                        ";font-family:",
-                                                        [Function],
-                                                        ";",
-                                                        "margin:0;",
-                                                      ],
-                                                    },
-                                                    "displayName": "PanelItemstyles__ItemHeading",
-                                                    "foldedComponentIds": Array [
-                                                      "c1",
-                                                      "Heading-sc-1c3aww7-0",
-                                                    ],
-                                                    "render": [Function],
-                                                    "styledComponentId": "PanelItemstyles__ItemHeading-sc-144j5xz-4",
-                                                    "target": "p",
-                                                    "toString": [Function],
-                                                    "warnTooManyClasses": [Function],
-                                                    "withComponent": [Function],
+                                                      "displayName": "PanelItemstyles__ItemIcon",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "PanelItemstyles__ItemIcon-sc-144j5xz-3",
+                                                      "target": "img",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
                                                   }
-                                                }
-                                                forwardedRef={null}
-                                              >
-                                                <h3
-                                                  className="c1 c12"
+                                                  forwardedRef={null}
+                                                  src="file-stub"
                                                 >
-                                                  Trezor Wallet
-                                                </h3>
-                                              </StyledComponent>
-                                            </PanelItemstyles__ItemHeading>
-                                            <Typography>
-                                              <StyledComponent
-                                                forwardedComponent={
-                                                  Object {
-                                                    "$$typeof": Symbol(react.forward_ref),
-                                                    "attrs": Array [],
-                                                    "componentStyle": ComponentStyle {
-                                                      "componentId": "c1",
-                                                      "isStatic": false,
-                                                      "lastClassName": "c5",
-                                                      "rules": Array [
-                                                        "display:block;font-size:",
-                                                        [Function],
-                                                        ";font-family:",
-                                                        [Function],
-                                                        ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
-                                                      ],
-                                                    },
-                                                    "displayName": "Typography",
-                                                    "foldedComponentIds": Array [],
-                                                    "render": [Function],
-                                                    "styledComponentId": "c1",
-                                                    "target": "p",
-                                                    "toString": [Function],
-                                                    "warnTooManyClasses": [Function],
-                                                    "withComponent": [Function],
+                                                  <img
+                                                    alt="Ledger Wallet"
+                                                    className="c10"
+                                                    src="file-stub"
+                                                  />
+                                                </StyledComponent>
+                                              </PanelItemstyles__ItemIcon>
+                                              <PanelItemstyles__ItemDescription>
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "PanelItemstyles__ItemDescription-sc-144j5xz-2",
+                                                        "isStatic": false,
+                                                        "lastClassName": "c11",
+                                                        "rules": Array [
+                                                          "margin-left:1rem;",
+                                                          ".c1",
+                                                          "{margin:0;}",
+                                                        ],
+                                                      },
+                                                      "displayName": "PanelItemstyles__ItemDescription",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "PanelItemstyles__ItemDescription-sc-144j5xz-2",
+                                                      "target": "section",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
                                                   }
-                                                }
-                                                forwardedRef={null}
-                                              >
-                                                <p
-                                                  className="c1 c5"
+                                                  forwardedRef={null}
                                                 >
-                                                  Use your Trezor Model One or T
-                                                </p>
-                                              </StyledComponent>
-                                            </Typography>
-                                          </section>
-                                        </StyledComponent>
-                                      </PanelItemstyles__ItemDescription>
-                                    </div>
-                                  </StyledComponent>
-                                </PanelItemstyles__FlexWrapper>
-                              </li>
-                            </StyledComponent>
-                          </PanelItemstyles__ItemContainer>
-                        </PanelItem>
-                      </Trezor>
-                    </ul>
-                  </StyledComponent>
-                </List>
-              </div>
+                                                  <section
+                                                    className="c11"
+                                                  >
+                                                    <PanelItemstyles__ItemHeading>
+                                                      <StyledComponent
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [
+                                                              Object {
+                                                                "as": "h3",
+                                                              },
+                                                            ],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "PanelItemstyles__ItemHeading-sc-144j5xz-4",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c12",
+                                                              "rules": Array [
+                                                                "display:block;font-size:",
+                                                                [Function],
+                                                                ";font-family:",
+                                                                [Function],
+                                                                ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
+                                                                "font-size:",
+                                                                [Function],
+                                                                ";font-family:",
+                                                                [Function],
+                                                                ";",
+                                                                "margin:0;",
+                                                              ],
+                                                            },
+                                                            "displayName": "PanelItemstyles__ItemHeading",
+                                                            "foldedComponentIds": Array [
+                                                              "c1",
+                                                              "Heading-sc-1c3aww7-0",
+                                                            ],
+                                                            "render": [Function],
+                                                            "styledComponentId": "PanelItemstyles__ItemHeading-sc-144j5xz-4",
+                                                            "target": "p",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                      >
+                                                        <h3
+                                                          className="c1 c12"
+                                                        >
+                                                          Ledger Wallet
+                                                        </h3>
+                                                      </StyledComponent>
+                                                    </PanelItemstyles__ItemHeading>
+                                                    <Typography>
+                                                      <StyledComponent
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "c1",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c5",
+                                                              "rules": Array [
+                                                                "display:block;font-size:",
+                                                                [Function],
+                                                                ";font-family:",
+                                                                [Function],
+                                                                ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
+                                                              ],
+                                                            },
+                                                            "displayName": "Typography",
+                                                            "foldedComponentIds": Array [],
+                                                            "render": [Function],
+                                                            "styledComponentId": "c1",
+                                                            "target": "p",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                      >
+                                                        <p
+                                                          className="c1 c5"
+                                                        >
+                                                          Use your Ledger Nano X or S
+                                                        </p>
+                                                      </StyledComponent>
+                                                    </Typography>
+                                                  </section>
+                                                </StyledComponent>
+                                              </PanelItemstyles__ItemDescription>
+                                            </div>
+                                          </StyledComponent>
+                                        </PanelItemstyles__FlexWrapper>
+                                        <AnimatePresence />
+                                      </li>
+                                    </StyledComponent>
+                                  </PanelItemstyles__ItemContainer>
+                                </PanelItem>
+                              </Ledger>
+                              <Trezor
+                                onSelect={[Function]}
+                              >
+                                <PanelItem
+                                  description="Use your Trezor Model One or T"
+                                  icon="file-stub"
+                                  onClick={[Function]}
+                                  title="Trezor Wallet"
+                                >
+                                  <PanelItemstyles__ItemContainer>
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [
+                                            Object {
+                                              "as": "li",
+                                            },
+                                          ],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "PanelItemstyles__ItemContainer-sc-144j5xz-0",
+                                            "isStatic": false,
+                                            "lastClassName": "c8",
+                                            "rules": Array [
+                                              "background:white;padding:1.5rem 2.25rem;box-shadow:rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;",
+                                              ".c1",
+                                              ":last-of-type{margin-bottom:0;}",
+                                              "padding:1rem;",
+                                            ],
+                                          },
+                                          "displayName": "PanelItemstyles__ItemContainer",
+                                          "foldedComponentIds": Array [
+                                            "Panel-thlxvf-0",
+                                          ],
+                                          "render": [Function],
+                                          "styledComponentId": "PanelItemstyles__ItemContainer-sc-144j5xz-0",
+                                          "target": "section",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                    >
+                                      <li
+                                        className="c8"
+                                      >
+                                        <PanelItemstyles__FlexWrapper
+                                          highlight={false}
+                                          onClick={[Function]}
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "PanelItemstyles__FlexWrapper-sc-144j5xz-1",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c9",
+                                                  "rules": Array [
+                                                    "display:flex;flex-direction:row;align-items:center;transition:color 0.3s;cursor:pointer;:hover{color:",
+                                                    [Function],
+                                                    ";}",
+                                                    [Function],
+                                                    ";",
+                                                  ],
+                                                },
+                                                "displayName": "PanelItemstyles__FlexWrapper",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "PanelItemstyles__FlexWrapper-sc-144j5xz-1",
+                                                "target": "div",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            highlight={false}
+                                            onClick={[Function]}
+                                          >
+                                            <div
+                                              className="c9"
+                                              onClick={[Function]}
+                                            >
+                                              <PanelItemstyles__ItemIcon
+                                                alt="Trezor Wallet"
+                                                src="file-stub"
+                                              >
+                                                <StyledComponent
+                                                  alt="Trezor Wallet"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "PanelItemstyles__ItemIcon-sc-144j5xz-3",
+                                                        "isStatic": false,
+                                                        "lastClassName": "c10",
+                                                        "rules": Array [
+                                                          "min-width:50px;max-width:50px;max-height:50px;vertical-align:middle;",
+                                                        ],
+                                                      },
+                                                      "displayName": "PanelItemstyles__ItemIcon",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "PanelItemstyles__ItemIcon-sc-144j5xz-3",
+                                                      "target": "img",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  src="file-stub"
+                                                >
+                                                  <img
+                                                    alt="Trezor Wallet"
+                                                    className="c10"
+                                                    src="file-stub"
+                                                  />
+                                                </StyledComponent>
+                                              </PanelItemstyles__ItemIcon>
+                                              <PanelItemstyles__ItemDescription>
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "PanelItemstyles__ItemDescription-sc-144j5xz-2",
+                                                        "isStatic": false,
+                                                        "lastClassName": "c11",
+                                                        "rules": Array [
+                                                          "margin-left:1rem;",
+                                                          ".c1",
+                                                          "{margin:0;}",
+                                                        ],
+                                                      },
+                                                      "displayName": "PanelItemstyles__ItemDescription",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "PanelItemstyles__ItemDescription-sc-144j5xz-2",
+                                                      "target": "section",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                >
+                                                  <section
+                                                    className="c11"
+                                                  >
+                                                    <PanelItemstyles__ItemHeading>
+                                                      <StyledComponent
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [
+                                                              Object {
+                                                                "as": "h3",
+                                                              },
+                                                            ],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "PanelItemstyles__ItemHeading-sc-144j5xz-4",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c12",
+                                                              "rules": Array [
+                                                                "display:block;font-size:",
+                                                                [Function],
+                                                                ";font-family:",
+                                                                [Function],
+                                                                ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
+                                                                "font-size:",
+                                                                [Function],
+                                                                ";font-family:",
+                                                                [Function],
+                                                                ";",
+                                                                "margin:0;",
+                                                              ],
+                                                            },
+                                                            "displayName": "PanelItemstyles__ItemHeading",
+                                                            "foldedComponentIds": Array [
+                                                              "c1",
+                                                              "Heading-sc-1c3aww7-0",
+                                                            ],
+                                                            "render": [Function],
+                                                            "styledComponentId": "PanelItemstyles__ItemHeading-sc-144j5xz-4",
+                                                            "target": "p",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                      >
+                                                        <h3
+                                                          className="c1 c12"
+                                                        >
+                                                          Trezor Wallet
+                                                        </h3>
+                                                      </StyledComponent>
+                                                    </PanelItemstyles__ItemHeading>
+                                                    <Typography>
+                                                      <StyledComponent
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "c1",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c5",
+                                                              "rules": Array [
+                                                                "display:block;font-size:",
+                                                                [Function],
+                                                                ";font-family:",
+                                                                [Function],
+                                                                ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;",
+                                                              ],
+                                                            },
+                                                            "displayName": "Typography",
+                                                            "foldedComponentIds": Array [],
+                                                            "render": [Function],
+                                                            "styledComponentId": "c1",
+                                                            "target": "p",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                      >
+                                                        <p
+                                                          className="c1 c5"
+                                                        >
+                                                          Use your Trezor Model One or T
+                                                        </p>
+                                                      </StyledComponent>
+                                                    </Typography>
+                                                  </section>
+                                                </StyledComponent>
+                                              </PanelItemstyles__ItemDescription>
+                                            </div>
+                                          </StyledComponent>
+                                        </PanelItemstyles__FlexWrapper>
+                                      </li>
+                                    </StyledComponent>
+                                  </PanelItemstyles__ItemContainer>
+                                </PanelItem>
+                              </Trezor>
+                            </ul>
+                          </StyledComponent>
+                        </List>
+                      </div>
+                    </StyledComponent>
+                  </Container>
+                </section>
+                <Memo(MountComponent)
+                  innerRef={
+                    Object {
+                      "current": .c0 {
+  padding: 4rem 0;
+}
+
+.c0:last-of-type {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  width: 1200px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c5 {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c4 {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.c3 {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.c6 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c7 {
+  background: white;
+  padding: 1.5rem 2.25rem;
+  box-shadow: rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;
+  padding: 1rem;
+}
+
+.c7 .c2:last-of-type {
+  margin-bottom: 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.c10 {
+  margin-left: 1rem;
+}
+
+.c10 .c2 {
+  margin: 0;
+}
+
+.c9 {
+  min-width: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  vertical-align: middle;
+}
+
+.c11 {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+<section
+                        class="c0"
+                        style="opacity: 0;"
+                      >
+                        <div
+                          class="c1"
+                        >
+                          <h2
+                            class="c2 c3"
+                          >
+                            Select a wallet type
+                          </h2>
+                          <p
+                            class="c2 c4"
+                          >
+                            Choose one of the available wallet types from the list below.
+                          </p>
+                        </div>
+                        <div
+                          class="c5"
+                        >
+                          <ul
+                            class="c6"
+                          >
+                            <li
+                              class="c7"
+                            >
+                              <div
+                                class="c8"
+                              >
+                                <img
+                                  alt="Ledger Wallet"
+                                  class="c9"
+                                  src="file-stub"
+                                />
+                                <section
+                                  class="c10"
+                                >
+                                  <h3
+                                    class="c2 c11"
+                                  >
+                                    Ledger Wallet
+                                  </h3>
+                                  <p
+                                    class="c2 c4"
+                                  >
+                                    Use your Ledger Nano X or S
+                                  </p>
+                                </section>
+                              </div>
+                            </li>
+                            <li
+                              class="c7"
+                            >
+                              <div
+                                class="c8"
+                              >
+                                <img
+                                  alt="Trezor Wallet"
+                                  class="c9"
+                                  src="file-stub"
+                                />
+                                <section
+                                  class="c10"
+                                >
+                                  <h3
+                                    class="c2 c11"
+                                  >
+                                    Trezor Wallet
+                                  </h3>
+                                  <p
+                                    class="c2 c4"
+                                  >
+                                    Use your Trezor Model One or T
+                                  </p>
+                                </section>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>,
+                    }
+                  }
+                  isStatic={false}
+                  values={
+                    MotionValuesMap {
+                      "hasMounted": true,
+                      "onUpdate": undefined,
+                      "output": [Function],
+                      "unsubscribers": Map {
+                        "opacity" => [Function],
+                      },
+                      "values": Map {
+                        "opacity" => MotionValue {
+                          "canTrackVelocity": true,
+                          "current": 0,
+                          "lastUpdated": 0,
+                          "notifySubscriber": [Function],
+                          "parent": undefined,
+                          "prev": undefined,
+                          "renderSubscribers": Set {
+                            [Function],
+                          },
+                          "scheduleVelocityCheck": [Function],
+                          "setChild": [Function],
+                          "stopAnimation": [Function],
+                          "timeDelta": 0,
+                          "transformer": undefined,
+                          "updateAndNotify": [Function],
+                          "updateSubscribers": Set {
+                            [Function],
+                          },
+                          "velocityCheck": [Function],
+                        },
+                      },
+                    }
+                  }
+                />
+                <Component
+                  animate="enter"
+                  controls={
+                    ValueAnimationControls {
+                      "activeOverrides": Set {},
+                      "baseTarget": Object {
+                        "opacity": 1,
+                      },
+                      "defaultTransition": Object {
+                        "duration": 0.6,
+                      },
+                      "hasValue": [Function],
+                      "isAnimating": Set {
+                        "opacity",
+                      },
+                      "makeTargetAnimatable": [Function],
+                      "overrides": Array [],
+                      "props": Object {
+                        "animate": "enter",
+                        "children": Array [
+                          <ForwardRef(Container)>
+                            <ForwardRef(Heading)
+                              as="h2"
+                            >
+                              Select a wallet type
+                            </ForwardRef(Heading)>
+                            <ForwardRef(Typography)>
+                              Choose one of the available wallet types from the list below.
+                            </ForwardRef(Typography)>
+                          </ForwardRef(Container)>,
+                          <ForwardRef(Container)
+                            small={true}
+                          >
+                            <ForwardRef(List)>
+                              <Ledger
+                                onSelect={[Function]}
+                              />
+                              <Trezor
+                                onSelect={[Function]}
+                              />
+                            </ForwardRef(List)>
+                          </ForwardRef(Container)>,
+                        ],
+                        "className": "Section-uqyogt-0 c3",
+                        "exit": "exit",
+                        "initial": "initial",
+                        "transition": Object {
+                          "duration": 0.6,
+                        },
+                        "variants": Object {
+                          "enter": Object {
+                            "opacity": 1,
+                          },
+                          "exit": Object {
+                            "opacity": 0,
+                          },
+                          "initial": Object {
+                            "opacity": 0,
+                          },
+                        },
+                      },
+                      "readValueFromSource": [Function],
+                      "resolvedOverrides": Array [],
+                      "values": MotionValuesMap {
+                        "hasMounted": true,
+                        "onUpdate": undefined,
+                        "output": [Function],
+                        "unsubscribers": Map {
+                          "opacity" => [Function],
+                        },
+                        "values": Map {
+                          "opacity" => MotionValue {
+                            "canTrackVelocity": true,
+                            "current": 0,
+                            "lastUpdated": 0,
+                            "notifySubscriber": [Function],
+                            "parent": undefined,
+                            "prev": undefined,
+                            "renderSubscribers": Set {
+                              [Function],
+                            },
+                            "scheduleVelocityCheck": [Function],
+                            "setChild": [Function],
+                            "stopAnimation": [Function],
+                            "timeDelta": 0,
+                            "transformer": undefined,
+                            "updateAndNotify": [Function],
+                            "updateSubscribers": Set {
+                              [Function],
+                            },
+                            "velocityCheck": [Function],
+                          },
+                        },
+                      },
+                      "variants": Object {
+                        "enter": Object {
+                          "opacity": 1,
+                        },
+                        "exit": Object {
+                          "opacity": 0,
+                        },
+                        "initial": Object {
+                          "opacity": 0,
+                        },
+                      },
+                    }
+                  }
+                  inherit={false}
+                  initial="initial"
+                  key="animation"
+                  transition={
+                    Object {
+                      "duration": 0.6,
+                    }
+                  }
+                  values={
+                    MotionValuesMap {
+                      "hasMounted": true,
+                      "onUpdate": undefined,
+                      "output": [Function],
+                      "unsubscribers": Map {
+                        "opacity" => [Function],
+                      },
+                      "values": Map {
+                        "opacity" => MotionValue {
+                          "canTrackVelocity": true,
+                          "current": 0,
+                          "lastUpdated": 0,
+                          "notifySubscriber": [Function],
+                          "parent": undefined,
+                          "prev": undefined,
+                          "renderSubscribers": Set {
+                            [Function],
+                          },
+                          "scheduleVelocityCheck": [Function],
+                          "setChild": [Function],
+                          "stopAnimation": [Function],
+                          "timeDelta": 0,
+                          "transformer": undefined,
+                          "updateAndNotify": [Function],
+                          "updateSubscribers": Set {
+                            [Function],
+                          },
+                          "velocityCheck": [Function],
+                        },
+                      },
+                    }
+                  }
+                  variants={
+                    Object {
+                      "enter": Object {
+                        "opacity": 1,
+                      },
+                      "exit": Object {
+                        "opacity": 0,
+                      },
+                      "initial": Object {
+                        "opacity": 0,
+                      },
+                    }
+                  }
+                />
+                <Component
+                  animate="enter"
+                  className="c3"
+                  controls={
+                    ValueAnimationControls {
+                      "activeOverrides": Set {},
+                      "baseTarget": Object {
+                        "opacity": 1,
+                      },
+                      "defaultTransition": Object {
+                        "duration": 0.6,
+                      },
+                      "hasValue": [Function],
+                      "isAnimating": Set {
+                        "opacity",
+                      },
+                      "makeTargetAnimatable": [Function],
+                      "overrides": Array [],
+                      "props": Object {
+                        "animate": "enter",
+                        "children": Array [
+                          <ForwardRef(Container)>
+                            <ForwardRef(Heading)
+                              as="h2"
+                            >
+                              Select a wallet type
+                            </ForwardRef(Heading)>
+                            <ForwardRef(Typography)>
+                              Choose one of the available wallet types from the list below.
+                            </ForwardRef(Typography)>
+                          </ForwardRef(Container)>,
+                          <ForwardRef(Container)
+                            small={true}
+                          >
+                            <ForwardRef(List)>
+                              <Ledger
+                                onSelect={[Function]}
+                              />
+                              <Trezor
+                                onSelect={[Function]}
+                              />
+                            </ForwardRef(List)>
+                          </ForwardRef(Container)>,
+                        ],
+                        "className": "Section-uqyogt-0 c3",
+                        "exit": "exit",
+                        "initial": "initial",
+                        "transition": Object {
+                          "duration": 0.6,
+                        },
+                        "variants": Object {
+                          "enter": Object {
+                            "opacity": 1,
+                          },
+                          "exit": Object {
+                            "opacity": 0,
+                          },
+                          "initial": Object {
+                            "opacity": 0,
+                          },
+                        },
+                      },
+                      "readValueFromSource": [Function],
+                      "resolvedOverrides": Array [],
+                      "values": MotionValuesMap {
+                        "hasMounted": true,
+                        "onUpdate": undefined,
+                        "output": [Function],
+                        "unsubscribers": Map {
+                          "opacity" => [Function],
+                        },
+                        "values": Map {
+                          "opacity" => MotionValue {
+                            "canTrackVelocity": true,
+                            "current": 0,
+                            "lastUpdated": 0,
+                            "notifySubscriber": [Function],
+                            "parent": undefined,
+                            "prev": undefined,
+                            "renderSubscribers": Set {
+                              [Function],
+                            },
+                            "scheduleVelocityCheck": [Function],
+                            "setChild": [Function],
+                            "stopAnimation": [Function],
+                            "timeDelta": 0,
+                            "transformer": undefined,
+                            "updateAndNotify": [Function],
+                            "updateSubscribers": Set {
+                              [Function],
+                            },
+                            "velocityCheck": [Function],
+                          },
+                        },
+                      },
+                      "variants": Object {
+                        "enter": Object {
+                          "opacity": 1,
+                        },
+                        "exit": Object {
+                          "opacity": 0,
+                        },
+                        "initial": Object {
+                          "opacity": 0,
+                        },
+                      },
+                    }
+                  }
+                  exit="exit"
+                  initial="initial"
+                  innerRef={
+                    Object {
+                      "current": <section
+                        class="c3"
+                        style="opacity: 0;"
+                      >
+                        <div
+                          class="c0"
+                        >
+                          <h2
+                            class="c1 c4"
+                          >
+                            Select a wallet type
+                          </h2>
+                          <p
+                            class="c1 c5"
+                          >
+                            Choose one of the available wallet types from the list below.
+                          </p>
+                        </div>
+                        <div
+                          class="c6"
+                        >
+                          <ul
+                            class="c7"
+                          >
+                            <li
+                              class="c8"
+                            >
+                              <div
+                                class="c9"
+                              >
+                                <img
+                                  alt="Ledger Wallet"
+                                  class="c10"
+                                  src="file-stub"
+                                />
+                                <section
+                                  class="c11"
+                                >
+                                  <h3
+                                    class="c1 c12"
+                                  >
+                                    Ledger Wallet
+                                  </h3>
+                                  <p
+                                    class="c1 c5"
+                                  >
+                                    Use your Ledger Nano X or S
+                                  </p>
+                                </section>
+                              </div>
+                            </li>
+                            <li
+                              class="c8"
+                            >
+                              <div
+                                class="c9"
+                              >
+                                <img
+                                  alt="Trezor Wallet"
+                                  class="c10"
+                                  src="file-stub"
+                                />
+                                <section
+                                  class="c11"
+                                >
+                                  <h3
+                                    class="c1 c12"
+                                  >
+                                    Trezor Wallet
+                                  </h3>
+                                  <p
+                                    class="c1 c5"
+                                  >
+                                    Use your Trezor Model One or T
+                                  </p>
+                                </section>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>,
+                    }
+                  }
+                  key="exit"
+                  parentContext={
+                    Object {
+                      "exitProps": Object {},
+                      "static": false,
+                    }
+                  }
+                  transition={
+                    Object {
+                      "duration": 0.6,
+                    }
+                  }
+                  values={
+                    MotionValuesMap {
+                      "hasMounted": true,
+                      "onUpdate": undefined,
+                      "output": [Function],
+                      "unsubscribers": Map {
+                        "opacity" => [Function],
+                      },
+                      "values": Map {
+                        "opacity" => MotionValue {
+                          "canTrackVelocity": true,
+                          "current": 0,
+                          "lastUpdated": 0,
+                          "notifySubscriber": [Function],
+                          "parent": undefined,
+                          "prev": undefined,
+                          "renderSubscribers": Set {
+                            [Function],
+                          },
+                          "scheduleVelocityCheck": [Function],
+                          "setChild": [Function],
+                          "stopAnimation": [Function],
+                          "timeDelta": 0,
+                          "transformer": undefined,
+                          "updateAndNotify": [Function],
+                          "updateSubscribers": Set {
+                            [Function],
+                          },
+                          "velocityCheck": [Function],
+                        },
+                      },
+                    }
+                  }
+                  variants={
+                    Object {
+                      "enter": Object {
+                        "opacity": 1,
+                      },
+                      "exit": Object {
+                        "opacity": 0,
+                      },
+                      "initial": Object {
+                        "opacity": 0,
+                      },
+                    }
+                  }
+                />
+              </ForwardRef(MotionComponent)>
             </StyledComponent>
-          </Container>
-        </section>
-      </StyledComponent>
-    </Section>
-  </SelectWallet>
+          </Section>
+        </SelectWallet>
+      </PresenceChild>
+    </AnimatePresence>
+  </PageTransition>
 </EtherFlow>
 `;

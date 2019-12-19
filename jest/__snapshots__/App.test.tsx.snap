@@ -16,6 +16,7 @@ exports[`App renders 1`] = `
     theme={
       Object {
         "borderColor": "#e5e5e5",
+        "errorColor": "#ed4337",
         "font": "'Open Sans', sans-serif",
         "headingFont": "'Nunito', sans-serif",
         "linkColor": "#1eb8e7",

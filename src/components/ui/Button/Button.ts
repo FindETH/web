@@ -15,10 +15,11 @@ const Button = styled(Typography).attrs({ as: 'button' })<Props>`
   padding: 0.5rem 1.1rem;
   font-size: 0.9rem;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 
-  &:hover {
+  :hover {
     background: ${({ theme }) => transparentize(0.1, theme.primaryColor)};
+    color: white !important;
   }
 `;
 

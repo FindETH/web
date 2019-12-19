@@ -4,6 +4,6 @@ import SelectWallet from './SelectWallet';
 
 describe('SelectWallet', () => {
   it('renders', () => {
-    expect(shallow(<SelectWallet state={{}} onNext={jest.fn()} />)).toMatchSnapshot();
+    expect(shallow(<SelectWallet state={{}} onReset={jest.fn()} onNext={jest.fn()} />)).toMatchSnapshot();
   });
 });

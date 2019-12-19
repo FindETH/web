@@ -1,6 +1,8 @@
-import { WalletType } from '@findeth/wallets';
+import { TransportWrapper, WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
+import { WalletWithTransport } from '../../../containers/Flow/EtherFlow';
 import { FlowComponentProps } from '../../../hooks';
+import { PAGE_TRANSITION_PROPS } from '../../PageTransition/PageTransition';
 import Container from '../../ui/Container';
 import Heading from '../../ui/Heading';
 import List from '../../ui/List';
@@ -9,15 +11,18 @@ import Typography from '../../ui/Typography';
 import Ledger from './Ledger';
 import Trezor from './Trezor';
 
-type Props = FlowComponentProps<{ wallet: WalletType }>;
+type Props = FlowComponentProps<{ wallet: WalletWithTransport }>;
 
 const SelectWallet: FunctionComponent<Props> = ({ onNext }) => {
-  const handleNext = (wallet: WalletType) => {
-    return onNext({ wallet });
+  const handleNext = (type: WalletType, transport?: new () => TransportWrapper<unknown>) => {
+    if (type === WalletType.Ledger) {
+      return onNext({ wallet: { type, transport } });
+    }
+    return onNext({ wallet: { type } });
   };
 
   return (
-    <Section>
+    <Section {...PAGE_TRANSITION_PROPS}>
       <Container>
         <Heading as="h2">Select a wallet type</Heading>
         <Typography>Choose one of the available wallet types from the list below.</Typography>
