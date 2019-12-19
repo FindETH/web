@@ -5,7 +5,11 @@ import Other from './Other';
 
 describe('Other', () => {
   it('renders', () => {
-    expect(shallow(<Other type={WalletType.Ledger} onDone={jest.fn()} />)).toMatchSnapshot();
-    expect(shallow(<Other type={WalletType.Trezor} onDone={jest.fn()} />)).toMatchSnapshot();
+    expect(
+      shallow(<Other wallet={{ type: WalletType.Ledger }} onReset={jest.fn()} onDone={jest.fn()} />)
+    ).toMatchSnapshot();
+    expect(
+      shallow(<Other wallet={{ type: WalletType.Trezor }} onReset={jest.fn()} onDone={jest.fn()} />)
+    ).toMatchSnapshot();
   });
 });

@@ -2,17 +2,28 @@ import { AnimatePresence } from 'framer-motion';
 import React, { FunctionComponent, ReactPortal } from 'react';
 import { createPortal } from 'react-dom';
 import Button from '../ui/Button';
-import { ModalBackground, ModalButtons, ModalWrapper } from './Modal.styles';
+import { ModalBackground, ModalButtons, ModalType, ModalWrapper } from './Modal.styles';
 
 export interface Props {
   isVisible: boolean;
+  type?: ModalType;
+  closeText?: string;
+  confirmText?: string;
 
   onClose(): void;
 
   onConfirm?(): void;
 }
 
-const Modal: FunctionComponent<Props> = ({ isVisible, onClose, onConfirm, children }): ReactPortal =>
+const Modal: FunctionComponent<Props> = ({
+  isVisible,
+  type = 'normal',
+  closeText,
+  confirmText,
+  onClose,
+  onConfirm,
+  children
+}): ReactPortal =>
   createPortal(
     <AnimatePresence>
       {isVisible && (
@@ -21,11 +32,11 @@ const Modal: FunctionComponent<Props> = ({ isVisible, onClose, onConfirm, childr
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}>
-          <ModalWrapper initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ duration: 0.3 }}>
+          <ModalWrapper initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ duration: 0.3 }} type={type}>
             {children}
             <ModalButtons>
-              <Button onClick={onClose}>Close</Button>
-              {onConfirm && <Button onClick={onConfirm}>Confirm</Button>}
+              <Button onClick={onClose}>{closeText ?? 'Close'}</Button>
+              {onConfirm && <Button onClick={onConfirm}>{confirmText ?? 'Confirm'}</Button>}
             </ModalButtons>
           </ModalWrapper>
         </ModalBackground>

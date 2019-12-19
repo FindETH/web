@@ -1,1 +1,1 @@
-export { default } from './EtherFlow';
+export { default, WalletWithTransport } from './EtherFlow';

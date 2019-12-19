@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectOptions renders 1`] = `
+<Section
+  animate="enter"
+  exit="exit"
+  initial="initial"
+  transition={
+    Object {
+      "duration": 0.6,
+    }
+  }
+  variants={
+    Object {
+      "enter": Object {
+        "opacity": 1,
+      },
+      "exit": Object {
+        "opacity": 0,
+      },
+      "initial": Object {
+        "opacity": 0,
+      },
+    }
+  }
+>
+  <Typography>
+    Select options
+  </Typography>
+</Section>
+`;

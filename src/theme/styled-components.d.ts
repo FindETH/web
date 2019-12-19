@@ -6,6 +6,7 @@ declare module 'styled-components' {
     linkColor: string;
     linkHoverColor: string;
     borderColor: string;
+    errorColor: string;
 
     sectionBackground: string;
     sectionOddBackground: string;

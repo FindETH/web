@@ -5,6 +5,7 @@ module.exports = {
     [
       "@babel/preset-env",
       {
+        "modules": "commonjs",
         "targets": {
           "chrome": "78",
           "firefox": "70"
@@ -24,7 +25,6 @@ module.exports = {
         [
           "@babel/plugin-transform-runtime",
           {
-            "useESModules": true,
             "corejs": 3,
             "version": "^7.7.6"
           }
@@ -36,7 +36,6 @@ module.exports = {
         [
           "@babel/plugin-transform-runtime",
           {
-            "useESModules": true,
             "corejs": 3,
             "version": "^7.7.6"
           }

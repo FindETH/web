@@ -1,19 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AccessWallet renders 1`] = `
-<Section>
+<Section
+  animate="enter"
+  exit="exit"
+  initial="initial"
+  transition={
+    Object {
+      "duration": 0.6,
+    }
+  }
+  variants={
+    Object {
+      "enter": Object {
+        "opacity": 1,
+      },
+      "exit": Object {
+        "opacity": 0,
+      },
+      "initial": Object {
+        "opacity": 0,
+      },
+    }
+  }
+>
   <Other
     onDone={[Function]}
-    type="Ledger"
+    onReset={[MockFunction]}
+    wallet={
+      Object {
+        "type": "Ledger",
+      }
+    }
   />
 </Section>
 `;
 
 exports[`AccessWallet renders 2`] = `
-<Section>
-  <MnemonicPhrase
+<Section
+  animate="enter"
+  exit="exit"
+  initial="initial"
+  transition={
+    Object {
+      "duration": 0.6,
+    }
+  }
+  variants={
+    Object {
+      "enter": Object {
+        "opacity": 1,
+      },
+      "exit": Object {
+        "opacity": 0,
+      },
+      "initial": Object {
+        "opacity": 0,
+      },
+    }
+  }
+>
+  <Other
     onDone={[Function]}
-    type="MnemonicPhrase"
+    onReset={[MockFunction]}
+    wallet={
+      Object {
+        "type": "Trezor",
+      }
+    }
   />
 </Section>
 `;

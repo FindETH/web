@@ -1,4 +1,4 @@
-import { WalletType } from '@findeth/wallets';
+import { LedgerWebBLE, TransportWrapper, WalletType } from '@findeth/wallets';
 import { AnimatePresence } from 'framer-motion';
 import React, { FunctionComponent, useState } from 'react';
 import ledgerIcon from '../../../../assets/images/logos/ledger.svg';
@@ -8,7 +8,7 @@ import Typography from '../../../ui/Typography';
 import { LedgerMenu, LedgerMenuItem } from './Ledger.styles';
 
 interface Props {
-  onSelect(wallet: WalletType): void;
+  onSelect(wallet: WalletType, transport?: new () => TransportWrapper<unknown>): void;
 }
 
 const Ledger: FunctionComponent<Props> = ({ onSelect }) => {
@@ -23,8 +23,7 @@ const Ledger: FunctionComponent<Props> = ({ onSelect }) => {
   };
 
   const handleSelectBLE = () => {
-    // TODO
-    onSelect(WalletType.Ledger);
+    onSelect(WalletType.Ledger, LedgerWebBLE);
   };
 
   return (

@@ -2,6 +2,18 @@
 
 exports[`Other renders 1`] = `
 <Fragment>
+  <Modal
+    closeText="Cancel"
+    confirmText="Try again"
+    isVisible={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    type="error"
+  >
+    <Typography>
+      Could not connect to your device: 
+    </Typography>
+  </Modal>
   <Container>
     <Heading
       as="h2"
@@ -11,19 +23,27 @@ exports[`Other renders 1`] = `
     <Typography>
       Make sure your wallet is connected and available.
     </Typography>
-  </Container>
-  <Container
-    small={true}
-  >
-    <Typography>
-      Not connected
-    </Typography>
+    <Spinner
+      isVisible={true}
+    />
   </Container>
 </Fragment>
 `;
 
 exports[`Other renders 2`] = `
 <Fragment>
+  <Modal
+    closeText="Cancel"
+    confirmText="Try again"
+    isVisible={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    type="error"
+  >
+    <Typography>
+      Could not connect to your device: 
+    </Typography>
+  </Modal>
   <Container>
     <Heading
       as="h2"
@@ -33,13 +53,9 @@ exports[`Other renders 2`] = `
     <Typography>
       Make sure your wallet is connected and available.
     </Typography>
-  </Container>
-  <Container
-    small={true}
-  >
-    <Typography>
-      Not connected
-    </Typography>
+    <Spinner
+      isVisible={true}
+    />
   </Container>
 </Fragment>
 `;

@@ -1,17 +1,18 @@
-import React, { ComponentType, ReactElement, useEffect, useState } from 'react';
+import { ComponentType, useEffect, useState } from 'react';
 import { setFlow } from '../store/derivation';
 import { useDispatch } from './useDispatch';
 
 export interface FlowComponentProps<T extends object = {}> {
   state: Partial<T>;
 
+  onReset(): void;
   onNext(result?: Partial<T>): void;
 }
 
 export const useFlow = <T extends object>(
   components: Array<ComponentType<FlowComponentProps<T>>>,
   onDone: (state: Partial<T>) => void
-): [ReactElement | null] => {
+): [ComponentType<FlowComponentProps<T>> | null, FlowComponentProps<T>] => {
   const [current, setCurrent] = useState(0);
   const [result, setResult] = useState<Partial<T>>({});
   const dispatch = useDispatch();
@@ -26,6 +27,11 @@ export const useFlow = <T extends object>(
     }
   }, [current]);
 
+  const handleReset = () => {
+    setCurrent(0);
+    setResult({});
+  };
+
   const handleNext = (currentResult?: Partial<T>) => {
     if (currentResult) {
       setResult({ ...result, ...currentResult });
@@ -36,8 +42,8 @@ export const useFlow = <T extends object>(
 
   const Component = components[current];
   if (Component) {
-    return [<Component key="flow-component" state={result} onNext={handleNext} />];
+    return [Component, { state: result, onReset: handleReset, onNext: handleNext }];
   }
 
-  return [null];
+  return [null, { state: result, onReset: handleReset, onNext: handleNext }];
 };
