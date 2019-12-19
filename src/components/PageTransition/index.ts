@@ -1,1 +1,1 @@
-export { default } from './PageTransition';
+export { default, PAGE_TRANSITION_PROPS } from './PageTransition';
