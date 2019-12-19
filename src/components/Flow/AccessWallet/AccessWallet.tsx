@@ -1,9 +1,9 @@
 import { Wallet, WalletType } from '@findeth/wallets';
 import React, { ComponentType, FunctionComponent } from 'react';
 import { WalletWithTransport } from '../../../containers/Flow/EtherFlow';
-import { FlowComponentProps } from '../../../hooks';
-import { PAGE_TRANSITION_PROPS } from '../../PageTransition/PageTransition';
+import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
 import Section from '../../ui/Section';
+import { FlowComponentProps } from '../Flow';
 import MnemonicPhrase from './MnemonicPhrase';
 import Other from './Other';
 

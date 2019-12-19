@@ -1,5 +1,5 @@
 import { RouteComponentProps } from '@reach/router';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactElement, useEffect, useState } from 'react';
 import EtherFlow from './EtherFlow';
 
 const FLOWS = {
@@ -9,15 +9,23 @@ const FLOWS = {
 type Props = RouteComponentProps<{ flow: keyof typeof FLOWS }>;
 
 const Flow: FunctionComponent<Props> = ({ navigate, flow }) => {
-  if (!flow || !FLOWS[flow]) {
-    if (navigate) {
-      navigate('/start');
+  const [FlowComponent, setFlowComponent] = useState<ReactElement>();
+
+  useEffect(() => {
+    if (!flow || !FLOWS[flow]) {
+      navigate!('/start');
+      return;
     }
-    return null;
+
+    const Component = FLOWS[flow];
+    setFlowComponent(<Component />);
+  }, [flow]);
+
+  if (FlowComponent) {
+    return FlowComponent;
   }
 
-  const FlowComponent = FLOWS[flow];
-  return <FlowComponent />;
+  return null;
 };
 
 export default Flow;

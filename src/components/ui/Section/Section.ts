@@ -9,6 +9,10 @@ const Section = styled(motion.section)`
     background: ${({ theme }) => theme.sectionOddBackground};
   }
 
+  :first-of-type {
+    padding-top: 2rem;
+  }
+
   :last-of-type {
     flex: 1;
   }
