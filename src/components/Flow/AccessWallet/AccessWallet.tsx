@@ -1,6 +1,7 @@
 import { Wallet, WalletType } from '@findeth/wallets';
 import React, { ComponentType, FunctionComponent } from 'react';
 import { WalletWithTransport } from '../../../containers/Flow/EtherFlow';
+import MetaData from '../../MetaData';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
 import Section from '../../ui/Section';
 import { FlowComponentProps } from '../Flow';
@@ -30,6 +31,8 @@ const AccessWallet: FunctionComponent<Props> = ({ state, onReset, onNext }) => {
 
   return (
     <Section {...PAGE_TRANSITION_PROPS}>
+      <MetaData title="Connect to your wallet" />
+
       <Component wallet={state.wallet} onReset={onReset} onDone={handleNext} />
     </Section>
   );

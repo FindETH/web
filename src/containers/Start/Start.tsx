@@ -3,6 +3,7 @@ import React, { FunctionComponent } from 'react';
 import daiIcon from '../../assets/images/logos/dai.svg';
 import ethereumIcon from '../../assets/images/logos/ethereum.svg';
 import walletIcon from '../../assets/images/wallet.svg';
+import MetaData from '../../components/MetaData';
 import PanelItemLink from '../../components/PanelItemLink';
 import Container from '../../components/ui/Container';
 import Heading from '../../components/ui/Heading';
@@ -13,6 +14,8 @@ type Props = RouteComponentProps;
 
 const Start: FunctionComponent<Props> = () => (
   <>
+    <MetaData title="Start searching" />
+
     <Container>
       <Heading as="h1">What are you looking for?</Heading>
       <Typography>Choose whether you're looking for an address, or Ether or tokens.</Typography>

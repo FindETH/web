@@ -568,6 +568,74 @@ exports[`Flow renders 1`] = `
                       }
                     }
                   >
+                    <MetaData
+                      title="Select a wallet type"
+                    >
+                      <HelmetWrapper
+                        defer={true}
+                        encodeSpecialCharacters={true}
+                      >
+                        <SideEffect(NullComponent)
+                          defer={true}
+                          encodeSpecialCharacters={true}
+                          meta={
+                            Array [
+                              Object {
+                                "charset": "utf-8",
+                              },
+                              Object {
+                                "content": "width=device-width, initial-scale=1, shrink-to-fit=no",
+                                "name": "viewport",
+                              },
+                              Object {
+                                "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
+                                "name": "description",
+                              },
+                              Object {
+                                "content": "Ether, Ethereum, ERC20, ERC-20, tokens, address, private key, derivation path, mnemonic phrase, Ledger, Trezor, hardware wallet, lost",
+                                "name": "keywords",
+                              },
+                              Object {
+                                "content": "Maarten Zuidhoorn",
+                                "name": "author",
+                              },
+                            ]
+                          }
+                          title="Select a wallet type - FindETH"
+                          titleAttributes={Object {}}
+                        >
+                          <NullComponent
+                            defer={true}
+                            encodeSpecialCharacters={true}
+                            meta={
+                              Array [
+                                Object {
+                                  "charset": "utf-8",
+                                },
+                                Object {
+                                  "content": "width=device-width, initial-scale=1, shrink-to-fit=no",
+                                  "name": "viewport",
+                                },
+                                Object {
+                                  "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
+                                  "name": "description",
+                                },
+                                Object {
+                                  "content": "Ether, Ethereum, ERC20, ERC-20, tokens, address, private key, derivation path, mnemonic phrase, Ledger, Trezor, hardware wallet, lost",
+                                  "name": "keywords",
+                                },
+                                Object {
+                                  "content": "Maarten Zuidhoorn",
+                                  "name": "author",
+                                },
+                              ]
+                            }
+                            title="Select a wallet type - FindETH"
+                            titleAttributes={Object {}}
+                          />
+                        </SideEffect(NullComponent)>
+                      </HelmetWrapper>
+                    </MetaData>
                     <Container>
                       <StyledComponent
                         forwardedComponent={
@@ -1522,6 +1590,9 @@ exports[`Flow renders 1`] = `
                         "props": Object {
                           "animate": "enter",
                           "children": Array [
+                            <MetaData
+                              title="Select a wallet type"
+                            />,
                             <ForwardRef(Container)>
                               <ForwardRef(Heading)
                                 as="h2"
@@ -1685,6 +1756,9 @@ exports[`Flow renders 1`] = `
                         "props": Object {
                           "animate": "enter",
                           "children": Array [
+                            <MetaData
+                              title="Select a wallet type"
+                            />,
                             <ForwardRef(Container)>
                               <ForwardRef(Heading)
                                 as="h2"

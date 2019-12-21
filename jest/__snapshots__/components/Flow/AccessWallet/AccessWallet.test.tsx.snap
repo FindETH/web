@@ -24,6 +24,9 @@ exports[`AccessWallet renders 1`] = `
     }
   }
 >
+  <MetaData
+    title="Connect to your wallet"
+  />
   <Other
     onDone={[Function]}
     onReset={[MockFunction]}
@@ -60,6 +63,9 @@ exports[`AccessWallet renders 2`] = `
     }
   }
 >
+  <MetaData
+    title="Connect to your wallet"
+  />
   <Other
     onDone={[Function]}
     onReset={[MockFunction]}
