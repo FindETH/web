@@ -24,6 +24,9 @@ exports[`SelectWallet renders 1`] = `
     }
   }
 >
+  <MetaData
+    title="Select a wallet type"
+  />
   <Container>
     <Heading
       as="h2"

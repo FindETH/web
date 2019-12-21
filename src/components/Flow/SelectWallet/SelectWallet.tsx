@@ -1,6 +1,7 @@
 import { TransportWrapper, WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
 import { WalletWithTransport } from '../../../containers/Flow/EtherFlow';
+import MetaData from '../../MetaData';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
 import Container from '../../ui/Container';
 import Heading from '../../ui/Heading';
@@ -23,6 +24,8 @@ const SelectWallet: FunctionComponent<Props> = ({ onNext }) => {
 
   return (
     <Section {...PAGE_TRANSITION_PROPS}>
+      <MetaData title="Select a wallet type" />
+
       <Container>
         <Heading as="h2">Select a wallet type</Heading>
         <Typography>Choose one of the available wallet types from the list below.</Typography>

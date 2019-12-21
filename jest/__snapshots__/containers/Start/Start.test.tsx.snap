@@ -2,6 +2,9 @@
 
 exports[`Start renders 1`] = `
 <Fragment>
+  <MetaData
+    title="Start searching"
+  />
   <Container>
     <Heading
       as="h1"
