@@ -8,10 +8,10 @@ export const StyledNavigationItem = styled.li`
   a {
     font-size: 1.1rem;
     font-family: ${({ theme }) => theme.headingFont};
-    color: ${({ theme }) => transparentize(0.4, theme.primaryColor)};
+    color: ${({ theme }) => transparentize(0.4, theme.textColor)};
 
     :hover {
-      color: ${({ theme }) => transparentize(0.2, theme.primaryColor)};
+      color: ${({ theme }) => transparentize(0.1, theme.textColor)};
     }
   }
 `;

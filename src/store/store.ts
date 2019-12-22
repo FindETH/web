@@ -2,10 +2,12 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import { IS_DEVELOPMENT } from '../constants';
 import { DerivationState } from './derivation';
+import { NetworkState } from './network';
 import reducer from './reducer';
 
 export interface ApplicationState {
   derivation: DerivationState;
+  network: NetworkState;
 }
 
 const middleware = [...getDefaultMiddleware(), ...(IS_DEVELOPMENT ? [logger] : [])];
