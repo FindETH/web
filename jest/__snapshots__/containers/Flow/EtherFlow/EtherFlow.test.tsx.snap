@@ -4,7 +4,7 @@ exports[`Flow renders 1`] = `
 .c5 {
   width: 0.75rem;
   height: 0.75rem;
-  border: 3px solid;
+  border: 3px solid #242429;
   border-radius: 50%;
   background: none;
   -webkit-transition: border 0.3s,background-color 0.3s;
@@ -19,8 +19,9 @@ exports[`Flow renders 1`] = `
 .c6 {
   width: 0.75rem;
   height: 0.75rem;
-  border: 0 solid;
+  border: 0 solid #242429;
   border-radius: 50%;
+  background: #242429;
   -webkit-transition: border 0.3s,background-color 0.3s;
   transition: border 0.3s,background-color 0.3s;
   margin-right: 0.25rem;
@@ -65,6 +66,7 @@ exports[`Flow renders 1`] = `
 .c10 {
   display: block;
   font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
@@ -73,19 +75,23 @@ exports[`Flow renders 1`] = `
 .c3 {
   display: block;
   font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   font-size: 1.8rem;
+  font-family: 'Nunito',sans-serif;
 }
 
 .c9 {
   display: block;
   font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   font-size: 1.5rem;
+  font-family: 'Nunito',sans-serif;
 }
 
 .c0 {
@@ -116,6 +122,11 @@ exports[`Flow renders 1`] = `
 
 .c7 {
   padding: 4rem 0;
+  background: white;
+}
+
+.c7:nth-child(odd) {
+  background: #f6f7f9;
 }
 
 .c7:first-of-type {
@@ -162,6 +173,10 @@ exports[`Flow renders 1`] = `
   cursor: pointer;
 }
 
+.c14:hover {
+  color: #1eb8e7;
+}
+
 .c16 {
   margin-left: 1rem;
 }
@@ -180,10 +195,12 @@ exports[`Flow renders 1`] = `
 .c17 {
   display: block;
   font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   font-size: 1.2rem;
+  font-family: 'Nunito',sans-serif;
   margin: 0;
 }
 
@@ -571,11 +588,21 @@ exports[`Flow renders 1`] = `
                     <MetaData
                       title="Select a wallet type"
                     >
-                      <HelmetWrapper
+                      <Helmet
                         defer={true}
                         encodeSpecialCharacters={true}
                       >
-                        <SideEffect(NullComponent)
+                        <HelmetDispatcher
+                          context={
+                            Object {
+                              "helmetInstances": Object {
+                                "add": [Function],
+                                "get": [Function],
+                                "remove": [Function],
+                              },
+                              "setHelmet": [Function],
+                            }
+                          }
                           defer={true}
                           encodeSpecialCharacters={true}
                           meta={
@@ -603,38 +630,8 @@ exports[`Flow renders 1`] = `
                           }
                           title="Select a wallet type - FindETH"
                           titleAttributes={Object {}}
-                        >
-                          <NullComponent
-                            defer={true}
-                            encodeSpecialCharacters={true}
-                            meta={
-                              Array [
-                                Object {
-                                  "charset": "utf-8",
-                                },
-                                Object {
-                                  "content": "width=device-width, initial-scale=1, shrink-to-fit=no",
-                                  "name": "viewport",
-                                },
-                                Object {
-                                  "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
-                                  "name": "description",
-                                },
-                                Object {
-                                  "content": "Ether, Ethereum, ERC20, ERC-20, tokens, address, private key, derivation path, mnemonic phrase, Ledger, Trezor, hardware wallet, lost",
-                                  "name": "keywords",
-                                },
-                                Object {
-                                  "content": "Maarten Zuidhoorn",
-                                  "name": "author",
-                                },
-                              ]
-                            }
-                            title="Select a wallet type - FindETH"
-                            titleAttributes={Object {}}
-                          />
-                        </SideEffect(NullComponent)>
-                      </HelmetWrapper>
+                        />
+                      </Helmet>
                     </MetaData>
                     <Container>
                       <StyledComponent
@@ -1360,6 +1357,7 @@ exports[`Flow renders 1`] = `
 .c5 {
   display: block;
   font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
@@ -1368,10 +1366,12 @@ exports[`Flow renders 1`] = `
 .c4 {
   display: block;
   font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   font-size: 1.5rem;
+  font-family: 'Nunito',sans-serif;
 }
 
 .c13 .c3 {
@@ -1381,6 +1381,11 @@ exports[`Flow renders 1`] = `
 
 .c0 {
   padding: 4rem 0;
+  background: white;
+}
+
+.c0:nth-child(odd) {
+  background: #f6f7f9;
 }
 
 .c0:first-of-type {
@@ -1427,6 +1432,10 @@ exports[`Flow renders 1`] = `
   cursor: pointer;
 }
 
+.c9:hover {
+  color: #1eb8e7;
+}
+
 .c11 {
   margin-left: 1rem;
 }
@@ -1445,10 +1454,12 @@ exports[`Flow renders 1`] = `
 .c12 {
   display: block;
   font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   font-size: 1.2rem;
+  font-family: 'Nunito',sans-serif;
   margin: 0;
 }
 

@@ -1,17 +1,7 @@
 module.exports = {
   "presets": [
     "@babel/preset-typescript",
-    "@babel/preset-react",
-    [
-      "@babel/preset-env",
-      {
-        "modules": "commonjs",
-        "targets": {
-          "chrome": "78",
-          "firefox": "70"
-        }
-      }
-    ]
+    "@babel/preset-react"
   ],
   "plugins": [
     "react-hot-loader/babel",
@@ -20,24 +10,26 @@ module.exports = {
     "@babel/plugin-proposal-optional-chaining"
   ],
   "env": {
-    "development": {
-      "plugins": [
+    "production": {
+      "presets": [
         [
-          "@babel/plugin-transform-runtime",
+          "@babel/preset-env",
           {
-            "corejs": 3,
-            "version": "^7.7.6"
+            "modules": false,
+            "targets": {
+              "chrome": "78",
+              "firefox": "70"
+            }
           }
         ]
-      ]
-    },
-    "production": {
+      ],
       "plugins": [
         [
           "@babel/plugin-transform-runtime",
           {
             "corejs": 3,
-            "version": "^7.7.6"
+            "version": "^7.7.6",
+            "useESModules": true
           }
         ]
       ]

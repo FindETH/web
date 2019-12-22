@@ -3,6 +3,10 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { resolve } from 'path';
 import { Configuration, EnvironmentPlugin } from 'webpack';
+import WebpackBar from 'webpackbar';
+
+// tslint:disable-next-line:no-var-requires
+const IgnoreNotFoundExportPlugin = require('ignore-not-found-export-webpack-plugin');
 
 export const ROOT_PATH = resolve(__dirname, '..');
 export const SOURCE_PATH = resolve(__dirname, '../src');
@@ -65,11 +69,12 @@ const common: Configuration = {
     new MiniCssExtractPlugin({
       filename: IS_DEVELOPMENT ? '[name].css' : '[name].[contenthash].css',
       chunkFilename: IS_DEVELOPMENT ? '[id].css' : '[id].[contenthash].css'
-    })
+    }),
+    new WebpackBar(),
+    new IgnoreNotFoundExportPlugin()
   ],
-  node: {
-    fs: 'empty'
-  }
+  performance: { hints: false },
+  stats: 'errors-warnings'
 };
 
 export default common;
