@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders 1`] = `
-<Provider
+<Providers
   store={
     Object {
       "dispatch": [Function],
@@ -11,30 +11,27 @@ exports[`App renders 1`] = `
       Symbol(observable): [Function],
     }
   }
->
-  <ThemeProvider
-    theme={
-      Object {
-        "borderColor": "#e5e5e5",
-        "errorColor": "#ed4337",
-        "font": "'Open Sans', sans-serif",
-        "headingFont": "'Nunito', sans-serif",
-        "linkColor": "#1eb8e7",
-        "linkHoverColor": "#4cc7ec",
-        "modalBackground": "white",
-        "primaryColor": "#242429",
-        "sectionBackground": "white",
-        "sectionOddBackground": "#f6f7f9",
-        "smallBorderRadius": "3px",
-      }
+  theme={
+    Object {
+      "borderColor": "#e5e5e5",
+      "errorColor": "#ed4337",
+      "font": "'Open Sans', sans-serif",
+      "headingFont": "'Nunito', sans-serif",
+      "linkColor": "#1eb8e7",
+      "linkHoverColor": "#4cc7ec",
+      "modalBackground": "white",
+      "primaryColor": "#242429",
+      "sectionBackground": "white",
+      "sectionOddBackground": "#f6f7f9",
+      "smallBorderRadius": "3px",
     }
-  >
-    <GlobalStyleComponent />
-    <Wrapper>
-      <Header />
-      <Routes />
-    </Wrapper>
-    <Footer />
-  </ThemeProvider>
-</Provider>
+  }
+>
+  <GlobalStyleComponent />
+  <Wrapper>
+    <Header />
+    <Routes />
+  </Wrapper>
+  <Footer />
+</Providers>
 `;

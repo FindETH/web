@@ -10,8 +10,5 @@ module.exports = {
   snapshotSerializers: ['enzyme-to-json/serializer'],
   transform: {
     '^.+\\.[t|j]sx?$': 'babel-jest'
-  },
-  transformIgnorePatterns: [
-    "/node_modules/(?!(@findeth/wallets|@babel/runtime)).+\\.js$",
-  ]
+  }
 };

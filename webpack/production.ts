@@ -1,4 +1,4 @@
-import { Configuration, ProgressPlugin } from 'webpack';
+import { Configuration } from 'webpack';
 import { smart } from 'webpack-merge';
 import common from './common';
 
@@ -9,8 +9,7 @@ const production: Configuration = {
     splitChunks: {
       chunks: 'initial'
     }
-  },
-  plugins: [new ProgressPlugin()]
+  }
 };
 
 export default smart(common, production);
