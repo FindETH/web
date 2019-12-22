@@ -24,6 +24,7 @@ exports[`App renders 1`] = `
       "sectionBackground": "white",
       "sectionOddBackground": "#f6f7f9",
       "smallBorderRadius": "3px",
+      "textColor": "#323232",
     }
   }
 >

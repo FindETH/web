@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
   primaryColor: '#242429',
+  textColor: '#323232',
   linkColor: '#1eb8e7',
   linkHoverColor: '#4cc7ec',
   borderColor: '#e5e5e5',
