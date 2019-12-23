@@ -15,17 +15,20 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  transition: color 0.3s;
   cursor: pointer;
 
   :hover {
-    color: ${({ theme }) => theme.linkColor};
+    ${Typography} {
+      color: ${({ theme }) => theme.linkColor};
+    }
   }
 
   ${({ highlight }: FlexWrapperProps) =>
     highlight &&
     css`
-      color: ${({ theme }) => theme.linkColor};
+      ${Typography} {
+        color: ${({ theme }) => theme.linkColor};
+      }
     `};
 `;
 

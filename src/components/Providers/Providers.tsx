@@ -3,6 +3,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
+import NotificationProvider from '../NotificationProvider';
 
 interface Props {
   store: Store;
@@ -12,7 +13,9 @@ interface Props {
 const Providers: FunctionComponent<Props> = ({ store, theme, children }) => (
   <HelmetProvider>
     <Provider store={store}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <NotificationProvider>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </NotificationProvider>
     </Provider>
   </HelmetProvider>
 );
