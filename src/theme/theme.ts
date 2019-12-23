@@ -6,6 +6,7 @@ const theme: DefaultTheme = {
   linkColor: '#1eb8e7',
   linkHoverColor: '#4cc7ec',
   borderColor: '#e5e5e5',
+  warningColor: '#ffcc00',
   errorColor: '#ed4337',
 
   sectionBackground: 'white',

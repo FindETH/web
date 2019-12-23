@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Flow renders 1`] = `
+.c10 {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
 .c5 {
   width: 0.75rem;
   height: 0.75rem;
@@ -63,16 +75,6 @@ exports[`Flow renders 1`] = `
   padding: 0 2rem;
 }
 
-.c10 {
-  display: block;
-  font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: #323232;
-}
-
 .c3 {
   display: block;
   font-size: 1rem;
@@ -81,6 +83,8 @@ exports[`Flow renders 1`] = `
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   font-size: 1.8rem;
   font-family: 'Nunito',sans-serif;
 }
@@ -93,6 +97,8 @@ exports[`Flow renders 1`] = `
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   font-size: 1.5rem;
   font-family: 'Nunito',sans-serif;
 }
@@ -171,12 +177,10 @@ exports[`Flow renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
   cursor: pointer;
 }
 
-.c14:hover {
+.c14:hover .c1 {
   color: #1eb8e7;
 }
 
@@ -203,6 +207,8 @@ exports[`Flow renders 1`] = `
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   font-size: 1.2rem;
   font-family: 'Nunito',sans-serif;
   margin: 0;
@@ -278,7 +284,7 @@ exports[`Flow renders 1`] = `
                       [Function],
                       ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;color:",
                       [Function],
-                      ";",
+                      ";transition:color 0.3s;",
                       "font-size:",
                       [Function],
                       ";font-family:",
@@ -692,7 +698,7 @@ exports[`Flow renders 1`] = `
                                       [Function],
                                       ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;color:",
                                       [Function],
-                                      ";",
+                                      ";transition:color 0.3s;",
                                       "font-size:",
                                       [Function],
                                       ";font-family:",
@@ -738,7 +744,7 @@ exports[`Flow renders 1`] = `
                                       [Function],
                                       ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;color:",
                                       [Function],
-                                      ";",
+                                      ";transition:color 0.3s;",
                                     ],
                                   },
                                   "displayName": "Typography",
@@ -890,9 +896,11 @@ exports[`Flow renders 1`] = `
                                                     "isStatic": false,
                                                     "lastClassName": "c14",
                                                     "rules": Array [
-                                                      "display:flex;flex-direction:row;align-items:center;transition:color 0.3s;cursor:pointer;:hover{color:",
+                                                      "display:flex;flex-direction:row;align-items:center;cursor:pointer;:hover{",
+                                                      ".c1",
+                                                      "{color:",
                                                       [Function],
-                                                      ";}",
+                                                      ";}}",
                                                       [Function],
                                                       ";",
                                                     ],
@@ -1005,7 +1013,7 @@ exports[`Flow renders 1`] = `
                                                                   [Function],
                                                                   ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;color:",
                                                                   [Function],
-                                                                  ";",
+                                                                  ";transition:color 0.3s;",
                                                                   "font-size:",
                                                                   [Function],
                                                                   ";font-family:",
@@ -1053,7 +1061,7 @@ exports[`Flow renders 1`] = `
                                                                   [Function],
                                                                   ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;color:",
                                                                   [Function],
-                                                                  ";",
+                                                                  ";transition:color 0.3s;",
                                                                 ],
                                                               },
                                                               "displayName": "Typography",
@@ -1148,9 +1156,11 @@ exports[`Flow renders 1`] = `
                                                     "isStatic": false,
                                                     "lastClassName": "c14",
                                                     "rules": Array [
-                                                      "display:flex;flex-direction:row;align-items:center;transition:color 0.3s;cursor:pointer;:hover{color:",
+                                                      "display:flex;flex-direction:row;align-items:center;cursor:pointer;:hover{",
+                                                      ".c1",
+                                                      "{color:",
                                                       [Function],
-                                                      ";}",
+                                                      ";}}",
                                                       [Function],
                                                       ";",
                                                     ],
@@ -1263,7 +1273,7 @@ exports[`Flow renders 1`] = `
                                                                   [Function],
                                                                   ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;color:",
                                                                   [Function],
-                                                                  ";",
+                                                                  ";transition:color 0.3s;",
                                                                   "font-size:",
                                                                   [Function],
                                                                   ";font-family:",
@@ -1311,7 +1321,7 @@ exports[`Flow renders 1`] = `
                                                                   [Function],
                                                                   ";margin-top:0;margin-bottom:1.5rem;line-height:1.5;color:",
                                                                   [Function],
-                                                                  ";",
+                                                                  ";transition:color 0.3s;",
                                                                 ],
                                                               },
                                                               "displayName": "Typography",
@@ -1354,7 +1364,19 @@ exports[`Flow renders 1`] = `
                   <Memo(MountComponent)
                     innerRef={
                       Object {
-                        "current": .c1 {
+                        "current": .c5 {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1 {
   width: 1200px;
   max-width: 100%;
   height: auto;
@@ -1372,16 +1394,6 @@ exports[`Flow renders 1`] = `
   padding: 0 2rem;
 }
 
-.c5 {
-  display: block;
-  font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: #323232;
-}
-
 .c4 {
   display: block;
   font-size: 1rem;
@@ -1390,6 +1402,8 @@ exports[`Flow renders 1`] = `
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   font-size: 1.5rem;
   font-family: 'Nunito',sans-serif;
 }
@@ -1447,12 +1461,10 @@ exports[`Flow renders 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
   cursor: pointer;
 }
 
-.c9:hover {
+.c9:hover .c2 {
   color: #1eb8e7;
 }
 
@@ -1479,6 +1491,8 @@ exports[`Flow renders 1`] = `
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   font-size: 1.2rem;
   font-family: 'Nunito',sans-serif;
   margin: 0;

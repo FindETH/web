@@ -14,6 +14,7 @@ const Typography = styled.p<Props>`
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: ${({ theme, muted }) => (muted ? transparentize(0.4, theme.textColor) : theme.textColor)};
+  transition: color 0.3s;
 `;
 
 export default Typography;

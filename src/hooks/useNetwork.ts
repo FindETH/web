@@ -2,6 +2,7 @@ import { getDefaultProvider, getNetwork, Network, NETWORK_OFFLINE } from '@finde
 import { useEffect } from 'react';
 import { setNetwork, setOnline } from '../store/network';
 import { useDispatch } from './useDispatch';
+import { useNotifications } from './useNotifications';
 import { useSelector } from './useSelector';
 
 /**
@@ -12,6 +13,7 @@ import { useSelector } from './useSelector';
 export const useNetwork = (): Network | undefined => {
   const network = useSelector(state => state.network.network);
   const dispatch = useDispatch();
+  const { sendNotification } = useNotifications();
 
   const handleOnline = () => {
     dispatch(setOnline(true));
@@ -20,7 +22,13 @@ export const useNetwork = (): Network | undefined => {
     getNetwork(provider).then(fetchedNetwork => dispatch(setNetwork(fetchedNetwork)));
   };
 
+  const handleOnlineEvent = () => {
+    sendNotification('You are now online!');
+    handleOnline();
+  };
+
   const handleOffline = () => {
+    sendNotification('You are offline, some functionality may not be available.', 'warning');
     dispatch(setNetwork(NETWORK_OFFLINE));
   };
 
@@ -35,12 +43,12 @@ export const useNetwork = (): Network | undefined => {
   }, []);
 
   useEffect(() => {
-    document.addEventListener('online', handleOnline);
-    document.addEventListener('offline', handleOffline);
+    window.addEventListener('online', handleOnlineEvent);
+    window.addEventListener('offline', handleOffline);
 
     return () => {
-      document.removeEventListener('online', handleOnline);
-      document.removeEventListener('offline', handleOffline);
+      window.removeEventListener('online', handleOnlineEvent);
+      window.removeEventListener('offline', handleOffline);
     };
   }, []);
 
