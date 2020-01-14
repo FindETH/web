@@ -30,7 +30,7 @@ exports[`App renders 1`] = `
   }
 >
   <NotificationList />
-  <GlobalStyleComponent />
+  <Memo(GlobalStyleComponent) />
   <Wrapper>
     <Header />
     <Routes />
