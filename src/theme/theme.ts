@@ -16,7 +16,7 @@ const theme: DefaultTheme = {
   smallBorderRadius: '3px',
 
   font: `'Open Sans', sans-serif`,
-  headingFont: `'Nunito', sans-serif`
+  headingFont: `'Public Sans', sans-serif`
 };
 
 export default theme;

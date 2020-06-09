@@ -1,8 +1,8 @@
 import React, { ComponentType, ReactElement, useEffect, useState } from 'react';
 import { useDispatch } from '../../hooks';
 import { setFlow } from '../../store/derivation';
-import PageTransition from '../PageTransition';
 import StepIndicator from '../StepIndicator';
+import Container from '../ui/Container';
 import FlexContainer from '../ui/FlexContainer';
 import Heading from '../ui/Heading';
 
@@ -17,6 +17,7 @@ export interface FlowComponentProps<State> {
   state: Partial<State>;
 
   onReset(): void;
+
   onNext(result: Partial<State>): void;
 }
 
@@ -62,13 +63,13 @@ const Flow = <State extends object>({ title, components, handleDone }: Props<Sta
 
   return (
     <>
-      <FlexContainer>
-        <Heading as="h1">{title}</Heading>
-        <StepIndicator steps={components.length} currentStep={current} />
-      </FlexContainer>
-      <PageTransition>
-        {Component && <Component state={result} onReset={handleReset} onNext={handleNext} />}
-      </PageTransition>
+      <Container>
+        <FlexContainer>
+          <Heading as="h1">{title}</Heading>
+          <StepIndicator steps={components.length} currentStep={current} />
+        </FlexContainer>
+      </Container>
+      {Component && <Component state={result} onReset={handleReset} onNext={handleNext} />}
     </>
   );
 };

@@ -1,25 +1,39 @@
-import { TransportWrapper, WalletType } from '@findeth/wallets';
+import { WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
-import { WalletWithTransport } from '../../../containers/Flow/EtherFlow';
 import MetaData from '../../MetaData';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
 import Container from '../../ui/Container';
+import GridContainer from '../../ui/GridContainer';
 import Heading from '../../ui/Heading';
-import List from '../../ui/List';
 import Section from '../../ui/Section';
 import Typography from '../../ui/Typography';
 import { FlowComponentProps } from '../Flow';
-import Ledger from './Ledger';
-import Trezor from './Trezor';
+import WalletPanel from './WalletPanel/WalletPanel';
 
-type Props = FlowComponentProps<{ wallet: WalletWithTransport }>;
+type Props = FlowComponentProps<{ wallet: WalletType }>;
+
+const WALLET_TYPES = [
+  {
+    title: 'Ledger',
+    type: WalletType.Ledger
+  },
+  {
+    title: 'Trezor',
+    type: WalletType.Trezor
+  },
+  {
+    title: 'KeepKey',
+    type: WalletType.KeepKey
+  },
+  {
+    title: 'Mnemonic Phrase',
+    type: WalletType.MnemonicPhrase
+  }
+];
 
 const SelectWallet: FunctionComponent<Props> = ({ onNext }) => {
-  const handleNext = (type: WalletType, transport?: new () => TransportWrapper<unknown>) => {
-    if (type === WalletType.Ledger) {
-      return onNext({ wallet: { type, transport } });
-    }
-    return onNext({ wallet: { type } });
+  const handleNext = (type: WalletType) => {
+    return onNext({ wallet: type });
   };
 
   return (
@@ -29,12 +43,12 @@ const SelectWallet: FunctionComponent<Props> = ({ onNext }) => {
       <Container>
         <Heading as="h2">Select a wallet type</Heading>
         <Typography>Choose one of the available wallet types from the list below.</Typography>
-      </Container>
-      <Container small={true}>
-        <List>
-          <Ledger onSelect={handleNext} />
-          <Trezor onSelect={handleNext} />
-        </List>
+
+        <GridContainer rows={1} columns={WALLET_TYPES.length}>
+          {WALLET_TYPES.map(({ title, type }) => (
+            <WalletPanel key={title} title={title} type={type} onClick={handleNext} />
+          ))}
+        </GridContainer>
       </Container>
     </Section>
   );

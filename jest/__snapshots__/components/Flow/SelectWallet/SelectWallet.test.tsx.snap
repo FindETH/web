@@ -36,18 +36,35 @@ exports[`SelectWallet renders 1`] = `
     <Typography>
       Choose one of the available wallet types from the list below.
     </Typography>
-  </Container>
-  <Container
-    small={true}
-  >
-    <List>
-      <Ledger
-        onSelect={[Function]}
+    <GridContainer
+      columns={4}
+      rows={1}
+    >
+      <WalletPanel
+        key="Ledger"
+        onClick={[Function]}
+        title="Ledger"
+        type="Ledger"
       />
-      <Trezor
-        onSelect={[Function]}
+      <WalletPanel
+        key="Trezor"
+        onClick={[Function]}
+        title="Trezor"
+        type="Trezor"
       />
-    </List>
+      <WalletPanel
+        key="KeepKey"
+        onClick={[Function]}
+        title="KeepKey"
+        type="KeepKey"
+      />
+      <WalletPanel
+        key="Mnemonic Phrase"
+        onClick={[Function]}
+        title="Mnemonic Phrase"
+        type="MnemonicPhrase"
+      />
+    </GridContainer>
   </Container>
 </Section>
 `;

@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { hot } from 'react-hot-loader/root';
 import Footer from './components/Footer';
-import Header from './components/Header';
 import NotificationList from './components/NotificationList';
 import Providers from './components/Providers/Providers';
 import Routes from './components/Routes';
@@ -15,7 +14,6 @@ export const App: FunctionComponent = () => (
     <NotificationList />
     <GlobalStyle />
     <Wrapper>
-      <Header />
       <Routes />
     </Wrapper>
     <Footer />

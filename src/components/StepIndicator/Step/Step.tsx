@@ -5,9 +5,9 @@ interface Props {
 }
 
 const Step = styled.div<Props>`
-  width: 0.75rem;
-  height: 0.75rem;
-  border: ${({ active }) => (active ? '3px' : '0')} solid ${({ theme }) => theme.primaryColor};
+  width: 0.4rem;
+  height: 0.4rem;
+  border: 0.2rem solid ${({ theme }) => theme.primaryColor};
   border-radius: 50%;
   background: ${({ active, theme }) => (active ? 'none' : theme.primaryColor)};
   transition: border 0.3s, background-color 0.3s;

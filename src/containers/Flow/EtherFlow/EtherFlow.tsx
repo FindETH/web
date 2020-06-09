@@ -4,17 +4,18 @@ import Flow from '../../../components/Flow';
 import AccessWallet from '../../../components/Flow/AccessWallet';
 import SelectOptions from '../../../components/Flow/SelectOptions';
 import SelectWallet from '../../../components/Flow/SelectWallet';
+import WalletOptions from '../../../components/Flow/WalletOptions';
 
 export type WalletWithTransport =
   | { type: WalletType; transport?: undefined }
-  | { type: WalletType.Ledger; transport?: new () => TransportWrapper<unknown> };
+  | { type: WalletType.Ledger; transport?: new () => TransportWrapper<unknown, unknown> };
 
 interface FlowState {
-  wallet?: WalletWithTransport;
+  wallet?: WalletType;
   implementation?: Wallet;
 }
 
-const FLOW_COMPONENTS = [SelectWallet, AccessWallet, SelectOptions];
+const FLOW_COMPONENTS = [SelectWallet, WalletOptions, AccessWallet, SelectOptions];
 
 const EtherFlow: FunctionComponent = () => {
   const handleDone = () => {

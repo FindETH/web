@@ -2,6 +2,8 @@ import { Wallet } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
 import MetaData from '../../MetaData';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
+import Container from '../../ui/Container';
+import Heading from '../../ui/Heading';
 import Section from '../../ui/Section';
 import Typography from '../../ui/Typography';
 import { FlowComponentProps } from '../Flow';
@@ -17,7 +19,10 @@ const SelectOptions: FunctionComponent<Props> = () => {
     <Section {...PAGE_TRANSITION_PROPS}>
       <MetaData title="Select your options" />
 
-      <Typography>Select options</Typography>
+      <Container>
+        <Heading as="h2">Select your options</Heading>
+        <Typography>Select your options.</Typography>
+      </Container>
     </Section>
   );
 };

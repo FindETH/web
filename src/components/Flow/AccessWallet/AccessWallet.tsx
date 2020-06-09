@@ -1,39 +1,61 @@
 import { Wallet, WalletType } from '@findeth/wallets';
-import React, { ComponentType, FunctionComponent } from 'react';
-import { WalletWithTransport } from '../../../containers/Flow/EtherFlow';
+import React, { FunctionComponent, useEffect, useState } from 'react';
+import { getErrorMessage } from '../../../utils/errors';
 import MetaData from '../../MetaData';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
+import Spinner from '../../Spinner';
+import Button from '../../ui/Button';
+import Container from '../../ui/Container';
+import Heading from '../../ui/Heading';
 import Section from '../../ui/Section';
+import Typography from '../../ui/Typography';
 import { FlowComponentProps } from '../Flow';
-import MnemonicPhrase from './MnemonicPhrase';
-import Other from './Other';
 
-type Props = FlowComponentProps<{ wallet: WalletWithTransport; implementation: Wallet }>;
+type Props = FlowComponentProps<{ wallet: WalletType; implementation: Wallet }>;
 
-export interface ComponentProps {
-  wallet: WalletWithTransport;
-
-  onDone(implementation: Wallet): void;
-  onReset(): void;
-}
-
-const AccessWallet: FunctionComponent<Props> = ({ state, onReset, onNext }) => {
-  const handleNext = (implementation: Wallet) => {
-    return onNext({ implementation });
-  };
-
-  if (!state.wallet?.type) {
+const AccessWallet: FunctionComponent<Props> = ({ state, onNext }) => {
+  if (!state.implementation) {
     return null;
   }
 
-  const Component: ComponentType<ComponentProps> =
-    state.wallet.type === WalletType.MnemonicPhrase ? MnemonicPhrase : Other;
+  const [error, setError] = useState<Error | undefined>();
+
+  const connect = () => {
+    if (state.implementation!.isHardwareWallet()) {
+      state.implementation
+        .connect()
+        .then(() => onNext({}))
+        .catch(setError);
+    }
+  };
+
+  const handleRetry = () => {
+    setError(undefined);
+    connect();
+  };
+
+  useEffect(() => {
+    connect();
+  }, [state.implementation]);
 
   return (
     <Section {...PAGE_TRANSITION_PROPS}>
       <MetaData title="Connect to your wallet" />
 
-      <Component wallet={state.wallet} onReset={onReset} onDone={handleNext} />
+      <Container>
+        <Heading as="h2">Connecting to your wallet...</Heading>
+        <Typography>Make sure your wallet is connected and available.</Typography>
+
+        {error && (
+          <>
+            <Heading as="h3">Failed to connect</Heading>
+            <Typography>{getErrorMessage(error)}</Typography>
+            <Button onClick={handleRetry}>Retry</Button>
+          </>
+        )}
+
+        <Spinner isVisible={!error} />
+      </Container>
     </Section>
   );
 };
