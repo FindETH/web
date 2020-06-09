@@ -1,7 +1,7 @@
 import { Wallet, WalletType } from '@findeth/wallets';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { getErrorMessage } from '../../../utils/errors';
-import MetaData from '../../MetaData';
+import Meta from '../../Meta';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
 import Spinner from '../../Spinner';
 import Button from '../../ui/Button';
@@ -40,7 +40,7 @@ const AccessWallet: FunctionComponent<Props> = ({ state, onNext }) => {
 
   return (
     <Section {...PAGE_TRANSITION_PROPS}>
-      <MetaData title="Connect to your wallet" />
+      <Meta title="Connect to your wallet" />
 
       <Container>
         <Heading as="h2">Connecting to your wallet...</Heading>

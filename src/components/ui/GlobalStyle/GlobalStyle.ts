@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  html, body, #root {
+  html, body, #___gatsby, #gatsby-focus-wrapper {
     margin: 0;
     padding: 0;
     height: 100%;
   }
 
-  #root {
+  #gatsby-focus-wrapper {
     display: flex;
     flex-direction: column;
   }

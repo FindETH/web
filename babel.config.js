@@ -1,42 +1,29 @@
 module.exports = {
-  "presets": [
-    "@babel/preset-typescript",
-    "@babel/preset-react"
+  presets: [
+    'babel-preset-gatsby',
+    '@babel/preset-typescript',
+    [
+      '@babel/preset-env',
+      {
+        modules: false,
+        targets: {
+          chrome: '78',
+          firefox: '70'
+        }
+      }
+    ]
   ],
-  "plugins": [
-    "react-hot-loader/babel",
-    "babel-plugin-styled-components",
-    "@babel/plugin-proposal-nullish-coalescing-operator",
-    "@babel/plugin-proposal-optional-chaining"
-  ],
-  "env": {
-    "production": {
-      "presets": [
+  env: {
+    production: {
+      plugins: [
         [
-          "@babel/preset-env",
+          '@babel/plugin-transform-runtime',
           {
-            "modules": false,
-            "targets": {
-              "chrome": "78",
-              "firefox": "70"
-            }
+            corejs: 3,
+            version: '^7.7.6',
+            useESModules: true
           }
         ]
-      ],
-      "plugins": [
-        [
-          "@babel/plugin-transform-runtime",
-          {
-            "corejs": 3,
-            "version": "^7.7.6",
-            "useESModules": true
-          }
-        ]
-      ]
-    },
-    "test": {
-      "plugins": [
-        "@babel/plugin-transform-modules-commonjs"
       ]
     }
   }

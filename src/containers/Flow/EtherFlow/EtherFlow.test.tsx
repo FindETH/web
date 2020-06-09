@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import configureStore from 'redux-mock-store';
-import Providers from '../../../components/Providers';
+import TestProviders from '../../../components/Providers/TestProviders';
 import { ApplicationState } from '../../../store';
 import theme from '../../../theme';
 import EtherFlow from './EtherFlow';
@@ -18,7 +18,7 @@ describe('Flow', () => {
 
     expect(
       mount(<EtherFlow />, {
-        wrappingComponent: Providers,
+        wrappingComponent: TestProviders,
         wrappingComponentProps: { store, theme }
       })
     ).toMatchSnapshot();

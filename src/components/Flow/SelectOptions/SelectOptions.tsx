@@ -1,6 +1,6 @@
 import { Wallet } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
-import MetaData from '../../MetaData';
+import Meta from '../../Meta';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
 import Container from '../../ui/Container';
 import Heading from '../../ui/Heading';
@@ -17,7 +17,7 @@ const SelectOptions: FunctionComponent<Props> = () => {
 
   return (
     <Section {...PAGE_TRANSITION_PROPS}>
-      <MetaData title="Select your options" />
+      <Meta title="Select your options" />
 
       <Container>
         <Heading as="h2">Select your options</Heading>

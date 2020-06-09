@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore, EnhancedStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import { IS_DEVELOPMENT } from '../constants';
 import { DerivationState } from './derivation';
@@ -10,17 +10,17 @@ export interface ApplicationState {
   network: NetworkState;
 }
 
+export type ApplicationDispatch = ReturnType<typeof createStore>['dispatch'];
+
 const middleware = [...getDefaultMiddleware(), ...(IS_DEVELOPMENT ? [logger] : [])];
 
-export const store = configureStore<ApplicationState>({
-  reducer,
-  middleware
-});
-
-export type ApplicationDispatch = typeof store.dispatch;
-
-if (IS_DEVELOPMENT) {
-  module.hot?.accept('./reducer', async () => {
-    store.replaceReducer(reducer);
+export const createStore = (preloadedState?: ApplicationState): EnhancedStore<ApplicationState> => {
+  return configureStore({
+    reducer,
+    middleware,
+    preloadedState
   });
-}
+};
+
+// Default export for `gatsby-plugin-react-redux`
+export default createStore;

@@ -1,6 +1,6 @@
 import { WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
-import MetaData from '../../MetaData';
+import Meta from '../../Meta';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
 import Container from '../../ui/Container';
 import GridContainer from '../../ui/GridContainer';
@@ -38,7 +38,7 @@ const SelectWallet: FunctionComponent<Props> = ({ onNext }) => {
 
   return (
     <Section {...PAGE_TRANSITION_PROPS}>
-      <MetaData title="Select a wallet type" />
+      <Meta title="Select a wallet type" />
 
       <Container>
         <Heading as="h2">Select a wallet type</Heading>
