@@ -6,10 +6,10 @@ import AccessWallet from './AccessWallet';
 describe('AccessWallet', () => {
   it('renders', () => {
     expect(
-      shallow(<AccessWallet state={{ wallet: { type: WalletType.Ledger } }} onReset={jest.fn()} onNext={jest.fn()} />)
+      shallow(<AccessWallet state={{ wallet: WalletType.Ledger }} onReset={jest.fn()} onNext={jest.fn()} />)
     ).toMatchSnapshot();
     expect(
-      shallow(<AccessWallet state={{ wallet: { type: WalletType.Trezor } }} onReset={jest.fn()} onNext={jest.fn()} />)
+      shallow(<AccessWallet state={{ wallet: WalletType.Trezor }} onReset={jest.fn()} onNext={jest.fn()} />)
     ).toMatchSnapshot();
   });
 });

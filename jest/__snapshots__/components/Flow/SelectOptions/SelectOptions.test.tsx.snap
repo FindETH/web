@@ -27,8 +27,15 @@ exports[`SelectOptions renders 1`] = `
   <MetaData
     title="Select your options"
   />
-  <Typography>
-    Select options
-  </Typography>
+  <Container>
+    <Heading
+      as="h2"
+    >
+      Select your options
+    </Heading>
+    <Typography>
+      Select your options.
+    </Typography>
+  </Container>
 </Section>
 `;

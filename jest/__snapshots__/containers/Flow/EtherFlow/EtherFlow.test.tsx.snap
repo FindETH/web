@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Flow renders 1`] = `
-.c10 {
+.c8 {
   display: block;
   font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
@@ -13,12 +12,27 @@ exports[`Flow renders 1`] = `
   transition: color 0.3s;
 }
 
-.c5 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 3px solid #242429;
+.c4 {
+  width: 0.4rem;
+  height: 0.4rem;
+  border: 0.2rem solid #242429;
   border-radius: 50%;
   background: none;
+  -webkit-transition: border 0.3s,background-color 0.3s;
+  transition: border 0.3s,background-color 0.3s;
+  margin-right: 0.25rem;
+}
+
+.c4:last-of-type {
+  margin-right: 0;
+}
+
+.c5 {
+  width: 0.4rem;
+  height: 0.4rem;
+  border: 0.2rem solid #242429;
+  border-radius: 50%;
+  background: #242429;
   -webkit-transition: border 0.3s,background-color 0.3s;
   transition: border 0.3s,background-color 0.3s;
   margin-right: 0.25rem;
@@ -28,22 +42,7 @@ exports[`Flow renders 1`] = `
   margin-right: 0;
 }
 
-.c6 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 0 solid #242429;
-  border-radius: 50%;
-  background: #242429;
-  -webkit-transition: border 0.3s,background-color 0.3s;
-  transition: border 0.3s,background-color 0.3s;
-  margin-right: 0.25rem;
-}
-
-.c6:last-of-type {
-  margin-right: 0;
-}
-
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -57,59 +56,7 @@ exports[`Flow renders 1`] = `
   align-items: center;
 }
 
-.c8 {
-  width: 1200px;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c11 {
-  width: 600px;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c3 {
-  display: block;
-  font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: #323232;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-  font-size: 1.8rem;
-  font-family: 'Nunito',sans-serif;
-}
-
-.c9 {
-  display: block;
-  font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: #323232;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-  font-size: 1.5rem;
-  font-family: 'Nunito',sans-serif;
-}
-
-.c0 {
-  width: 1200px;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 2rem;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,94 +71,111 @@ exports[`Flow renders 1`] = `
   align-items: center;
 }
 
-.c0 .c2 {
-  margin: 0;
-  margin-bottom: 1.5rem;
-}
-
-.c7 {
-  padding: 4rem 0;
-  background: white;
-}
-
-.c7:nth-child(odd) {
-  background: #f6f7f9;
-}
-
-.c7:first-of-type {
-  padding-top: 2rem;
-}
-
-.c7:last-of-type {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c12 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c13 {
-  background: white;
-  padding: 1.5rem 2.25rem;
-  box-shadow: rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;
-  padding: 1rem;
-}
-
-.c13 .c1:last-of-type {
-  margin-bottom: 0;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.c14:hover .c1 {
-  color: #1eb8e7;
-}
-
-.c16 {
-  margin-left: 1rem;
-}
-
-.c16 .c1 {
-  margin: 0;
-}
-
-.c15 {
-  min-width: 50px;
-  max-width: 50px;
-  max-height: 50px;
-  vertical-align: middle;
-}
-
-.c17 {
+.c2 {
   display: block;
   font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  font-size: 3rem;
+  font-family: 'Public Sans',sans-serif;
+  font-weight: bold;
+}
+
+.c7 {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  font-size: 1.5rem;
+  font-family: 'Public Sans',sans-serif;
+  font-weight: normal;
+}
+
+.c12 {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 1.2rem;
-  font-family: 'Nunito',sans-serif;
-  margin: 0;
+  font-family: 'Public Sans',sans-serif;
+  font-weight: normal;
+}
+
+.c0 {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c6 {
+  padding: 4rem 0;
+  background: white;
+}
+
+.c6:nth-child(odd) {
+  background: #f6f7f9;
+}
+
+.c6:first-of-type {
+  padding-top: 2rem;
+}
+
+.c6:last-of-type {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c9 {
+  display: grid;
+  grid-template-rows: repeat(1,1fr);
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: 3rem;
+}
+
+.c10 {
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  height: 0;
+  position: relative;
+  box-shadow: rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;
+}
+
+.c11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 <EtherFlow>
@@ -221,338 +185,340 @@ exports[`Flow renders 1`] = `
         [Function],
         [Function],
         [Function],
+        [Function],
       ]
     }
     handleDone={[Function]}
     title="Search for Ether"
   >
-    <FlexContainer>
+    <Container>
       <div
         className="c0"
       >
-        <Heading
-          as="h1"
-        >
-          <h1
-            className="c1 c2 c3"
+        <FlexContainer>
+          <div
+            className="c1"
           >
-            Search for Ether
-          </h1>
-        </Heading>
-        <StepIndicator
-          currentStep={0}
-          steps={3}
-        >
-          <StepIndicatorstyles__StepContainer>
-            <div
-              className="c4"
+            <Heading
+              as="h1"
             >
-              <Step
-                active={true}
-                key="step-0"
+              <h1
+                className="c2"
               >
+                Search for Ether
+              </h1>
+            </Heading>
+            <StepIndicator
+              currentStep={0}
+              steps={4}
+            >
+              <StepIndicatorstyles__StepContainer>
                 <div
-                  className="c5"
-                />
-              </Step>
-              <Step
-                active={false}
-                key="step-1"
-              >
-                <div
-                  className="c6"
-                />
-              </Step>
-              <Step
-                active={false}
-                key="step-2"
-              >
-                <div
-                  className="c6"
-                />
-              </Step>
-            </div>
-          </StepIndicatorstyles__StepContainer>
-        </StepIndicator>
+                  className="c3"
+                >
+                  <Step
+                    active={true}
+                    key="step-0"
+                  >
+                    <div
+                      className="c4"
+                    />
+                  </Step>
+                  <Step
+                    active={false}
+                    key="step-1"
+                  >
+                    <div
+                      className="c5"
+                    />
+                  </Step>
+                  <Step
+                    active={false}
+                    key="step-2"
+                  >
+                    <div
+                      className="c5"
+                    />
+                  </Step>
+                  <Step
+                    active={false}
+                    key="step-3"
+                  >
+                    <div
+                      className="c5"
+                    />
+                  </Step>
+                </div>
+              </StepIndicatorstyles__StepContainer>
+            </StepIndicator>
+          </div>
+        </FlexContainer>
       </div>
-    </FlexContainer>
-    <PageTransition>
-      <AnimatePresence
-        exitBeforeEnter={true}
-        initial={true}
+    </Container>
+    <SelectWallet
+      onNext={[Function]}
+      onReset={[Function]}
+      state={Object {}}
+    >
+      <Section
+        animate="enter"
+        exit="exit"
+        initial="initial"
+        transition={
+          Object {
+            "duration": 0.6,
+          }
+        }
+        variants={
+          Object {
+            "enter": Object {
+              "opacity": 1,
+            },
+            "exit": Object {
+              "opacity": 0,
+            },
+            "initial": Object {
+              "opacity": 0,
+            },
+          }
+        }
       >
-        <PresenceChild
-          key=""
+        <ForwardRef(MotionComponent)
+          animate="enter"
+          className="c6"
+          exit="exit"
+          initial="initial"
+          transition={
+            Object {
+              "duration": 0.6,
+            }
+          }
+          variants={
+            Object {
+              "enter": Object {
+                "opacity": 1,
+              },
+              "exit": Object {
+                "opacity": 0,
+              },
+              "initial": Object {
+                "opacity": 0,
+              },
+            }
+          }
         >
-          <SelectWallet
-            onNext={[Function]}
-            onReset={[Function]}
-            state={Object {}}
+          <section
+            className="c6"
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
           >
-            <Section
-              animate="enter"
-              exit="exit"
-              initial="initial"
-              transition={
-                Object {
-                  "duration": 0.6,
-                }
-              }
-              variants={
-                Object {
-                  "enter": Object {
-                    "opacity": 1,
-                  },
-                  "exit": Object {
-                    "opacity": 0,
-                  },
-                  "initial": Object {
-                    "opacity": 0,
-                  },
-                }
-              }
+            <MetaData
+              title="Select a wallet type"
             >
-              <ForwardRef(MotionComponent)
-                animate="enter"
-                className="c7"
-                exit="exit"
-                initial="initial"
-                transition={
-                  Object {
-                    "duration": 0.6,
-                  }
-                }
-                variants={
-                  Object {
-                    "enter": Object {
-                      "opacity": 1,
-                    },
-                    "exit": Object {
-                      "opacity": 0,
-                    },
-                    "initial": Object {
-                      "opacity": 0,
-                    },
-                  }
-                }
+              <Helmet
+                defer={true}
+                encodeSpecialCharacters={true}
               >
-                <section
-                  className="c7"
-                  style={
+                <HelmetDispatcher
+                  context={
                     Object {
-                      "opacity": 0,
+                      "helmetInstances": Object {
+                        "add": [Function],
+                        "get": [Function],
+                        "remove": [Function],
+                      },
+                      "setHelmet": [Function],
                     }
                   }
+                  defer={true}
+                  encodeSpecialCharacters={true}
+                  meta={
+                    Array [
+                      Object {
+                        "charset": "utf-8",
+                      },
+                      Object {
+                        "content": "width=device-width, initial-scale=1, shrink-to-fit=no",
+                        "name": "viewport",
+                      },
+                      Object {
+                        "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
+                        "name": "description",
+                      },
+                      Object {
+                        "content": "Ether, Ethereum, ERC20, ERC-20, tokens, address, private key, derivation path, mnemonic phrase, Ledger, Trezor, hardware wallet, lost",
+                        "name": "keywords",
+                      },
+                      Object {
+                        "content": "Maarten Zuidhoorn",
+                        "name": "author",
+                      },
+                    ]
+                  }
+                  title="Select a wallet type - FindETH"
+                  titleAttributes={Object {}}
+                />
+              </Helmet>
+            </MetaData>
+            <Container>
+              <div
+                className="c0"
+              >
+                <Heading
+                  as="h2"
                 >
-                  <MetaData
-                    title="Select a wallet type"
+                  <h2
+                    className="c7"
                   >
-                    <Helmet
-                      defer={true}
-                      encodeSpecialCharacters={true}
+                    Select a wallet type
+                  </h2>
+                </Heading>
+                <Typography>
+                  <p
+                    className="c8"
+                  >
+                    Choose one of the available wallet types from the list below.
+                  </p>
+                </Typography>
+                <GridContainer
+                  columns={4}
+                  rows={1}
+                >
+                  <div
+                    className="c9"
+                    rows={1}
+                  >
+                    <Panel
+                      key="Ledger"
+                      onClick={[Function]}
                     >
-                      <HelmetDispatcher
-                        context={
-                          Object {
-                            "helmetInstances": Object {
-                              "add": [Function],
-                              "get": [Function],
-                              "remove": [Function],
-                            },
-                            "setHelmet": [Function],
-                          }
-                        }
-                        defer={true}
-                        encodeSpecialCharacters={true}
-                        meta={
-                          Array [
-                            Object {
-                              "charset": "utf-8",
-                            },
-                            Object {
-                              "content": "width=device-width, initial-scale=1, shrink-to-fit=no",
-                              "name": "viewport",
-                            },
-                            Object {
-                              "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
-                              "name": "description",
-                            },
-                            Object {
-                              "content": "Ether, Ethereum, ERC20, ERC-20, tokens, address, private key, derivation path, mnemonic phrase, Ledger, Trezor, hardware wallet, lost",
-                              "name": "keywords",
-                            },
-                            Object {
-                              "content": "Maarten Zuidhoorn",
-                              "name": "author",
-                            },
-                          ]
-                        }
-                        title="Select a wallet type - FindETH"
-                        titleAttributes={Object {}}
-                      />
-                    </Helmet>
-                  </MetaData>
-                  <Container>
-                    <div
-                      className="c8"
-                    >
-                      <Heading
-                        as="h2"
+                      <Panelstyles__PanelContainer
+                        onClick={[Function]}
                       >
-                        <h2
-                          className="c1 c2 c9"
+                        <div
+                          className="c10"
+                          onClick={[Function]}
                         >
-                          Select a wallet type
-                        </h2>
-                      </Heading>
-                      <Typography>
-                        <p
-                          className="c1 c10"
-                        >
-                          Choose one of the available wallet types from the list below.
-                        </p>
-                      </Typography>
-                    </div>
-                  </Container>
-                  <Container
-                    small={true}
-                  >
-                    <div
-                      className="c11"
+                          <Panelstyles__PanelContent>
+                            <div
+                              className="c11"
+                            >
+                              <Heading
+                                as="h3"
+                              >
+                                <h3
+                                  className="c12"
+                                >
+                                  Ledger
+                                </h3>
+                              </Heading>
+                            </div>
+                          </Panelstyles__PanelContent>
+                        </div>
+                      </Panelstyles__PanelContainer>
+                    </Panel>
+                    <Panel
+                      key="Trezor"
+                      onClick={[Function]}
                     >
-                      <List>
-                        <ul
-                          className="c12"
+                      <Panelstyles__PanelContainer
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="c10"
+                          onClick={[Function]}
                         >
-                          <Ledger
-                            onSelect={[Function]}
-                          >
-                            <PanelItem
-                              description="Use your Ledger Nano X or S"
-                              highlight={false}
-                              icon="file-stub"
-                              onClick={[Function]}
-                              title="Ledger Wallet"
+                          <Panelstyles__PanelContent>
+                            <div
+                              className="c11"
                             >
-                              <PanelItemstyles__ItemContainer>
-                                <li
-                                  className="Panel-thlxvf-0 c13"
+                              <Heading
+                                as="h3"
+                              >
+                                <h3
+                                  className="c12"
                                 >
-                                  <PanelItemstyles__FlexWrapper
-                                    highlight={false}
-                                    onClick={[Function]}
-                                  >
-                                    <div
-                                      className="c14"
-                                      onClick={[Function]}
-                                    >
-                                      <PanelItemstyles__ItemIcon
-                                        alt="Ledger Wallet"
-                                        src="file-stub"
-                                      >
-                                        <img
-                                          alt="Ledger Wallet"
-                                          className="c15"
-                                          src="file-stub"
-                                        />
-                                      </PanelItemstyles__ItemIcon>
-                                      <PanelItemstyles__ItemDescription>
-                                        <section
-                                          className="c16"
-                                        >
-                                          <PanelItemstyles__ItemHeading>
-                                            <h3
-                                              className="c1 c2 c17"
-                                            >
-                                              Ledger Wallet
-                                            </h3>
-                                          </PanelItemstyles__ItemHeading>
-                                          <Typography>
-                                            <p
-                                              className="c1 c10"
-                                            >
-                                              Use your Ledger Nano X or S
-                                            </p>
-                                          </Typography>
-                                        </section>
-                                      </PanelItemstyles__ItemDescription>
-                                    </div>
-                                  </PanelItemstyles__FlexWrapper>
-                                  <AnimatePresence />
-                                </li>
-                              </PanelItemstyles__ItemContainer>
-                            </PanelItem>
-                          </Ledger>
-                          <Trezor
-                            onSelect={[Function]}
-                          >
-                            <PanelItem
-                              description="Use your Trezor Model One or T"
-                              icon="file-stub"
-                              onClick={[Function]}
-                              title="Trezor Wallet"
+                                  Trezor
+                                </h3>
+                              </Heading>
+                            </div>
+                          </Panelstyles__PanelContent>
+                        </div>
+                      </Panelstyles__PanelContainer>
+                    </Panel>
+                    <Panel
+                      key="KeepKey"
+                      onClick={[Function]}
+                    >
+                      <Panelstyles__PanelContainer
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="c10"
+                          onClick={[Function]}
+                        >
+                          <Panelstyles__PanelContent>
+                            <div
+                              className="c11"
                             >
-                              <PanelItemstyles__ItemContainer>
-                                <li
-                                  className="Panel-thlxvf-0 c13"
+                              <Heading
+                                as="h3"
+                              >
+                                <h3
+                                  className="c12"
                                 >
-                                  <PanelItemstyles__FlexWrapper
-                                    highlight={false}
-                                    onClick={[Function]}
-                                  >
-                                    <div
-                                      className="c14"
-                                      onClick={[Function]}
-                                    >
-                                      <PanelItemstyles__ItemIcon
-                                        alt="Trezor Wallet"
-                                        src="file-stub"
-                                      >
-                                        <img
-                                          alt="Trezor Wallet"
-                                          className="c15"
-                                          src="file-stub"
-                                        />
-                                      </PanelItemstyles__ItemIcon>
-                                      <PanelItemstyles__ItemDescription>
-                                        <section
-                                          className="c16"
-                                        >
-                                          <PanelItemstyles__ItemHeading>
-                                            <h3
-                                              className="c1 c2 c17"
-                                            >
-                                              Trezor Wallet
-                                            </h3>
-                                          </PanelItemstyles__ItemHeading>
-                                          <Typography>
-                                            <p
-                                              className="c1 c10"
-                                            >
-                                              Use your Trezor Model One or T
-                                            </p>
-                                          </Typography>
-                                        </section>
-                                      </PanelItemstyles__ItemDescription>
-                                    </div>
-                                  </PanelItemstyles__FlexWrapper>
-                                </li>
-                              </PanelItemstyles__ItemContainer>
-                            </PanelItem>
-                          </Trezor>
-                        </ul>
-                      </List>
-                    </div>
-                  </Container>
-                </section>
-                <Memo(MountComponent)
-                  innerRef={
-                    Object {
-                      "current": .c5 {
+                                  KeepKey
+                                </h3>
+                              </Heading>
+                            </div>
+                          </Panelstyles__PanelContent>
+                        </div>
+                      </Panelstyles__PanelContainer>
+                    </Panel>
+                    <Panel
+                      key="Mnemonic Phrase"
+                      onClick={[Function]}
+                    >
+                      <Panelstyles__PanelContainer
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="c10"
+                          onClick={[Function]}
+                        >
+                          <Panelstyles__PanelContent>
+                            <div
+                              className="c11"
+                            >
+                              <Heading
+                                as="h3"
+                              >
+                                <h3
+                                  className="c12"
+                                >
+                                  Mnemonic Phrase
+                                </h3>
+                              </Heading>
+                            </div>
+                          </Panelstyles__PanelContent>
+                        </div>
+                      </Panelstyles__PanelContainer>
+                    </Panel>
+                  </div>
+                </GridContainer>
+              </div>
+            </Container>
+          </section>
+          <Memo(MountComponent)
+            innerRef={
+              Object {
+                "current": .c3 {
   display: block;
   font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
@@ -560,41 +526,41 @@ exports[`Flow renders 1`] = `
   transition: color 0.3s;
 }
 
-.c1 {
-  width: 1200px;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c6 {
-  width: 600px;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.c4 {
+.c2 {
   display: block;
   font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 1.5rem;
-  font-family: 'Nunito',sans-serif;
+  font-family: 'Public Sans',sans-serif;
+  font-weight: normal;
 }
 
-.c13 .c3 {
-  margin: 0;
+.c7 {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  font-size: 1.2rem;
+  font-family: 'Public Sans',sans-serif;
+  font-weight: normal;
+}
+
+.c1 {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .c0 {
@@ -616,618 +582,353 @@ exports[`Flow renders 1`] = `
   flex: 1;
 }
 
-.c7 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.c4 {
+  display: grid;
+  grid-template-rows: repeat(1,1fr);
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: 3rem;
 }
 
-.c8 {
-  background: white;
-  padding: 1.5rem 2.25rem;
+.c5 {
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  height: 0;
+  position: relative;
   box-shadow: rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;
-  padding: 1rem;
 }
 
-.c8 .c2:last-of-type {
-  margin-bottom: 0;
-}
-
-.c9 {
+.c6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: pointer;
 }
 
-.c9:hover .c2 {
-  color: #1eb8e7;
-}
-
-.c11 {
-  margin-left: 1rem;
-}
-
-.c11 .c2 {
-  margin: 0;
-}
-
-.c10 {
-  min-width: 50px;
-  max-width: 50px;
-  max-height: 50px;
-  vertical-align: middle;
-}
-
-.c12 {
-  display: block;
-  font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: #323232;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-  font-size: 1.2rem;
-  font-family: 'Nunito',sans-serif;
-  margin: 0;
-}
-
 <section
-                        class="c0"
-                        style="opacity: 0;"
+                  class="c0"
+                  style="opacity: 0;"
+                >
+                  <div
+                    class="c1"
+                  >
+                    <h2
+                      class="c2"
+                    >
+                      Select a wallet type
+                    </h2>
+                    <p
+                      class="c3"
+                    >
+                      Choose one of the available wallet types from the list below.
+                    </p>
+                    <div
+                      class="c4"
+                      rows="1"
+                    >
+                      <div
+                        class="c5"
                       >
-                        <div
-                          class="c1"
-                        >
-                          <h2
-                            class="c2 c3 c4"
-                          >
-                            Select a wallet type
-                          </h2>
-                          <p
-                            class="c2 c5"
-                          >
-                            Choose one of the available wallet types from the list below.
-                          </p>
-                        </div>
                         <div
                           class="c6"
                         >
-                          <ul
+                          <h3
                             class="c7"
                           >
-                            <li
-                              class="Panel-thlxvf-0 c8"
-                            >
-                              <div
-                                class="c9"
-                              >
-                                <img
-                                  alt="Ledger Wallet"
-                                  class="c10"
-                                  src="file-stub"
-                                />
-                                <section
-                                  class="c11"
-                                >
-                                  <h3
-                                    class="c2 c3 c12"
-                                  >
-                                    Ledger Wallet
-                                  </h3>
-                                  <p
-                                    class="c2 c5"
-                                  >
-                                    Use your Ledger Nano X or S
-                                  </p>
-                                </section>
-                              </div>
-                            </li>
-                            <li
-                              class="Panel-thlxvf-0 c8"
-                            >
-                              <div
-                                class="c9"
-                              >
-                                <img
-                                  alt="Trezor Wallet"
-                                  class="c10"
-                                  src="file-stub"
-                                />
-                                <section
-                                  class="c11"
-                                >
-                                  <h3
-                                    class="c2 c3 c12"
-                                  >
-                                    Trezor Wallet
-                                  </h3>
-                                  <p
-                                    class="c2 c5"
-                                  >
-                                    Use your Trezor Model One or T
-                                  </p>
-                                </section>
-                              </div>
-                            </li>
-                          </ul>
+                            Ledger
+                          </h3>
                         </div>
-                      </section>,
-                    }
-                  }
-                  isStatic={false}
-                  values={
-                    MotionValuesMap {
-                      "hasMounted": true,
-                      "onUpdate": undefined,
-                      "output": [Function],
-                      "unsubscribers": Map {
-                        "opacity" => [Function],
-                      },
-                      "values": Map {
-                        "opacity" => MotionValue {
-                          "canTrackVelocity": true,
-                          "current": 0,
-                          "lastUpdated": 0,
-                          "notifySubscriber": [Function],
-                          "parent": undefined,
-                          "prev": undefined,
-                          "renderSubscribers": Set {
-                            [Function],
-                          },
-                          "scheduleVelocityCheck": [Function],
-                          "setChild": [Function],
-                          "stopAnimation": [Function],
-                          "timeDelta": 0,
-                          "transformer": undefined,
-                          "updateAndNotify": [Function],
-                          "updateSubscribers": Set {
-                            [Function],
-                          },
-                          "velocityCheck": [Function],
-                        },
-                      },
-                    }
-                  }
-                />
-                <Component
-                  animate="enter"
-                  controls={
-                    ValueAnimationControls {
-                      "activeOverrides": Set {},
-                      "baseTarget": Object {
-                        "opacity": 1,
-                      },
-                      "defaultTransition": Object {
-                        "duration": 0.6,
-                      },
-                      "hasValue": [Function],
-                      "isAnimating": Set {
-                        "opacity",
-                      },
-                      "makeTargetAnimatable": [Function],
-                      "overrides": Array [],
-                      "props": Object {
-                        "animate": "enter",
-                        "children": Array [
-                          <MetaData
-                            title="Select a wallet type"
-                          />,
-                          <ForwardRef(Container)>
-                            <ForwardRef(Heading)
-                              as="h2"
-                            >
-                              Select a wallet type
-                            </ForwardRef(Heading)>
-                            <ForwardRef(Typography)>
-                              Choose one of the available wallet types from the list below.
-                            </ForwardRef(Typography)>
-                          </ForwardRef(Container)>,
-                          <ForwardRef(Container)
-                            small={true}
-                          >
-                            <ForwardRef(List)>
-                              <Ledger
-                                onSelect={[Function]}
-                              />
-                              <Trezor
-                                onSelect={[Function]}
-                              />
-                            </ForwardRef(List)>
-                          </ForwardRef(Container)>,
-                        ],
-                        "className": "Section-uqyogt-0 c7",
-                        "exit": "exit",
-                        "initial": "initial",
-                        "transition": Object {
-                          "duration": 0.6,
-                        },
-                        "variants": Object {
-                          "enter": Object {
-                            "opacity": 1,
-                          },
-                          "exit": Object {
-                            "opacity": 0,
-                          },
-                          "initial": Object {
-                            "opacity": 0,
-                          },
-                        },
-                      },
-                      "readValueFromSource": [Function],
-                      "resolvedOverrides": Array [],
-                      "values": MotionValuesMap {
-                        "hasMounted": true,
-                        "onUpdate": undefined,
-                        "output": [Function],
-                        "unsubscribers": Map {
-                          "opacity" => [Function],
-                        },
-                        "values": Map {
-                          "opacity" => MotionValue {
-                            "canTrackVelocity": true,
-                            "current": 0,
-                            "lastUpdated": 0,
-                            "notifySubscriber": [Function],
-                            "parent": undefined,
-                            "prev": undefined,
-                            "renderSubscribers": Set {
-                              [Function],
-                            },
-                            "scheduleVelocityCheck": [Function],
-                            "setChild": [Function],
-                            "stopAnimation": [Function],
-                            "timeDelta": 0,
-                            "transformer": undefined,
-                            "updateAndNotify": [Function],
-                            "updateSubscribers": Set {
-                              [Function],
-                            },
-                            "velocityCheck": [Function],
-                          },
-                        },
-                      },
-                      "variants": Object {
-                        "enter": Object {
-                          "opacity": 1,
-                        },
-                        "exit": Object {
-                          "opacity": 0,
-                        },
-                        "initial": Object {
-                          "opacity": 0,
-                        },
-                      },
-                    }
-                  }
-                  inherit={false}
-                  initial="initial"
-                  key="animation"
-                  transition={
-                    Object {
-                      "duration": 0.6,
-                    }
-                  }
-                  values={
-                    MotionValuesMap {
-                      "hasMounted": true,
-                      "onUpdate": undefined,
-                      "output": [Function],
-                      "unsubscribers": Map {
-                        "opacity" => [Function],
-                      },
-                      "values": Map {
-                        "opacity" => MotionValue {
-                          "canTrackVelocity": true,
-                          "current": 0,
-                          "lastUpdated": 0,
-                          "notifySubscriber": [Function],
-                          "parent": undefined,
-                          "prev": undefined,
-                          "renderSubscribers": Set {
-                            [Function],
-                          },
-                          "scheduleVelocityCheck": [Function],
-                          "setChild": [Function],
-                          "stopAnimation": [Function],
-                          "timeDelta": 0,
-                          "transformer": undefined,
-                          "updateAndNotify": [Function],
-                          "updateSubscribers": Set {
-                            [Function],
-                          },
-                          "velocityCheck": [Function],
-                        },
-                      },
-                    }
-                  }
-                  variants={
-                    Object {
-                      "enter": Object {
-                        "opacity": 1,
-                      },
-                      "exit": Object {
-                        "opacity": 0,
-                      },
-                      "initial": Object {
-                        "opacity": 0,
-                      },
-                    }
-                  }
-                />
-                <Component
-                  animate="enter"
-                  className="c7"
-                  controls={
-                    ValueAnimationControls {
-                      "activeOverrides": Set {},
-                      "baseTarget": Object {
-                        "opacity": 1,
-                      },
-                      "defaultTransition": Object {
-                        "duration": 0.6,
-                      },
-                      "hasValue": [Function],
-                      "isAnimating": Set {
-                        "opacity",
-                      },
-                      "makeTargetAnimatable": [Function],
-                      "overrides": Array [],
-                      "props": Object {
-                        "animate": "enter",
-                        "children": Array [
-                          <MetaData
-                            title="Select a wallet type"
-                          />,
-                          <ForwardRef(Container)>
-                            <ForwardRef(Heading)
-                              as="h2"
-                            >
-                              Select a wallet type
-                            </ForwardRef(Heading)>
-                            <ForwardRef(Typography)>
-                              Choose one of the available wallet types from the list below.
-                            </ForwardRef(Typography)>
-                          </ForwardRef(Container)>,
-                          <ForwardRef(Container)
-                            small={true}
-                          >
-                            <ForwardRef(List)>
-                              <Ledger
-                                onSelect={[Function]}
-                              />
-                              <Trezor
-                                onSelect={[Function]}
-                              />
-                            </ForwardRef(List)>
-                          </ForwardRef(Container)>,
-                        ],
-                        "className": "Section-uqyogt-0 c7",
-                        "exit": "exit",
-                        "initial": "initial",
-                        "transition": Object {
-                          "duration": 0.6,
-                        },
-                        "variants": Object {
-                          "enter": Object {
-                            "opacity": 1,
-                          },
-                          "exit": Object {
-                            "opacity": 0,
-                          },
-                          "initial": Object {
-                            "opacity": 0,
-                          },
-                        },
-                      },
-                      "readValueFromSource": [Function],
-                      "resolvedOverrides": Array [],
-                      "values": MotionValuesMap {
-                        "hasMounted": true,
-                        "onUpdate": undefined,
-                        "output": [Function],
-                        "unsubscribers": Map {
-                          "opacity" => [Function],
-                        },
-                        "values": Map {
-                          "opacity" => MotionValue {
-                            "canTrackVelocity": true,
-                            "current": 0,
-                            "lastUpdated": 0,
-                            "notifySubscriber": [Function],
-                            "parent": undefined,
-                            "prev": undefined,
-                            "renderSubscribers": Set {
-                              [Function],
-                            },
-                            "scheduleVelocityCheck": [Function],
-                            "setChild": [Function],
-                            "stopAnimation": [Function],
-                            "timeDelta": 0,
-                            "transformer": undefined,
-                            "updateAndNotify": [Function],
-                            "updateSubscribers": Set {
-                              [Function],
-                            },
-                            "velocityCheck": [Function],
-                          },
-                        },
-                      },
-                      "variants": Object {
-                        "enter": Object {
-                          "opacity": 1,
-                        },
-                        "exit": Object {
-                          "opacity": 0,
-                        },
-                        "initial": Object {
-                          "opacity": 0,
-                        },
-                      },
-                    }
-                  }
-                  exit="exit"
-                  initial="initial"
-                  innerRef={
-                    Object {
-                      "current": <section
-                        class="c7"
-                        style="opacity: 0;"
+                      </div>
+                      <div
+                        class="c5"
                       >
                         <div
-                          class="c8"
+                          class="c6"
                         >
-                          <h2
-                            class="c1 c2 c9"
+                          <h3
+                            class="c7"
                           >
-                            Select a wallet type
-                          </h2>
-                          <p
-                            class="c1 c10"
-                          >
-                            Choose one of the available wallet types from the list below.
-                          </p>
+                            Trezor
+                          </h3>
                         </div>
+                      </div>
+                      <div
+                        class="c5"
+                      >
                         <div
-                          class="c11"
+                          class="c6"
                         >
-                          <ul
-                            class="c12"
+                          <h3
+                            class="c7"
                           >
-                            <li
-                              class="Panel-thlxvf-0 c13"
-                            >
-                              <div
-                                class="c14"
-                              >
-                                <img
-                                  alt="Ledger Wallet"
-                                  class="c15"
-                                  src="file-stub"
-                                />
-                                <section
-                                  class="c16"
-                                >
-                                  <h3
-                                    class="c1 c2 c17"
-                                  >
-                                    Ledger Wallet
-                                  </h3>
-                                  <p
-                                    class="c1 c10"
-                                  >
-                                    Use your Ledger Nano X or S
-                                  </p>
-                                </section>
-                              </div>
-                            </li>
-                            <li
-                              class="Panel-thlxvf-0 c13"
-                            >
-                              <div
-                                class="c14"
-                              >
-                                <img
-                                  alt="Trezor Wallet"
-                                  class="c15"
-                                  src="file-stub"
-                                />
-                                <section
-                                  class="c16"
-                                >
-                                  <h3
-                                    class="c1 c2 c17"
-                                  >
-                                    Trezor Wallet
-                                  </h3>
-                                  <p
-                                    class="c1 c10"
-                                  >
-                                    Use your Trezor Model One or T
-                                  </p>
-                                </section>
-                              </div>
-                            </li>
-                          </ul>
+                            KeepKey
+                          </h3>
                         </div>
-                      </section>,
-                    }
-                  }
-                  key="exit"
-                  parentContext={
-                    Object {
-                      "exitProps": Object {},
-                      "static": false,
-                    }
-                  }
-                  transition={
-                    Object {
-                      "duration": 0.6,
-                    }
-                  }
-                  values={
-                    MotionValuesMap {
-                      "hasMounted": true,
-                      "onUpdate": undefined,
-                      "output": [Function],
-                      "unsubscribers": Map {
-                        "opacity" => [Function],
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <div
+                          class="c6"
+                        >
+                          <h3
+                            class="c7"
+                          >
+                            Mnemonic Phrase
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>,
+              }
+            }
+            isStatic={false}
+            values={
+              MotionValuesMap {
+                "hasMounted": true,
+                "onUpdate": undefined,
+                "output": [Function],
+                "unsubscribers": Map {
+                  "opacity" => [Function],
+                },
+                "values": Map {
+                  "opacity" => MotionValue {
+                    "canTrackVelocity": true,
+                    "current": 0,
+                    "lastUpdated": 0,
+                    "notifySubscriber": [Function],
+                    "parent": undefined,
+                    "prev": undefined,
+                    "renderSubscribers": Set {
+                      [Function],
+                    },
+                    "scheduleVelocityCheck": [Function],
+                    "setChild": [Function],
+                    "stopAnimation": [Function],
+                    "timeDelta": 0,
+                    "transformer": undefined,
+                    "updateAndNotify": [Function],
+                    "updateSubscribers": Set {
+                      [Function],
+                    },
+                    "velocityCheck": [Function],
+                  },
+                },
+              }
+            }
+          />
+          <Component
+            animate="enter"
+            controls={
+              ValueAnimationControls {
+                "activeOverrides": Set {},
+                "baseTarget": Object {
+                  "opacity": 1,
+                },
+                "defaultTransition": Object {
+                  "duration": 0.6,
+                },
+                "hasValue": [Function],
+                "isAnimating": Set {
+                  "opacity",
+                },
+                "makeTargetAnimatable": [Function],
+                "overrides": Array [],
+                "props": Object {
+                  "animate": "enter",
+                  "children": Array [
+                    <MetaData
+                      title="Select a wallet type"
+                    />,
+                    <ForwardRef(Container)>
+                      <ForwardRef(Heading)
+                        as="h2"
+                      >
+                        Select a wallet type
+                      </ForwardRef(Heading)>
+                      <ForwardRef(Typography)>
+                        Choose one of the available wallet types from the list below.
+                      </ForwardRef(Typography)>
+                      <ForwardRef(GridContainer)
+                        columns={4}
+                        rows={1}
+                      >
+                        <Panel
+                          onClick={[Function]}
+                        >
+                          <ForwardRef(Heading)
+                            as="h3"
+                          >
+                            Ledger
+                          </ForwardRef(Heading)>
+                        </Panel>
+                        <Panel
+                          onClick={[Function]}
+                        >
+                          <ForwardRef(Heading)
+                            as="h3"
+                          >
+                            Trezor
+                          </ForwardRef(Heading)>
+                        </Panel>
+                        <Panel
+                          onClick={[Function]}
+                        >
+                          <ForwardRef(Heading)
+                            as="h3"
+                          >
+                            KeepKey
+                          </ForwardRef(Heading)>
+                        </Panel>
+                        <Panel
+                          onClick={[Function]}
+                        >
+                          <ForwardRef(Heading)
+                            as="h3"
+                          >
+                            Mnemonic Phrase
+                          </ForwardRef(Heading)>
+                        </Panel>
+                      </ForwardRef(GridContainer)>
+                    </ForwardRef(Container)>,
+                  ],
+                  "className": "Section-uqyogt-0 c6",
+                  "exit": "exit",
+                  "initial": "initial",
+                  "transition": Object {
+                    "duration": 0.6,
+                  },
+                  "variants": Object {
+                    "enter": Object {
+                      "opacity": 1,
+                    },
+                    "exit": Object {
+                      "opacity": 0,
+                    },
+                    "initial": Object {
+                      "opacity": 0,
+                    },
+                  },
+                },
+                "readValueFromSource": [Function],
+                "resolvedOverrides": Array [],
+                "values": MotionValuesMap {
+                  "hasMounted": true,
+                  "onUpdate": undefined,
+                  "output": [Function],
+                  "unsubscribers": Map {
+                    "opacity" => [Function],
+                  },
+                  "values": Map {
+                    "opacity" => MotionValue {
+                      "canTrackVelocity": true,
+                      "current": 0,
+                      "lastUpdated": 0,
+                      "notifySubscriber": [Function],
+                      "parent": undefined,
+                      "prev": undefined,
+                      "renderSubscribers": Set {
+                        [Function],
                       },
-                      "values": Map {
-                        "opacity" => MotionValue {
-                          "canTrackVelocity": true,
-                          "current": 0,
-                          "lastUpdated": 0,
-                          "notifySubscriber": [Function],
-                          "parent": undefined,
-                          "prev": undefined,
-                          "renderSubscribers": Set {
-                            [Function],
-                          },
-                          "scheduleVelocityCheck": [Function],
-                          "setChild": [Function],
-                          "stopAnimation": [Function],
-                          "timeDelta": 0,
-                          "transformer": undefined,
-                          "updateAndNotify": [Function],
-                          "updateSubscribers": Set {
-                            [Function],
-                          },
-                          "velocityCheck": [Function],
-                        },
+                      "scheduleVelocityCheck": [Function],
+                      "setChild": [Function],
+                      "stopAnimation": [Function],
+                      "timeDelta": 0,
+                      "transformer": undefined,
+                      "updateAndNotify": [Function],
+                      "updateSubscribers": Set {
+                        [Function],
                       },
-                    }
-                  }
-                  variants={
-                    Object {
-                      "enter": Object {
-                        "opacity": 1,
-                      },
-                      "exit": Object {
-                        "opacity": 0,
-                      },
-                      "initial": Object {
-                        "opacity": 0,
-                      },
-                    }
-                  }
-                />
-              </ForwardRef(MotionComponent)>
-            </Section>
-          </SelectWallet>
-        </PresenceChild>
-      </AnimatePresence>
-    </PageTransition>
+                      "velocityCheck": [Function],
+                    },
+                  },
+                },
+                "variants": Object {
+                  "enter": Object {
+                    "opacity": 1,
+                  },
+                  "exit": Object {
+                    "opacity": 0,
+                  },
+                  "initial": Object {
+                    "opacity": 0,
+                  },
+                },
+              }
+            }
+            inherit={false}
+            initial="initial"
+            key="animation"
+            transition={
+              Object {
+                "duration": 0.6,
+              }
+            }
+            values={
+              MotionValuesMap {
+                "hasMounted": true,
+                "onUpdate": undefined,
+                "output": [Function],
+                "unsubscribers": Map {
+                  "opacity" => [Function],
+                },
+                "values": Map {
+                  "opacity" => MotionValue {
+                    "canTrackVelocity": true,
+                    "current": 0,
+                    "lastUpdated": 0,
+                    "notifySubscriber": [Function],
+                    "parent": undefined,
+                    "prev": undefined,
+                    "renderSubscribers": Set {
+                      [Function],
+                    },
+                    "scheduleVelocityCheck": [Function],
+                    "setChild": [Function],
+                    "stopAnimation": [Function],
+                    "timeDelta": 0,
+                    "transformer": undefined,
+                    "updateAndNotify": [Function],
+                    "updateSubscribers": Set {
+                      [Function],
+                    },
+                    "velocityCheck": [Function],
+                  },
+                },
+              }
+            }
+            variants={
+              Object {
+                "enter": Object {
+                  "opacity": 1,
+                },
+                "exit": Object {
+                  "opacity": 0,
+                },
+                "initial": Object {
+                  "opacity": 0,
+                },
+              }
+            }
+          />
+        </ForwardRef(MotionComponent)>
+      </Section>
+    </SelectWallet>
   </Flow>
 </EtherFlow>
 `;
