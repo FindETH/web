@@ -56,6 +56,15 @@ exports[`Flow renders 1`] = `
   align-items: center;
 }
 
+.c0 {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -111,15 +120,6 @@ exports[`Flow renders 1`] = `
   font-size: 1.2rem;
   font-family: 'Public Sans',sans-serif;
   font-weight: normal;
-}
-
-.c0 {
-  width: 1400px;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .c6 {
@@ -391,122 +391,150 @@ exports[`Flow renders 1`] = `
                     className="c9"
                     rows={1}
                   >
-                    <Panel
+                    <WalletPanel
                       key="Ledger"
                       onClick={[Function]}
+                      title="Ledger"
+                      type="Ledger"
                     >
-                      <Panelstyles__PanelContainer
+                      <Panel
+                        key="Ledger"
                         onClick={[Function]}
                       >
-                        <div
-                          className="c10"
+                        <Panelstyles__PanelContainer
                           onClick={[Function]}
                         >
-                          <Panelstyles__PanelContent>
-                            <div
-                              className="c11"
-                            >
-                              <Heading
-                                as="h3"
+                          <div
+                            className="c10"
+                            onClick={[Function]}
+                          >
+                            <Panelstyles__PanelContent>
+                              <div
+                                className="c11"
                               >
-                                <h3
-                                  className="c12"
+                                <Heading
+                                  as="h3"
                                 >
-                                  Ledger
-                                </h3>
-                              </Heading>
-                            </div>
-                          </Panelstyles__PanelContent>
-                        </div>
-                      </Panelstyles__PanelContainer>
-                    </Panel>
-                    <Panel
+                                  <h3
+                                    className="c12"
+                                  >
+                                    Ledger
+                                  </h3>
+                                </Heading>
+                              </div>
+                            </Panelstyles__PanelContent>
+                          </div>
+                        </Panelstyles__PanelContainer>
+                      </Panel>
+                    </WalletPanel>
+                    <WalletPanel
                       key="Trezor"
                       onClick={[Function]}
+                      title="Trezor"
+                      type="Trezor"
                     >
-                      <Panelstyles__PanelContainer
+                      <Panel
+                        key="Trezor"
                         onClick={[Function]}
                       >
-                        <div
-                          className="c10"
+                        <Panelstyles__PanelContainer
                           onClick={[Function]}
                         >
-                          <Panelstyles__PanelContent>
-                            <div
-                              className="c11"
-                            >
-                              <Heading
-                                as="h3"
+                          <div
+                            className="c10"
+                            onClick={[Function]}
+                          >
+                            <Panelstyles__PanelContent>
+                              <div
+                                className="c11"
                               >
-                                <h3
-                                  className="c12"
+                                <Heading
+                                  as="h3"
                                 >
-                                  Trezor
-                                </h3>
-                              </Heading>
-                            </div>
-                          </Panelstyles__PanelContent>
-                        </div>
-                      </Panelstyles__PanelContainer>
-                    </Panel>
-                    <Panel
+                                  <h3
+                                    className="c12"
+                                  >
+                                    Trezor
+                                  </h3>
+                                </Heading>
+                              </div>
+                            </Panelstyles__PanelContent>
+                          </div>
+                        </Panelstyles__PanelContainer>
+                      </Panel>
+                    </WalletPanel>
+                    <WalletPanel
                       key="KeepKey"
                       onClick={[Function]}
+                      title="KeepKey"
+                      type="KeepKey"
                     >
-                      <Panelstyles__PanelContainer
+                      <Panel
+                        key="KeepKey"
                         onClick={[Function]}
                       >
-                        <div
-                          className="c10"
+                        <Panelstyles__PanelContainer
                           onClick={[Function]}
                         >
-                          <Panelstyles__PanelContent>
-                            <div
-                              className="c11"
-                            >
-                              <Heading
-                                as="h3"
+                          <div
+                            className="c10"
+                            onClick={[Function]}
+                          >
+                            <Panelstyles__PanelContent>
+                              <div
+                                className="c11"
                               >
-                                <h3
-                                  className="c12"
+                                <Heading
+                                  as="h3"
                                 >
-                                  KeepKey
-                                </h3>
-                              </Heading>
-                            </div>
-                          </Panelstyles__PanelContent>
-                        </div>
-                      </Panelstyles__PanelContainer>
-                    </Panel>
-                    <Panel
+                                  <h3
+                                    className="c12"
+                                  >
+                                    KeepKey
+                                  </h3>
+                                </Heading>
+                              </div>
+                            </Panelstyles__PanelContent>
+                          </div>
+                        </Panelstyles__PanelContainer>
+                      </Panel>
+                    </WalletPanel>
+                    <WalletPanel
                       key="Mnemonic Phrase"
                       onClick={[Function]}
+                      title="Mnemonic Phrase"
+                      type="MnemonicPhrase"
                     >
-                      <Panelstyles__PanelContainer
+                      <Panel
+                        key="Mnemonic Phrase"
                         onClick={[Function]}
                       >
-                        <div
-                          className="c10"
+                        <Panelstyles__PanelContainer
                           onClick={[Function]}
                         >
-                          <Panelstyles__PanelContent>
-                            <div
-                              className="c11"
-                            >
-                              <Heading
-                                as="h3"
+                          <div
+                            className="c10"
+                            onClick={[Function]}
+                          >
+                            <Panelstyles__PanelContent>
+                              <div
+                                className="c11"
                               >
-                                <h3
-                                  className="c12"
+                                <Heading
+                                  as="h3"
                                 >
-                                  Mnemonic Phrase
-                                </h3>
-                              </Heading>
-                            </div>
-                          </Panelstyles__PanelContent>
-                        </div>
-                      </Panelstyles__PanelContainer>
-                    </Panel>
+                                  <h3
+                                    className="c12"
+                                  >
+                                    Mnemonic Phrase
+                                  </h3>
+                                </Heading>
+                              </div>
+                            </Panelstyles__PanelContent>
+                          </div>
+                        </Panelstyles__PanelContainer>
+                      </Panel>
+                    </WalletPanel>
                   </div>
                 </GridContainer>
               </div>
@@ -524,6 +552,15 @@ exports[`Flow renders 1`] = `
   color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+}
+
+.c1 {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .c2 {
@@ -552,15 +589,6 @@ exports[`Flow renders 1`] = `
   font-size: 1.2rem;
   font-family: 'Public Sans',sans-serif;
   font-weight: normal;
-}
-
-.c1 {
-  width: 1400px;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .c0 {
@@ -768,42 +796,26 @@ exports[`Flow renders 1`] = `
                         columns={4}
                         rows={1}
                       >
-                        <Panel
+                        <WalletPanel
                           onClick={[Function]}
-                        >
-                          <ForwardRef(Heading)
-                            as="h3"
-                          >
-                            Ledger
-                          </ForwardRef(Heading)>
-                        </Panel>
-                        <Panel
+                          title="Ledger"
+                          type="Ledger"
+                        />
+                        <WalletPanel
                           onClick={[Function]}
-                        >
-                          <ForwardRef(Heading)
-                            as="h3"
-                          >
-                            Trezor
-                          </ForwardRef(Heading)>
-                        </Panel>
-                        <Panel
+                          title="Trezor"
+                          type="Trezor"
+                        />
+                        <WalletPanel
                           onClick={[Function]}
-                        >
-                          <ForwardRef(Heading)
-                            as="h3"
-                          >
-                            KeepKey
-                          </ForwardRef(Heading)>
-                        </Panel>
-                        <Panel
+                          title="KeepKey"
+                          type="KeepKey"
+                        />
+                        <WalletPanel
                           onClick={[Function]}
-                        >
-                          <ForwardRef(Heading)
-                            as="h3"
-                          >
-                            Mnemonic Phrase
-                          </ForwardRef(Heading)>
-                        </Panel>
+                          title="Mnemonic Phrase"
+                          type="MnemonicPhrase"
+                        />
                       </ForwardRef(GridContainer)>
                     </ForwardRef(Container)>,
                   ],

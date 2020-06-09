@@ -40,46 +40,30 @@ exports[`SelectWallet renders 1`] = `
       columns={4}
       rows={1}
     >
-      <Panel
+      <WalletPanel
         key="Ledger"
         onClick={[Function]}
-      >
-        <Heading
-          as="h3"
-        >
-          Ledger
-        </Heading>
-      </Panel>
-      <Panel
+        title="Ledger"
+        type="Ledger"
+      />
+      <WalletPanel
         key="Trezor"
         onClick={[Function]}
-      >
-        <Heading
-          as="h3"
-        >
-          Trezor
-        </Heading>
-      </Panel>
-      <Panel
+        title="Trezor"
+        type="Trezor"
+      />
+      <WalletPanel
         key="KeepKey"
         onClick={[Function]}
-      >
-        <Heading
-          as="h3"
-        >
-          KeepKey
-        </Heading>
-      </Panel>
-      <Panel
+        title="KeepKey"
+        type="KeepKey"
+      />
+      <WalletPanel
         key="Mnemonic Phrase"
         onClick={[Function]}
-      >
-        <Heading
-          as="h3"
-        >
-          Mnemonic Phrase
-        </Heading>
-      </Panel>
+        title="Mnemonic Phrase"
+        type="MnemonicPhrase"
+      />
     </GridContainer>
   </Container>
 </Section>
