@@ -14,6 +14,21 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'FindETH',
+        short_name: 'FindETH',
+        description: 'FindETH is a tool to help you find your lost Ether, tokens or Ethereum address',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#242429',
+        display: 'standalone',
+        icon: resolve(__dirname, '../src/assets/images/logos/findeth.svg'),
+        legacy: false,
+        cache_busting_mode: 'none'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-create-client-paths',
       options: {
         prefixes: ['/flow/*']
@@ -42,6 +57,14 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
         siteUrl: SITE_URL
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/*']
+        }
       }
     },
     {
