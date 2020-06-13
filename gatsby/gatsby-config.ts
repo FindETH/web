@@ -73,7 +73,8 @@ const config: GatsbyConfig = {
       options: {
         bucketName: 'beta.findeth.io',
         protocol: 'https',
-        hostname: 'beta.findeth.io'
+        hostname: 'beta.findeth.io',
+        generateMatchPathRewrites: false
       }
     }
   ]
