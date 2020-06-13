@@ -25,7 +25,8 @@ const config: GatsbyConfig = {
         display: 'standalone',
         icon: resolve(__dirname, '../src/assets/images/logos/findeth.svg'),
         legacy: false,
-        cache_busting_mode: 'none'
+        cache_busting_mode: 'none',
+        crossOrigin: 'use-credentials'
       }
     },
     {
