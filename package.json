@@ -12,6 +12,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production gatsby build",
     "start": "gatsby develop --https",
+    "deploy": "gatsby-plugin-s3 deploy --yes",
     "test": "jest",
     "lint": "yarn run lint:tsc && yarn run lint:tslint && yarn run lint:prettier && yarn run lint:styles && yarn run lint:lockfile",
     "lint:tsc": "tsc --noEmit",

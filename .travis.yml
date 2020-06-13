@@ -23,8 +23,9 @@ before_deploy:
 
 deploy:
   provider: script
-  script: ~/.local/bin/aws s3 sync dist s3://beta.findeth.io --region=eu-west-1 --delete
-  skip-cleanup: true
+  script: yarn run deploy
+  cleanup: false
+  edge: true
   on:
     branch: master
 
