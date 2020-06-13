@@ -14,6 +14,12 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: {
+        prefixes: ['/flow/*']
+      }
+    },
+    {
       resolve: 'gatsby-plugin-react-redux',
       options: {
         pathToCreateStoreModule: resolve(__dirname, '../src/store/store.ts')
