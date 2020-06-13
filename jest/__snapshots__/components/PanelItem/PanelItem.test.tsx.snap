@@ -1,43 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PanelItem renders 1`] = `
-<PanelItemstyles__ItemContainer>
-  <PanelItemstyles__FlexWrapper
+<Styled(styled.section)>
+  <styled.div
     highlight={false}
   >
-    <PanelItemstyles__ItemIcon
+    <styled.img
       alt="Foo"
       src="Baz"
     />
-    <PanelItemstyles__ItemDescription>
-      <PanelItemstyles__ItemHeading>
+    <styled.section>
+      <Styled(Styled(styled.p))>
         Foo
-      </PanelItemstyles__ItemHeading>
-      <Typography>
+      </Styled(Styled(styled.p))>
+      <styled.p>
         Bar
-      </Typography>
-    </PanelItemstyles__ItemDescription>
-  </PanelItemstyles__FlexWrapper>
-</PanelItemstyles__ItemContainer>
+      </styled.p>
+    </styled.section>
+  </styled.div>
+</Styled(styled.section)>
 `;
 
 exports[`PanelItem renders 2`] = `
-<PanelItemstyles__ItemContainer>
-  <PanelItemstyles__FlexWrapper
+<Styled(styled.section)>
+  <styled.div
     highlight={true}
   >
-    <PanelItemstyles__ItemIcon
+    <styled.img
       alt="Foo"
       src="Baz"
     />
-    <PanelItemstyles__ItemDescription>
-      <PanelItemstyles__ItemHeading>
+    <styled.section>
+      <Styled(Styled(styled.p))>
         Foo
-      </PanelItemstyles__ItemHeading>
-      <Typography>
+      </Styled(Styled(styled.p))>
+      <styled.p>
         Bar
-      </Typography>
-    </PanelItemstyles__ItemDescription>
-  </PanelItemstyles__FlexWrapper>
-</PanelItemstyles__ItemContainer>
+      </styled.p>
+    </styled.section>
+  </styled.div>
+</Styled(styled.section)>
 `;

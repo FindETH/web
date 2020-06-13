@@ -15,9 +15,5 @@
     "noUnusedParameters": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src",
-    "webpack",
-    "jest"
-  ]
+  "include": ["src", "gatsby", "jest"]
 }

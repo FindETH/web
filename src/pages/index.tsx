@@ -1,16 +1,15 @@
-import { RouteComponentProps } from '@reach/router';
 import React, { FunctionComponent } from 'react';
-import Panel from '../../components/Panel';
-import Container from '../../components/ui/Container';
-import GridContainer from '../../components/ui/GridContainer';
-import Heading from '../../components/ui/Heading';
-import Section from '../../components/ui/Section';
-import Typography from '../../components/ui/Typography';
+import Meta from '../components/Meta';
+import Panel from '../components/Panel';
+import Container from '../components/ui/Container';
+import GridContainer from '../components/ui/GridContainer';
+import Heading from '../components/ui/Heading';
+import Section from '../components/ui/Section';
+import Typography from '../components/ui/Typography';
 
-type Props = RouteComponentProps;
-
-const Home: FunctionComponent<Props> = () => (
+const Index: FunctionComponent = () => (
   <Container>
+    <Meta />
     <Heading as="h1">FindETH</Heading>
 
     <Section>
@@ -34,4 +33,4 @@ const Home: FunctionComponent<Props> = () => (
   </Container>
 );
 
-export default Home;
+export default Index;

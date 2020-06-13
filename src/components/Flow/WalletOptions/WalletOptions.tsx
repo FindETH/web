@@ -1,6 +1,6 @@
 import { getWalletImplementation, KeepKey, Ledger, MnemonicPhrase, Trezor, Wallet, WalletType } from '@findeth/wallets';
 import React, { ComponentType, FunctionComponent } from 'react';
-import MetaData from '../../MetaData';
+import Meta from '../../Meta';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
 import Section from '../../ui/Section';
 import { FlowComponentProps } from '../Flow';
@@ -40,7 +40,7 @@ const WalletOptions: FunctionComponent<Props> = ({ state, onNext }) => {
 
   return (
     <Section {...PAGE_TRANSITION_PROPS}>
-      <MetaData title="Wallet options" />
+      <Meta title="Wallet options" />
 
       <wallet.component onNext={handleNext} />
     </Section>

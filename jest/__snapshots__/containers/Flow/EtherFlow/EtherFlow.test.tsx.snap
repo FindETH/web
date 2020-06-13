@@ -4,10 +4,8 @@ exports[`Flow renders 1`] = `
 .c8 {
   display: block;
   font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -15,7 +13,7 @@ exports[`Flow renders 1`] = `
 .c4 {
   width: 0.4rem;
   height: 0.4rem;
-  border: 0.2rem solid #242429;
+  border: 0.2rem solid;
   border-radius: 50%;
   background: none;
   -webkit-transition: border 0.3s,background-color 0.3s;
@@ -30,9 +28,8 @@ exports[`Flow renders 1`] = `
 .c5 {
   width: 0.4rem;
   height: 0.4rem;
-  border: 0.2rem solid #242429;
+  border: 0.2rem solid;
   border-radius: 50%;
-  background: #242429;
   -webkit-transition: border 0.3s,background-color 0.3s;
   transition: border 0.3s,background-color 0.3s;
   margin-right: 0.25rem;
@@ -83,52 +80,38 @@ exports[`Flow renders 1`] = `
 .c2 {
   display: block;
   font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 3rem;
-  font-family: 'Public Sans',sans-serif;
   font-weight: bold;
 }
 
 .c7 {
   display: block;
   font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 1.5rem;
-  font-family: 'Public Sans',sans-serif;
   font-weight: normal;
 }
 
 .c12 {
   display: block;
   font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 1.2rem;
-  font-family: 'Public Sans',sans-serif;
   font-weight: normal;
 }
 
 .c6 {
   padding: 4rem 0;
-  background: white;
-}
-
-.c6:nth-child(odd) {
-  background: #f6f7f9;
 }
 
 .c6:first-of-type {
@@ -154,7 +137,7 @@ exports[`Flow renders 1`] = `
   overflow: hidden;
   height: 0;
   position: relative;
-  box-shadow: rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;
+  box-shadow: rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0, rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;
 }
 
 .c11 {
@@ -191,15 +174,15 @@ exports[`Flow renders 1`] = `
     handleDone={[Function]}
     title="Search for Ether"
   >
-    <Container>
+    <styled.div>
       <div
         className="c0"
       >
-        <FlexContainer>
+        <styled.div>
           <div
             className="c1"
           >
-            <Heading
+            <Styled(styled.p)
               as="h1"
             >
               <h1
@@ -207,60 +190,60 @@ exports[`Flow renders 1`] = `
               >
                 Search for Ether
               </h1>
-            </Heading>
+            </Styled(styled.p)>
             <StepIndicator
               currentStep={0}
               steps={4}
             >
-              <StepIndicatorstyles__StepContainer>
+              <styled.div>
                 <div
                   className="c3"
                 >
-                  <Step
+                  <styled.div
                     active={true}
                     key="step-0"
                   >
                     <div
                       className="c4"
                     />
-                  </Step>
-                  <Step
+                  </styled.div>
+                  <styled.div
                     active={false}
                     key="step-1"
                   >
                     <div
                       className="c5"
                     />
-                  </Step>
-                  <Step
+                  </styled.div>
+                  <styled.div
                     active={false}
                     key="step-2"
                   >
                     <div
                       className="c5"
                     />
-                  </Step>
-                  <Step
+                  </styled.div>
+                  <styled.div
                     active={false}
                     key="step-3"
                   >
                     <div
                       className="c5"
                     />
-                  </Step>
+                  </styled.div>
                 </div>
-              </StepIndicatorstyles__StepContainer>
+              </styled.div>
             </StepIndicator>
           </div>
-        </FlexContainer>
+        </styled.div>
       </div>
-    </Container>
+    </styled.div>
     <SelectWallet
       onNext={[Function]}
       onReset={[Function]}
       state={Object {}}
     >
-      <Section
+      <Styled(Component)
         animate="enter"
         exit="exit"
         initial="initial"
@@ -315,12 +298,35 @@ exports[`Flow renders 1`] = `
               }
             }
           >
-            <MetaData
+            <Meta
               title="Select a wallet type"
             >
               <Helmet
+                defaultTitle="FindETH"
                 defer={true}
                 encodeSpecialCharacters={true}
+                htmlAttributes={
+                  Object {
+                    "lang": "en",
+                  }
+                }
+                meta={
+                  Array [
+                    Object {
+                      "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
+                      "name": "description",
+                    },
+                    Object {
+                      "content": "Ether, Ethereum, ERC20, ERC-20, tokens, address, private key, derivation path, mnemonic phrase, Ledger, Trezor, hardware wallet, lost",
+                      "name": "keywords",
+                    },
+                    Object {
+                      "content": "Maarten Zuidhoorn",
+                      "name": "author",
+                    },
+                  ]
+                }
+                title="Select a wallet type"
               >
                 <HelmetDispatcher
                   context={
@@ -333,17 +339,16 @@ exports[`Flow renders 1`] = `
                       "setHelmet": [Function],
                     }
                   }
+                  defaultTitle="FindETH"
                   defer={true}
                   encodeSpecialCharacters={true}
+                  htmlAttributes={
+                    Object {
+                      "lang": "en",
+                    }
+                  }
                   meta={
                     Array [
-                      Object {
-                        "charset": "utf-8",
-                      },
-                      Object {
-                        "content": "width=device-width, initial-scale=1, shrink-to-fit=no",
-                        "name": "viewport",
-                      },
                       Object {
                         "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
                         "name": "description",
@@ -358,16 +363,15 @@ exports[`Flow renders 1`] = `
                       },
                     ]
                   }
-                  title="Select a wallet type - FindETH"
-                  titleAttributes={Object {}}
+                  title="Select a wallet type"
                 />
               </Helmet>
-            </MetaData>
-            <Container>
+            </Meta>
+            <styled.div>
               <div
                 className="c0"
               >
-                <Heading
+                <Styled(styled.p)
                   as="h2"
                 >
                   <h2
@@ -375,15 +379,15 @@ exports[`Flow renders 1`] = `
                   >
                     Select a wallet type
                   </h2>
-                </Heading>
-                <Typography>
+                </Styled(styled.p)>
+                <styled.p>
                   <p
                     className="c8"
                   >
                     Choose one of the available wallet types from the list below.
                   </p>
-                </Typography>
-                <GridContainer
+                </styled.p>
+                <styled.div
                   columns={4}
                   rows={1}
                 >
@@ -401,18 +405,18 @@ exports[`Flow renders 1`] = `
                         key="Ledger"
                         onClick={[Function]}
                       >
-                        <Panelstyles__PanelContainer
+                        <styled.div
                           onClick={[Function]}
                         >
                           <div
                             className="c10"
                             onClick={[Function]}
                           >
-                            <Panelstyles__PanelContent>
+                            <styled.div>
                               <div
                                 className="c11"
                               >
-                                <Heading
+                                <Styled(styled.p)
                                   as="h3"
                                 >
                                   <h3
@@ -420,11 +424,11 @@ exports[`Flow renders 1`] = `
                                   >
                                     Ledger
                                   </h3>
-                                </Heading>
+                                </Styled(styled.p)>
                               </div>
-                            </Panelstyles__PanelContent>
+                            </styled.div>
                           </div>
-                        </Panelstyles__PanelContainer>
+                        </styled.div>
                       </Panel>
                     </WalletPanel>
                     <WalletPanel
@@ -437,18 +441,18 @@ exports[`Flow renders 1`] = `
                         key="Trezor"
                         onClick={[Function]}
                       >
-                        <Panelstyles__PanelContainer
+                        <styled.div
                           onClick={[Function]}
                         >
                           <div
                             className="c10"
                             onClick={[Function]}
                           >
-                            <Panelstyles__PanelContent>
+                            <styled.div>
                               <div
                                 className="c11"
                               >
-                                <Heading
+                                <Styled(styled.p)
                                   as="h3"
                                 >
                                   <h3
@@ -456,11 +460,11 @@ exports[`Flow renders 1`] = `
                                   >
                                     Trezor
                                   </h3>
-                                </Heading>
+                                </Styled(styled.p)>
                               </div>
-                            </Panelstyles__PanelContent>
+                            </styled.div>
                           </div>
-                        </Panelstyles__PanelContainer>
+                        </styled.div>
                       </Panel>
                     </WalletPanel>
                     <WalletPanel
@@ -473,18 +477,18 @@ exports[`Flow renders 1`] = `
                         key="KeepKey"
                         onClick={[Function]}
                       >
-                        <Panelstyles__PanelContainer
+                        <styled.div
                           onClick={[Function]}
                         >
                           <div
                             className="c10"
                             onClick={[Function]}
                           >
-                            <Panelstyles__PanelContent>
+                            <styled.div>
                               <div
                                 className="c11"
                               >
-                                <Heading
+                                <Styled(styled.p)
                                   as="h3"
                                 >
                                   <h3
@@ -492,11 +496,11 @@ exports[`Flow renders 1`] = `
                                   >
                                     KeepKey
                                   </h3>
-                                </Heading>
+                                </Styled(styled.p)>
                               </div>
-                            </Panelstyles__PanelContent>
+                            </styled.div>
                           </div>
-                        </Panelstyles__PanelContainer>
+                        </styled.div>
                       </Panel>
                     </WalletPanel>
                     <WalletPanel
@@ -509,18 +513,18 @@ exports[`Flow renders 1`] = `
                         key="Mnemonic Phrase"
                         onClick={[Function]}
                       >
-                        <Panelstyles__PanelContainer
+                        <styled.div
                           onClick={[Function]}
                         >
                           <div
                             className="c10"
                             onClick={[Function]}
                           >
-                            <Panelstyles__PanelContent>
+                            <styled.div>
                               <div
                                 className="c11"
                               >
-                                <Heading
+                                <Styled(styled.p)
                                   as="h3"
                                 >
                                   <h3
@@ -528,17 +532,17 @@ exports[`Flow renders 1`] = `
                                   >
                                     Mnemonic Phrase
                                   </h3>
-                                </Heading>
+                                </Styled(styled.p)>
                               </div>
-                            </Panelstyles__PanelContent>
+                            </styled.div>
                           </div>
-                        </Panelstyles__PanelContainer>
+                        </styled.div>
                       </Panel>
                     </WalletPanel>
                   </div>
-                </GridContainer>
+                </styled.div>
               </div>
-            </Container>
+            </styled.div>
           </section>
           <Memo(MountComponent)
             innerRef={
@@ -546,10 +550,8 @@ exports[`Flow renders 1`] = `
                 "current": .c3 {
   display: block;
   font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -566,38 +568,27 @@ exports[`Flow renders 1`] = `
 .c2 {
   display: block;
   font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 1.5rem;
-  font-family: 'Public Sans',sans-serif;
   font-weight: normal;
 }
 
 .c7 {
   display: block;
   font-size: 1rem;
-  font-family: 'Open Sans',sans-serif;
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 1.2rem;
-  font-family: 'Public Sans',sans-serif;
   font-weight: normal;
 }
 
 .c0 {
   padding: 4rem 0;
-  background: white;
-}
-
-.c0:nth-child(odd) {
-  background: #f6f7f9;
 }
 
 .c0:first-of-type {
@@ -623,7 +614,7 @@ exports[`Flow renders 1`] = `
   overflow: hidden;
   height: 0;
   position: relative;
-  box-shadow: rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0,rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;
+  box-shadow: rgba(0,0,0,0.03) 0 0 0 0.0625em,rgba(0,0,0,0.05) 0 0.0625em 0 0, rgba(0,0,0,0.1) 0 0.0625em 0.1875em 0;
 }
 
 .c6 {
@@ -780,19 +771,19 @@ exports[`Flow renders 1`] = `
                 "props": Object {
                   "animate": "enter",
                   "children": Array [
-                    <MetaData
+                    <Meta
                       title="Select a wallet type"
                     />,
-                    <ForwardRef(Container)>
-                      <ForwardRef(Heading)
+                    <ForwardRef(styled.div)>
+                      <ForwardRef(Styled(styled.p))
                         as="h2"
                       >
                         Select a wallet type
-                      </ForwardRef(Heading)>
-                      <ForwardRef(Typography)>
+                      </ForwardRef(Styled(styled.p))>
+                      <ForwardRef(styled.p)>
                         Choose one of the available wallet types from the list below.
-                      </ForwardRef(Typography)>
-                      <ForwardRef(GridContainer)
+                      </ForwardRef(styled.p)>
+                      <ForwardRef(styled.div)
                         columns={4}
                         rows={1}
                       >
@@ -816,10 +807,10 @@ exports[`Flow renders 1`] = `
                           title="Mnemonic Phrase"
                           type="MnemonicPhrase"
                         />
-                      </ForwardRef(GridContainer)>
-                    </ForwardRef(Container)>,
+                      </ForwardRef(styled.div)>
+                    </ForwardRef(styled.div)>,
                   ],
-                  "className": "Section-uqyogt-0 c6",
+                  "className": "sc-AxmLO c6",
                   "exit": "exit",
                   "initial": "initial",
                   "transition": Object {
@@ -938,8 +929,272 @@ exports[`Flow renders 1`] = `
               }
             }
           />
+          <Component
+            animate="enter"
+            className="c6"
+            controls={
+              ValueAnimationControls {
+                "activeOverrides": Set {},
+                "baseTarget": Object {
+                  "opacity": 1,
+                },
+                "defaultTransition": Object {
+                  "duration": 0.6,
+                },
+                "hasValue": [Function],
+                "isAnimating": Set {
+                  "opacity",
+                },
+                "makeTargetAnimatable": [Function],
+                "overrides": Array [],
+                "props": Object {
+                  "animate": "enter",
+                  "children": Array [
+                    <Meta
+                      title="Select a wallet type"
+                    />,
+                    <ForwardRef(styled.div)>
+                      <ForwardRef(Styled(styled.p))
+                        as="h2"
+                      >
+                        Select a wallet type
+                      </ForwardRef(Styled(styled.p))>
+                      <ForwardRef(styled.p)>
+                        Choose one of the available wallet types from the list below.
+                      </ForwardRef(styled.p)>
+                      <ForwardRef(styled.div)
+                        columns={4}
+                        rows={1}
+                      >
+                        <WalletPanel
+                          onClick={[Function]}
+                          title="Ledger"
+                          type="Ledger"
+                        />
+                        <WalletPanel
+                          onClick={[Function]}
+                          title="Trezor"
+                          type="Trezor"
+                        />
+                        <WalletPanel
+                          onClick={[Function]}
+                          title="KeepKey"
+                          type="KeepKey"
+                        />
+                        <WalletPanel
+                          onClick={[Function]}
+                          title="Mnemonic Phrase"
+                          type="MnemonicPhrase"
+                        />
+                      </ForwardRef(styled.div)>
+                    </ForwardRef(styled.div)>,
+                  ],
+                  "className": "sc-AxmLO c6",
+                  "exit": "exit",
+                  "initial": "initial",
+                  "transition": Object {
+                    "duration": 0.6,
+                  },
+                  "variants": Object {
+                    "enter": Object {
+                      "opacity": 1,
+                    },
+                    "exit": Object {
+                      "opacity": 0,
+                    },
+                    "initial": Object {
+                      "opacity": 0,
+                    },
+                  },
+                },
+                "readValueFromSource": [Function],
+                "resolvedOverrides": Array [],
+                "values": MotionValuesMap {
+                  "hasMounted": true,
+                  "onUpdate": undefined,
+                  "output": [Function],
+                  "unsubscribers": Map {
+                    "opacity" => [Function],
+                  },
+                  "values": Map {
+                    "opacity" => MotionValue {
+                      "canTrackVelocity": true,
+                      "current": 0,
+                      "lastUpdated": 0,
+                      "notifySubscriber": [Function],
+                      "parent": undefined,
+                      "prev": undefined,
+                      "renderSubscribers": Set {
+                        [Function],
+                      },
+                      "scheduleVelocityCheck": [Function],
+                      "setChild": [Function],
+                      "stopAnimation": [Function],
+                      "timeDelta": 0,
+                      "transformer": undefined,
+                      "updateAndNotify": [Function],
+                      "updateSubscribers": Set {
+                        [Function],
+                      },
+                      "velocityCheck": [Function],
+                    },
+                  },
+                },
+                "variants": Object {
+                  "enter": Object {
+                    "opacity": 1,
+                  },
+                  "exit": Object {
+                    "opacity": 0,
+                  },
+                  "initial": Object {
+                    "opacity": 0,
+                  },
+                },
+              }
+            }
+            exit="exit"
+            initial="initial"
+            innerRef={
+              Object {
+                "current": <section
+                  class="c6"
+                  style="opacity: 0;"
+                >
+                  <div
+                    class="c0"
+                  >
+                    <h2
+                      class="c7"
+                    >
+                      Select a wallet type
+                    </h2>
+                    <p
+                      class="c8"
+                    >
+                      Choose one of the available wallet types from the list below.
+                    </p>
+                    <div
+                      class="c9"
+                      rows="1"
+                    >
+                      <div
+                        class="c10"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3
+                            class="c12"
+                          >
+                            Ledger
+                          </h3>
+                        </div>
+                      </div>
+                      <div
+                        class="c10"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3
+                            class="c12"
+                          >
+                            Trezor
+                          </h3>
+                        </div>
+                      </div>
+                      <div
+                        class="c10"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3
+                            class="c12"
+                          >
+                            KeepKey
+                          </h3>
+                        </div>
+                      </div>
+                      <div
+                        class="c10"
+                      >
+                        <div
+                          class="c11"
+                        >
+                          <h3
+                            class="c12"
+                          >
+                            Mnemonic Phrase
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>,
+              }
+            }
+            key="exit"
+            parentContext={
+              Object {
+                "static": false,
+              }
+            }
+            transition={
+              Object {
+                "duration": 0.6,
+              }
+            }
+            values={
+              MotionValuesMap {
+                "hasMounted": true,
+                "onUpdate": undefined,
+                "output": [Function],
+                "unsubscribers": Map {
+                  "opacity" => [Function],
+                },
+                "values": Map {
+                  "opacity" => MotionValue {
+                    "canTrackVelocity": true,
+                    "current": 0,
+                    "lastUpdated": 0,
+                    "notifySubscriber": [Function],
+                    "parent": undefined,
+                    "prev": undefined,
+                    "renderSubscribers": Set {
+                      [Function],
+                    },
+                    "scheduleVelocityCheck": [Function],
+                    "setChild": [Function],
+                    "stopAnimation": [Function],
+                    "timeDelta": 0,
+                    "transformer": undefined,
+                    "updateAndNotify": [Function],
+                    "updateSubscribers": Set {
+                      [Function],
+                    },
+                    "velocityCheck": [Function],
+                  },
+                },
+              }
+            }
+            variants={
+              Object {
+                "enter": Object {
+                  "opacity": 1,
+                },
+                "exit": Object {
+                  "opacity": 0,
+                },
+                "initial": Object {
+                  "opacity": 0,
+                },
+              }
+            }
+          />
         </ForwardRef(MotionComponent)>
-      </Section>
+      </Styled(Component)>
     </SelectWallet>
   </Flow>
 </EtherFlow>

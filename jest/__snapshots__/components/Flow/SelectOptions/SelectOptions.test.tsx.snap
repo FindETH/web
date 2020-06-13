@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SelectOptions renders 1`] = `
-<Section
+<Styled(Component)
   animate="enter"
   exit="exit"
   initial="initial"
@@ -24,18 +24,18 @@ exports[`SelectOptions renders 1`] = `
     }
   }
 >
-  <MetaData
+  <Meta
     title="Select your options"
   />
-  <Container>
-    <Heading
+  <styled.div>
+    <Styled(styled.p)
       as="h2"
     >
       Select your options
-    </Heading>
-    <Typography>
+    </Styled(styled.p)>
+    <styled.p>
       Select your options.
-    </Typography>
-  </Container>
-</Section>
+    </styled.p>
+  </styled.div>
+</Styled(Component)>
 `;
