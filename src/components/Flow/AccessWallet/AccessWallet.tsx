@@ -14,14 +14,10 @@ import { FlowComponentProps } from '../Flow';
 type Props = FlowComponentProps<{ wallet: WalletType; implementation: Wallet }>;
 
 const AccessWallet: FunctionComponent<Props> = ({ state, onNext }) => {
-  if (!state.implementation) {
-    return null;
-  }
-
   const [error, setError] = useState<Error | undefined>();
 
   const connect = () => {
-    if (state.implementation!.isHardwareWallet()) {
+    if (state.implementation?.isHardwareWallet()) {
       state.implementation
         .connect()
         .then(() => onNext({}))
@@ -37,6 +33,10 @@ const AccessWallet: FunctionComponent<Props> = ({ state, onNext }) => {
   useEffect(() => {
     connect();
   }, [state.implementation]);
+
+  if (!state.implementation) {
+    return null;
+  }
 
   return (
     <Section {...PAGE_TRANSITION_PROPS}>

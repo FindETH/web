@@ -16,7 +16,7 @@ const LedgerOptions: FunctionComponent<Props> = ({ onNext }) => {
       .then(transport => {
         onNext(new Ledger(transport));
       })
-      // tslint:disable-next-line:no-console
+      // eslint-disable-next-line no-console
       .catch(console.error); // TODO
   };
 
@@ -29,7 +29,7 @@ const LedgerOptions: FunctionComponent<Props> = ({ onNext }) => {
 
         throw new Error('WebBLE not supported');
       })
-      // tslint:disable-next-line:no-console
+      // eslint-disable-next-line no-console
       .catch(console.error); // TODO
   };
 

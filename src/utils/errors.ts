@@ -8,7 +8,7 @@
  */
 export const getErrorMessage = (error: Error): string => {
   if (process.env.NODE_ENV !== 'production') {
-    // tslint:disable-next-line
+    // eslint-disable-next-line no-console
     console.error(error);
   }
 
