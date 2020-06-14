@@ -6,8 +6,8 @@ exports[`App renders 1`] = `
     Object {
       "borderColor": "#e5e5e5",
       "errorColor": "#ed4337",
-      "font": "'Open Sans', sans-serif",
-      "headingFont": "'Public Sans', sans-serif",
+      "font": "\\"Open Sans\\", sans-serif",
+      "headingFont": "\\"Public Sans\\", sans-serif",
       "linkColor": "#1eb8e7",
       "linkHoverColor": "#4cc7ec",
       "modalBackground": "white",
