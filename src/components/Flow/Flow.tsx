@@ -26,6 +26,7 @@ export interface FlowComponentProps<State> {
  *
  * TODO: Figure out if it's possible to create a union of the values returned by the components.
  */
+// eslint-disable-next-line @typescript-eslint/ban-types
 const Flow = <State extends object>({ title, components, handleDone }: Props<State>): ReactElement => {
   const dispatch = useDispatch();
   const [current, setCurrent] = useState(0);

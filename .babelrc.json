@@ -13,9 +13,7 @@
       }
     ]
   ],
-  "plugins": [
-    "@babel/plugin-syntax-bigint"
-  ],
+  "plugins": ["@babel/plugin-syntax-bigint"],
   "env": {
     "production": {
       "plugins": [
