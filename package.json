@@ -113,8 +113,7 @@
     "*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix",
-      "stylelint",
-      "git add"
+      "stylelint"
     ]
   },
   "husky": {
