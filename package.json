@@ -17,10 +17,10 @@
     "lint": "yarn run lint:tsc && yarn run lint:eslint && yarn run lint:prettier && yarn run lint:styles && yarn run lint:lockfile",
     "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx",
-    "lint:prettier": "prettier --check 'src/**/*.{ts,tsx}'",
+    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
     "lint:styles": "stylelint 'src/**/*.tsx'",
     "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
-    "prettier": "prettier --write '**/*.{ts,tsx,js,json}'"
+    "prettier": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.10.2",
@@ -97,7 +97,7 @@
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "jest-styled-components": "^7.0.0",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.2.11",
     "lockfile-lint": "^3.0.4",
     "prettier": "^1.19.1",
     "redux-mock-store": "^1.5.4",
@@ -113,8 +113,7 @@
     "*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix",
-      "stylelint",
-      "git add"
+      "stylelint"
     ]
   },
   "husky": {
