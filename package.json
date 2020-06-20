@@ -12,6 +12,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production gatsby build",
     "start": "gatsby develop --https",
+    "analyze": "cross-env ANALYZE_BUNDLE=true yarn run build",
     "deploy": "gatsby-plugin-s3 deploy --yes",
     "test": "jest",
     "lint": "yarn run lint:tsc && yarn run lint:eslint && yarn run lint:prettier && yarn run lint:styles && yarn run lint:lockfile",
@@ -92,6 +93,7 @@
     "gatsby-plugin-ts-config": "^0.2.2",
     "gatsby-plugin-typescript": "^2.4.6",
     "gatsby-plugin-typescript-checker": "^1.1.1",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "jest-styled-components": "^7.0.0",

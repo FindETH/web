@@ -2,6 +2,7 @@ import { resolve } from 'path';
 import { GatsbyConfig } from 'gatsby';
 
 const SITE_URL = 'https://beta.findeth.io';
+const ENABLE_BUNDLE_ANALYZER = process.env.ANALYZE_BUNDLE ?? false;
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -13,6 +14,13 @@ const config: GatsbyConfig = {
     'gatsby-plugin-react-helmet-async',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        disable: !ENABLE_BUNDLE_ANALYZER,
+        analyzerPort: 8001
+      }
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
