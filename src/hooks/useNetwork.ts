@@ -1,24 +1,33 @@
-import { getDefaultProvider, getNetwork, Network, NETWORK_OFFLINE } from '@findeth/networks';
+import { getNetwork, Network } from '@findeth/networks';
 import { useEffect } from 'react';
 import { setNetwork, setOnline } from '../store/network';
 import { useDispatch } from './useDispatch';
 import { useNotifications } from './useNotifications';
 import { useSelector } from './useSelector';
 
+export type NetworkResult =
+  | {
+      online: true;
+      network: Network;
+    }
+  | {
+      online: false;
+      network: undefined;
+    };
+
 /**
- * React hook to get an instance of an Ethers.js provider.
+ * React hook to get the current network from a provider.
  *
- * @return {Network | undefined}
+ * @return {NetworkResult}
  */
-export const useNetwork = (): Network | undefined => {
-  const network = useSelector(state => state.network.network);
+export const useNetwork = (provider: string): NetworkResult => {
+  const { network, online } = useSelector(state => state.network);
   const dispatch = useDispatch();
   const { sendNotification } = useNotifications();
 
   const handleOnline = () => {
     dispatch(setOnline(true));
 
-    const provider = getDefaultProvider();
     getNetwork(provider).then(fetchedNetwork => dispatch(setNetwork(fetchedNetwork)));
   };
 
@@ -29,7 +38,8 @@ export const useNetwork = (): Network | undefined => {
 
   const handleOffline = () => {
     sendNotification('You are offline, some functionality may not be available.', 'warning');
-    dispatch(setNetwork(NETWORK_OFFLINE));
+    dispatch(setOnline(false));
+    dispatch(setNetwork(undefined));
   };
 
   useEffect(() => {
@@ -52,5 +62,8 @@ export const useNetwork = (): Network | undefined => {
     };
   }, []);
 
-  return network;
+  return {
+    online,
+    network
+  } as NetworkResult;
 };
