@@ -10,5 +10,5 @@ export const INITIAL_STATE: NetworkState = {
   online: true
 };
 
-export const setNetwork = createAction<Network>('network/setNetwork');
+export const setNetwork = createAction<Network | undefined>('network/setNetwork');
 export const setOnline = createAction<boolean>('network/setOnline');
