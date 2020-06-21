@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectNetwork renders 1`] = `
+<Styled(Component)>
+  <Meta
+    title="Choose a network"
+  />
+  <styled.div>
+    <Styled(styled.p)
+      as="h2"
+    >
+      Choose a network
+    </Styled(styled.p)>
+    <styled.p>
+      Which network would you like to use? FindETH is compatible with Ethereum and other EVM-like networks.
+    </styled.p>
+    <Dropdown
+      items={
+        Array [
+          "Ethereum Mainnet",
+          "xDAI Chain",
+          "EtherInc",
+          "ThunderCore Mainnet",
+          "Metadium Mainnet",
+          "IPOS Network",
+          "Metadium Testnet",
+          "Fuse Mainnet",
+          "Ether-1",
+          "Xerom",
+          "PepChain Churchill",
+          "Lightstreams Testnet",
+          "Atheios",
+          "Lightstreams Mainnet",
+          "ThunderCore Testnet",
+          "IOLite",
+          "Teslafunds",
+          "EtherGem",
+          "Expanse Network",
+          "ELA-ETH-Sidechain Mainnet",
+          "Akaroma",
+          "ELA-ETH-Sidechain Testnet",
+          "Freight Trust Network",
+          "Webchain",
+          "ARTIS sigma1",
+          "ARTIS tau1",
+          "Fantom Opera",
+          "High Performance Blockchain",
+          "Auxilium Network Mainnet",
+          "Ethereum Testnet Ropsten",
+          "RSK Mainnet",
+          "RSK Testnet",
+          "Ethersocial Network",
+          "Pirl",
+          "Lisinski",
+          "Energi Mainnet",
+          "Ethereum Testnet Rinkeby",
+          "Ethereum Testnet Kovan",
+          "Athereum",
+          "Energi Testnet",
+          "Ethereum Testnet Görli",
+          "GoChain",
+          "Ethereum Classic Mainnet",
+          "Aquachain",
+          "Ellaism",
+          "ThaiChain",
+          "Mix",
+          "POA Network Sokol",
+          "Musicoin",
+          "Firenze test network",
+          "Ubiq Network Mainnet",
+          "Callisto Mainnet",
+          "TomoChain",
+          "Nepal Blockchain Network",
+          "POA Network Core",
+        ]
+      }
+      onChange={[Function]}
+      value="Ethereum Mainnet"
+    />
+    <Styled(styled.p)
+      onClick={[Function]}
+    >
+      Next
+    </Styled(styled.p)>
+  </styled.div>
+</Styled(Component)>
+`;
