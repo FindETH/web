@@ -1,4 +1,4 @@
-import { getWalletImplementation, KeepKey, Ledger, MnemonicPhrase, Trezor, Wallet, WalletType } from '@findeth/wallets';
+import { getWalletImplementation, Ledger, MnemonicPhrase, Trezor, Wallet, WalletType } from '@findeth/wallets';
 import React, { ComponentType, FunctionComponent } from 'react';
 import Meta from '../../Meta';
 import { PAGE_TRANSITION_PROPS } from '../../PageTransition';
@@ -34,7 +34,7 @@ const WalletOptions: FunctionComponent<Props> = ({ state, onNext }) => {
       throw new Error();
     }
 
-    handleNext(new (implementation as typeof KeepKey | typeof Trezor)());
+    handleNext(new (implementation as typeof Trezor)());
     return null;
   }
 

@@ -22,10 +22,6 @@ const WALLET_TYPES = [
     type: WalletType.Trezor
   },
   {
-    title: 'KeepKey',
-    type: WalletType.KeepKey
-  },
-  {
     title: 'Mnemonic Phrase',
     type: WalletType.MnemonicPhrase
   }

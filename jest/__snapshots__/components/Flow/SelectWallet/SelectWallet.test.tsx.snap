@@ -37,7 +37,7 @@ exports[`SelectWallet renders 1`] = `
       Choose one of the available wallet types from the list below.
     </styled.p>
     <styled.div
-      columns={4}
+      columns={3}
       rows={1}
     >
       <WalletPanel
@@ -51,12 +51,6 @@ exports[`SelectWallet renders 1`] = `
         onClick={[Function]}
         title="Trezor"
         type="Trezor"
-      />
-      <WalletPanel
-        key="KeepKey"
-        onClick={[Function]}
-        title="KeepKey"
-        type="KeepKey"
       />
       <WalletPanel
         key="Mnemonic Phrase"
