@@ -3,8 +3,8 @@ import { TransportWrapper, Wallet, WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
 import Flow from '../../../components/Flow';
 import AccessWallet from '../../../components/Flow/AccessWallet';
+import SearchOptions from '../../../components/Flow/SearchOptions';
 import SelectNetwork from '../../../components/Flow/SelectNetwork';
-import SelectOptions from '../../../components/Flow/SelectOptions';
 import SelectWallet from '../../../components/Flow/SelectWallet';
 import WalletOptions from '../../../components/Flow/WalletOptions';
 
@@ -18,7 +18,7 @@ interface FlowState {
   network?: Network;
 }
 
-const FLOW_COMPONENTS = [SelectNetwork, SelectWallet, WalletOptions, AccessWallet, SelectOptions];
+const FLOW_COMPONENTS = [SelectNetwork, SelectWallet, WalletOptions, AccessWallet, SearchOptions];
 
 const EtherFlow: FunctionComponent = () => {
   const handleDone = () => {
