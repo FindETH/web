@@ -13,7 +13,7 @@ interface Props<State> {
   handleDone(result: State): void;
 }
 
-export interface FlowComponentProps<State> {
+export interface FlowComponentProps<State = unknown> {
   state: Partial<State>;
 
   onReset(): void;
