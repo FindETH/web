@@ -12,7 +12,8 @@ describe('Flow', () => {
   it('renders', () => {
     const store = mockStore({
       derivation: {
-        isFlow: false
+        isFlow: false,
+        isSearching: false
       }
     });
 

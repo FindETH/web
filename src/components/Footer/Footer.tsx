@@ -5,6 +5,7 @@ import Info from './Info';
 const Footer: FunctionComponent = () => (
   <FooterContainer>
     <FlexContainer>
+      <div />
       <Info />
     </FlexContainer>
   </FooterContainer>

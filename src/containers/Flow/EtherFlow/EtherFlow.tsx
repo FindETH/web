@@ -7,6 +7,8 @@ import SearchOptions from '../../../components/Flow/SearchOptions';
 import SelectNetwork from '../../../components/Flow/SelectNetwork';
 import SelectWallet from '../../../components/Flow/SelectWallet';
 import WalletOptions from '../../../components/Flow/WalletOptions';
+import { useDispatch } from '../../../hooks';
+import { setImplementation } from '../../../store/derivation';
 
 export type WalletWithTransport =
   | { type: WalletType; transport?: undefined }
@@ -21,8 +23,11 @@ interface FlowState {
 const FLOW_COMPONENTS = [SelectNetwork, SelectWallet, WalletOptions, AccessWallet, SearchOptions];
 
 const EtherFlow: FunctionComponent = () => {
-  const handleDone = () => {
-    // TODO
+  const dispatch = useDispatch();
+
+  const handleDone = ({ implementation }: Required<FlowState>) => {
+    const serializedImplementation = implementation.serialize();
+    dispatch(setImplementation(serializedImplementation));
   };
 
   return <Flow<FlowState> title="Search for Ether" components={FLOW_COMPONENTS} handleDone={handleDone} />;
