@@ -1911,10 +1911,10 @@
     "@mycrypto/eth-scan" "^3.0.0"
     isomorphic-unfetch "^3.0.0"
 
-"@findeth/wallets@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.2.tgz#36b2a6e6bd24016fe822324d15238f7ee1b27932"
-  integrity sha512-O/Q5UufI4qU2sn9lkr6fAcHyt+p/cDtkJixAKbSbAwr+5E2cC3s4DO/fafcP9ZlAK52F02NEY97ddk/PDs62OQ==
+"@findeth/wallets@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.3.tgz#2f4699d301e30d46b165d68e0c32b74ccbb00bbb"
+  integrity sha512-JP1rvm8MSCRjVcTcZ4muc4B2LzUIS6jMNdXvsFOGIOF3j9lcQBukvzdNHY4aAW5KpcsRD9fOxwtC7m4mkeoI5g==
   dependencies:
     "@findeth/hdnode" "^0.2.0"
     "@ledgerhq/hw-app-eth" "^5.2.0"
@@ -2603,12 +2603,12 @@
   resolved "https://registry.yarnpkg.com/@redux-saga/types/-/types-1.1.0.tgz#0e81ce56b4883b4b2a3001ebe1ab298b84237204"
   integrity sha512-afmTuJrylUU/0OtqzaRkbyYFFNgCF73Bvel/sw90pvGrWIZ+vyoIJqA6eMSoA6+nb443kTmulmBtC9NerXboNg==
 
-"@reduxjs/toolkit@^1.3.6":
-  version "1.3.6"
-  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.3.6.tgz#306171fce2ab7423931736c34fa82190959dcd62"
-  integrity sha512-eNYURfoJa6mRNU5YtBVbmE5+nDoc4lpjZ181PBwRC6nIFYZdNR3GcoQ4uomFt8eHpXAUAdpCdxBlDsmwyXOt9Q==
+"@reduxjs/toolkit@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.4.0.tgz#ee2e2384cc3d1d76780d844b9c2da3580d32710d"
+  integrity sha512-hkxQwVx4BNVRsYdxjNF6cAseRmtrkpSlcgJRr3kLUcHPIAMZAmMJkXmHh/eUEGTMqPzsYpJLM7NN2w9fxQDuGw==
   dependencies:
-    immer "^6.0.1"
+    immer "^7.0.3"
     redux "^4.0.0"
     redux-thunk "^2.3.0"
     reselect "^4.0.0"
@@ -9326,10 +9326,10 @@ ignore@^5.1.1, ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-immer@^6.0.1:
-  version "6.0.9"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-6.0.9.tgz#b9dd69b8e69b3a12391e87db1e3ff535d1b26485"
-  integrity sha512-SyCYnAuiRf67Lvk0VkwFvwtDoEiCMjeamnHvRfnVDyc7re1/rQrNxuL+jJ7lA3WvdC4uznrvbmm+clJ9+XXatg==
+immer@^7.0.3:
+  version "7.0.9"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-7.0.9.tgz#28e7552c21d39dd76feccd2b800b7bc86ee4a62e"
+  integrity sha512-Vs/gxoM4DqNAYR7pugIxi0Xc8XAun/uy7AQu4fLLqaTBHxjOP9pJ266Q9MWA/ly4z6rAFZbvViOtihxUZ7O28A==
 
 import-cwd@^2.0.0:
   version "2.1.0"
