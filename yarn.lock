@@ -1911,10 +1911,10 @@
     "@mycrypto/eth-scan" "^3.0.0"
     isomorphic-unfetch "^3.0.0"
 
-"@findeth/wallets@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.2.tgz#36b2a6e6bd24016fe822324d15238f7ee1b27932"
-  integrity sha512-O/Q5UufI4qU2sn9lkr6fAcHyt+p/cDtkJixAKbSbAwr+5E2cC3s4DO/fafcP9ZlAK52F02NEY97ddk/PDs62OQ==
+"@findeth/wallets@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.3.tgz#2f4699d301e30d46b165d68e0c32b74ccbb00bbb"
+  integrity sha512-JP1rvm8MSCRjVcTcZ4muc4B2LzUIS6jMNdXvsFOGIOF3j9lcQBukvzdNHY4aAW5KpcsRD9fOxwtC7m4mkeoI5g==
   dependencies:
     "@findeth/hdnode" "^0.2.0"
     "@ledgerhq/hw-app-eth" "^5.2.0"
