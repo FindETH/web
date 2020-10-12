@@ -3,7 +3,6 @@ module.exports = {
   moduleNameMapper: {
     '\\.(woff|woff2|svg)$': '<rootDir>/jest/fileMock.ts'
   },
-  collectCoverage: true,
   collectCoverageFrom: ['**/*.ts?(x)', '!**/*.d.ts', '!jest/**/*'],
   setupFilesAfterEnv: ['./jest/setupTests.ts'],
   snapshotResolver: './jest/snapshotResolver.js',
