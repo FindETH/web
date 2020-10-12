@@ -89,7 +89,7 @@
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-s3": "^0.3.3",
     "gatsby-plugin-sitemap": "^2.4.5",
-    "gatsby-plugin-styled-components": "^3.3.4",
+    "gatsby-plugin-styled-components": "^3.3.14",
     "gatsby-plugin-ts-config": "^0.2.2",
     "gatsby-plugin-typescript": "^2.4.6",
     "gatsby-plugin-typescript-checker": "^1.1.1",
