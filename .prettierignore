@@ -1,8 +1,0 @@
-node_modules/
-coverage/
-lib/
-typings/
-dist/
-yarn-error.log
-.cache/
-public/
