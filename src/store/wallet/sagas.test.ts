@@ -3,6 +3,17 @@ import { recordSaga } from '../../utils/saga';
 import { initialise, setInitialised } from './actions';
 import { initialiseSaga } from './sagas';
 
+jest.mock('@findeth/wallets', () => ({
+  MnemonicPhrase: class {
+    isHardwareWallet = jest.fn().mockImplementation(() => false);
+  },
+
+  Trezor: class {
+    isHardwareWallet = jest.fn().mockImplementation(() => true);
+    connect = jest.fn();
+  }
+}));
+
 const MNEMONIC_PHRASE = 'test test test test test test test test test test test ball';
 
 describe('initialiseSaga', () => {
