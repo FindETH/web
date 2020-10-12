@@ -43,7 +43,7 @@
     "styled-components": "^5.0.0",
     "typeface-nunito": "^0.0.72",
     "typeface-open-sans": "^0.0.75",
-    "typeface-public-sans": "^1.1.4",
+    "typeface-public-sans": "^1.1.13",
     "yup": "^0.29.1"
   },
   "devDependencies": {
