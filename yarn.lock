@@ -16676,10 +16676,10 @@ typeface-open-sans@^0.0.75:
   resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.75.tgz#20d0c330f14c0c40463c334adbedd6005389abe4"
   integrity sha512-0lLmB7pfj113OP4T78SbpSmC4OCdFQ0vUxdSXQccsSb6qF76F92iEuC/DghFgmPswTyidk8+Hwf+PS/htiJoRQ==
 
-typeface-public-sans@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/typeface-public-sans/-/typeface-public-sans-1.1.4.tgz#99126a26a7365b26b07ffcef936c8c1edcad368b"
-  integrity sha512-Ed4A+FiMVSGrYuNWyE7gMIuDIwNbiN1GGWklcayGOc8BdsPAvHp4dSIpn2MbchncAyaH7cvVWuUKPffCyGFFgA==
+typeface-public-sans@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-public-sans/-/typeface-public-sans-1.1.13.tgz#451ba783150205746506b29ee30272850d584dcb"
+  integrity sha512-cBrpPUvIeaYIacxtxPeCpKM7vAJb27+8E9HAT7R3ZA2zrj9ntm630tpSgBCn/Ip6D11pWSmKVR4eZ8Pr1Yxnog==
 
 typescript-compare@^0.0.2:
   version "0.0.2"
