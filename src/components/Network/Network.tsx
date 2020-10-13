@@ -1,19 +1,20 @@
 import React, { FunctionComponent } from 'react';
-import { useNetwork } from '../../hooks';
+import { useSelector } from '../../hooks';
 import Typography from '../ui/Typography';
 import { NetworkContainer } from './Network.styles';
 
-const NETWORK_CONNECTING = {
-  name: 'Connecting',
+const NETWORK_OFFLINE = {
+  name: 'Offline',
   color: '#dcdcdc'
 };
 
 const Network: FunctionComponent = () => {
-  const { network } = useNetwork('');
+  const network = useSelector(state => state.network.network);
+  const isOnline = useSelector(state => state.network.isOnline);
 
   return (
     <NetworkContainer>
-      <Typography muted={true}>{network?.name ?? NETWORK_CONNECTING.name}</Typography>
+      <Typography muted={true}>{isOnline ? network.name : NETWORK_OFFLINE.name}</Typography>
     </NetworkContainer>
   );
 };
