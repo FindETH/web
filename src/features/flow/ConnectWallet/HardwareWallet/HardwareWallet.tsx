@@ -18,7 +18,7 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
       if (type === WalletType.Ledger) {
         const Ledger = getWalletImplementation(type);
 
-        // TODO: Fallback to other transports
+        // TODO: Handle error when no transports are available
         getLedgerTransport().then(transport => setImplementation(new Ledger(transport)));
         return;
       }

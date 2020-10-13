@@ -2,6 +2,7 @@ import { WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
 import { useSelector } from '../../../hooks';
 import { FlowComponentProps } from '../Flow';
+import InvalidState from '../InvalidState';
 import HardwareWallet from './HardwareWallet';
 import MnemonicPhrase from './MnemonicPhrase';
 
@@ -16,9 +17,8 @@ type Props = FlowComponentProps;
 const ConnectWallet: FunctionComponent<Props> = ({ onNext }) => {
   const type = useSelector(state => state.wallet.type);
 
-  // TODO: Invalid state component
   if (!type) {
-    return null;
+    return <InvalidState />;
   }
 
   const Component = components[type];
