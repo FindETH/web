@@ -25,7 +25,7 @@ describe('checkNetworkSaga', () => {
     expect(dispatched).toContainEqual(setOnline(true));
   });
 
-  it('doesn\'t do anything when the chain ID is invalid', async () => {
+  it("doesn't do anything when the chain ID is invalid", async () => {
     const state: DeepPartial<ApplicationState> = {
       network: {
         network: getDefaultNetwork()
