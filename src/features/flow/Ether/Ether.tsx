@@ -1,6 +1,7 @@
 import { RouteComponentProps } from '@reach/router';
 import { navigate } from 'gatsby';
 import React, { FunctionComponent } from 'react';
+import CheckConnection from '../../../components/CheckConnection';
 import ConnectWallet from '../ConnectWallet';
 import Flow from '../Flow';
 import NetworkSelector from '../NetworkSelector';
@@ -13,7 +14,11 @@ const Ether: FunctionComponent<Props> = () => {
     navigate('/search');
   };
 
-  return <Flow components={[NetworkSelector, Wallet, ConnectWallet]} onDone={handleDone} />;
+  return (
+    <CheckConnection>
+      <Flow components={[NetworkSelector, Wallet, ConnectWallet]} onDone={handleDone} />
+    </CheckConnection>
+  );
 };
 
 export default Ether;
