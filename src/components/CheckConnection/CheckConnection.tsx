@@ -5,8 +5,9 @@ import Typography from '../ui/Typography';
 
 const CheckConnection: FunctionComponent = ({ children }) => {
   const isOnline = useSelector(state => state.network.isOnline);
+  const isConnected = useSelector(state => state.network.isConnected);
 
-  if (isOnline) {
+  if (isOnline && isConnected) {
     return <>{children}</>;
   }
 

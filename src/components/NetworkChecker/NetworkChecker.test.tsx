@@ -3,7 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import createMockStore from 'redux-mock-store';
-import { checkNetwork, setOnline } from '../../store/network';
+import { setOnline } from '../../store/network';
 import NetworkChecker from './NetworkChecker';
 
 const getComponent = (store: Store) => {
@@ -18,7 +18,7 @@ const getComponent = (store: Store) => {
 describe('NetworkChecker', () => {
   const mockStore = createMockStore();
 
-  it('dispatches checkNetwork if the browser is online', () => {
+  it('dispatches setOnline with true if the browser is online', () => {
     jest
       .spyOn(navigator, 'onLine', 'get')
       .mockReturnValueOnce(true)
@@ -27,7 +27,7 @@ describe('NetworkChecker', () => {
     const store = mockStore({});
     const component = getComponent(store);
 
-    expect(store.getActions()).toContainEqual(checkNetwork());
+    expect(store.getActions()).toContainEqual(setOnline(true));
 
     component.unmount();
     component.mount();
@@ -35,7 +35,7 @@ describe('NetworkChecker', () => {
     expect(store.getActions()).toContainEqual(setOnline(false));
   });
 
-  it('dispatches setOffline if the browser connection is lost', () => {
+  it('dispatches setOnline when an online or offline event is called', () => {
     const events: Record<string, () => void> = {};
     window.addEventListener = jest.fn().mockImplementation((event, callback) => {
       events[event] = callback;
@@ -47,10 +47,10 @@ describe('NetworkChecker', () => {
     expect(events).toHaveProperty('online');
     expect(events).toHaveProperty('offline');
 
-    events.offline();
+    events.online();
     events.offline();
 
+    expect(store.getActions()).toContainEqual(setOnline(true));
     expect(store.getActions()).toContainEqual(setOnline(false));
-    expect(store.getActions()).toContainEqual(checkNetwork());
   });
 });

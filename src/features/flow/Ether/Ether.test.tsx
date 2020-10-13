@@ -12,7 +12,8 @@ describe('Ether', () => {
     const store = mockStore({
       network: {
         network: getDefaultNetwork(),
-        isOnline: true
+        isOnline: true,
+        isConnected: true
       }
     });
 
@@ -24,7 +25,8 @@ describe('Ether', () => {
     const store = mockStore({
       network: {
         network: getDefaultNetwork(),
-        isOnline: false
+        isOnline: false,
+        isConnected: false
       }
     });
 

@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect } from 'react';
 import { useDispatch } from '../../hooks';
-import { checkNetwork, setOnline } from '../../store/network';
+import { setOnline } from '../../store/network';
 
 /**
  * This component does not render anything. It only checks if there is an internet connection available, and updates the
@@ -10,7 +10,7 @@ const NetworkChecker: FunctionComponent = () => {
   const dispatch = useDispatch();
 
   const handleOnline = () => {
-    dispatch(checkNetwork());
+    dispatch(setOnline(true));
   };
 
   const handleOffline = () => {
