@@ -21,12 +21,12 @@
     "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
     "lint:styles": "stylelint 'src/**/*.tsx'",
     "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
-    "prettier": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'"
+    "format": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.10.2",
-    "@findeth/networks": "^0.3.1",
-    "@findeth/wallets": "^0.3.3",
+    "@findeth/networks": "^0.4.0",
+    "@findeth/wallets": "^0.3.5",
     "@reach/router": "^1.2.1",
     "@reduxjs/toolkit": "^1.4.0",
     "core-js": "^3.5.0",

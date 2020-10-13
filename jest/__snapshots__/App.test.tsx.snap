@@ -20,6 +20,7 @@ exports[`App renders 1`] = `
     }
   }
 >
+  <NetworkChecker />
   <NotificationList />
   <Memo(GlobalStyleComponent) />
   <styled.main />

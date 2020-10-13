@@ -1902,19 +1902,19 @@
     base-x "^3.0.8"
     keccak "^3.0.0"
 
-"@findeth/networks@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.3.1.tgz#146b742d4d752404cb351a261b81729af2ff70d7"
-  integrity sha512-VEVezr1Dl8kOOMzj4H4yV3Ct56xa30/78WjEVeL8Q8xKWxznwLOZNx/AMIp6rQ1TWsJUiDCBvGViDdvSkKrQGg==
+"@findeth/networks@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.4.0.tgz#162d21cd3d8a3a713372051afe71ee602a9ce1d6"
+  integrity sha512-rYoLisuWji1Vhh/hg0HWAXEghvyEahN+RKvYj6LweoMYy4/SjEyw6gBn+5Wm3a24WRXebjghDJapHeEK74CZlg==
   dependencies:
     "@findeth/abi" "^0.2.1"
     "@mycrypto/eth-scan" "^3.0.0"
     isomorphic-unfetch "^3.0.0"
 
-"@findeth/wallets@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.3.tgz#2f4699d301e30d46b165d68e0c32b74ccbb00bbb"
-  integrity sha512-JP1rvm8MSCRjVcTcZ4muc4B2LzUIS6jMNdXvsFOGIOF3j9lcQBukvzdNHY4aAW5KpcsRD9fOxwtC7m4mkeoI5g==
+"@findeth/wallets@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.5.tgz#4b2c9752d72eb5548ed1d687c3cf7e4711b5990d"
+  integrity sha512-OsZDsB/liO8lYH127jLpfMAFb9UQ/8RNdkEGWSMsDWPY9xbtMsOuvJPzl0s5xDln2USy0TvkuJFeAXRRhGFCcw==
   dependencies:
     "@findeth/hdnode" "^0.2.0"
     "@ledgerhq/hw-app-eth" "^5.2.0"
