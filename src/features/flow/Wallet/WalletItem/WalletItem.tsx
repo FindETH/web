@@ -1,14 +1,12 @@
 import { WalletType } from '@findeth/wallets';
 import React, { FunctionComponent } from 'react';
-import styled from 'styled-components';
+import { WalletContainer } from './WalletItem.styles';
 
 interface Props {
   type: WalletType;
   isSelected: boolean;
   onSelect(type: WalletType): void;
 }
-
-const WalletContainer = styled.li``;
 
 const WalletItem: FunctionComponent<Props> = ({ type, isSelected, onSelect }) => {
   const handleSelect = () => onSelect(type);
