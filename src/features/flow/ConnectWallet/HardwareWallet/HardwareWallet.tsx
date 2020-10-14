@@ -1,4 +1,4 @@
-import { getLedgerTransport, getWalletImplementation, Ledger, Trezor, WalletType } from '@findeth/wallets';
+import { getLedgerTransport, getWalletImplementation, Ledger, Trezor, Wallet, WalletType } from '@findeth/wallets';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import Button from '../../../../components/ui/Button';
 import Container from '../../../../components/ui/Container';
@@ -6,7 +6,7 @@ import Typography from '../../../../components/ui/Typography';
 import { useSelector } from '../../../../hooks';
 
 interface Props {
-  onNext(): void;
+  onNext(wallet: Wallet): void;
 }
 
 const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
@@ -33,7 +33,7 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
     if (implementation) {
       implementation
         .connect()
-        .then(onNext)
+        .then(() => onNext(implementation))
         // eslint-disable-next-line no-console
         .catch(console.error);
     }

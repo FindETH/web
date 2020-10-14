@@ -14,6 +14,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-react-helmet-async',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-remove-dependency-transpilation',
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
