@@ -10,7 +10,7 @@ interface Props {
 
 // TODO
 const MnemonicWallet: FunctionComponent<Props> = ({ onNext }) => {
-  const implementation = new MnemonicPhrase('');
+  const implementation = new MnemonicPhrase('test test test test test test test test test test test ball');
 
   const handleNext = () => onNext(implementation);
 

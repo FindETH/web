@@ -1,5 +1,5 @@
 import { DerivationPath, deserialize, getFullPath, Wallet } from '@findeth/wallets';
-import { SagaIterator, Task } from 'redux-saga';
+import { SagaIterator } from 'redux-saga';
 import { all, call, fork, select, takeLatest, put } from 'redux-saga/effects';
 import { SerialisedWallet } from '../../types/wallet';
 import { ApplicationState } from '../store';

@@ -43,6 +43,9 @@ describe('ConnectWallet', () => {
     const store = mockStore({
       wallet: {
         type: WalletType.Ledger
+      },
+      network: {
+        network: getDefaultNetwork()
       }
     });
 
@@ -56,6 +59,9 @@ describe('ConnectWallet', () => {
     const store = mockStore({
       wallet: {
         type: WalletType.Trezor
+      },
+      network: {
+        network: getDefaultNetwork()
       }
     });
 
@@ -69,6 +75,9 @@ describe('ConnectWallet', () => {
     const store = mockStore({
       wallet: {
         type: WalletType.MnemonicPhrase
+      },
+      network: {
+        network: getDefaultNetwork()
       }
     });
 
@@ -80,7 +89,10 @@ describe('ConnectWallet', () => {
 
   it('renders invalid state when no type is set', async () => {
     const store = mockStore({
-      wallet: {}
+      wallet: {},
+      network: {
+        network: getDefaultNetwork()
+      }
     });
 
     const component = getComponent(<ConnectWallet onReset={jest.fn} onNext={jest.fn} />, store);
