@@ -2,7 +2,7 @@ import { getChainId, Network } from '@findeth/networks';
 import { SagaIterator } from 'redux-saga';
 import { all, call, put, select, takeLatest } from 'redux-saga/effects';
 import { ApplicationState } from '../store';
-import { setConnected, setNetwork, setOnline } from './actions';
+import { setConnected, setOnline } from './actions';
 
 export function* setOnlineSaga({ payload }: ReturnType<typeof setOnline>): SagaIterator {
   if (payload) {
@@ -19,5 +19,5 @@ export function* setOnlineSaga({ payload }: ReturnType<typeof setOnline>): SagaI
 }
 
 export function* rootSaga(): SagaIterator {
-  yield all([takeLatest(setNetwork.type, setOnlineSaga)]);
+  yield all([takeLatest(setOnline.type, setOnlineSaga)]);
 }

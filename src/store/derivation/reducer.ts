@@ -1,15 +1,37 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { DerivationState, INITIAL_STATE, setFlow, setImplementation, setSearching } from './derivation';
+import { addAddress, setDerivationPaths, setFlow, setSearching, startSearching } from './actions';
+import { DerivationState, INITIAL_STATE } from './types';
 
 export const derivationReducer = createReducer<DerivationState>(INITIAL_STATE, builder =>
   builder
     .addCase(setFlow, (state, action) => {
-      state.isFlow = action.payload;
+      return {
+        ...state,
+        isFlow: action.payload
+      };
     })
     .addCase(setSearching, (state, action) => {
-      state.isSearching = action.payload;
+      return {
+        ...state,
+        isSearching: action.payload
+      };
     })
-    .addCase(setImplementation, (state, action) => {
-      state.implementation = action.payload;
+    .addCase(startSearching, state => {
+      return {
+        ...state,
+        isSearching: true
+      };
+    })
+    .addCase(setDerivationPaths, (state, action) => {
+      return {
+        ...state,
+        derivationPaths: action.payload
+      };
+    })
+    .addCase(addAddress, (state, action) => {
+      return {
+        ...state,
+        addresses: [...state.addresses, action.payload]
+      };
     })
 );
