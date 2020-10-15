@@ -32,7 +32,7 @@ const Address: FunctionComponent<Props> = ({ onNext }) => {
 
   return (
     <Container>
-      <input name="address" {...getInputProps()} />
+      <input {...getInputProps('address')} />
       <Button onClick={handleSubmit}>Next</Button>
     </Container>
   );

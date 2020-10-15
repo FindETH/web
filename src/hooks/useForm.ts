@@ -3,25 +3,31 @@ import { Struct, StructError, validate as validateSchema } from 'superstruct';
 
 export type HTMLValueElement = HTMLElement & { name: string; value: string };
 
+export interface InputProps {
+  name: string;
+  value: string;
+  onChange(event: ChangeEvent<HTMLValueElement>): void;
+}
+
 export interface Form<T> {
   values: Partial<T>;
 
-  getInputProps(): { onChange(event: ChangeEvent<HTMLValueElement>): void };
+  getInputProps(name: string): InputProps;
   handleChange(event: ChangeEvent<HTMLValueElement>): void;
   validate(): [StructError, undefined] | [undefined, T];
 }
 
-export const getDefaultValue = <T>(schema: Record<string, Struct<unknown>>): Partial<T> => {
-  return Object.keys(schema).reduce((object, key) => {
+export const getDefaultValue = <T>(schema: Record<string, Struct<unknown>>): T => {
+  return Object.keys(schema).reduce<T>((object, key) => {
     return {
       ...object,
       [key]: ''
     };
-  }, {});
+  }, {} as T);
 };
 
-export const useForm = <T>(schema: Struct<T>): Form<T> => {
-  const [values, setValues] = useState<Partial<T>>(getDefaultValue(schema.schema));
+export const useForm = <T extends Record<string, unknown>>(schema: Struct<T>): Form<T> => {
+  const [values, setValues] = useState<T>(getDefaultValue(schema.schema));
 
   const handleChange = (event: ChangeEvent<HTMLValueElement>): void => {
     const name = event.target.name;
@@ -38,8 +44,10 @@ export const useForm = <T>(schema: Struct<T>): Form<T> => {
     }
   };
 
-  const getInputProps = (): { onChange: typeof handleChange } => {
+  const getInputProps = (name: string): InputProps => {
     return {
+      name,
+      value: String(values[name]),
       onChange: handleChange
     };
   };
