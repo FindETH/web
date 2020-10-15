@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { object, pattern, string } from 'superstruct';
 import Button from '../../../components/ui/Button';
 import Container from '../../../components/ui/Container';
-import { useForm , useDispatch } from '../../../hooks';
+import { useForm, useDispatch } from '../../../hooks';
 import { setAddress } from '../../../store/derivation';
 import { FlowComponentProps } from '../Flow';
 
