@@ -17,6 +17,11 @@ export interface DerivationState {
   derivationPaths: DerivationPath[];
 
   /**
+   * The address to search for.
+   */
+  address?: string;
+
+  /**
    * The addresses that were found.
    */
   addresses: DerivationResult[];

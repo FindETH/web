@@ -1,13 +1,18 @@
 import { Router } from '@reach/router';
 import React, { FunctionComponent } from 'react';
-import Ether from '../features/flow/Ether';
+import AddressFlow from '../features/flow/AddressFlow';
+import EtherFlow from '../features/flow/EtherFlow';
+import { SearchType } from '../types/search';
+
+const getRoute = (searchType: SearchType) => `/${searchType}`;
 
 /**
  * Router for `/flow/*`. This is registered as client-only route in Gatsby.
  */
 const FlowRouter: FunctionComponent = () => (
   <Router basepath="/flow">
-    <Ether path="/ether" default={true} />
+    <AddressFlow path={getRoute(SearchType.ADDRESS)} />
+    <EtherFlow path={getRoute(SearchType.ETHER)} default={true} />
   </Router>
 );
 
