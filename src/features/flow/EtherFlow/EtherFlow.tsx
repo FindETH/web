@@ -9,7 +9,7 @@ import Wallet from '../Wallet';
 
 type Props = RouteComponentProps;
 
-const Ether: FunctionComponent<Props> = () => {
+const EtherFlow: FunctionComponent<Props> = () => {
   const handleDone = () => {
     navigate('/search');
   };
@@ -21,4 +21,4 @@ const Ether: FunctionComponent<Props> = () => {
   );
 };
 
-export default Ether;
+export default EtherFlow;

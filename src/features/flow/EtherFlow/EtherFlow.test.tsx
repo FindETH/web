@@ -3,9 +3,9 @@ import React from 'react';
 import createMockStore from 'redux-mock-store';
 import { getComponent } from '../../../utils/test-utils';
 import Flow from '../Flow';
-import Ether from './Ether';
+import EtherFlow from './EtherFlow';
 
-describe('Ether', () => {
+describe('EtherFlow', () => {
   const mockStore = createMockStore();
 
   it('renders a flow if there is an internet connection', () => {
@@ -17,7 +17,7 @@ describe('Ether', () => {
       }
     });
 
-    const component = getComponent(<Ether />, store);
+    const component = getComponent(<EtherFlow />, store);
     expect(component.find(Flow)).toHaveLength(1);
   });
 
@@ -30,7 +30,7 @@ describe('Ether', () => {
       }
     });
 
-    const component = getComponent(<Ether />, store);
+    const component = getComponent(<EtherFlow />, store);
     expect(component.find(Flow)).toHaveLength(0);
   });
 });

@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { addAddress, setDerivationPaths, setFlow, setSearching, startSearching } from './actions';
+import { addAddress, setAddress, setDerivationPaths, setFlow, setSearching, startSearching } from './actions';
 import { DerivationState, INITIAL_STATE } from './types';
 
 export const derivationReducer = createReducer<DerivationState>(INITIAL_STATE, builder =>
@@ -26,6 +26,12 @@ export const derivationReducer = createReducer<DerivationState>(INITIAL_STATE, b
       return {
         ...state,
         derivationPaths: action.payload
+      };
+    })
+    .addCase(setAddress, (state, action) => {
+      return {
+        ...state,
+        address: action.payload
       };
     })
     .addCase(addAddress, (state, action) => {

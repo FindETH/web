@@ -8,4 +8,5 @@ export const startSearching = createAction('derivation/startSearching');
 
 export const setDerivationPaths = createAction<DerivationPath[]>('derivation/setDerivationPaths');
 
+export const setAddress = createAction<string>('derivation/setAddress');
 export const addAddress = createAction<DerivationResult>('derivation/addAddress');
