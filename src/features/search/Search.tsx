@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Container from '../../components/ui/Container';
 import Typography from '../../components/ui/Typography';

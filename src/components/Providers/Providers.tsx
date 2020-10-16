@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import NotificationProvider from '../NotificationProvider';
 

@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { SpinnerProps, StyledSpinner } from './Spinner.styles';
 
 interface OwnProps {

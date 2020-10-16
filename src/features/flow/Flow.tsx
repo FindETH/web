@@ -1,4 +1,4 @@
-import React, { ComponentType, FunctionComponent, useEffect, useState } from 'react';
+import { ComponentType, FunctionComponent, useEffect, useState } from 'react';
 
 export interface FlowComponentProps {
   onReset(): void;

@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import React, { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { QuestionBody, QuestionContainer, QuestionHeading } from './Question.styles';
 
 export interface Props {

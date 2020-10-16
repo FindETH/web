@@ -1,6 +1,5 @@
 {
   "presets": [
-    "babel-preset-gatsby",
     "@babel/preset-typescript",
     [
       "@babel/preset-env",
@@ -11,21 +10,33 @@
           "firefox": "70"
         }
       }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
     ]
   ],
-  "plugins": ["@babel/plugin-syntax-bigint"],
+  "plugins": [
+    "@babel/plugin-syntax-bigint",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-nullish-coalescing-operator",
+    "@babel/plugin-proposal-optional-chaining",
+    "babel-plugin-optimize-hook-destructuring",
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3,
+        "version": "^7.12.1",
+        "useESModules": true
+      }
+    ]
+  ],
   "env": {
-    "production": {
-      "plugins": [
-        [
-          "@babel/plugin-transform-runtime",
-          {
-            "corejs": 3,
-            "version": "^7.10.1",
-            "useESModules": true
-          }
-        ]
-      ]
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
     }
   }
 }

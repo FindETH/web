@@ -1,5 +1,5 @@
 import { navigate } from '@reach/router';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import PanelItem, { Props as PanelItemProps } from '../PanelItem/PanelItem';
 
 type Props = Exclude<PanelItemProps, 'onClick'> & { to: string };

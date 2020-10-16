@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, FunctionComponent, HTMLAttributes, HtmlHTMLAttributes, ReactElement } from 'react';
+import { DetailedHTMLProps, FunctionComponent, HTMLAttributes, HtmlHTMLAttributes, ReactElement } from 'react';
 
 interface Props {
   htmlAttributes: DetailedHTMLProps<HtmlHTMLAttributes<HTMLHtmlElement>, HTMLHtmlElement>;

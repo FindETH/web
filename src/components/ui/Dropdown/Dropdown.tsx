@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FunctionComponent } from 'react';
+import { ChangeEvent, FunctionComponent } from 'react';
 import { DropdownContainer, DropdownOption } from './Dropdown.styles';
 
 interface Props {

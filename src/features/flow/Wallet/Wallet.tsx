@@ -1,5 +1,5 @@
 import { WalletType } from '@findeth/wallets';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import Button from '../../../components/ui/Button';
 import Container from '../../../components/ui/Container';
 import Heading from '../../../components/ui/Heading';

@@ -1,6 +1,5 @@
 import { getDefaultNetwork } from '@findeth/networks';
 import { WalletType } from '@findeth/wallets';
-import React from 'react';
 import createMockStore from 'redux-mock-store';
 import Button from '../../../components/ui/Button';
 import { setDerivationPaths } from '../../../store/derivation';

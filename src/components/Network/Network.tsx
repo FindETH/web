@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { useSelector } from '../../hooks';
 import Typography from '../ui/Typography';
 import { NetworkContainer } from './Network.styles';

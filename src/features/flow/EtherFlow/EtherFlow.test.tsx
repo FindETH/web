@@ -1,5 +1,4 @@
 import { getDefaultNetwork } from '@findeth/networks';
-import React from 'react';
 import createMockStore from 'redux-mock-store';
 import { getComponent } from '../../../utils/test-utils';
 import Flow from '../Flow';

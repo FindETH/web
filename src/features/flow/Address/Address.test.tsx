@@ -1,4 +1,3 @@
-import React from 'react';
 import createMockStore from 'redux-mock-store';
 import Button from '../../../components/ui/Button';
 import { setAddress } from '../../../store/derivation';

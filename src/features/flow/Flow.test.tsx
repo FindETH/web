@@ -1,5 +1,4 @@
 import { mount, shallow } from 'enzyme';
-import React from 'react';
 import Flow from './Flow';
 import { FirstComponent, SecondComponent } from './__fixtures__/components';
 

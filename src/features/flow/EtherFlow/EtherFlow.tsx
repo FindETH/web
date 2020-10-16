@@ -1,6 +1,6 @@
 import { RouteComponentProps } from '@reach/router';
 import { navigate } from 'gatsby';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import CheckConnection from '../../../components/CheckConnection';
 import ConnectWallet from '../ConnectWallet';
 import Flow from '../Flow';

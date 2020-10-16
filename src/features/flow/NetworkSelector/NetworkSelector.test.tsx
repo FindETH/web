@@ -1,5 +1,4 @@
 import { getDefaultNetwork, getSupportedNetworks } from '@findeth/networks';
-import React from 'react';
 import createMockStore from 'redux-mock-store';
 import Button from '../../../components/ui/Button';
 import Dropdown from '../../../components/ui/Dropdown';

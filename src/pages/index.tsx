@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import Meta from '../components/Meta';
 import Panel from '../components/Panel';
 import Container from '../components/ui/Container';

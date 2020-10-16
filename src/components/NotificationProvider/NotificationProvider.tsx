@@ -1,4 +1,4 @@
-import React, { createContext, FunctionComponent, ReactElement, Reducer, useReducer, useRef } from 'react';
+import { createContext, FunctionComponent, ReactElement, Reducer, useReducer, useRef } from 'react';
 import Typography from '../ui/Typography';
 
 export interface NotificationType {
