@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { transparentize } from 'polished';
 import styled, { keyframes } from 'styled-components';
 
@@ -16,7 +15,7 @@ const Spin = keyframes`
   }
 `;
 
-export const StyledSpinner = styled(motion.div)<SpinnerProps>`
+export const StyledSpinner = styled.div<SpinnerProps>`
   margin: 0 auto;
   position: relative;
   border: 0.4rem solid ${({ theme }) => transparentize(0.8, theme.primaryColor)};

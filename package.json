@@ -31,7 +31,6 @@
     "@reach/router": "^1.2.1",
     "@reduxjs/toolkit": "^1.4.0",
     "core-js": "^3.5.0",
-    "framer-motion": "^1.6.18",
     "polished": "^3.4.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -121,8 +120,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
-      "eslint --fix",
-      "stylelint"
+      "eslint --fix"
     ]
   },
   "husky": {

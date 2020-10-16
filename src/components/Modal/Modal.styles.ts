@@ -1,9 +1,8 @@
-import { motion } from 'framer-motion';
 import { transparentize } from 'polished';
 import styled, { css } from 'styled-components';
 import Button from '../ui/Button';
 
-export const ModalBackground = styled(motion.div)`
+export const ModalBackground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +20,7 @@ interface ModalWrapperProps {
   type: ModalType;
 }
 
-export const ModalWrapper = styled(motion.div)<ModalWrapperProps>`
+export const ModalWrapper = styled.div<ModalWrapperProps>`
   min-width: 18rem;
   max-width: 36rem;
   background: ${({ theme }) => theme.modalBackground};

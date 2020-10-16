@@ -1,4 +1,3 @@
-import { AnimatePresence } from 'framer-motion';
 import { FunctionComponent, ReactPortal } from 'react';
 import { createPortal } from 'react-dom';
 import Button from '../ui/Button';
@@ -25,14 +24,10 @@ const Modal: FunctionComponent<Props> = ({
   children
 }): ReactPortal =>
   createPortal(
-    <AnimatePresence>
+    <>
       {isVisible && (
-        <ModalBackground
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}>
-          <ModalWrapper initial={{ scale: 0.9 }} animate={{ scale: 1 }} transition={{ duration: 0.3 }} type={type}>
+        <ModalBackground>
+          <ModalWrapper type={type}>
             {children}
             <ModalButtons>
               <Button onClick={onClose}>{closeText ?? 'Close'}</Button>
@@ -41,7 +36,7 @@ const Modal: FunctionComponent<Props> = ({
           </ModalWrapper>
         </ModalBackground>
       )}
-    </AnimatePresence>,
+    </>,
     document.getElementById('modal')!
   );
 

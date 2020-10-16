@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 import Heading from '../../ui/Heading';
 import Typography from '../../ui/Typography';
@@ -33,7 +32,7 @@ export const QuestionHeading = styled(Heading).attrs<QuestionHeadingProps>({ as:
 
 export const QuestionContainer = styled.section``;
 
-export const QuestionBody = styled(motion.div)`
+export const QuestionBody = styled.div`
   overflow: hidden;
 
   ${Typography} {
