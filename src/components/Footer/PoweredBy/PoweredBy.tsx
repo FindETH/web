@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import myCryptoLogo from '../../../assets/images/logos/mycrypto.svg';
 import Link from '../../Link';
 import Network from '../../Network';

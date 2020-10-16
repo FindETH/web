@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { NotificationWrapper } from './Notification.styles';
 
 type NotificationType = 'info' | 'warning' | 'error';

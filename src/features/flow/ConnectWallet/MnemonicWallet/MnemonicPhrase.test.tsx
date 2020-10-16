@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '../../../../components/ui/Button';
 import { getComponent } from '../../../../utils/test-utils';
 import MnemonicWallet from './MnemonicWallet';

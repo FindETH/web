@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import React, { FunctionComponent, ReactPortal } from 'react';
+import { FunctionComponent, ReactPortal } from 'react';
 import { createPortal } from 'react-dom';
 import Button from '../ui/Button';
 import { ModalBackground, ModalButtons, ModalType, ModalWrapper } from './Modal.styles';

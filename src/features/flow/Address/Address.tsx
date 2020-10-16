@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { object, pattern, string } from 'superstruct';
 import Button from '../../../components/ui/Button';
 import Container from '../../../components/ui/Container';

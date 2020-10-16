@@ -1,5 +1,5 @@
 import { Router } from '@reach/router';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import AddressFlow from '../features/flow/AddressFlow';
 import EtherFlow from '../features/flow/EtherFlow';
 import { SearchType } from '../types/search';

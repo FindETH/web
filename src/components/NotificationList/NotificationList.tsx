@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { useNotifications } from '../../hooks';
 import Notification from '../Notification';
 import { NotificationsContainer } from './NotificationList.styles';

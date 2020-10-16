@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { NavigationItems } from './Navigation.styles';
 import NavigationItem from './NavigationItem';
 

@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { FlowComponentProps } from '../Flow';
 
 export const FirstComponent: FunctionComponent<FlowComponentProps> = ({ onNext }) => (

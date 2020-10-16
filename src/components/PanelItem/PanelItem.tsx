@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import Typography from '../ui/Typography';
 import { FlexWrapper, ItemContainer, ItemDescription, ItemHeading, ItemIcon } from './PanelItem.styles';
 

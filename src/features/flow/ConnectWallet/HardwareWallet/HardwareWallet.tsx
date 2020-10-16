@@ -1,5 +1,5 @@
 import { getLedgerTransport, getWalletImplementation, Ledger, Trezor, Wallet, WalletType } from '@findeth/wallets';
-import React, { FunctionComponent, useEffect, useState } from 'react';
+import { FunctionComponent, useEffect, useState } from 'react';
 import Button from '../../../../components/ui/Button';
 import Container from '../../../../components/ui/Container';
 import Typography from '../../../../components/ui/Typography';

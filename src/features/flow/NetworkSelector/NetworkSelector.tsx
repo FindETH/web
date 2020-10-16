@@ -1,5 +1,5 @@
 import { getSupportedNetworks } from '@findeth/networks';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import Network from '../../../components/Network';
 import Button from '../../../components/ui/Button';
 import Container from '../../../components/ui/Container';

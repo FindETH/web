@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactElement } from 'react';
+import { FunctionComponent, ReactElement } from 'react';
 import Panel from '../ui/Panel';
 import { InstructionsListWrapper, ItemIndicator } from './InstructionsList.styles';
 

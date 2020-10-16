@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import Logo from '../Logo';
 import Navigation from '../Navigation';
 import Network from '../Network';

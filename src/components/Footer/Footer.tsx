@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { FlexContainer, FooterContainer } from './Footer.styles';
 import Info from './Info';
 

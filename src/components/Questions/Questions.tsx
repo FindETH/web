@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import Link from '../Link';
 import Container from '../ui/Container';
 import Section from '../ui/Section';

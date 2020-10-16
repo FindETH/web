@@ -1,5 +1,5 @@
 import { Wallet, WalletType } from '@findeth/wallets';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { useDispatch, useSelector } from '../../../hooks';
 import { setDerivationPaths } from '../../../store/derivation';
 import { setImplementation } from '../../../store/wallet';
