@@ -85,6 +85,12 @@ const config: GatsbyConfig = {
         hostname: 'beta.findeth.io',
         generateMatchPathRewrites: false
       }
+    },
+    {
+      resolve: '@bundle-analyzer/gatsby-plugin',
+      options: {
+        token: process.env.BUNDLE_ANALYZER_TOKEN
+      }
     }
   ]
 };
