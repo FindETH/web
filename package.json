@@ -96,7 +96,7 @@
     "gatsby-plugin-ts-config": "^0.2.2",
     "gatsby-plugin-typescript": "^2.4.21",
     "gatsby-plugin-typescript-checker": "^1.1.1",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.13",
     "husky": "^4.3.0",
     "jest": "^24.9.0",
     "jest-styled-components": "^7.0.0",
