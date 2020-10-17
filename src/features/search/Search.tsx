@@ -2,19 +2,16 @@ import { FunctionComponent, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Container from '../../components/ui/Container';
 import Typography from '../../components/ui/Typography';
-import { useSelector, useWallet } from '../../hooks';
-import { startSearching } from '../../store/derivation';
+import { useSelector } from '../../hooks';
+import { startSearching } from './types';
 
 const Search: FunctionComponent = () => {
-  const derivationPaths = useSelector(state => state.derivation.derivationPaths);
+  const derivationPaths = useSelector(state => state.search.derivationPaths);
   const dispatch = useDispatch();
-  const wallet = useWallet();
 
   useEffect(() => {
-    if (wallet) {
-      dispatch(startSearching());
-    }
-  }, [wallet]);
+    dispatch(startSearching());
+  }, []);
 
   return (
     <Container>

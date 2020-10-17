@@ -1,8 +1,8 @@
 import { Wallet, WalletType } from '@findeth/wallets';
 import { FunctionComponent } from 'react';
 import { useDispatch, useSelector } from '../../../hooks';
-import { setDerivationPaths } from '../../../store/derivation';
-import { setImplementation } from '../../../store/wallet';
+import { SerialisedWallet } from '../../../types/wallet';
+import { setDerivationPaths, setSerialisedWallet } from '../../search';
 import { FlowComponentProps } from '../Flow';
 import InvalidState from '../InvalidState';
 import HardwareWallet from './HardwareWallet';
@@ -18,10 +18,10 @@ type Props = FlowComponentProps;
 
 const ConnectWallet: FunctionComponent<Props> = ({ onNext }) => {
   const network = useSelector(state => state.network.network);
-  const type = useSelector(state => state.wallet.type);
+  const walletType = useSelector(state => state.flow.walletType);
   const dispatch = useDispatch();
 
-  if (!type) {
+  if (!walletType) {
     return <InvalidState />;
   }
 
@@ -29,11 +29,11 @@ const ConnectWallet: FunctionComponent<Props> = ({ onNext }) => {
     const defaultDerivationPaths = wallet.getDerivationPaths(network);
 
     dispatch(setDerivationPaths(defaultDerivationPaths));
-    dispatch(setImplementation(wallet.serialize()));
+    dispatch(setSerialisedWallet(wallet.serialize() as SerialisedWallet));
     onNext();
   };
 
-  const Component = components[type];
+  const Component = components[walletType];
   return <Component onNext={handleNext} />;
 };
 

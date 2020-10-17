@@ -1,10 +1,12 @@
 import { getDefaultNetwork } from '@findeth/networks';
 import { WalletType } from '@findeth/wallets';
+import { DeepPartial } from 'redux';
 import createMockStore from 'redux-mock-store';
 import Button from '../../../components/ui/Button';
-import { setDerivationPaths } from '../../../store/derivation';
-import { setImplementation } from '../../../store/wallet';
+import { ApplicationState } from '../../../store';
+import { SerialisedWallet } from '../../../types/wallet';
 import { getComponent, wait, waitForComponentToPaint } from '../../../utils/test-utils';
+import { setDerivationPaths, setSerialisedWallet } from '../../search';
 import InvalidState from '../InvalidState';
 import ConnectWallet from './ConnectWallet';
 import HardwareWallet from './HardwareWallet';
@@ -35,13 +37,13 @@ jest.mock('@findeth/wallets', () => ({
   MnemonicPhrase: class MnemonicPhrase {}
 }));
 
-describe('ConnectWallet', () => {
-  const mockStore = createMockStore();
+const mockStore = createMockStore<DeepPartial<ApplicationState>>();
 
+describe('ConnectWallet', () => {
   it('renders the hardware wallet component when type is Ledger', async () => {
     const store = mockStore({
-      wallet: {
-        type: WalletType.Ledger
+      flow: {
+        walletType: WalletType.Ledger
       },
       network: {
         network: getDefaultNetwork()
@@ -56,8 +58,8 @@ describe('ConnectWallet', () => {
 
   it('renders the hardware wallet component when type is Trezor', async () => {
     const store = mockStore({
-      wallet: {
-        type: WalletType.Trezor
+      flow: {
+        walletType: WalletType.Trezor
       },
       network: {
         network: getDefaultNetwork()
@@ -72,8 +74,8 @@ describe('ConnectWallet', () => {
 
   it('renders the mnemonic phrase component when type is MnemonicPhrase', async () => {
     const store = mockStore({
-      wallet: {
-        type: WalletType.MnemonicPhrase
+      flow: {
+        walletType: WalletType.MnemonicPhrase
       },
       network: {
         network: getDefaultNetwork()
@@ -88,7 +90,7 @@ describe('ConnectWallet', () => {
 
   it('renders invalid state when no type is set', async () => {
     const store = mockStore({
-      wallet: {},
+      flow: {},
       network: {
         network: getDefaultNetwork()
       }
@@ -101,8 +103,8 @@ describe('ConnectWallet', () => {
 
   it('sets the implementation and derivation paths in the Redux store', async () => {
     const store = mockStore({
-      wallet: {
-        type: WalletType.Ledger
+      flow: {
+        walletType: WalletType.Ledger
       },
       network: {
         network: getDefaultNetwork()
@@ -119,10 +121,10 @@ describe('ConnectWallet', () => {
     await wait();
 
     expect(store.getActions()).toContainEqual(
-      setImplementation(
+      setSerialisedWallet(
         JSON.stringify({
           type: 'Ledger'
-        })
+        }) as SerialisedWallet
       )
     );
     expect(store.getActions()).toContainEqual(

@@ -1,18 +1,20 @@
 import { WalletType } from '@findeth/wallets';
+import { DeepPartial } from 'redux';
 import createMockStore from 'redux-mock-store';
 import Button from '../../../components/ui/Button';
-import { setWalletType } from '../../../store/wallet';
+import { ApplicationState } from '../../../store';
 import { getComponent } from '../../../utils/test-utils';
+import { setWalletType } from '../types';
 import Wallet from './Wallet';
 import WalletItem from './WalletItem';
 import { WalletContainer } from './WalletItem/WalletItem.styles';
 
-describe('Wallet', () => {
-  const mockStore = createMockStore();
+const mockStore = createMockStore<DeepPartial<ApplicationState>>();
 
+describe('Wallet', () => {
   it('renders a list with all wallet types', () => {
     const store = mockStore({
-      wallet: {}
+      flow: {}
     });
 
     const component = getComponent(<Wallet onReset={jest.fn} onNext={jest.fn} />, store);
@@ -26,7 +28,7 @@ describe('Wallet', () => {
 
   it('dispatches setWalletType when a type is selected', () => {
     const store = mockStore({
-      wallet: {}
+      flow: {}
     });
 
     const component = getComponent(<Wallet onReset={jest.fn} onNext={jest.fn} />, store);
@@ -39,8 +41,8 @@ describe('Wallet', () => {
 
   it('calls onNext when the button is pressed', () => {
     const store = mockStore({
-      wallet: {
-        type: WalletType.Ledger
+      flow: {
+        walletType: WalletType.Ledger
       }
     });
 

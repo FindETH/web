@@ -1,7 +1,7 @@
 import createMockStore from 'redux-mock-store';
 import Button from '../../../components/ui/Button';
-import { setAddress } from '../../../store/derivation';
 import { getComponent } from '../../../utils/test-utils';
+import { setAddress } from '../../search';
 import Address from './Address';
 
 describe('Address', () => {

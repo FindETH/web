@@ -1,8 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { setConnected, setNetwork, setOnline } from './actions';
-import { INITIAL_STATE, NetworkState } from './types';
+import { INITIAL_STATE, setConnected, setNetwork, setOnline } from './types';
 
-export const networkReducer = createReducer<NetworkState>(INITIAL_STATE, builder =>
+export const networkReducer = createReducer(INITIAL_STATE, builder =>
   builder
     .addCase(setNetwork, (state, action) => {
       return {

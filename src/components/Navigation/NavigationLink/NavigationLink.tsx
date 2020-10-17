@@ -16,7 +16,7 @@ interface OwnProps {
 type Props = OwnProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, 'href'>;
 
 const NavigationLink: FunctionComponent<Props> = ({ to, children, ref: _, ...rest }) => {
-  const isFlow = useSelector(state => state.derivation.isFlow);
+  const isFlow = useSelector(state => state.flow.isFlow);
   const [showModal, hideModal] = useModal(() => (
     <Modal isVisible={true}>
       <ModalContent>

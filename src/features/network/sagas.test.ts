@@ -1,9 +1,9 @@
 import { getDefaultNetwork } from '@findeth/networks';
 import { DeepPartial } from 'redux';
+import { ApplicationState } from '../../store';
 import { recordSaga } from '../../utils/saga';
-import { ApplicationState } from '../store';
-import { setConnected, setOnline } from './actions';
 import { setOnlineSaga } from './sagas';
+import { setConnected, setOnline } from './types';
 
 jest.mock('@findeth/networks', () => ({
   getChainId: jest

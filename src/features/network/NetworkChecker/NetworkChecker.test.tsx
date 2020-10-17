@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import createMockStore from 'redux-mock-store';
-import { setOnline } from '../../store/network';
+import { setOnline } from '../index';
 import NetworkChecker from './NetworkChecker';
 
 const getComponent = (store: Store) => {
