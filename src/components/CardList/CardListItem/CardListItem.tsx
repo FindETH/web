@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import { IconName } from '../../Icon';
 import { ArrowIcon, CardIcon, CardListItemContainer, CardListItemContent } from './CardListItem.styles';
 
-interface Props {
+export interface Props {
   icon?: IconName;
   onClick(): void;
 }

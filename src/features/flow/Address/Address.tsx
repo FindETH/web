@@ -1,8 +1,11 @@
 import { FunctionComponent } from 'react';
 import { object, pattern, string } from 'superstruct';
+import Card, { CardHeader } from '../../../components/Card';
+import { CardContent } from '../../../components/Card/Card.styles';
 import Button from '../../../components/ui/Button';
-import Container from '../../../components/ui/Container';
-import { useForm, useDispatch } from '../../../hooks';
+import Heading from '../../../components/ui/Heading';
+import Typography from '../../../components/ui/Typography';
+import { useDispatch, useForm } from '../../../hooks';
 import { setAddress } from '../../search';
 import { FlowComponentProps } from '../Flow';
 
@@ -31,10 +34,16 @@ const Address: FunctionComponent<Props> = ({ onNext }) => {
   };
 
   return (
-    <Container>
-      <input {...getInputProps('address')} />
-      <Button onClick={handleSubmit}>Next</Button>
-    </Container>
+    <Card>
+      <CardHeader>
+        <Heading as="h3">Enter the address(es) you are looking for</Heading>
+        <Typography>You can enter a regular Ethereum address, as well as ENS addresses.</Typography>
+      </CardHeader>
+      <CardContent>
+        <input {...getInputProps('address')} />
+        <Button onClick={handleSubmit}>Next</Button>
+      </CardContent>
+    </Card>
   );
 };
 

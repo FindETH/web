@@ -1,6 +1,8 @@
 import { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react';
 import arrowIcon from '../../assets/images/arrow.svg';
 import ethereumIcon from '../../assets/images/ethereum.svg';
+import ledgerIcon from '../../assets/images/logos/ledger.svg';
+import trezorIcon from '../../assets/images/logos/trezor.svg';
 import walletIcon from '../../assets/images/wallet.svg';
 import { Image } from './Icon.styles';
 
@@ -12,6 +14,14 @@ const SUPPORTED_ICONS = {
   ethereum: {
     name: 'Ethereum',
     icon: ethereumIcon
+  },
+  ledger: {
+    name: 'Ledger',
+    icon: ledgerIcon
+  },
+  trezor: {
+    name: 'Trezor',
+    icon: trezorIcon
   },
   wallet: {
     name: 'Wallet',

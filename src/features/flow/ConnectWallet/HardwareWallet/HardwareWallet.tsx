@@ -1,7 +1,8 @@
 import { getLedgerTransport, getWalletImplementation, Ledger, Trezor, Wallet, WalletType } from '@findeth/wallets';
 import { FunctionComponent, useEffect, useState } from 'react';
+import Card, { CardHeader } from '../../../../components/Card';
 import Button from '../../../../components/ui/Button';
-import Container from '../../../../components/ui/Container';
+import Heading from '../../../../components/ui/Heading';
 import Typography from '../../../../components/ui/Typography';
 import { useSelector } from '../../../../hooks';
 
@@ -40,11 +41,14 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
   };
 
   return (
-    <Container>
-      <Typography>Connect hardware wallet</Typography>
+    <Card>
+      <CardHeader>
+        <Heading as="h3">Connect to your hardware wallet</Heading>
+        <Typography>Make sure your device is unlocked and not in use by any other application.</Typography>
+      </CardHeader>
 
       <Button onClick={handleNext}>Next</Button>
-    </Container>
+    </Card>
   );
 };
 
