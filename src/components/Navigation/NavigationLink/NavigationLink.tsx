@@ -38,7 +38,6 @@ const NavigationLink: FunctionComponent<Props> = ({ to, children, ref: _, ...res
   };
 
   const handleClick = (event: MouseEvent) => {
-    // TODO: Show modal with confirmation
     if (isFlow) {
       event.preventDefault();
       showModal();
