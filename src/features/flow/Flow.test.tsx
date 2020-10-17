@@ -1,6 +1,11 @@
 import { mount, shallow } from 'enzyme';
+import createMockStore from 'redux-mock-store';
+import { setFlow } from '../../store/derivation';
+import { getComponent } from '../../utils/test-utils';
 import Flow from './Flow';
 import { FirstComponent, SecondComponent } from './__fixtures__/components';
+
+const mockStore = createMockStore();
 
 describe('Flow', () => {
   it('passes a onNext and onReset callback function to the components', () => {
@@ -39,5 +44,14 @@ describe('Flow', () => {
     component.find('#reset-button').simulate('click');
 
     expect(component.find(FirstComponent)).toBeDefined();
+  });
+
+  it('updates the flow state in the store', () => {
+    const store = mockStore();
+    const component = getComponent(<Flow components={[FirstComponent]} onDone={jest.fn()} />, store);
+    component.find('#next-button').simulate('click');
+
+    expect(store.getActions()).toContainEqual(setFlow(true));
+    expect(store.getActions()).toContainEqual(setFlow(false));
   });
 });
