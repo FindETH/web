@@ -1,6 +1,7 @@
 import { RouteComponentProps } from '@reach/router';
 import { navigate } from 'gatsby';
 import { FunctionComponent } from 'react';
+import Page from '../../../components/Page';
 import Address from '../Address';
 import ConnectWallet from '../ConnectWallet';
 import Flow from '../Flow';
@@ -13,7 +14,11 @@ const AddressFlow: FunctionComponent<Props> = () => {
     navigate('/search');
   };
 
-  return <Flow components={[Address, Wallet, ConnectWallet]} onDone={handleDone} />;
+  return (
+    <Page title="Search for Address">
+      <Flow components={[Address, Wallet, ConnectWallet]} onDone={handleDone} />
+    </Page>
+  );
 };
 
 export default AddressFlow;

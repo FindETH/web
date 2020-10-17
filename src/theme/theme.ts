@@ -1,22 +1,72 @@
+import { darken, lighten } from 'polished';
 import { DefaultTheme } from 'styled-components';
 
+export const PRIMARY_COLOUR = '#242429';
+
 const theme: DefaultTheme = {
-  primaryColor: '#242429',
+  primaryColor: PRIMARY_COLOUR,
   textColor: '#323232',
+  invertedText: 'white',
   linkColor: '#1eb8e7',
   linkHoverColor: '#4cc7ec',
   borderColor: '#e5e5e5',
   warningColor: '#ffcc00',
   errorColor: '#ed4337',
 
+  backgroundColour: '#f4f5f7',
+
   sectionBackground: 'white',
   sectionOddBackground: '#f6f7f9',
   modalBackground: 'white',
 
-  smallBorderRadius: '3px',
+  smallBorderRadius: '.375rem',
+  mediumBorderRadius: '.5rem',
 
-  font: '"Open Sans", sans-serif',
-  headingFont: '"Public Sans", sans-serif'
+  font: '"Inter", sans-serif',
+  headingFont: '"Public Sans", sans-serif',
+
+  smallShadow: '0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .05)',
+  largeShadow: '0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)',
+
+  border: '#d2d6dc',
+
+  mutedText: '#6b7280',
+
+  button: {
+    default: {
+      background: 'white',
+      text: PRIMARY_COLOUR
+    },
+    primary: {
+      background: PRIMARY_COLOUR,
+      text: 'white'
+    },
+    danger: {
+      background: '#e02424',
+      text: 'white'
+    }
+  },
+
+  modal: {
+    text: '#6b7280',
+    background: 'white',
+    buttonBackground: '#f9fafb'
+  },
+
+  navigation: {
+    text: '#d2d6dc',
+    activeText: 'white',
+    font: '"Inter", sans-serif',
+
+    background: PRIMARY_COLOUR,
+    hoverBackground: lighten(0.1, PRIMARY_COLOUR),
+    activeBackground: darken(0.1, PRIMARY_COLOUR)
+  },
+
+  pageHeader: {
+    font: '"Inter", sans-serif',
+    background: 'white'
+  }
 };
 
 export default theme;

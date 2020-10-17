@@ -1,4 +1,3 @@
-import { AnimatePresence } from 'framer-motion';
 import { FunctionComponent } from 'react';
 import { useNotifications } from '../../hooks';
 import Notification from '../Notification';
@@ -9,13 +8,11 @@ const NotificationList: FunctionComponent = () => {
 
   return (
     <NotificationsContainer>
-      <AnimatePresence>
-        {notifications.map(({ id, type, notification }) => (
-          <Notification key={`notification-${id}`} type={type}>
-            {notification}
-          </Notification>
-        ))}
-      </AnimatePresence>
+      {notifications.map(({ id, type, notification }) => (
+        <Notification key={`notification-${id}`} type={type}>
+          {notification}
+        </Notification>
+      ))}
     </NotificationsContainer>
   );
 };

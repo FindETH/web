@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
-export const NavigationItems = styled.ul`
-  display: flex;
-  align-items: center;
+export const NavigationList = styled.ul`
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 0 2.5rem;
   padding: 0;
 `;

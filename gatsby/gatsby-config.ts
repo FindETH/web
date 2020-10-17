@@ -10,7 +10,7 @@ const config: GatsbyConfig = {
   },
   plugins: [
     'gatsby-plugin-typescript',
-    'gatsby-plugin-typescript-checker',
+    // 'gatsby-plugin-typescript-checker',
     'gatsby-plugin-react-helmet-async',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',

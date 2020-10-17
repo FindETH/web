@@ -8,7 +8,7 @@ export interface Props {
 
 const Typography = styled.p<Props>`
   display: block;
-  font-size: ${({ small }) => (small ? '0.75rem' : '1rem')};
+  font-size: ${({ small }) => (small ? '.75rem' : '.875rem')};
   font-family: ${({ theme }) => theme.font};
   margin-bottom: 1.5rem;
   line-height: 1.5;

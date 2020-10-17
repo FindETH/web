@@ -1,7 +1,6 @@
 import { FunctionComponent } from 'react';
-import logo from '../../assets/images/logos/findeth.svg';
-import { LogoImage } from './Logo.styles';
+import Heading from '../ui/Heading';
 
-const Logo: FunctionComponent = () => <LogoImage src={logo} alt="FindETH logo" />;
+const Logo: FunctionComponent = () => <Heading as="h1">FindETH</Heading>;
 
 export default Logo;

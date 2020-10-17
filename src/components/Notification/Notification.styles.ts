@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import styled, { css, DefaultTheme, FlattenInterpolation, ThemeProps } from 'styled-components';
 import Typography from '../ui/Typography';
 
@@ -20,7 +19,7 @@ const NOTIFICATION_VARIANTS: {
   `
 };
 
-export const NotificationWrapper = styled(motion.li)<NotificationWrapperProps>`
+export const NotificationWrapper = styled.li<NotificationWrapperProps>`
   display: block;
   width: 20rem;
   max-width: 100%;
