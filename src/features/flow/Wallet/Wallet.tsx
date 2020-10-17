@@ -4,7 +4,7 @@ import Card, { CardHeader } from '../../../components/Card';
 import CardList from '../../../components/CardList/CardList';
 import Heading from '../../../components/ui/Heading';
 import Typography from '../../../components/ui/Typography';
-import { useDispatch, useSelector } from '../../../hooks';
+import { useDispatch } from '../../../hooks';
 import { FlowComponentProps } from '../Flow';
 import { setWalletType } from '../types';
 import WalletItem from './WalletItem';
@@ -30,14 +30,11 @@ const WALLET_ITEMS = [
 ];
 
 const Wallet: FunctionComponent<Props> = ({ onNext }) => {
-  const walletType = useSelector(state => state.flow.walletType);
   const dispatch = useDispatch();
 
   const handleNext = (type: WalletType) => {
-    if (walletType) {
-      dispatch(setWalletType(type));
-      onNext();
-    }
+    dispatch(setWalletType(type));
+    onNext();
   };
 
   return (

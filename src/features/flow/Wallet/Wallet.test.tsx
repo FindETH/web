@@ -1,13 +1,11 @@
 import { WalletType } from '@findeth/wallets';
 import { DeepPartial } from 'redux';
 import createMockStore from 'redux-mock-store';
-import Button from '../../../components/ui/Button';
 import { ApplicationState } from '../../../store';
 import { getComponent } from '../../../utils/test-utils';
 import { setWalletType } from '../types';
 import Wallet from './Wallet';
 import WalletItem from './WalletItem';
-import { WalletContainer } from './WalletItem/WalletItem.styles';
 
 const mockStore = createMockStore<DeepPartial<ApplicationState>>();
 
@@ -22,8 +20,8 @@ describe('Wallet', () => {
 
     expect(walletItems).toHaveLength(3);
     expect(walletItems.at(0).text()).toContain('Ledger');
-    expect(walletItems.at(1).text()).toContain('MnemonicPhrase');
-    expect(walletItems.at(2).text()).toContain('Trezor');
+    expect(walletItems.at(1).text()).toContain('Trezor');
+    expect(walletItems.at(2).text()).toContain('Mnemonic Phrase');
   });
 
   it('dispatches setWalletType when a type is selected', () => {
@@ -34,7 +32,7 @@ describe('Wallet', () => {
     const component = getComponent(<Wallet onReset={jest.fn} onNext={jest.fn} />, store);
     const walletItem = component.find(WalletItem).at(0);
 
-    walletItem.find(WalletContainer).simulate('click');
+    walletItem.simulate('click');
 
     expect(store.getActions()).toContainEqual(setWalletType(WalletType.Ledger));
   });
@@ -48,9 +46,9 @@ describe('Wallet', () => {
 
     const fn = jest.fn();
     const component = getComponent(<Wallet onReset={jest.fn} onNext={fn} />, store);
+    const walletItem = component.find(WalletItem).at(0);
 
-    const button = component.find(Button);
-    button.simulate('click');
+    walletItem.simulate('click');
 
     expect(fn).toHaveBeenCalledTimes(1);
   });
