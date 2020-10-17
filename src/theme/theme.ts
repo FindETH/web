@@ -30,6 +30,8 @@ const theme: DefaultTheme = {
 
   border: '#d2d6dc',
 
+  mutedText: '#6b7280',
+
   button: {
     default: {
       background: 'white',

@@ -28,6 +28,8 @@ declare module 'styled-components' {
 
     border: string;
 
+    mutedText: string;
+
     button: {
       default: {
         background: string;

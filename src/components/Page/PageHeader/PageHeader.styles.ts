@@ -3,7 +3,7 @@ import Heading from '../../ui/Heading';
 
 export const PageHeaderContainer = styled.div`
   width: 100%;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0;
   background: ${({ theme }) => theme.pageHeader.background};
   box-sizing: border-box;
   box-shadow: ${({ theme }) => theme.smallShadow};
