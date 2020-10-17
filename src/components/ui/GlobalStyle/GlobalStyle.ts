@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
+
+  body {
+    background: ${({ theme }) => theme.backgroundColour};
+  }
 `;
 
 export default GlobalStyle;

@@ -1,15 +1,16 @@
 import { FunctionComponent } from 'react';
-import Link from '../../Link';
-import { StyledNavigationItem } from './NavigationItem.styles';
+import NavigationLink from '../NavigationLink';
+import { NavigationItemContainer } from './NavigationItem.styles';
 
 interface Props {
+  title: string;
   to: string;
 }
 
-const NavigationItem: FunctionComponent<Props> = ({ to, children }) => (
-  <StyledNavigationItem>
-    <Link to={to}>{children}</Link>
-  </StyledNavigationItem>
+const NavigationItem: FunctionComponent<Props> = ({ title, to }) => (
+  <NavigationItemContainer>
+    <NavigationLink to={to}>{title}</NavigationLink>
+  </NavigationItemContainer>
 );
 
 export default NavigationItem;

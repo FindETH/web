@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import { hot } from 'react-hot-loader/root';
 import Footer from './components/Footer';
+import Header from './components/Header/Header';
 import NetworkChecker from './components/NetworkChecker';
 import NotificationList from './components/NotificationList';
 import Providers from './components/Providers/Providers';
@@ -13,7 +14,10 @@ export const App: FunctionComponent = ({ children }) => (
     <NetworkChecker />
     <NotificationList />
     <GlobalStyle />
-    <Wrapper>{children}</Wrapper>
+    <Wrapper>
+      <Header />
+      {children}
+    </Wrapper>
     <Footer />
   </Providers>
 );
