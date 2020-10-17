@@ -5,6 +5,7 @@ import Typography from '../ui/Typography';
 export const CardContainer = styled.section`
   margin: 1.5rem auto;
   width: 40rem;
+  max-width: 100%;
   background: white;
   border-radius: ${({ theme }) => theme.mediumBorderRadius};
   box-shadow: ${({ theme }) => theme.smallShadow};
