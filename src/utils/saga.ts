@@ -1,4 +1,4 @@
-import { Action, DeepPartial } from 'redux';
+import { DeepPartial } from 'redux';
 import { runSaga, Saga } from 'redux-saga';
 import { ApplicationState } from '../store';
 
@@ -10,16 +10,16 @@ import { ApplicationState } from '../store';
  * @param {Saga<[A]>} saga
  * @param {A} initialAction
  * @param {DeepPartial<ApplicationState>} state
- * @return {Promise<Action[]>}
+ * @return {Promise<unknown[]>}
  */
-export const recordSaga = async <A extends Action>(
+export const recordSaga = async <A>(
   saga: Saga<[A]>,
   initialAction: A,
   state?: DeepPartial<ApplicationState>
-): Promise<Action[]> => {
-  const dispatched: Action[] = [];
+): Promise<unknown[]> => {
+  const dispatched: unknown[] = [];
 
-  await runSaga<A, ApplicationState, Saga<[A]>>(
+  const task = runSaga<A, ApplicationState, Saga<[A]>>(
     {
       dispatch: action => dispatched.push(action),
       getState: () => state as ApplicationState
@@ -27,6 +27,8 @@ export const recordSaga = async <A extends Action>(
     saga,
     initialAction
   );
+
+  await task.toPromise();
 
   return dispatched;
 };

@@ -5,7 +5,13 @@ import { ApplicationState } from '../../store';
 import { SerialisedWallet } from '../../types/wallet';
 import { addAddress, startSearching } from './types';
 
-export function* getAddresses(wallet: Wallet, derivationPaths: DerivationPath[], depth: number): SagaIterator {
+interface GetAddressesAction {
+  wallet: Wallet;
+  derivationPaths: DerivationPath[];
+  depth: number;
+}
+
+export function* getAddresses({ wallet, derivationPaths, depth }: GetAddressesAction): SagaIterator {
   for (const derivationPath of derivationPaths) {
     for (let index = 0; index < depth; index++) {
       const address = yield call([wallet, wallet.getAddress], derivationPath, index);
@@ -23,7 +29,7 @@ export function* searchSaga(): SagaIterator {
   const wallet: Wallet = deserialize(implementation);
 
   // TODO: Task cancellation
-  /*const task: Task = */ yield fork(getAddresses, wallet, derivationPaths, 10);
+  /*const task: Task = */ yield fork(getAddresses, { wallet, derivationPaths, depth: 10 });
 }
 
 export function* rootSaga(): SagaIterator {
