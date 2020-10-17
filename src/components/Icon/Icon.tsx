@@ -1,23 +1,35 @@
-import { FunctionComponent } from 'react';
+import { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react';
 import arrowIcon from '../../assets/images/arrow.svg';
+import ethereumIcon from '../../assets/images/ethereum.svg';
+import walletIcon from '../../assets/images/wallet.svg';
 import { Image } from './Icon.styles';
 
 const SUPPORTED_ICONS = {
   arrow: {
     name: 'Arrow',
     icon: arrowIcon
+  },
+  ethereum: {
+    name: 'Ethereum',
+    icon: ethereumIcon
+  },
+  wallet: {
+    name: 'Wallet',
+    icon: walletIcon
   }
 };
 
-type Icon = keyof typeof SUPPORTED_ICONS;
+export type IconName = keyof typeof SUPPORTED_ICONS;
 
-interface Props {
-  icon: Icon;
+export interface OwnProps {
+  icon: IconName;
   name?: string;
 }
 
-const Icon: FunctionComponent<Props> = ({ icon, name = SUPPORTED_ICONS[icon].name }) => (
-  <Image src={SUPPORTED_ICONS[icon].icon} alt={name} />
+type Props = OwnProps & Omit<DetailedHTMLProps<HTMLAttributes<HTMLImageElement>, HTMLImageElement>, 'src' | 'alt'>;
+
+const Icon: FunctionComponent<Props> = ({ icon, name = SUPPORTED_ICONS[icon].name, ref: _, ...rest }) => (
+  <Image src={SUPPORTED_ICONS[icon].icon} alt={name} {...rest} />
 );
 
 export default Icon;
