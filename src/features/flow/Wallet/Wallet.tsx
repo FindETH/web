@@ -13,21 +13,24 @@ type Props = FlowComponentProps;
 
 const WALLET_ITEMS = [
   {
+    icon: 'ledger',
     title: 'Ledger',
     description: 'Connect with your Ledger Nano X, Nano S or Blue.',
     type: WalletType.Ledger
   },
   {
+    icon: 'trezor',
     title: 'Trezor',
     description: 'Connect with your Trezor One or Model T.',
     type: WalletType.Trezor
   },
   {
+    icon: 'wallet',
     title: 'Mnemonic Phrase',
     description: 'Unlock with your mnemonic phrase. (Not recommended!)',
     type: WalletType.MnemonicPhrase
   }
-];
+] as const;
 
 const Wallet: FunctionComponent<Props> = ({ onNext }) => {
   const dispatch = useDispatch();
