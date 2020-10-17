@@ -1,6 +1,10 @@
-import { FunctionComponent } from 'react';
+import { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react';
 import { CardContainer } from './Card.styles';
 
-const Card: FunctionComponent = ({ children }) => <CardContainer>{children}</CardContainer>;
+type Props = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+
+const Card: FunctionComponent<Props> = ({ children, ref: _, ...props }) => (
+  <CardContainer {...props}>{children}</CardContainer>
+);
 
 export default Card;

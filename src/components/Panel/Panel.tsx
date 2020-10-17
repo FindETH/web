@@ -1,24 +1,8 @@
-import { FunctionComponent } from 'react';
-import Link from '../Link';
-import { PanelContainer, PanelContent } from './Panel.styles';
+import styled from 'styled-components';
+import Card from '../Card';
 
-interface Props {
-  to?: string;
-  onClick?(): void;
-}
-
-const Panel: FunctionComponent<Props> = ({ to, onClick, children }) => {
-  const element = (
-    <PanelContainer onClick={onClick}>
-      <PanelContent>{children}</PanelContent>
-    </PanelContainer>
-  );
-
-  if (to) {
-    return <Link to={to}>{element}</Link>;
-  }
-
-  return element;
-};
+const Panel = styled(Card)`
+  width: 70rem;
+`;
 
 export default Panel;
