@@ -2,7 +2,6 @@ import { MnemonicPhrase, Wallet } from '@findeth/wallets';
 import { FunctionComponent } from 'react';
 import Card, { CardHeader } from '../../../../components/Card';
 import Button from '../../../../components/ui/Button';
-import Container from '../../../../components/ui/Container';
 import Heading from '../../../../components/ui/Heading';
 import Typography from '../../../../components/ui/Typography';
 
