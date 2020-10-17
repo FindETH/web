@@ -19,20 +19,51 @@ const theme: DefaultTheme = {
   sectionOddBackground: '#f6f7f9',
   modalBackground: 'white',
 
-  smallBorderRadius: '.5rem',
+  smallBorderRadius: '.375rem',
+  mediumBorderRadius: '.5rem',
 
-  font: '"Open Sans", sans-serif',
+  font: '"Inter", sans-serif',
   headingFont: '"Public Sans", sans-serif',
 
+  smallShadow: '0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .05)',
+  largeShadow: '0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)',
+
+  border: '#d2d6dc',
+
+  button: {
+    default: {
+      background: 'white',
+      text: PRIMARY_COLOUR
+    },
+    primary: {
+      background: PRIMARY_COLOUR,
+      text: 'white'
+    },
+    danger: {
+      background: '#e02424',
+      text: 'white'
+    }
+  },
+
+  modal: {
+    text: '#6b7280',
+    background: 'white',
+    buttonBackground: '#f9fafb'
+  },
+
   navigation: {
+    text: '#d2d6dc',
+    activeText: 'white',
     font: '"Inter", sans-serif',
 
     background: PRIMARY_COLOUR,
     hoverBackground: lighten(0.1, PRIMARY_COLOUR),
-    activeBackground: darken(0.1, PRIMARY_COLOUR),
+    activeBackground: darken(0.1, PRIMARY_COLOUR)
+  },
 
-    text: '#d2d6dc',
-    activeText: 'white'
+  pageHeader: {
+    font: '"Inter", sans-serif',
+    background: 'white'
   }
 };
 

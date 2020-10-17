@@ -9,6 +9,7 @@ const Meta: FunctionComponent<Props> = ({ title }) => (
   <Helmet
     defaultTitle="FindETH"
     title={title}
+    titleTemplate="%s - FindETH"
     htmlAttributes={{
       lang: 'en'
     }}

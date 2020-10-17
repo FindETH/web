@@ -18,9 +18,36 @@ declare module 'styled-components' {
     modalBackground: string;
 
     smallBorderRadius: string;
+    mediumBorderRadius: string;
 
     font: string;
     headingFont: string;
+
+    smallShadow: string;
+    largeShadow: string;
+
+    border: string;
+
+    button: {
+      default: {
+        background: string;
+        text: string;
+      };
+      primary: {
+        background: string;
+        text: string;
+      };
+      danger: {
+        background: string;
+        text: string;
+      };
+    };
+
+    modal: {
+      text: string;
+      background: string;
+      buttonBackground: string;
+    };
 
     navigation: {
       font: string;
@@ -31,6 +58,11 @@ declare module 'styled-components' {
 
       text: string;
       activeText: string;
+    };
+
+    pageHeader: {
+      font: string;
+      background: string;
     };
   }
 }

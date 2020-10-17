@@ -1,26 +1,51 @@
-import { transparentize } from 'polished';
-import styled from 'styled-components';
+import { lighten, transitions } from 'polished';
+import styled, { css } from 'styled-components';
 import Typography from '../Typography';
+
+type ButtonType = 'default' | 'primary' | 'danger';
 
 interface Props {
   primary?: boolean;
+  disabled?: boolean;
+  type?: ButtonType;
 }
 
 const Button = styled(Typography).attrs({ as: 'button' })<Props>`
-  background: ${({ primary, theme }) => (primary ? theme.primaryColor : 'transparent')};
   outline: none;
-  border: 3px solid ${({ theme }) => theme.primaryColor};
+  border: none;
   border-radius: ${({ theme }) => theme.smallBorderRadius};
-  color: ${({ primary, theme }) => (primary ? 'white' : theme.primaryColor)};
-  padding: 0.5rem 1.1rem;
-  font-size: 0.9rem;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
+  background: ${({ theme, type = 'default' }) => theme.button[type].background};
+  padding: 0.5rem 1rem;
+  font-family: ${({ theme }) => theme.font};
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: ${({ theme, type = 'default' }) => theme.button[type].text};
+  cursor: pointer;
+
+  ${transitions(['background-color', 'color', 'opacity'], '0.2s')};
 
   :hover {
-    background: ${({ theme }) => transparentize(0.1, theme.primaryColor)};
-    color: white !important;
+    background: ${({ theme, disabled, type = 'default' }) => !disabled && lighten(0.15, theme.button[type].background)};
+    color: white;
   }
+
+  ${({ type = 'default' }) =>
+    type === 'default' &&
+    css`
+      box-shadow: ${({ theme }) => theme.smallShadow};
+      border: 1px solid ${({ theme }) => theme.border};
+
+      :hover {
+        color: ${({ theme }) => lighten(0.35, theme.primaryColor)};
+      }
+    `};
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      opacity: 0.7;
+      cursor: initial;
+    `};
 `;
 
 export default Button;

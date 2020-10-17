@@ -10,7 +10,7 @@ export const NavigationItemContainer = styled.li`
 
   ${LinkWrapper} {
     padding: 0.5rem 0.75rem;
-    border-radius: ${({ theme }) => theme.smallBorderRadius};
+    border-radius: ${({ theme }) => theme.mediumBorderRadius};
     text-decoration: none;
     color: ${({ theme }) => theme.navigation.text};
     font-size: 0.875rem;
