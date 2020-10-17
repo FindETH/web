@@ -7,14 +7,16 @@ const OPTIONS = [
   {
     title: 'Addresses',
     description: "Use this option if you're looking for a specific address.",
+    icon: 'wallet',
     type: SearchType.ADDRESS
   },
   {
     title: 'Assets',
     description: "Use this option if you're looking for Ether, ERC-20 tokens, or other supported assets.",
+    icon: 'ethereum',
     type: SearchType.ETHER
   }
-];
+] as const;
 
 const OptionList: FunctionComponent = () => {
   return (

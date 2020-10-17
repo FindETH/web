@@ -9,7 +9,7 @@ jest.mock('gatsby', () => ({
 
 describe('Option', () => {
   it('navigates to the specified type when clicked', () => {
-    const component = getComponent(<Option title="Foo" description="Bar" type={SearchType.ADDRESS} />);
+    const component = getComponent(<Option icon="arrow" title="Foo" description="Bar" type={SearchType.ADDRESS} />);
     component.simulate('click');
 
     expect(navigate).toHaveBeenCalledTimes(1);
