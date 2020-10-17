@@ -1,6 +1,8 @@
 import { WalletType } from '@findeth/wallets';
+import { DeepPartial } from 'redux';
 import createMockStore from 'redux-mock-store';
 import Button from '../../../../components/ui/Button';
+import { ApplicationState } from '../../../../store';
 import { getComponent, wait, waitForComponentToPaint } from '../../../../utils/test-utils';
 import HardwareWallet from './HardwareWallet';
 
@@ -22,13 +24,13 @@ afterEach(() => {
   mockConnect.mockClear();
 });
 
-describe('HardwareWallet', () => {
-  const mockStore = createMockStore();
+const mockStore = createMockStore<DeepPartial<ApplicationState>>();
 
+describe('HardwareWallet', () => {
   it('connects to a Ledger wallet when the type is Ledger', async () => {
     const store = mockStore({
-      wallet: {
-        type: WalletType.Ledger
+      flow: {
+        walletType: WalletType.Ledger
       }
     });
 
@@ -47,8 +49,8 @@ describe('HardwareWallet', () => {
 
   it('connects to a Trezor wallet when the type is Trezor', async () => {
     const store = mockStore({
-      wallet: {
-        type: WalletType.Trezor
+      flow: {
+        walletType: WalletType.Trezor
       }
     });
 

@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect } from 'react';
-import { useDispatch } from '../../hooks';
-import { setOnline } from '../../store/network';
+import { useDispatch } from '../../../hooks';
+import { setOnline } from '../index';
 
 /**
  * This component does not render anything. It only checks if there is an internet connection available, and updates the

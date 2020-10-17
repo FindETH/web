@@ -5,7 +5,7 @@ import Button from '../../../components/ui/Button';
 import Container from '../../../components/ui/Container';
 import Dropdown from '../../../components/ui/Dropdown';
 import { useDispatch, useSelector } from '../../../hooks';
-import { setNetwork } from '../../../store/network';
+import { setNetwork } from '../../network';
 import { FlowComponentProps } from '../Flow';
 
 type Props = FlowComponentProps;

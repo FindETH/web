@@ -1,15 +1,15 @@
 import { configureStore, EnhancedStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
-import { DerivationState, rootSaga as derivationSaga } from './derivation';
-import { NetworkState, rootSaga as networkSaga } from './network';
+import { FlowState } from '../features/flow';
+import { NetworkState, rootSaga as networkSaga } from '../features/network';
+import { rootSaga as searchSaga, SearchState } from '../features/search';
 import reducer from './reducer';
-import { WalletState } from './wallet';
 
 export interface ApplicationState {
-  derivation: DerivationState;
+  flow: FlowState;
   network: NetworkState;
-  wallet: WalletState;
+  search: SearchState;
 }
 
 export type ApplicationDispatch = ReturnType<typeof createStore>['dispatch'];
@@ -23,7 +23,7 @@ export const createStore = (preloadedState?: ApplicationState): EnhancedStore<Ap
     preloadedState
   });
 
-  sagaMiddleware.run(derivationSaga);
+  sagaMiddleware.run(searchSaga);
   sagaMiddleware.run(networkSaga);
 
   return store;

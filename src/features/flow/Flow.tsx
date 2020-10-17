@@ -1,6 +1,6 @@
 import { ComponentType, FunctionComponent, useEffect, useState } from 'react';
 import { useDispatch } from '../../hooks';
-import { setFlow } from '../../store/derivation';
+import { setFlow } from './types';
 
 export interface FlowComponentProps {
   onReset(): void;

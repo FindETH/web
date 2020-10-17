@@ -3,7 +3,7 @@ import { object, pattern, string } from 'superstruct';
 import Button from '../../../components/ui/Button';
 import Container from '../../../components/ui/Container';
 import { useForm, useDispatch } from '../../../hooks';
-import { setAddress } from '../../../store/derivation';
+import { setAddress } from '../../search';
 import { FlowComponentProps } from '../Flow';
 
 type Props = FlowComponentProps;

@@ -1,8 +1,8 @@
 import createMockStore from 'redux-mock-store';
-import { setFlow } from '../../store/derivation';
 import { getComponent } from '../../utils/test-utils';
 import Flow from './Flow';
 import { FirstComponent, SecondComponent } from './__fixtures__/components';
+import { setFlow } from './types';
 
 const mockStore = createMockStore();
 

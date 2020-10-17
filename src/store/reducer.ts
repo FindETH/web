@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
-import { derivationReducer } from './derivation';
-import { networkReducer } from './network';
+import { flowReducer } from '../features/flow';
+import { networkReducer } from '../features/network';
+import { searchReducer } from '../features/search';
 import { ApplicationState } from './store';
-import walletReducer from './wallet';
 
 const reducer = combineReducers<ApplicationState>({
-  derivation: derivationReducer,
+  flow: flowReducer,
   network: networkReducer,
-  wallet: walletReducer
+  search: searchReducer
 });
 
 export default reducer;

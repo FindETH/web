@@ -3,8 +3,8 @@ import createMockStore from 'redux-mock-store';
 import Button from '../../../components/ui/Button';
 import Dropdown from '../../../components/ui/Dropdown';
 import { DropdownOption } from '../../../components/ui/Dropdown/Dropdown.styles';
-import { setNetwork } from '../../../store/network';
 import { getComponent } from '../../../utils/test-utils';
+import { setNetwork } from '../../network';
 import NetworkSelector from './NetworkSelector';
 
 describe('NetworkSelector', () => {

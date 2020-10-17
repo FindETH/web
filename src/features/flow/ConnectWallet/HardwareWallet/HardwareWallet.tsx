@@ -10,23 +10,23 @@ interface Props {
 }
 
 const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
-  const type = useSelector(state => state.wallet.type) as WalletType.Ledger | WalletType.Trezor;
+  const walletType = useSelector(state => state.flow.walletType) as WalletType.Ledger | WalletType.Trezor;
   const [implementation, setImplementation] = useState<Ledger<unknown> | Trezor>();
 
   useEffect(() => {
-    if (type) {
-      if (type === WalletType.Ledger) {
-        const Ledger = getWalletImplementation(type);
+    if (walletType) {
+      if (walletType === WalletType.Ledger) {
+        const Ledger = getWalletImplementation(walletType);
 
         // TODO: Handle error when no transports are available
         getLedgerTransport().then(transport => setImplementation(new Ledger(transport)));
         return;
       }
 
-      const Trezor = getWalletImplementation(type);
+      const Trezor = getWalletImplementation(walletType);
       setImplementation(new Trezor());
     }
-  }, [type]);
+  }, [walletType]);
 
   // TODO: Handle errors
   const handleNext = () => {

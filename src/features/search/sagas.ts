@@ -1,11 +1,17 @@
 import { DerivationPath, deserialize, getFullPath, Wallet } from '@findeth/wallets';
 import { SagaIterator } from 'redux-saga';
-import { all, call, fork, select, takeLatest, put } from 'redux-saga/effects';
+import { all, call, fork, put, select, takeLatest } from 'redux-saga/effects';
+import { ApplicationState } from '../../store';
 import { SerialisedWallet } from '../../types/wallet';
-import { ApplicationState } from '../store';
-import { addAddress, startSearching } from './actions';
+import { addAddress, startSearching } from './types';
 
-export function* getAddresses(wallet: Wallet, derivationPaths: DerivationPath[], depth: number): SagaIterator {
+interface GetAddressesAction {
+  wallet: Wallet;
+  derivationPaths: DerivationPath[];
+  depth: number;
+}
+
+export function* getAddresses({ wallet, derivationPaths, depth }: GetAddressesAction): SagaIterator {
   for (const derivationPath of derivationPaths) {
     for (let index = 0; index < depth; index++) {
       const address = yield call([wallet, wallet.getAddress], derivationPath, index);
@@ -17,13 +23,13 @@ export function* getAddresses(wallet: Wallet, derivationPaths: DerivationPath[],
 }
 
 export function* searchSaga(): SagaIterator {
-  const implementation: SerialisedWallet = yield select((state: ApplicationState) => state.wallet.wallet);
-  const derivationPaths: DerivationPath[] = yield select((state: ApplicationState) => state.derivation.derivationPaths);
+  const implementation: SerialisedWallet = yield select((state: ApplicationState) => state.search.wallet);
+  const derivationPaths: DerivationPath[] = yield select((state: ApplicationState) => state.search.derivationPaths);
 
   const wallet: Wallet = deserialize(implementation);
 
   // TODO: Task cancellation
-  /*const task: Task = */ yield fork(getAddresses, wallet, derivationPaths, 10);
+  /*const task: Task = */ yield fork(getAddresses, { wallet, derivationPaths, depth: 10 });
 }
 
 export function* rootSaga(): SagaIterator {
