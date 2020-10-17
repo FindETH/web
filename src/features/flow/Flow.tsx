@@ -1,4 +1,6 @@
 import { ComponentType, FunctionComponent, useEffect, useState } from 'react';
+import { useDispatch } from '../../hooks';
+import { setFlow } from '../../store/derivation';
 
 export interface FlowComponentProps {
   onReset(): void;
@@ -12,9 +14,19 @@ interface Props {
 
 const Flow: FunctionComponent<Props> = ({ components, onDone }) => {
   const [step, setStep] = useState<number>(0);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setFlow(true));
+
+    return () => {
+      dispatch(setFlow(false));
+    };
+  }, []);
 
   useEffect(() => {
     if (step >= components.length) {
+      dispatch(setFlow(false));
       onDone();
     }
   }, [components, step]);
