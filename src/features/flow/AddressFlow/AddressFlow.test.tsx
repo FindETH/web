@@ -5,6 +5,9 @@ import AddressFlow from './AddressFlow';
 describe('AddressFlow', () => {
   it('renders a flow', () => {
     const store = mockStore({
+      flow: {
+        isFlow: true
+      },
       search: {
         addresses: []
       }

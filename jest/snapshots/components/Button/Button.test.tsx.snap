@@ -17,6 +17,7 @@ exports[`Button renders correctly 1`] = `
   border: none;
   border-radius: .375rem;
   background: white;
+  margin: 1rem 0 0;
   padding: 0.5rem 1rem;
   font-family: "Inter",sans-serif;
   font-size: 0.875rem;
