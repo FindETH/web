@@ -3,6 +3,7 @@ import { IconName } from '../Icon';
 import { InputContainer, InputIcon, StyledInput } from './Input.styles';
 
 interface OwnProps {
+  type?: string;
   icon?: IconName;
   hasError?: boolean;
 }

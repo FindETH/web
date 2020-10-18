@@ -1,6 +1,6 @@
 import { DerivationPath, deserialize, getFullPath, Wallet } from '@findeth/wallets';
 import { SagaIterator } from 'redux-saga';
-import { all, call, fork, put, select, takeLatest } from 'redux-saga/effects';
+import { all, call, fork, put, select, takeEvery } from 'redux-saga/effects';
 import { ApplicationState } from '../../store';
 import { SerialisedWallet } from '../../types/wallet';
 import { addDerivedAddress, startSearching } from './types';
@@ -34,5 +34,5 @@ export function* searchSaga(): SagaIterator {
 }
 
 export function* rootSaga(): SagaIterator {
-  yield all([takeLatest(startSearching.type, searchSaga)]);
+  yield all([takeEvery(startSearching.type, searchSaga)]);
 }

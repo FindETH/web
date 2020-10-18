@@ -26,6 +26,10 @@ exports[`Field renders correctly 1`] = `
   justify-content: space-between;
 }
 
+.c0:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
 .c0 .c1 {
   font-weight: 500;
   margin: 0 0 0.25rem;

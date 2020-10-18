@@ -15,6 +15,7 @@ const Button = styled(Typography).attrs({ as: 'button' })<Props>`
   border: none;
   border-radius: ${({ theme }) => theme.smallBorderRadius};
   background: ${({ theme, type = 'default' }) => theme.button[type].background};
+  margin: 1rem 0 0;
   padding: 0.5rem 1rem;
   font-family: ${({ theme }) => theme.font};
   font-size: 0.875rem;

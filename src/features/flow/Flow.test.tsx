@@ -1,14 +1,16 @@
-import createMockStore from 'redux-mock-store';
-import { getComponent } from '../../utils/test-utils';
+import { getComponent, mockStore } from '../../utils/test-utils';
 import Flow from './Flow';
 import { FirstComponent, SecondComponent } from './__fixtures__/components';
 import { setFlow } from './types';
 
-const mockStore = createMockStore();
-
 describe('Flow', () => {
   it('passes a onNext and onReset callback function to the components', () => {
-    const store = mockStore();
+    const store = mockStore({
+      flow: {
+        isFlow: true
+      }
+    });
+
     const component = getComponent(<Flow components={[FirstComponent, SecondComponent]} onDone={jest.fn} />, store);
     const first = component.find(FirstComponent);
 
@@ -17,14 +19,24 @@ describe('Flow', () => {
   });
 
   it('renders the current step in the flow', () => {
-    const store = mockStore();
+    const store = mockStore({
+      flow: {
+        isFlow: true
+      }
+    });
+
     const component = getComponent(<Flow components={[FirstComponent, SecondComponent]} onDone={jest.fn} />, store);
 
     expect(component.find(FirstComponent)).toBeDefined();
   });
 
   it('renders the next component when onNext is called', () => {
-    const store = mockStore();
+    const store = mockStore({
+      flow: {
+        isFlow: true
+      }
+    });
+
     const component = getComponent(<Flow components={[FirstComponent, SecondComponent]} onDone={jest.fn} />, store);
     component.find('#next-button').simulate('click');
 
@@ -32,7 +44,12 @@ describe('Flow', () => {
   });
 
   it('calls onDone when all steps are done', () => {
-    const store = mockStore();
+    const store = mockStore({
+      flow: {
+        isFlow: true
+      }
+    });
+
     const fn = jest.fn();
     const component = getComponent(<Flow components={[FirstComponent, SecondComponent]} onDone={fn} />, store);
     component.find('#next-button').simulate('click');
@@ -42,7 +59,12 @@ describe('Flow', () => {
   });
 
   it('goes back to the first step when onReset is called', () => {
-    const store = mockStore();
+    const store = mockStore({
+      flow: {
+        isFlow: true
+      }
+    });
+
     const component = getComponent(<Flow components={[FirstComponent, SecondComponent]} onDone={jest.fn} />, store);
     component.find('#next-button').simulate('click');
     component.find('#reset-button').simulate('click');
@@ -51,7 +73,12 @@ describe('Flow', () => {
   });
 
   it('updates the flow state in the store', () => {
-    const store = mockStore();
+    const store = mockStore({
+      flow: {
+        isFlow: true
+      }
+    });
+
     const component = getComponent(<Flow components={[FirstComponent]} onDone={jest.fn} />, store);
     component.find('#next-button').simulate('click');
 

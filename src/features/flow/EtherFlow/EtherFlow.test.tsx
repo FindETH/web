@@ -9,6 +9,9 @@ describe('EtherFlow', () => {
 
   it('renders a flow if there is an internet connection', () => {
     const store = mockStore({
+      flow: {
+        isFlow: true
+      },
       network: {
         network: getDefaultNetwork(),
         isOnline: true,
@@ -22,6 +25,9 @@ describe('EtherFlow', () => {
 
   it('renders a network error when there is no internet connection', () => {
     const store = mockStore({
+      flow: {
+        isFlow: true
+      },
       network: {
         network: getDefaultNetwork(),
         isOnline: false,
