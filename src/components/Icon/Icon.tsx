@@ -1,5 +1,7 @@
 import { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react';
 import arrowIcon from '../../assets/images/arrow.svg';
+import crossIcon from '../../assets/images/cross.svg';
+import errorIcon from '../../assets/images/error.svg';
 import ethereumIcon from '../../assets/images/ethereum.svg';
 import ledgerIcon from '../../assets/images/logos/ledger.svg';
 import trezorIcon from '../../assets/images/logos/trezor.svg';
@@ -10,6 +12,14 @@ const SUPPORTED_ICONS = {
   arrow: {
     name: 'Arrow',
     icon: arrowIcon
+  },
+  cross: {
+    name: 'Cross',
+    icon: crossIcon
+  },
+  error: {
+    name: 'Error',
+    icon: errorIcon
   },
   ethereum: {
     name: 'Ethereum',

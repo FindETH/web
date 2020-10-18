@@ -32,6 +32,19 @@ const theme: DefaultTheme = {
 
   mutedText: '#6b7280',
 
+  table: {
+    background: 'white',
+    headerBackground: '#f9fafb'
+  },
+
+  input: {
+    shadow: '0 1px 2px 0 rgba(0, 0, 0, .05)',
+    border: '#d2d6dc',
+    hoverShadow: '0 0 0 3px rgba(164, 202, 254, .45)',
+    hoverBorder: '#a4cafe',
+    errorBorder: '#f8b4b4'
+  },
+
   button: {
     default: {
       background: 'white',

@@ -1,9 +1,13 @@
 import { mount, ReactWrapper } from 'enzyme';
 import { ReactElement } from 'react';
 import { act } from 'react-dom/test-utils';
-import { Store } from 'redux';
+import { DeepPartial, Store } from 'redux';
+import createMockStore from 'redux-mock-store';
 import TestProviders from '../components/Providers/TestProviders';
+import { ApplicationState } from '../store';
 import theme from '../theme';
+
+export const mockStore = createMockStore<DeepPartial<ApplicationState>>();
 
 /**
  * Wait for a promise to resolve. Useful for testing components with async logic.

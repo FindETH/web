@@ -30,6 +30,19 @@ declare module 'styled-components' {
 
     mutedText: string;
 
+    table: {
+      background: white;
+      headerBackground: string;
+    };
+
+    input: {
+      shadow: string;
+      border: string;
+      hoverShadow: string;
+      hoverBorder: string;
+      errorBorder: string;
+    };
+
     button: {
       default: {
         background: string;
