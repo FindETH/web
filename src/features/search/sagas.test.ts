@@ -6,6 +6,14 @@ import { recordSaga } from '../../utils/saga';
 import { getAddresses, searchSaga } from './sagas';
 import { addDerivedAddress, startSearching } from './types';
 
+jest.mock(
+  './search.worker.ts',
+  () =>
+    class SearchWorker {
+      deriveAddress = jest.requireActual('./search.worker.ts').deriveAddress;
+    }
+);
+
 const wallet = new MnemonicPhrase('test test test test test test test test test test test ball');
 const serialisedWallet = wallet.serialize() as SerialisedWallet;
 
@@ -38,7 +46,11 @@ describe('searchSaga', () => {
 
 describe('getAddresses', () => {
   it('derives addresses for the specified derivation paths', async () => {
-    const defaultEth = await recordSaga(getAddresses, { wallet, derivationPaths: [DEFAULT_ETH], depth: 2 }, {});
+    const defaultEth = await recordSaga(
+      getAddresses,
+      { wallet: serialisedWallet, derivationPaths: [DEFAULT_ETH], depth: 2 },
+      {}
+    );
     expect(defaultEth).toHaveLength(2);
     expect(defaultEth).toContainEqual(
       addDerivedAddress({
@@ -53,7 +65,11 @@ describe('getAddresses', () => {
       })
     );
 
-    const ledgerLiveEth = await recordSaga(getAddresses, { wallet, derivationPaths: [LEDGER_LIVE_ETH], depth: 2 }, {});
+    const ledgerLiveEth = await recordSaga(
+      getAddresses,
+      { wallet: serialisedWallet, derivationPaths: [LEDGER_LIVE_ETH], depth: 2 },
+      {}
+    );
     expect(ledgerLiveEth).toHaveLength(2);
     expect(ledgerLiveEth).toContainEqual(
       addDerivedAddress({

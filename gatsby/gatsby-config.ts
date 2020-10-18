@@ -15,6 +15,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-remove-dependency-transpilation',
+    'gatsby-plugin-workerize-loader',
     {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
