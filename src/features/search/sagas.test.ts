@@ -14,12 +14,13 @@ describe('searchSaga', () => {
     const state: DeepPartial<ApplicationState> = {
       search: {
         wallet: serialisedWallet,
-        derivationPaths: [DEFAULT_ETH]
+        derivationPaths: [DEFAULT_ETH],
+        depth: 3
       }
     };
 
     const dispatched = await recordSaga(searchSaga, startSearching(), state);
-    expect(dispatched).toHaveLength(10);
+    expect(dispatched).toHaveLength(3);
     expect(dispatched).toContainEqual(
       addDerivedAddress({
         address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf',

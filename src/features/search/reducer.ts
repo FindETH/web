@@ -1,5 +1,14 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { addAddress, addDerivedAddress, INITIAL_STATE, removeAddress, startSearching, stopSearching } from './types';
+import {
+  addAddress,
+  addDerivedAddress,
+  INITIAL_STATE,
+  removeAddress,
+  setDepth,
+  setDerivationPaths,
+  startSearching,
+  stopSearching
+} from './types';
 
 export const searchReducer = createReducer(INITIAL_STATE, builder =>
   builder
@@ -10,6 +19,14 @@ export const searchReducer = createReducer(INITIAL_STATE, builder =>
     .addCase(stopSearching, state => ({
       ...state,
       isSearching: false
+    }))
+    .addCase(setDerivationPaths, (state, action) => ({
+      ...state,
+      derivationPaths: action.payload
+    }))
+    .addCase(setDepth, (state, action) => ({
+      ...state,
+      depth: action.payload
     }))
     .addCase(addAddress, (state, action) => ({
       ...state,

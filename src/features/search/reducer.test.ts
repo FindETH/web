@@ -1,5 +1,15 @@
+import { LEDGER_DERIVATION_PATHS } from '@findeth/wallets';
 import { searchReducer } from './reducer';
-import { addAddress, addDerivedAddress, INITIAL_STATE, removeAddress, startSearching, stopSearching } from './types';
+import {
+  addAddress,
+  addDerivedAddress,
+  INITIAL_STATE,
+  removeAddress,
+  setDepth,
+  setDerivationPaths,
+  startSearching,
+  stopSearching
+} from './types';
 
 describe('searchReducer', () => {
   it('returns the initial state', () => {
@@ -17,6 +27,20 @@ describe('searchReducer', () => {
     expect(searchReducer(undefined, stopSearching())).toEqual({
       ...INITIAL_STATE,
       isSearching: false
+    });
+  });
+
+  it('handles setDerivationPaths', () => {
+    expect(searchReducer(undefined, setDerivationPaths(LEDGER_DERIVATION_PATHS))).toEqual({
+      ...INITIAL_STATE,
+      derivationPaths: LEDGER_DERIVATION_PATHS
+    });
+  });
+
+  it('handles setDepth', () => {
+    expect(searchReducer(undefined, setDepth(5))).toEqual({
+      ...INITIAL_STATE,
+      depth: 5
     });
   });
 
