@@ -2,7 +2,7 @@ import Button from '../../../../components/Button';
 import { getComponent } from '../../../../utils/test-utils';
 import MnemonicWallet from './MnemonicWallet';
 
-describe('MnemonicPhrase', () => {
+describe('MnemonicWallet', () => {
   it('calls onNext when the button is pressed', () => {
     const fn = jest.fn();
     const component = getComponent(<MnemonicWallet onNext={fn} />);

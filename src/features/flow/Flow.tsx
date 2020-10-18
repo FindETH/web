@@ -1,5 +1,5 @@
 import { ComponentType, FunctionComponent, useEffect, useState } from 'react';
-import { useDispatch } from '../../utils/hooks';
+import { useDispatch, useSelector } from '../../utils/hooks';
 import { setFlow } from './types';
 
 export interface FlowComponentProps {
@@ -14,13 +14,16 @@ interface Props {
 
 const Flow: FunctionComponent<Props> = ({ components, onDone }) => {
   const [step, setStep] = useState<number>(0);
+  const isFlow = useSelector(state => state.flow.isFlow);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(setFlow(true));
 
     return () => {
-      dispatch(setFlow(false));
+      if (isFlow) {
+        dispatch(setFlow(false));
+      }
     };
   }, []);
 

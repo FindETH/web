@@ -12,6 +12,10 @@ export const FieldContainer = styled.label<Props>`
   flex-wrap: wrap;
   justify-content: space-between;
 
+  :not(:first-of-type) {
+    margin-top: 1rem;
+  }
+
   ${Typography} {
     font-weight: 500;
     margin: 0 0 0.25rem;
