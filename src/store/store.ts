@@ -1,6 +1,7 @@
 import { configureStore, EnhancedStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
+import { IS_DEVELOPMENT } from '../constants';
 import { FlowState } from '../features/flow';
 import { NetworkState, rootSaga as networkSaga } from '../features/network';
 import { rootSaga as searchSaga, SearchState } from '../features/search';
@@ -19,7 +20,7 @@ export const createStore = (preloadedState?: ApplicationState): EnhancedStore<Ap
 
   const store = configureStore({
     reducer,
-    middleware: [...getDefaultMiddleware({ thunk: false }), sagaMiddleware, logger],
+    middleware: [...getDefaultMiddleware({ thunk: false }), sagaMiddleware, ...(IS_DEVELOPMENT ? [logger] : [])],
     preloadedState
   });
 
