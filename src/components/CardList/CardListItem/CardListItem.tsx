@@ -7,14 +7,12 @@ export interface Props {
   onClick(): void;
 }
 
-const CardListItem: FunctionComponent<Props> = ({ icon, onClick, children }) => {
-  return (
-    <CardListItemContainer onClick={onClick}>
-      {icon && <CardIcon icon={icon} />}
-      <CardListItemContent>{children}</CardListItemContent>
-      <ArrowIcon icon="arrow" />
-    </CardListItemContainer>
-  );
-};
+const CardListItem: FunctionComponent<Props> = ({ icon, onClick, children }) => (
+  <CardListItemContainer onClick={onClick}>
+    {icon && <CardIcon icon={icon} />}
+    <CardListItemContent>{children}</CardListItemContent>
+    <ArrowIcon icon="arrow" />
+  </CardListItemContainer>
+);
 
 export default CardListItem;

@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page renders correctly 1`] = `
+.c1 {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c3 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c4 {
+  font-size: 1.5rem;
+  font-family: "Public Sans",sans-serif;
+  font-weight: normal;
+}
+
+.c5 {
+  padding: 1.5rem 2rem;
+}
+
+.c0 {
+  width: 100%;
+  padding: 1.5rem 0;
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.05);
+}
+
+.c0 .c2 {
+  margin: 0;
+  font-family: "Inter",sans-serif;
+  font-weight: 700;
+}
+
+<Page
+  title="Foo"
+>
+  <Meta
+    title="Foo"
+  >
+    <Helmet
+      defaultTitle="FindETH"
+      defer={true}
+      encodeSpecialCharacters={true}
+      htmlAttributes={
+        Object {
+          "lang": "en",
+        }
+      }
+      meta={
+        Array [
+          Object {
+            "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
+            "name": "description",
+          },
+          Object {
+            "content": "Ether, Ethereum, ERC20, ERC-20, tokens, address, private key, derivation path, mnemonic phrase, Ledger, Trezor, hardware wallet, lost",
+            "name": "keywords",
+          },
+          Object {
+            "content": "Maarten Zuidhoorn",
+            "name": "author",
+          },
+        ]
+      }
+      title="Foo"
+      titleTemplate="%s - FindETH"
+    >
+      <HelmetDispatcher
+        context={
+          Object {
+            "helmetInstances": Object {
+              "add": [Function],
+              "get": [Function],
+              "remove": [Function],
+            },
+            "setHelmet": [Function],
+          }
+        }
+        defaultTitle="FindETH"
+        defer={true}
+        encodeSpecialCharacters={true}
+        htmlAttributes={
+          Object {
+            "lang": "en",
+          }
+        }
+        meta={
+          Array [
+            Object {
+              "content": "Easily find your lost Ether, tokens, or Ethereum address, by automatically scanning a bunch of derivation paths",
+              "name": "description",
+            },
+            Object {
+              "content": "Ether, Ethereum, ERC20, ERC-20, tokens, address, private key, derivation path, mnemonic phrase, Ledger, Trezor, hardware wallet, lost",
+              "name": "keywords",
+            },
+            Object {
+              "content": "Maarten Zuidhoorn",
+              "name": "author",
+            },
+          ]
+        }
+        title="Foo"
+        titleTemplate="%s - FindETH"
+      />
+    </Helmet>
+  </Meta>
+  <PageHeader>
+    <styled.div>
+      <div
+        className="c0"
+      >
+        <styled.div>
+          <div
+            className="c1"
+          >
+            <Styled(styled.p)
+              as="h2"
+            >
+              <h2
+                className="c2 c3 c4"
+              >
+                Foo
+              </h2>
+            </Styled(styled.p)>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </PageHeader>
+  <styled.main>
+    <main
+      className="c5"
+    />
+  </styled.main>
+</Page>
+`;

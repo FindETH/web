@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field renders correctly 1`] = `
+.c2 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c0 .c1 {
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+}
+
+.c0 > .sc-hKFyIo,
+.c0 > .sc-iCoHVE {
+  width: 100%;
+}
+
+<Field
+  label="Foo bar"
+>
+  <styled.label
+    hasError={false}
+  >
+    <label
+      className="c0"
+    >
+      <styled.p>
+        <p
+          className="c1 c2"
+        >
+          Foo bar
+        </p>
+      </styled.p>
+      Baz qux
+    </label>
+  </styled.label>
+</Field>
+`;

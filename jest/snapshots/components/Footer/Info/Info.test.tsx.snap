@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Info renders correctly 1`] = `
+.c2 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Inter",sans-serif;
+  color: #1eb8e7;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c3:hover {
+  color: #4cc7ec;
+}
+
+.c4 {
+  margin-top: 0.25rem;
+}
+
+.c4 .c1 {
+  font-size: 0.75rem;
+}
+
+.c0 {
+  justify-self: flex-end;
+  text-align: right;
+}
+
+<Info>
+  <styled.section>
+    <section
+      className="c0"
+    >
+      <MadeBy>
+        <styled.p>
+          <p
+            className="c1 c2"
+          >
+            Made by
+             
+            <Link
+              external={true}
+              to="https://github.com/Mrtenz"
+            >
+              <styled.a
+                href="https://github.com/Mrtenz"
+              >
+                <a
+                  className="c3"
+                  href="https://github.com/Mrtenz"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Maarten Zuidhoorn
+                </a>
+              </styled.a>
+            </Link>
+          </p>
+        </styled.p>
+      </MadeBy>
+      <Donate>
+        <styled.div>
+          <div
+            className="c4"
+          >
+            <styled.p>
+              <p
+                className="c1 c2"
+              >
+                Donate (ETH):
+                <br />
+                <Link
+                  external={true}
+                  to="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+                >
+                  <styled.a
+                    href="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+                  >
+                    <a
+                      className="c3"
+                      href="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      0xDFDD854DaAD30E6E077AEf1c653169968c102E34
+                    </a>
+                  </styled.a>
+                </Link>
+              </p>
+            </styled.p>
+          </div>
+        </styled.div>
+      </Donate>
+    </section>
+  </styled.section>
+</Info>
+`;

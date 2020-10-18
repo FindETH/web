@@ -1,8 +1,8 @@
 import { RouteComponentProps } from '@reach/router';
 import { navigate } from 'gatsby';
 import { FunctionComponent } from 'react';
-import CheckConnection from '../../../components/CheckConnection';
 import Page from '../../../components/Page';
+import CheckConnection from '../../network/CheckConnection';
 import ConnectWallet from '../ConnectWallet';
 import Flow from '../Flow';
 import NetworkSelector from '../NetworkSelector';

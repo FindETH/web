@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+.c2 {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c4 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c5 {
+  font-size: 3rem;
+  font-family: "Public Sans",sans-serif;
+  font-weight: bold;
+}
+
+.c6 {
+  list-style-type: none;
+  margin: 0 0 0 2.5rem;
+  padding: 0;
+}
+
+.c7 {
+  display: inline-block;
+}
+
+.c7:not(:first-of-type) {
+  margin-left: 1rem;
+}
+
+.c7 .{
+  padding: 0.5rem 0.75rem;
+  border-radius: .5rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #d2d6dc;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.c7 ..active {
+  background: #0c0c0e;
+  color: white;
+}
+
+.c7 .:hover {
+  background: #3c3c44;
+  color: white;
+}
+
+.c0 {
+  height: 4rem;
+  background: #242429;
+  color: white;
+  font-family: "Inter",sans-serif;
+}
+
+.c0 .c1 {
+  height: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 .c3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Inter",sans-serif;
+}
+
+<Header>
+  <styled.header>
+    <header
+      className="c0"
+    >
+      <styled.div>
+        <div
+          className="c1 c2"
+        >
+          <Logo>
+            <Styled(styled.p)
+              as="h1"
+            >
+              <h1
+                className="c3 c4 c5"
+              >
+                FindETH
+              </h1>
+            </Styled(styled.p)>
+          </Logo>
+          <Navigation>
+            <styled.ul>
+              <ul
+                className="c6"
+              >
+                <NavigationItem
+                  title="Search"
+                  to="/"
+                >
+                  <styled.li>
+                    <li
+                      className="c7"
+                    >
+                      <NavigationLink
+                        to="/"
+                      >
+                        <Styled(Component)
+                          activeClassName="active"
+                          onClick={[Function]}
+                          to="/"
+                        >
+                          <ForwardRef
+                            activeClassName="active"
+                            className=""
+                            onClick={[Function]}
+                            to="/"
+                          >
+                            <GatsbyLink
+                              activeClassName="active"
+                              className=""
+                              innerRef={null}
+                              onClick={[Function]}
+                              to="/"
+                            >
+                              <Location>
+                                <LocationProvider
+                                  history={
+                                    Object {
+                                      "_onTransitionComplete": [Function],
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "host": "localhost",
+                                        "hostname": "localhost",
+                                        "href": "http://localhost/",
+                                        "key": "initial",
+                                        "origin": "http://localhost",
+                                        "pathname": "/",
+                                        "port": "",
+                                        "protocol": "http:",
+                                        "search": "",
+                                        "state": null,
+                                      },
+                                      "navigate": [Function],
+                                      "transitioning": false,
+                                    }
+                                  }
+                                >
+                                  <Link
+                                    className=""
+                                    getProps={[Function]}
+                                    innerRef={[Function]}
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    to="/"
+                                  >
+                                    <Location>
+                                      <a
+                                        aria-current="page"
+                                        className="active"
+                                        href="/"
+                                        onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        style={Object {}}
+                                      >
+                                        Search
+                                      </a>
+                                    </Location>
+                                  </Link>
+                                </LocationProvider>
+                              </Location>
+                            </GatsbyLink>
+                          </ForwardRef>
+                        </Styled(Component)>
+                      </NavigationLink>
+                    </li>
+                  </styled.li>
+                </NavigationItem>
+                <NavigationItem
+                  title="Info"
+                  to="/info"
+                >
+                  <styled.li>
+                    <li
+                      className="c7"
+                    >
+                      <NavigationLink
+                        to="/info"
+                      >
+                        <Styled(Component)
+                          activeClassName="active"
+                          onClick={[Function]}
+                          to="/info"
+                        >
+                          <ForwardRef
+                            activeClassName="active"
+                            className=""
+                            onClick={[Function]}
+                            to="/info"
+                          >
+                            <GatsbyLink
+                              activeClassName="active"
+                              className=""
+                              innerRef={null}
+                              onClick={[Function]}
+                              to="/info"
+                            >
+                              <Location>
+                                <LocationProvider
+                                  history={
+                                    Object {
+                                      "_onTransitionComplete": [Function],
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "host": "localhost",
+                                        "hostname": "localhost",
+                                        "href": "http://localhost/",
+                                        "key": "initial",
+                                        "origin": "http://localhost",
+                                        "pathname": "/",
+                                        "port": "",
+                                        "protocol": "http:",
+                                        "search": "",
+                                        "state": null,
+                                      },
+                                      "navigate": [Function],
+                                      "transitioning": false,
+                                    }
+                                  }
+                                >
+                                  <Link
+                                    className=""
+                                    getProps={[Function]}
+                                    innerRef={[Function]}
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    to="/info"
+                                  >
+                                    <Location>
+                                      <a
+                                        className=""
+                                        href="/info"
+                                        onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                      >
+                                        Info
+                                      </a>
+                                    </Location>
+                                  </Link>
+                                </LocationProvider>
+                              </Location>
+                            </GatsbyLink>
+                          </ForwardRef>
+                        </Styled(Component)>
+                      </NavigationLink>
+                    </li>
+                  </styled.li>
+                </NavigationItem>
+              </ul>
+            </styled.ul>
+          </Navigation>
+        </div>
+      </styled.div>
+    </header>
+  </styled.header>
+</Header>
+`;

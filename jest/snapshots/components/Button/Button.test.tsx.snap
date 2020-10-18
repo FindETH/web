@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+.c0 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1 {
+  outline: none;
+  border: none;
+  border-radius: .375rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  font-family: "Inter",sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #242429;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s,color 0.2s,opacity 0.2s;
+  transition: background-color 0.2s,color 0.2s,opacity 0.2s;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.05);
+  border: 1px solid #d2d6dc;
+}
+
+.c1:hover {
+  background: #fff;
+  color: white;
+}
+
+.c1:hover {
+  color: #778;
+}
+
+<Styled(styled.p)>
+  <button
+    className="c0 c1"
+  />
+</Styled(styled.p)>
+`;

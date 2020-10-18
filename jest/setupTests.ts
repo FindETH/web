@@ -6,3 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 configure({ adapter: new Adapter() });
 
 HelmetProvider.canUseDOM = false;
+
+global.___loader = {
+  enqueue: jest.fn()
+};

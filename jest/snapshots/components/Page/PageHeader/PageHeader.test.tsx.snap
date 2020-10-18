@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader renders correctly 1`] = `
+.c0 {
+  width: 100%;
+  padding: 1.5rem 0;
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.05);
+}
+
+.c0 .sc-dlnjPT {
+  margin: 0;
+  font-family: "Inter",sans-serif;
+  font-weight: 700;
+}
+
+<PageHeader>
+  <styled.div>
+    <div
+      className="c0"
+    />
+  </styled.div>
+</PageHeader>
+`;

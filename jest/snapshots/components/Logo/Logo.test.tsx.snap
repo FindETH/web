@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo renders correctly 1`] = `
+.c0 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1 {
+  font-size: 3rem;
+  font-family: "Public Sans",sans-serif;
+  font-weight: bold;
+}
+
+<Logo>
+  <Styled(styled.p)
+    as="h1"
+  >
+    <h1
+      className="c0 c1"
+    >
+      FindETH
+    </h1>
+  </Styled(styled.p)>
+</Logo>
+`;

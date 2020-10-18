@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders correctly 1`] = `
+.c1 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c0 {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: .375rem;
+  border-spacing: 0;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.05);
+  background: white;
+}
+
+.c0 thead {
+  width: 100%;
+}
+
+.c2 {
+  width: 100%;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  display: table-cell;
+  text-align: left;
+}
+
+.c3 {
+  -webkit-letter-spacing: 0.05em;
+  -moz-letter-spacing: 0.05em;
+  -ms-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #f9fafb;
+  box-sizing: border-box;
+  text-align: left;
+  border-bottom: #d2d6dc;
+}
+
+<Table
+  columns={
+    Array [
+      "Foo",
+      "Bar",
+    ]
+  }
+>
+  <styled.table>
+    <table
+      className="c0"
+    >
+      <thead>
+        <tr>
+          <Styled(Styled(styled.p))
+            key="0"
+          >
+            <th
+              className="c1 c2 c3"
+            >
+              Foo
+            </th>
+          </Styled(Styled(styled.p))>
+          <Styled(Styled(styled.p))
+            key="1"
+          >
+            <th
+              className="c1 c2 c3"
+            >
+              Bar
+            </th>
+          </Styled(Styled(styled.p))>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </styled.table>
+</Table>
+`;

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MadeBy renders correctly 1`] = `
+.c0 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Inter",sans-serif;
+  color: #1eb8e7;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1:hover {
+  color: #4cc7ec;
+}
+
+<MadeBy>
+  <styled.p>
+    <p
+      className="c0"
+    >
+      Made by
+       
+      <Link
+        external={true}
+        to="https://github.com/Mrtenz"
+      >
+        <styled.a
+          href="https://github.com/Mrtenz"
+        >
+          <a
+            className="c1"
+            href="https://github.com/Mrtenz"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Maarten Zuidhoorn
+          </a>
+        </styled.a>
+      </Link>
+    </p>
+  </styled.p>
+</MadeBy>
+`;

@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders correctly 1`] = `
+.c0 {
+  list-style-type: none;
+  margin: 0 0 0 2.5rem;
+  padding: 0;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.c1:not(:first-of-type) {
+  margin-left: 1rem;
+}
+
+.c1 .{
+  padding: 0.5rem 0.75rem;
+  border-radius: .5rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #d2d6dc;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.c1 ..active {
+  background: #0c0c0e;
+  color: white;
+}
+
+.c1 .:hover {
+  background: #3c3c44;
+  color: white;
+}
+
+<Navigation>
+  <styled.ul>
+    <ul
+      className="c0"
+    >
+      <NavigationItem
+        title="Search"
+        to="/"
+      >
+        <styled.li>
+          <li
+            className="c1"
+          >
+            <NavigationLink
+              to="/"
+            >
+              <Styled(Component)
+                activeClassName="active"
+                onClick={[Function]}
+                to="/"
+              >
+                <ForwardRef
+                  activeClassName="active"
+                  className=""
+                  onClick={[Function]}
+                  to="/"
+                >
+                  <GatsbyLink
+                    activeClassName="active"
+                    className=""
+                    innerRef={null}
+                    onClick={[Function]}
+                    to="/"
+                  >
+                    <Location>
+                      <LocationProvider
+                        history={
+                          Object {
+                            "_onTransitionComplete": [Function],
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "host": "localhost",
+                              "hostname": "localhost",
+                              "href": "http://localhost/",
+                              "key": "initial",
+                              "origin": "http://localhost",
+                              "pathname": "/",
+                              "port": "",
+                              "protocol": "http:",
+                              "search": "",
+                              "state": null,
+                            },
+                            "navigate": [Function],
+                            "transitioning": false,
+                          }
+                        }
+                      >
+                        <Link
+                          className=""
+                          getProps={[Function]}
+                          innerRef={[Function]}
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          to="/"
+                        >
+                          <Location>
+                            <a
+                              aria-current="page"
+                              className="active"
+                              href="/"
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              style={Object {}}
+                            >
+                              Search
+                            </a>
+                          </Location>
+                        </Link>
+                      </LocationProvider>
+                    </Location>
+                  </GatsbyLink>
+                </ForwardRef>
+              </Styled(Component)>
+            </NavigationLink>
+          </li>
+        </styled.li>
+      </NavigationItem>
+      <NavigationItem
+        title="Info"
+        to="/info"
+      >
+        <styled.li>
+          <li
+            className="c1"
+          >
+            <NavigationLink
+              to="/info"
+            >
+              <Styled(Component)
+                activeClassName="active"
+                onClick={[Function]}
+                to="/info"
+              >
+                <ForwardRef
+                  activeClassName="active"
+                  className=""
+                  onClick={[Function]}
+                  to="/info"
+                >
+                  <GatsbyLink
+                    activeClassName="active"
+                    className=""
+                    innerRef={null}
+                    onClick={[Function]}
+                    to="/info"
+                  >
+                    <Location>
+                      <LocationProvider
+                        history={
+                          Object {
+                            "_onTransitionComplete": [Function],
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "host": "localhost",
+                              "hostname": "localhost",
+                              "href": "http://localhost/",
+                              "key": "initial",
+                              "origin": "http://localhost",
+                              "pathname": "/",
+                              "port": "",
+                              "protocol": "http:",
+                              "search": "",
+                              "state": null,
+                            },
+                            "navigate": [Function],
+                            "transitioning": false,
+                          }
+                        }
+                      >
+                        <Link
+                          className=""
+                          getProps={[Function]}
+                          innerRef={[Function]}
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          to="/info"
+                        >
+                          <Location>
+                            <a
+                              className=""
+                              href="/info"
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
+                            >
+                              Info
+                            </a>
+                          </Location>
+                        </Link>
+                      </LocationProvider>
+                    </Location>
+                  </GatsbyLink>
+                </ForwardRef>
+              </Styled(Component)>
+            </NavigationLink>
+          </li>
+        </styled.li>
+      </NavigationItem>
+    </ul>
+  </styled.ul>
+</Navigation>
+`;

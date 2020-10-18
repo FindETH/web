@@ -6,10 +6,9 @@ import Header from './components/Header/Header';
 import Providers from './components/Providers/Providers';
 import Wrapper from './components/Wrapper';
 import NetworkChecker from './features/network/NetworkChecker';
-import theme from './theme';
 
 export const App: FunctionComponent = ({ children }) => (
-  <Providers theme={theme}>
+  <Providers>
     <NetworkChecker />
     <GlobalStyle />
     <Wrapper>

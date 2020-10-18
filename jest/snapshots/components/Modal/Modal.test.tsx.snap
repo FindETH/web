@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(36,36,41,0.6);
+}
+
+.c1 {
+  min-width: 18rem;
+  max-width: 32rem;
+  background: white;
+  border-radius: .5rem;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04);
+}
+
+.c1 .sc-dlnjPT {
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+
+.c2 {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.c2 .sc-gtssRu {
+  color: #6b7280;
+  margin: 0;
+}
+
+.c2 .sc-hKFyIo {
+  color: #242429;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.c3 {
+  padding: 0.75rem 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  background: #f9fafb;
+  border-bottom-left-radius: .375rem;
+  border-bottom-right-radius: .375rem;
+}
+
+<Modal>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.div
+        type="normal"
+      >
+        <div
+          className="c1"
+          type="normal"
+        >
+          <styled.div>
+            <div
+              className="c2"
+            >
+              Foo bar
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="c3"
+            >
+              Baz qux
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Modal>
+`;

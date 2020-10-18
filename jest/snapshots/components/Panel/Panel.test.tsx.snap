@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel renders correctly 1`] = `
+.c0 {
+  margin: 1.5rem auto;
+  width: 40rem;
+  max-width: 100%;
+  background: white;
+  border-radius: .5rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.05);
+}
+
+.c1 {
+  width: 70rem;
+}
+
+<Styled(styled.section)>
+  <section
+    className="c0 c1"
+  />
+</Styled(styled.section)>
+`;
