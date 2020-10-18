@@ -6,6 +6,7 @@ export interface SearchState {
   isSearching: boolean;
   wallet?: SerialisedWallet;
   derivationPaths: DerivationPath[];
+  depth: number;
   addresses: string[];
   derivedAddresses: DerivationResult[];
 }
@@ -13,6 +14,7 @@ export interface SearchState {
 export const INITIAL_STATE: SearchState = {
   isSearching: false,
   derivationPaths: ALL_DERIVATION_PATHS,
+  depth: 10,
   addresses: [],
   derivedAddresses: []
 };
@@ -20,6 +22,7 @@ export const INITIAL_STATE: SearchState = {
 export const setSerialisedWallet = createAction<SerialisedWallet>('search/setSerialisedWallet');
 
 export const setDerivationPaths = createAction<DerivationPath[]>('search/setDerivationPaths');
+export const setDepth = createAction<number>('search/setDepth');
 
 export const startSearching = createAction('search/startSearching');
 export const stopSearching = createAction('search/stopSearching');

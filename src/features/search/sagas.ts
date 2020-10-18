@@ -25,11 +25,12 @@ export function* getAddresses({ wallet, derivationPaths, depth }: GetAddressesAc
 export function* searchSaga(): SagaIterator {
   const implementation: SerialisedWallet = yield select((state: ApplicationState) => state.search.wallet);
   const derivationPaths: DerivationPath[] = yield select((state: ApplicationState) => state.search.derivationPaths);
+  const depth: number = yield select((state: ApplicationState) => state.search.depth);
 
   const wallet: Wallet = deserialize(implementation);
 
   // TODO: Task cancellation
-  /*const task: Task = */ yield fork(getAddresses, { wallet, derivationPaths, depth: 10 });
+  /*const task: Task = */ yield fork(getAddresses, { wallet, derivationPaths, depth });
 }
 
 export function* rootSaga(): SagaIterator {
