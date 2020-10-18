@@ -2,7 +2,6 @@
 
 ![License](https://img.shields.io/github/license/FindETH/web) [![GitHub Actions](https://github.com/FindETH/web/workflows/CI/badge.svg)](https://github.com/FindETH/web/actions) [![codecov](https://codecov.io/gh/FindETH/web/branch/master/graph/badge.svg)](https://codecov.io/gh/FindETH/web)
 
-
 `@findeth/web` is the main website of FindETH, a tool to help you find your lost Ethereum address, Ether or tokens. Other versions of FindETH can be found here:
 
 - [Desktop](https://github.com/FindETH/desktop)
