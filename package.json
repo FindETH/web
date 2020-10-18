@@ -18,10 +18,10 @@
     "lint": "yarn run lint:types && yarn run lint:source && yarn run lint:format && yarn run lint:styles && yarn run lint:lockfile",
     "lint:types": "tsc --noEmit",
     "lint:source": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx",
-    "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
+    "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,jsx,json,yml}'",
     "lint:styles": "stylelint 'src/**/*.tsx'",
     "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
-    "format": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'"
+    "format": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,jsx,json,yml}'"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.1",
@@ -120,9 +120,12 @@
     "typescript": "^4.1.0-beta"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{ts,tsx,js,jsx}": [
       "prettier --write",
       "eslint --fix"
+    ],
+    "*.{json,yml}": [
+      "prettier --write"
     ]
   },
   "husky": {

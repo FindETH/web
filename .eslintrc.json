@@ -59,9 +59,12 @@
         ],
         "@typescript-eslint/method-signature-style": ["error", "method"],
         "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-unused-vars": ["error", {
-          "argsIgnorePattern": "^_"
-        }],
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "argsIgnorePattern": "^_"
+          }
+        ],
         "react/no-unescaped-entities": "off",
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
