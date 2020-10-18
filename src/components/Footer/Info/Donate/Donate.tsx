@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import Link from '../../../Link';
-import Typography from '../../../ui/Typography';
+import Typography from '../../../Typography';
 import { DonateContainer } from './Donate.styles';
 
 const Donate: FunctionComponent = () => (

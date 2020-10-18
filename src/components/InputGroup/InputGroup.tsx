@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import Button from '../Button';
 import { InputContainer } from '../Input';
-import Button from '../ui/Button';
 
 const InputGroup = styled.div`
   display: flex;

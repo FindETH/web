@@ -1,8 +1,8 @@
 import { FunctionComponent, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Container from '../../components/ui/Container';
-import Typography from '../../components/ui/Typography';
-import { useSelector } from '../../hooks';
+import Container from '../../components/Container';
+import Typography from '../../components/Typography';
+import { useSelector } from '../../utils/hooks';
 import { startSearching } from './types';
 
 const Search: FunctionComponent = () => {

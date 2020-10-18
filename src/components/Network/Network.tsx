@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
-import { useSelector } from '../../hooks';
-import Typography from '../ui/Typography';
+import { useSelector } from '../../utils/hooks';
+import Typography from '../Typography';
 import { NetworkContainer } from './Network.styles';
 
 const NETWORK_OFFLINE = {

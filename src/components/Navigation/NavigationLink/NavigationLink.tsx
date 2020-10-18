@@ -1,12 +1,12 @@
 import { navigate } from 'gatsby';
 import { AnchorHTMLAttributes, DetailedHTMLProps, FunctionComponent, MouseEvent } from 'react';
 import { useModal } from 'react-modal-hook';
-import { useSelector } from '../../../hooks';
+import { useSelector } from '../../../utils/hooks';
+import Button from '../../Button';
+import Heading from '../../Heading';
 import Modal, { ModalContent } from '../../Modal';
 import { ModalButtons } from '../../Modal/Modal.styles';
-import Button from '../../ui/Button';
-import Heading from '../../ui/Heading';
-import Typography from '../../ui/Typography';
+import Typography from '../../Typography';
 import { LinkWrapper } from './NavigationLink.styles';
 
 interface OwnProps {

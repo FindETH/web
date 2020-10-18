@@ -1,9 +1,9 @@
 import { FunctionComponent } from 'react';
 import { CardHeader } from '../../components/Card';
 import { CardContent } from '../../components/Card/Card.styles';
+import Heading from '../../components/Heading';
 import Panel from '../../components/Panel';
-import Heading from '../../components/ui/Heading';
-import Typography from '../../components/ui/Typography';
+import Typography from '../../components/Typography';
 
 const Info: FunctionComponent = () => (
   <Panel>

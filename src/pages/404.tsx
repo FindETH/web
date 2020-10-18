@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
-import Container from '../components/ui/Container';
-import Heading from '../components/ui/Heading';
+import Container from '../components/Container';
+import Heading from '../components/Heading';
 
 const NotFound: FunctionComponent = () => (
   <Container>

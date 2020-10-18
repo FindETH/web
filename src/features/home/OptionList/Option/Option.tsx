@@ -1,9 +1,9 @@
 import { navigate } from 'gatsby';
 import { FunctionComponent } from 'react';
 import CardListItem from '../../../../components/CardList/CardListItem';
+import Heading from '../../../../components/Heading';
 import { IconName } from '../../../../components/Icon';
-import Heading from '../../../../components/ui/Heading';
-import Typography from '../../../../components/ui/Typography';
+import Typography from '../../../../components/Typography';
 import { SearchType } from '../../../../types/search';
 
 interface Props {

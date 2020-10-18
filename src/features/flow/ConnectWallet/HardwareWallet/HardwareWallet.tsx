@@ -1,10 +1,10 @@
 import { getLedgerTransport, getWalletImplementation, Ledger, Trezor, Wallet, WalletType } from '@findeth/wallets';
 import { FunctionComponent, useEffect, useState } from 'react';
+import Button from '../../../../components/Button';
 import Card, { CardHeader } from '../../../../components/Card';
-import Button from '../../../../components/ui/Button';
-import Heading from '../../../../components/ui/Heading';
-import Typography from '../../../../components/ui/Typography';
-import { useSelector } from '../../../../hooks';
+import Heading from '../../../../components/Heading';
+import Typography from '../../../../components/Typography';
+import { useSelector } from '../../../../utils/hooks';
 
 interface Props {
   onNext(wallet: Wallet): void;

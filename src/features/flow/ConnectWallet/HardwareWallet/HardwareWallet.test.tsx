@@ -1,7 +1,7 @@
 import { WalletType } from '@findeth/wallets';
 import { DeepPartial } from 'redux';
 import createMockStore from 'redux-mock-store';
-import Button from '../../../../components/ui/Button';
+import Button from '../../../../components/Button';
 import { ApplicationState } from '../../../../store';
 import { getComponent, wait, waitForComponentToPaint } from '../../../../utils/test-utils';
 import HardwareWallet from './HardwareWallet';

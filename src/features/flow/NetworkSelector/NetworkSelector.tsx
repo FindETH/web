@@ -1,12 +1,12 @@
 import { getSupportedNetworks } from '@findeth/networks';
 import { FunctionComponent } from 'react';
+import Button from '../../../components/Button';
 import Card, { CardHeader } from '../../../components/Card';
+import Dropdown from '../../../components/Dropdown';
+import Heading from '../../../components/Heading';
 import Network from '../../../components/Network';
-import Button from '../../../components/ui/Button';
-import Dropdown from '../../../components/ui/Dropdown';
-import Heading from '../../../components/ui/Heading';
-import Typography from '../../../components/ui/Typography';
-import { useDispatch, useSelector } from '../../../hooks';
+import Typography from '../../../components/Typography';
+import { useDispatch, useSelector } from '../../../utils/hooks';
 import { setNetwork } from '../../network';
 import { FlowComponentProps } from '../Flow';
 

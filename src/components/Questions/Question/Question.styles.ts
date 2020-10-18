@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import Heading from '../../ui/Heading';
-import Typography from '../../ui/Typography';
+import Heading from '../../Heading';
+import Typography from '../../Typography';
 
 interface QuestionHeadingProps {
   as: string;

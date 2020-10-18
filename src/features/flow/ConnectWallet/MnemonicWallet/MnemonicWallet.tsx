@@ -1,9 +1,9 @@
 import { MnemonicPhrase, Wallet } from '@findeth/wallets';
 import { FunctionComponent } from 'react';
+import Button from '../../../../components/Button';
 import Card, { CardHeader } from '../../../../components/Card';
-import Button from '../../../../components/ui/Button';
-import Heading from '../../../../components/ui/Heading';
-import Typography from '../../../../components/ui/Typography';
+import Heading from '../../../../components/Heading';
+import Typography from '../../../../components/Typography';
 
 interface Props {
   onNext(wallet: Wallet): void;

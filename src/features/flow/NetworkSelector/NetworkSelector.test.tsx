@@ -1,8 +1,8 @@
 import { getDefaultNetwork, getSupportedNetworks } from '@findeth/networks';
 import createMockStore from 'redux-mock-store';
-import Button from '../../../components/ui/Button';
-import Dropdown from '../../../components/ui/Dropdown';
-import { DropdownOption } from '../../../components/ui/Dropdown/Dropdown.styles';
+import Button from '../../../components/Button';
+import Dropdown from '../../../components/Dropdown';
+import { DropdownOption } from '../../../components/Dropdown/Dropdown.styles';
 import { getComponent } from '../../../utils/test-utils';
 import { setNetwork } from '../../network';
 import NetworkSelector from './NetworkSelector';

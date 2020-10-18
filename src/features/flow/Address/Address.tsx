@@ -1,14 +1,14 @@
 import { FunctionComponent } from 'react';
 import { object, pattern, refinement, string } from 'superstruct';
+import Button from '../../../components/Button';
 import Card, { CardHeader } from '../../../components/Card';
 import { CardContent } from '../../../components/Card/Card.styles';
 import Field from '../../../components/Field';
+import Heading from '../../../components/Heading';
 import Input from '../../../components/Input';
 import InputGroup from '../../../components/InputGroup';
-import Button from '../../../components/ui/Button';
-import Heading from '../../../components/ui/Heading';
-import Typography from '../../../components/ui/Typography';
-import { useDispatch, useForm, useSelector } from '../../../hooks';
+import Typography from '../../../components/Typography';
+import { useDispatch, useForm, useSelector } from '../../../utils/hooks';
 import { addAddress } from '../../search';
 import { FlowComponentProps } from '../Flow';
 import AddressList from './AddressList';

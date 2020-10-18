@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
+import Container from '../Container';
+import Heading from '../Heading';
 import Meta from '../Meta';
-import Container from '../ui/Container';
-import Heading from '../ui/Heading';
 import { Main } from './Page.styles';
 import PageHeader from './PageHeader';
 

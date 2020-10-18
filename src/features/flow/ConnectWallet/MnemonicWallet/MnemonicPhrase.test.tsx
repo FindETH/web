@@ -1,4 +1,4 @@
-import Button from '../../../../components/ui/Button';
+import Button from '../../../../components/Button';
 import { getComponent } from '../../../../utils/test-utils';
 import MnemonicWallet from './MnemonicWallet';
 
