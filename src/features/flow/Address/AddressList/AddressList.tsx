@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import Table, { TableCell } from '../../../../components/Table';
-import { useSelector } from '../../../../hooks';
+import { useSelector } from '../../../../utils/hooks';
 import AddressItem from './AddressItem';
 
 const AddressList: FunctionComponent = () => {

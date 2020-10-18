@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import Typography from '../ui/Typography';
+import Typography from '../Typography';
 import { FieldContainer } from './Field.styles';
 
 interface Props {

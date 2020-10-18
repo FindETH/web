@@ -1,5 +1,5 @@
 import { ComponentType, FunctionComponent, useEffect, useState } from 'react';
-import { useDispatch } from '../../hooks';
+import { useDispatch } from '../../utils/hooks';
 import { setFlow } from './types';
 
 export interface FlowComponentProps {

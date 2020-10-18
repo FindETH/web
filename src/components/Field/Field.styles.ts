@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { InputContainer, StyledInput } from '../Input';
 import InputGroup from '../InputGroup/InputGroup';
-import Typography from '../ui/Typography';
+import Typography from '../Typography';
 
 interface Props {
   hasError: boolean;

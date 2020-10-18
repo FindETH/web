@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Container from '../ui/Container';
-import Typography from '../ui/Typography';
+import Container from '../Container';
+import Typography from '../Typography';
 
 export const FooterContainer = styled.footer`
   background: ${({ theme }) => theme.primaryColor};

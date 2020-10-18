@@ -1,8 +1,8 @@
 import { transparentize } from 'polished';
 import styled from 'styled-components';
-import Button from '../ui/Button';
-import Heading from '../ui/Heading';
-import Typography from '../ui/Typography';
+import Button from '../Button';
+import Heading from '../Heading';
+import Typography from '../Typography';
 
 export const ModalBackground = styled.div`
   display: flex;

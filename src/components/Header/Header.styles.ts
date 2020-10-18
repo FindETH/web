@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Container from '../ui/Container';
-import Heading from '../ui/Heading';
+import Container from '../Container';
+import Heading from '../Heading';
 
 export const HeaderContainer = styled.header`
   height: 4rem;

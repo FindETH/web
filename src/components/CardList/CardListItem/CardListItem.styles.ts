@@ -1,8 +1,8 @@
 import { darken, transitions } from 'polished';
 import styled from 'styled-components';
+import Heading from '../../Heading';
 import Icon from '../../Icon';
-import Heading from '../../ui/Heading';
-import Typography from '../../ui/Typography';
+import Typography from '../../Typography';
 
 export const CardListItemContainer = styled.li`
   display: flex;

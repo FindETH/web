@@ -1,4 +1,4 @@
-import Button from '../../../components/ui/Button';
+import Button from '../../../components/Button';
 import { getComponent, mockStore } from '../../../utils/test-utils';
 import { addAddress } from '../../search';
 import Address from './Address';

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Heading from '../ui/Heading';
-import Typography from '../ui/Typography';
+import Heading from '../Heading';
+import Typography from '../Typography';
 
 export const CardContainer = styled.section`
   margin: 1.5rem auto;

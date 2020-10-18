@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { TableCell } from '../../../../../components/Table';
-import { useDispatch } from '../../../../../hooks';
+import { useDispatch } from '../../../../../utils/hooks';
 import { removeAddress } from '../../../../search';
 import { RemoveIcon } from './AddressItem.styles';
 

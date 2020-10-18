@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect } from 'react';
-import { useDispatch } from '../../../hooks';
+import { useDispatch } from '../../../utils/hooks';
 import { setOnline } from '../index';
 
 /**

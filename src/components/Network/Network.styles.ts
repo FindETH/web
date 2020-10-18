@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Typography from '../ui/Typography';
+import Typography from '../Typography';
 
 export const NetworkContainer = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
-import { useSelector } from '../../hooks';
-import Section from '../ui/Section';
-import Typography from '../ui/Typography';
+import { useSelector } from '../../utils/hooks';
+import Card from '../Card';
+import Typography from '../Typography';
 
 const CheckConnection: FunctionComponent = ({ children }) => {
   const isOnline = useSelector(state => state.network.isOnline);
@@ -12,9 +12,9 @@ const CheckConnection: FunctionComponent = ({ children }) => {
   }
 
   return (
-    <Section>
+    <Card>
       <Typography>This functionality requires an internet connection.</Typography>
-    </Section>
+    </Card>
   );
 };
 

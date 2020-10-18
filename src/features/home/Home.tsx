@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import Card, { CardHeader } from '../../components/Card';
-import Heading from '../../components/ui/Heading';
-import Typography from '../../components/ui/Typography';
+import Heading from '../../components/Heading';
+import Typography from '../../components/Typography';
 import OptionList from './OptionList';
 
 const Home: FunctionComponent = () => (

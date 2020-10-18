@@ -1,7 +1,7 @@
 import { Wallet, WalletType } from '@findeth/wallets';
 import { FunctionComponent } from 'react';
-import { useDispatch, useSelector } from '../../../hooks';
 import { SerialisedWallet } from '../../../types/wallet';
+import { useDispatch, useSelector } from '../../../utils/hooks';
 import { setDerivationPaths, setSerialisedWallet } from '../../search';
 import { FlowComponentProps } from '../Flow';
 import InvalidState from '../InvalidState';
