@@ -3,7 +3,7 @@ import { SagaIterator } from 'redux-saga';
 import { all, call, fork, put, select, takeLatest } from 'redux-saga/effects';
 import { ApplicationState } from '../../store';
 import { SerialisedWallet } from '../../types/wallet';
-import { addAddress, startSearching } from './types';
+import { addDerivedAddress, startSearching } from './types';
 
 interface GetAddressesAction {
   wallet: Wallet;
@@ -17,7 +17,7 @@ export function* getAddresses({ wallet, derivationPaths, depth }: GetAddressesAc
       const address = yield call([wallet, wallet.getAddress], derivationPath, index);
       const result = { address, derivationPath: getFullPath(derivationPath, index) };
 
-      yield put(addAddress(result));
+      yield put(addDerivedAddress(result));
     }
   }
 }

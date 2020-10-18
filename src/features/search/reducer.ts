@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { addAddress, INITIAL_STATE, setAddress, startSearching, stopSearching } from './types';
+import { addAddress, addDerivedAddress, INITIAL_STATE, removeAddress, startSearching, stopSearching } from './types';
 
 export const searchReducer = createReducer(INITIAL_STATE, builder =>
   builder
@@ -11,12 +11,16 @@ export const searchReducer = createReducer(INITIAL_STATE, builder =>
       ...state,
       isSearching: false
     }))
-    .addCase(setAddress, (state, action) => ({
-      ...state,
-      address: action.payload
-    }))
     .addCase(addAddress, (state, action) => ({
       ...state,
       addresses: [...state.addresses, action.payload]
+    }))
+    .addCase(removeAddress, (state, action) => ({
+      ...state,
+      addresses: state.addresses.filter(address => address !== action.payload)
+    }))
+    .addCase(addDerivedAddress, (state, action) => ({
+      ...state,
+      derivedAddresses: [...state.derivedAddresses, action.payload]
     }))
 );

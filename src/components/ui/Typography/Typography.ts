@@ -1,4 +1,3 @@
-import { transparentize } from 'polished';
 import styled from 'styled-components';
 
 export interface Props {
@@ -12,7 +11,7 @@ const Typography = styled.p<Props>`
   font-family: ${({ theme }) => theme.font};
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: ${({ theme, muted }) => (muted ? transparentize(0.4, theme.textColor) : theme.textColor)};
+  color: ${({ theme, muted }) => (muted ? theme.mutedText : theme.textColor)};
   transition: color 0.3s;
 `;
 

@@ -6,14 +6,15 @@ export interface SearchState {
   isSearching: boolean;
   wallet?: SerialisedWallet;
   derivationPaths: DerivationPath[];
-  address?: string;
-  addresses: DerivationResult[];
+  addresses: string[];
+  derivedAddresses: DerivationResult[];
 }
 
 export const INITIAL_STATE: SearchState = {
   isSearching: false,
   derivationPaths: ALL_DERIVATION_PATHS,
-  addresses: []
+  addresses: [],
+  derivedAddresses: []
 };
 
 export const setSerialisedWallet = createAction<SerialisedWallet>('search/setSerialisedWallet');
@@ -23,5 +24,6 @@ export const setDerivationPaths = createAction<DerivationPath[]>('search/setDeri
 export const startSearching = createAction('search/startSearching');
 export const stopSearching = createAction('search/stopSearching');
 
-export const setAddress = createAction<string>('search/setAddress');
-export const addAddress = createAction<DerivationResult>('search/addAddress');
+export const addAddress = createAction<string>('search/addAddress');
+export const removeAddress = createAction<string>('search/removeAddress');
+export const addDerivedAddress = createAction<DerivationResult>('search/addDerivedAddress');
