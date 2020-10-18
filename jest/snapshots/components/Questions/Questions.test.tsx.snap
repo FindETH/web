@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Questions renders correctly 1`] = `
+.c2 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c3 {
+  font-size: 1.5rem;
+  font-family: "Public Sans",sans-serif;
+  font-weight: normal;
+}
+
+.c0 {
+  margin: 1.5rem auto;
+  width: 40rem;
+  max-width: 100%;
+  background: white;
+  border-radius: .5rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.05);
+}
+
+.c1 {
+  width: 70rem;
+}
+
+.c4 {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 3rem 1rem 1rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+  -webkit-transition: color 0.3s,border-bottom-color 0.3s;
+  transition: color 0.3s,border-bottom-color 0.3s;
+}
+
+.c4:hover {
+  color: #1eb8e7;
+  border-bottom-color: #1eb8e7;
+}
+
+<Questions>
+  <Styled(styled.section)>
+    <section
+      className="c0 c1"
+    >
+      <Question
+        title="Is this tool safe?"
+      >
+        <styled.section>
+          <section
+            className=""
+          >
+            <Styled(Styled(styled.p))
+              as="h2"
+              isOpen={false}
+              onClick={[Function]}
+            >
+              <h2
+                className="c2 c3 c4"
+                onClick={[Function]}
+              >
+                Is this tool safe?
+              </h2>
+            </Styled(Styled(styled.p))>
+          </section>
+        </styled.section>
+      </Question>
+      <Question
+        title="How does it work?"
+      >
+        <styled.section>
+          <section
+            className=""
+          >
+            <Styled(Styled(styled.p))
+              as="h2"
+              isOpen={false}
+              onClick={[Function]}
+            >
+              <h2
+                className="c2 c3 c4"
+                onClick={[Function]}
+              >
+                How does it work?
+              </h2>
+            </Styled(Styled(styled.p))>
+          </section>
+        </styled.section>
+      </Question>
+      <Question
+        title="Can I use my private key or keystore file?"
+      >
+        <styled.section>
+          <section
+            className=""
+          >
+            <Styled(Styled(styled.p))
+              as="h2"
+              isOpen={false}
+              onClick={[Function]}
+            >
+              <h2
+                className="c2 c3 c4"
+                onClick={[Function]}
+              >
+                Can I use my private key or keystore file?
+              </h2>
+            </Styled(Styled(styled.p))>
+          </section>
+        </styled.section>
+      </Question>
+      <Question
+        title="Can I run FindETH offline?"
+      >
+        <styled.section>
+          <section
+            className=""
+          >
+            <Styled(Styled(styled.p))
+              as="h2"
+              isOpen={false}
+              onClick={[Function]}
+            >
+              <h2
+                className="c2 c3 c4"
+                onClick={[Function]}
+              >
+                Can I run FindETH offline?
+              </h2>
+            </Styled(Styled(styled.p))>
+          </section>
+        </styled.section>
+      </Question>
+      <Question
+        title="How can I reach out to you?"
+      >
+        <styled.section>
+          <section
+            className=""
+          >
+            <Styled(Styled(styled.p))
+              as="h2"
+              isOpen={false}
+              onClick={[Function]}
+            >
+              <h2
+                className="c2 c3 c4"
+                onClick={[Function]}
+              >
+                How can I reach out to you?
+              </h2>
+            </Styled(Styled(styled.p))>
+          </section>
+        </styled.section>
+      </Question>
+    </section>
+  </Styled(styled.section)>
+</Questions>
+`;

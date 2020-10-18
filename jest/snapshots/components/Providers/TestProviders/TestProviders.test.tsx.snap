@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestProviders renders correctly 1`] = `
+<TestProviders
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Providers>
+    <Component
+      theme={
+        Object {
+          "backgroundColour": "#f4f5f7",
+          "border": "#d2d6dc",
+          "borderColor": "#e5e5e5",
+          "button": Object {
+            "danger": Object {
+              "background": "#e02424",
+              "text": "white",
+            },
+            "default": Object {
+              "background": "white",
+              "text": "#242429",
+            },
+            "primary": Object {
+              "background": "#242429",
+              "text": "white",
+            },
+          },
+          "errorColor": "#ed4337",
+          "font": "\\"Inter\\", sans-serif",
+          "headingFont": "\\"Public Sans\\", sans-serif",
+          "input": Object {
+            "border": "#d2d6dc",
+            "errorBorder": "#f8b4b4",
+            "hoverBorder": "#a4cafe",
+            "hoverShadow": "0 0 0 3px rgba(164, 202, 254, .45)",
+            "shadow": "0 1px 2px 0 rgba(0, 0, 0, .05)",
+          },
+          "invertedText": "white",
+          "largeShadow": "0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)",
+          "linkColor": "#1eb8e7",
+          "linkHoverColor": "#4cc7ec",
+          "mediumBorderRadius": ".5rem",
+          "modal": Object {
+            "background": "white",
+            "buttonBackground": "#f9fafb",
+            "text": "#6b7280",
+          },
+          "modalBackground": "white",
+          "mutedText": "#6b7280",
+          "navigation": Object {
+            "activeBackground": "#0c0c0e",
+            "activeText": "white",
+            "background": "#242429",
+            "font": "\\"Inter\\", sans-serif",
+            "hoverBackground": "#3c3c44",
+            "text": "#d2d6dc",
+          },
+          "pageHeader": Object {
+            "background": "white",
+            "font": "\\"Inter\\", sans-serif",
+          },
+          "primaryColor": "#242429",
+          "sectionBackground": "white",
+          "sectionOddBackground": "#f6f7f9",
+          "smallBorderRadius": ".375rem",
+          "smallShadow": "0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .05)",
+          "table": Object {
+            "background": "white",
+            "headerBackground": "#f9fafb",
+          },
+          "textColor": "#323232",
+          "warningColor": "#ffcc00",
+        }
+      }
+    >
+      <ModalProvider>
+        <HelmetProvider
+          context={
+            Object {
+              "helmet": Object {
+                "base": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+                "bodyAttributes": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+                "htmlAttributes": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+                "link": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+                "meta": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+                "noscript": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+                "script": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+                "style": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+                "title": Object {
+                  "toComponent": [Function],
+                  "toString": [Function],
+                },
+              },
+            }
+          }
+        >
+          <Provider
+            store={
+              Object {
+                "dispatch": [Function],
+                "getState": [Function],
+                "replaceReducer": [Function],
+                "subscribe": [Function],
+                Symbol(observable): [Function],
+              }
+            }
+          />
+        </HelmetProvider>
+        <Memo()
+          modals={Object {}}
+        >
+          <Portal
+            containerInfo={<body />}
+          />
+        </Memo()>
+      </ModalProvider>
+    </Component>
+  </Providers>
+</TestProviders>
+`;

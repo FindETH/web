@@ -3,6 +3,7 @@ import { ReactElement } from 'react';
 import { act } from 'react-dom/test-utils';
 import { DeepPartial, Store } from 'redux';
 import createMockStore from 'redux-mock-store';
+import { ThemeProvider } from 'styled-components';
 import TestProviders from '../components/Providers/TestProviders';
 import { ApplicationState } from '../store';
 import theme from '../theme';
@@ -46,8 +47,24 @@ export const getComponent = <P extends object = {}>(component: ReactElement<P>, 
   return mount(component, {
     wrappingComponent: TestProviders,
     wrappingComponentProps: {
-      theme,
       store
+    }
+  });
+};
+
+/**
+ * Render a component with a theme provider.
+ *
+ * @template P
+ * @param {ReactElement<P>} component
+ * @return {ReactWrapper<P, {}>}
+ */
+// eslint-disable-next-line @typescript-eslint/ban-types
+export const getStyledComponent = <P extends object = {}>(component: ReactElement<P>): ReactWrapper<P, {}> => {
+  return mount(component, {
+    wrappingComponent: ThemeProvider,
+    wrappingComponentProps: {
+      theme
     }
   });
 };

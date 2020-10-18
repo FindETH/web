@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+.c1 {
+  width: 1400px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.c5 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c0 {
+  background: #242429;
+  padding: 2rem 0;
+}
+
+.c0 .c4 {
+  display: inline-block;
+  color: white;
+  margin: 0;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Inter",sans-serif;
+  color: #1eb8e7;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c6:hover {
+  color: #4cc7ec;
+}
+
+.c7 {
+  margin-top: 0.25rem;
+}
+
+.c7 .c4 {
+  font-size: 0.75rem;
+}
+
+.c3 {
+  justify-self: flex-end;
+  text-align: right;
+}
+
+<Footer>
+  <styled.footer>
+    <footer
+      className="c0"
+    >
+      <Styled(styled.div)>
+        <div
+          className="c1 c2"
+        >
+          <div />
+          <Info>
+            <styled.section>
+              <section
+                className="c3"
+              >
+                <MadeBy>
+                  <styled.p>
+                    <p
+                      className="c4 c5"
+                    >
+                      Made by
+                       
+                      <Link
+                        external={true}
+                        to="https://github.com/Mrtenz"
+                      >
+                        <styled.a
+                          href="https://github.com/Mrtenz"
+                        >
+                          <a
+                            className="c6"
+                            href="https://github.com/Mrtenz"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            Maarten Zuidhoorn
+                          </a>
+                        </styled.a>
+                      </Link>
+                    </p>
+                  </styled.p>
+                </MadeBy>
+                <Donate>
+                  <styled.div>
+                    <div
+                      className="c7"
+                    >
+                      <styled.p>
+                        <p
+                          className="c4 c5"
+                        >
+                          Donate (ETH):
+                          <br />
+                          <Link
+                            external={true}
+                            to="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+                          >
+                            <styled.a
+                              href="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+                            >
+                              <a
+                                className="c6"
+                                href="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                              >
+                                0xDFDD854DaAD30E6E077AEf1c653169968c102E34
+                              </a>
+                            </styled.a>
+                          </Link>
+                        </p>
+                      </styled.p>
+                    </div>
+                  </styled.div>
+                </Donate>
+              </section>
+            </styled.section>
+          </Info>
+        </div>
+      </Styled(styled.div)>
+    </footer>
+  </styled.footer>
+</Footer>
+`;

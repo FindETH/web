@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d2d6dc;
+  border-radius: .375rem;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  line-height: 1.25rem;
+  font-family: "Inter",sans-serif;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+}
+
+.c1:focus {
+  outline: none;
+  border: 1px solid #a4cafe;
+  box-shadow: 0 0 0 3px rgba(164,202,254,.45);
+}
+
+<Input>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.input>
+        <input
+          className="c1"
+        />
+      </styled.input>
+    </div>
+  </styled.div>
+</Input>
+`;
+
+exports[`Input renders correctly 2`] = `
+.c3 {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c2 {
+  position: absolute;
+  right: 0.75rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+.c1 {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d2d6dc;
+  border-radius: .375rem;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  line-height: 1.25rem;
+  font-family: "Inter",sans-serif;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+}
+
+.c1:focus {
+  outline: none;
+  border: 1px solid #a4cafe;
+  box-shadow: 0 0 0 3px rgba(164,202,254,.45);
+}
+
+<Input
+  hasError={true}
+>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <styled.input>
+        <input
+          className="c1"
+        />
+      </styled.input>
+      <Styled(Icon)
+        icon="error"
+      >
+        <Icon
+          className="c2"
+          icon="error"
+        >
+          <styled.img
+            alt="Error"
+            className="c2"
+            src="file-stub"
+          >
+            <img
+              alt="Error"
+              className="c3 c2"
+              src="file-stub"
+            />
+          </styled.img>
+        </Icon>
+      </Styled(Icon)>
+    </div>
+  </styled.div>
+</Input>
+`;

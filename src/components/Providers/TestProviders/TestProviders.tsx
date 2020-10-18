@@ -1,21 +1,22 @@
 import { FunctionComponent } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetData, HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
-import { DefaultTheme } from 'styled-components';
 import { ApplicationState, createStore } from '../../../store';
 import Providers from '../Providers';
 
 interface Props {
-  theme: DefaultTheme;
   store: Store<ApplicationState>;
 }
 
 const defaultStore = createStore();
+export const helmetContext: {
+  helmet: HelmetData;
+} = { helmet: {} as HelmetData };
 
-const TestProviders: FunctionComponent<Props> = ({ theme, store, children }) => (
-  <Providers theme={theme}>
-    <HelmetProvider context={{}}>
+const TestProviders: FunctionComponent<Props> = ({ store, children }) => (
+  <Providers>
+    <HelmetProvider context={helmetContext}>
       <Provider store={store ?? defaultStore}>{children}</Provider>
     </HelmetProvider>
   </Providers>

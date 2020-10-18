@@ -18,7 +18,7 @@ type Props = OwnProps & Omit<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorEl
 const NavigationLink: FunctionComponent<Props> = ({ to, children, ref: _, ...rest }) => {
   const isFlow = useSelector(state => state.flow.isFlow);
   const [showModal, hideModal] = useModal(() => (
-    <Modal isVisible={true}>
+    <Modal>
       <ModalContent>
         <Heading as="h3">Stop search?</Heading>
         <Typography>Are you sure you want to stop searching for your address or assets?</Typography>

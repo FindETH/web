@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders correctly 1`] = `
+.c0 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1 {
+  font-size: 3rem;
+  font-family: "Public Sans",sans-serif;
+  font-weight: bold;
+}
+
+<Styled(styled.p)
+  as="h1"
+>
+  <h1
+    className="c0 c1"
+  />
+</Styled(styled.p)>
+`;
+
+exports[`Heading renders correctly 2`] = `
+.c0 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1 {
+  font-size: 1.5rem;
+  font-family: "Public Sans",sans-serif;
+  font-weight: normal;
+}
+
+<Styled(styled.p)
+  as="h2"
+>
+  <h2
+    className="c0 c1"
+  />
+</Styled(styled.p)>
+`;
+
+exports[`Heading renders correctly 3`] = `
+.c0 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1 {
+  font-size: 1.2rem;
+  font-family: "Public Sans",sans-serif;
+  font-weight: normal;
+}
+
+<Styled(styled.p)
+  as="h3"
+>
+  <h3
+    className="c0 c1"
+  />
+</Styled(styled.p)>
+`;
