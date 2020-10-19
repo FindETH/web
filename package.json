@@ -115,7 +115,7 @@
     "jest-styled-components": "^7.0.0",
     "lint-staged": "^10.4.2",
     "lockfile-lint": "^4.3.7",
-    "prettier": "^1.19.1",
+    "prettier": "^2.1.2",
     "redux-mock-store": "^1.5.4",
     "stylelint": "^13.7.2",
     "stylelint-config-recommended": "^3.0.0",
