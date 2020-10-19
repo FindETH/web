@@ -10,6 +10,7 @@ import Heading from '../../../../components/Heading';
 import Input from '../../../../components/Input';
 import Typography from '../../../../components/Typography';
 import { useForm } from '../../../../utils/hooks';
+import CheckLocal from '../../CheckLocal';
 
 const MNEMONIC_SCHEMA = object({
   mnemonic: refinement(string(), 'Mnemonic Phrase', value => {
@@ -34,21 +35,23 @@ const MnemonicWallet: FunctionComponent<Props> = ({ onNext }) => {
   };
 
   return (
-    <Card>
-      <CardHeader>
-        <Heading as="h3">Enter your mnemonic phrase</Heading>
-        <Typography>The mnemonic phrase (usually) consists of 12 or 24 words, and an optional passphrase.</Typography>
-      </CardHeader>
-      <CardContent>
-        <Field label="Mnemonic Phrase" {...getFieldProps('mnemonic')}>
-          <Input placeholder="quote park size..." {...getInputProps('mnemonic')} />
-        </Field>
-        <Field label="Passphrase (Optional)" {...getFieldProps('passphrase')}>
-          <Input type="password" {...getInputProps('passphrase')} />
-        </Field>
-        <Button onClick={handleNext}>Next</Button>
-      </CardContent>
-    </Card>
+    <CheckLocal>
+      <Card>
+        <CardHeader>
+          <Heading as="h3">Enter your mnemonic phrase</Heading>
+          <Typography>The mnemonic phrase (usually) consists of 12 or 24 words, and an optional passphrase.</Typography>
+        </CardHeader>
+        <CardContent>
+          <Field label="Mnemonic Phrase" {...getFieldProps('mnemonic')}>
+            <Input placeholder="quote park size..." {...getInputProps('mnemonic')} />
+          </Field>
+          <Field label="Passphrase (Optional)" {...getFieldProps('passphrase')}>
+            <Input type="password" {...getInputProps('passphrase')} />
+          </Field>
+          <Button onClick={handleNext}>Next</Button>
+        </CardContent>
+      </Card>
+    </CheckLocal>
   );
 };
 

@@ -17,6 +17,12 @@ const config: GatsbyConfig = {
     'gatsby-plugin-remove-dependency-transpilation',
     'gatsby-plugin-workerize-loader',
     {
+      resolve: 'gatsby-plugin-env-variables',
+      options: {
+        allowList: ['IS_LOCAL']
+      }
+    },
+    {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
         disable: !ENABLE_BUNDLE_ANALYZER,

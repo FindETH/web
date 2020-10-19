@@ -11,6 +11,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production gatsby build",
+    "build:local": "cross-env IS_LOCAL=true yarn build",
     "start": "gatsby develop --https",
     "analyze": "cross-env ANALYZE_BUNDLE=true yarn run build",
     "deploy": "gatsby-plugin-s3 deploy --yes",
@@ -91,6 +92,7 @@
     "gatsby": "^2.24.80",
     "gatsby-plugin-canonical-urls": "^2.3.4",
     "gatsby-plugin-create-client-paths": "^2.3.4",
+    "gatsby-plugin-env-variables": "^2.0.0",
     "gatsby-plugin-layout": "^1.3.13",
     "gatsby-plugin-manifest": "^2.4.11",
     "gatsby-plugin-offline": "^3.2.9",
