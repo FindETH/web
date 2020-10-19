@@ -31,6 +31,10 @@ exports[`NoConnection renders correctly 1`] = `
   padding: 1.5rem;
 }
 
+.c1 .c4:first-of-type {
+  margin-top: 0;
+}
+
 .c3 {
   width: 6rem;
   height: 6rem;

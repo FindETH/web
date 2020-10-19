@@ -29,4 +29,8 @@ export const CardHeader = styled.header`
 
 export const CardContent = styled.div`
   padding: 1.5rem;
+
+  ${Typography}:first-of-type {
+    margin-top: 0;
+  }
 `;
