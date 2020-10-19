@@ -8,7 +8,7 @@ exports[`InputGroup renders correctly 1`] = `
   display: flex;
 }
 
-.c0 .sc-eCApGN {
+.c0 .sc-iqAbSa {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;

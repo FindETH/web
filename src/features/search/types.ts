@@ -1,9 +1,11 @@
 import { ALL_DERIVATION_PATHS, DerivationPath, DerivationResult } from '@findeth/wallets';
 import { createAction } from '@reduxjs/toolkit';
+import { SearchType } from '../../types/search';
 import { SerialisedWallet } from '../../types/wallet';
 
 export interface SearchState {
   isSearching: boolean;
+  type: SearchType;
   wallet?: SerialisedWallet;
   derivationPaths: DerivationPath[];
   depth: number;
@@ -13,6 +15,7 @@ export interface SearchState {
 
 export const INITIAL_STATE: SearchState = {
   isSearching: false,
+  type: SearchType.ADDRESS,
   derivationPaths: ALL_DERIVATION_PATHS,
   depth: 10,
   addresses: [],
@@ -21,6 +24,7 @@ export const INITIAL_STATE: SearchState = {
 
 export const setSerialisedWallet = createAction<SerialisedWallet>('search/setSerialisedWallet');
 
+export const setType = createAction<SearchType>('search/setType');
 export const setDerivationPaths = createAction<DerivationPath[]>('search/setDerivationPaths');
 export const setDepth = createAction<number>('search/setDepth');
 

@@ -1,15 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer renders correctly 1`] = `
-.c1 {
-  width: 1400px;
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
 .c5 {
   display: block;
   font-size: .875rem;
@@ -19,6 +10,14 @@ exports[`Footer renders correctly 1`] = `
   color: #323232;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+}
+
+.c1 {
+  width: 80rem;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .c0 {

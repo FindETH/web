@@ -7,6 +7,7 @@ import {
   setDepth,
   setDerivationPaths,
   setSerialisedWallet,
+  setType,
   startSearching,
   stopSearching
 } from './types';
@@ -24,6 +25,10 @@ export const searchReducer = createReducer(INITIAL_STATE, builder =>
     .addCase(setSerialisedWallet, (state, action) => ({
       ...state,
       wallet: action.payload
+    }))
+    .addCase(setType, (state, action) => ({
+      ...state,
+      type: action.payload
     }))
     .addCase(setDerivationPaths, (state, action) => ({
       ...state,

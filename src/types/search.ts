@@ -1,5 +1,5 @@
 export enum SearchType {
+  ALL = 'all',
   ADDRESS = 'address',
-  ETHER = 'ether',
-  TOKENS = 'tokens'
+  ETHER = 'ether'
 }
