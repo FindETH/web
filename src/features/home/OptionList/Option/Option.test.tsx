@@ -15,10 +15,10 @@ describe('Option', () => {
     expect(navigate).toHaveBeenCalledTimes(1);
     expect(navigate).toHaveBeenCalledWith(`/flow/${SearchType.ADDRESS}`);
 
-    component.setProps({ type: SearchType.ETHER });
+    component.setProps({ type: SearchType.ASSETS });
     component.simulate('click');
 
     expect(navigate).toHaveBeenCalledTimes(2);
-    expect(navigate).toHaveBeenCalledWith(`/flow/${SearchType.ETHER}`);
+    expect(navigate).toHaveBeenCalledWith(`/flow/${SearchType.ASSETS}`);
   });
 });

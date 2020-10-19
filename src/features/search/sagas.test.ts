@@ -4,7 +4,7 @@ import { ApplicationState } from '../../store';
 import { SearchType } from '../../types/search';
 import { SerialisedWallet } from '../../types/wallet';
 import { recordSaga } from '../../utils/saga';
-import { checkAddress, checkAll, checkEther, getAddresses, searchSaga } from './sagas';
+import { checkAddress, checkAll, checkAssets, getAddresses, searchSaga } from './sagas';
 import { addDerivedAddress, startSearching } from './types';
 
 jest.mock(
@@ -69,10 +69,10 @@ describe('checkAddress', () => {
   });
 });
 
-describe('checkEther', () => {
+describe('checkAssets', () => {
   // TODO
   it('adds all addresses with funds to the store', async () => {
-    const result = await recordSaga(checkEther, {
+    const result = await recordSaga(checkAssets, {
       address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf',
       derivationPath: "m/44'/60'/0'/0/0"
     });

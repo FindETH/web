@@ -42,9 +42,9 @@ describe('searchReducer', () => {
   });
 
   it('handles setType', () => {
-    expect(searchReducer(undefined, setType(SearchType.ETHER))).toEqual({
+    expect(searchReducer(undefined, setType(SearchType.ASSETS))).toEqual({
       ...INITIAL_STATE,
-      type: SearchType.ETHER
+      type: SearchType.ASSETS
     });
   });
 

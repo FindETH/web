@@ -10,7 +10,7 @@ import { addDerivedAddress, startSearching } from './types';
 const SEARCH_HANDLERS: Record<SearchType, (result: DerivationResult) => SagaIterator> = {
   [SearchType.ALL]: checkAll,
   [SearchType.ADDRESS]: checkAddress,
-  [SearchType.ETHER]: checkEther
+  [SearchType.ASSETS]: checkAssets
 };
 
 export function* checkAll(result: DerivationResult): SagaIterator {
@@ -26,7 +26,7 @@ export function* checkAddress(result: DerivationResult): SagaIterator {
   }
 }
 
-export function* checkEther(result: DerivationResult): SagaIterator {
+export function* checkAssets(result: DerivationResult): SagaIterator {
   // TODO
   yield put(addDerivedAddress(result));
 }

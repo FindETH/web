@@ -13,11 +13,11 @@ import Wallet from '../Wallet';
 
 type Props = RouteComponentProps;
 
-const EtherFlow: FunctionComponent<Props> = () => {
+const AssetFlow: FunctionComponent<Props> = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setType(SearchType.ETHER));
+    dispatch(setType(SearchType.ASSETS));
   }, []);
 
   const handleDone = () => {
@@ -33,4 +33,4 @@ const EtherFlow: FunctionComponent<Props> = () => {
   );
 };
 
-export default EtherFlow;
+export default AssetFlow;
