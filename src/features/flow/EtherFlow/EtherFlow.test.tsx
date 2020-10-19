@@ -1,6 +1,8 @@
 import { getDefaultNetwork } from '@findeth/networks';
 import createMockStore from 'redux-mock-store';
+import { SearchType } from '../../../types/search';
 import { getComponent } from '../../../utils/test-utils';
+import { setType } from '../../search';
 import Flow from '../Flow';
 import EtherFlow from './EtherFlow';
 
@@ -37,5 +39,22 @@ describe('EtherFlow', () => {
 
     const component = getComponent(<EtherFlow />, store);
     expect(component.find(Flow)).toHaveLength(0);
+  });
+
+  it('sets the search type to ether', () => {
+    const store = mockStore({
+      flow: {
+        isFlow: true
+      },
+      network: {
+        network: getDefaultNetwork(),
+        isOnline: false,
+        isConnected: false
+      }
+    });
+
+    getComponent(<EtherFlow />, store);
+
+    expect(store.getActions()).toContainEqual(setType(SearchType.ETHER));
   });
 });
