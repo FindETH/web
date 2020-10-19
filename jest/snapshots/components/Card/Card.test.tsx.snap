@@ -30,6 +30,10 @@ exports[`Card renders correctly 1`] = `
   padding: 1.5rem;
 }
 
+.c2 .sc-gtssRu:first-of-type {
+  margin-top: 0;
+}
+
 <styled.section>
   <section
     className="c0"

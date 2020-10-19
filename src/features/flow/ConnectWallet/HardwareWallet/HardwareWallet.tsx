@@ -1,9 +1,12 @@
 import { getLedgerTransport, getWalletImplementation, Ledger, Trezor, Wallet, WalletType } from '@findeth/wallets';
 import { FunctionComponent, useEffect, useState } from 'react';
+import Alert from '../../../../components/Alert';
 import Button from '../../../../components/Button';
 import Card, { CardHeader } from '../../../../components/Card';
+import { CardContent } from '../../../../components/Card/Card.styles';
 import Heading from '../../../../components/Heading';
 import Typography from '../../../../components/Typography';
+import { getErrorMessage } from '../../../../utils/errors';
 import { useSelector } from '../../../../utils/hooks';
 
 interface Props {
@@ -13,14 +16,17 @@ interface Props {
 const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
   const walletType = useSelector(state => state.flow.walletType) as WalletType.Ledger | WalletType.Trezor;
   const [implementation, setImplementation] = useState<Ledger<unknown> | Trezor>();
+  const [error, setError] = useState<string>();
 
   useEffect(() => {
     if (walletType) {
       if (walletType === WalletType.Ledger) {
         const Ledger = getWalletImplementation(walletType);
 
-        // TODO: Handle error when no transports are available
-        getLedgerTransport().then(transport => setImplementation(new Ledger(transport)));
+        getLedgerTransport()
+          .then(transport => new Ledger(transport))
+          .then(setImplementation)
+          .catch(error => setError(getErrorMessage(error)));
         return;
       }
 
@@ -32,23 +38,41 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
   // TODO: Handle errors
   const handleNext = () => {
     if (implementation) {
+      setError(undefined);
+
       implementation
         .connect()
         .then(() => onNext(implementation))
-        // eslint-disable-next-line no-console
-        .catch(console.error);
+        .catch(error => setError(getErrorMessage(error)));
     }
   };
 
-  return (
-    <Card>
-      <CardHeader>
-        <Heading as="h3">Connect to your hardware wallet</Heading>
-        <Typography>Make sure your device is unlocked and not in use by any other application.</Typography>
-      </CardHeader>
+  const handleClose = () => {
+    setError(undefined);
+  };
 
-      <Button onClick={handleNext}>Next</Button>
-    </Card>
+  return (
+    <>
+      {error && (
+        <Alert onClose={handleClose}>
+          <Typography>
+            <strong>An error occurred.</strong>
+          </Typography>
+          <Typography>{error}</Typography>
+        </Alert>
+      )}
+
+      <Card>
+        <CardHeader>
+          <Heading as="h3">Connect to your hardware wallet</Heading>
+          <Typography>Make sure your device is unlocked and not in use by any other application.</Typography>
+        </CardHeader>
+        <CardContent>
+          <Typography>Click on "Next" to connect.</Typography>
+          <Button onClick={handleNext}>Next</Button>
+        </CardContent>
+      </Card>
+    </>
   );
 };
 
