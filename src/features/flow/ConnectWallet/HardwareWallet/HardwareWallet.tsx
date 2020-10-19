@@ -14,7 +14,7 @@ interface Props {
 }
 
 const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
-  const walletType = useSelector(state => state.flow.walletType) as WalletType.Ledger | WalletType.Trezor;
+  const walletType = useSelector((state) => state.flow.walletType) as WalletType.Ledger | WalletType.Trezor;
   const [implementation, setImplementation] = useState<Ledger<unknown> | Trezor>();
   const [error, setError] = useState<string>();
 
@@ -24,9 +24,9 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
         const Ledger = getWalletImplementation(walletType);
 
         getLedgerTransport()
-          .then(transport => new Ledger(transport))
+          .then((transport) => new Ledger(transport))
           .then(setImplementation)
-          .catch(error => setError(getErrorMessage(error)));
+          .catch((error) => setError(getErrorMessage(error)));
         return;
       }
 
@@ -42,7 +42,7 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
       implementation
         .connect()
         .then(() => onNext(implementation))
-        .catch(error => setError(getErrorMessage(error)));
+        .catch((error) => setError(getErrorMessage(error)));
     }
   };
 

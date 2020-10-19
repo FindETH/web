@@ -17,13 +17,13 @@ type Props = FlowComponentProps;
 
 const Address: FunctionComponent<Props> = ({ onNext }) => {
   const ADDRESS_SCHEMA = object({
-    address: refinement(pattern(string(), /^0x[a-fA-F0-9]{40}$/), 'Unique', value => {
+    address: refinement(pattern(string(), /^0x[a-fA-F0-9]{40}$/), 'Unique', (value) => {
       return !addresses.includes(value);
     })
   });
 
   const { getFieldProps, getInputProps, validate, clear } = useForm(ADDRESS_SCHEMA);
-  const addresses = useSelector(state => state.search.addresses);
+  const addresses = useSelector((state) => state.search.addresses);
   const dispatch = useDispatch();
 
   const handleAdd = () => {

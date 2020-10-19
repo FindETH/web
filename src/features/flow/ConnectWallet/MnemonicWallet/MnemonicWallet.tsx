@@ -13,7 +13,7 @@ import { useForm } from '../../../../utils/hooks';
 import CheckLocal from '../../CheckLocal';
 
 const MNEMONIC_SCHEMA = object({
-  mnemonic: refinement(string(), 'Mnemonic Phrase', value => {
+  mnemonic: refinement(string(), 'Mnemonic Phrase', (value) => {
     return isValidMnemonic(value);
   }),
   passphrase: optional(string())

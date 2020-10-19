@@ -1,7 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { INITIAL_STATE, setFlow, setWalletInitialised, setWalletType } from './types';
 
-export const flowReducer = createReducer(INITIAL_STATE, builder =>
+export const flowReducer = createReducer(INITIAL_STATE, (builder) =>
   builder
     .addCase(setFlow, (state, action) => ({
       ...state,

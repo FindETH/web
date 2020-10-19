@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from '../../../utils/hooks';
 import { setNetworkError } from '../types';
 
 const NetworkError: FunctionComponent = () => {
-  const networkError = useSelector(state => state.network.networkError);
+  const networkError = useSelector((state) => state.network.networkError);
   const dispatch = useDispatch();
 
   const handleClose = () => dispatch(setNetworkError(undefined));

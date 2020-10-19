@@ -12,13 +12,13 @@ import {
   stopSearching
 } from './types';
 
-export const searchReducer = createReducer(INITIAL_STATE, builder =>
+export const searchReducer = createReducer(INITIAL_STATE, (builder) =>
   builder
-    .addCase(startSearching, state => ({
+    .addCase(startSearching, (state) => ({
       ...state,
       isSearching: true
     }))
-    .addCase(stopSearching, state => ({
+    .addCase(stopSearching, (state) => ({
       ...state,
       isSearching: false
     }))
@@ -44,7 +44,7 @@ export const searchReducer = createReducer(INITIAL_STATE, builder =>
     }))
     .addCase(removeAddress, (state, action) => ({
       ...state,
-      addresses: state.addresses.filter(address => address !== action.payload)
+      addresses: state.addresses.filter((address) => address !== action.payload)
     }))
     .addCase(addDerivedAddress, (state, action) => ({
       ...state,

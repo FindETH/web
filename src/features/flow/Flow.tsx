@@ -14,7 +14,7 @@ interface Props {
 
 const Flow: FunctionComponent<Props> = ({ components, onDone }) => {
   const [step, setStep] = useState<number>(0);
-  const isFlow = useSelector(state => state.flow.isFlow);
+  const isFlow = useSelector((state) => state.flow.isFlow);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Flow: FunctionComponent<Props> = ({ components, onDone }) => {
   }, [components, step]);
 
   const handleReset = () => setStep(0);
-  const handleNext = () => setStep(value => value + 1);
+  const handleNext = () => setStep((value) => value + 1);
 
   const Component = components[step];
   if (Component) {

@@ -11,9 +11,9 @@ import { useSelector } from '../../utils/hooks';
 import { startSearching, stopSearching } from './types';
 
 const Search: FunctionComponent = () => {
-  const wallet = useSelector(state => state.search.wallet);
-  const addresses = useSelector(state => state.search.derivedAddresses);
-  const isSearching = useSelector(state => state.search.isSearching);
+  const wallet = useSelector((state) => state.search.wallet);
+  const addresses = useSelector((state) => state.search.derivedAddresses);
+  const isSearching = useSelector((state) => state.search.isSearching);
   const dispatch = useDispatch();
 
   useEffect(() => {

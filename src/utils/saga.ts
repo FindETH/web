@@ -21,7 +21,7 @@ export const recordSaga = async <A>(
 
   const task = runSaga<A, ApplicationState, Saga<[A]>>(
     {
-      dispatch: action => dispatched.push(action),
+      dispatch: (action) => dispatched.push(action),
       getState: () => state as ApplicationState
     },
     saga,

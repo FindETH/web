@@ -15,8 +15,8 @@ import { FlowComponentProps } from '../Flow';
 type Props = FlowComponentProps;
 
 const NetworkSelector: FunctionComponent<Props> = ({ onNext }) => {
-  const network = useSelector(state => state.network.network);
-  const isConnected = useSelector(state => state.network.isConnected);
+  const network = useSelector((state) => state.network.network);
+  const isConnected = useSelector((state) => state.network.isConnected);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const NetworkSelector: FunctionComponent<Props> = ({ onNext }) => {
   }, []);
 
   const handleChange = (networkName: string) => {
-    const nextNetwork = getSupportedNetworks().find(item => item.name === networkName);
+    const nextNetwork = getSupportedNetworks().find((item) => item.name === networkName);
     if (nextNetwork) {
       dispatch(setNetwork(nextNetwork));
     }
@@ -47,7 +47,7 @@ const NetworkSelector: FunctionComponent<Props> = ({ onNext }) => {
         </CardHeader>
         <CardContent>
           <Dropdown
-            items={getSupportedNetworks().map(network => network.name)}
+            items={getSupportedNetworks().map((network) => network.name)}
             value={network.name}
             onChange={handleChange}
           />

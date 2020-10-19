@@ -18,10 +18,7 @@ describe('NetworkChecker', () => {
   const mockStore = createMockStore();
 
   it('dispatches setOnline with true if the browser is online', () => {
-    jest
-      .spyOn(navigator, 'onLine', 'get')
-      .mockReturnValueOnce(true)
-      .mockReturnValueOnce(false);
+    jest.spyOn(navigator, 'onLine', 'get').mockReturnValueOnce(true).mockReturnValueOnce(false);
 
     const store = mockStore({});
     const component = getComponent(store);

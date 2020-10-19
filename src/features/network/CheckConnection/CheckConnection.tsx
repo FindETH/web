@@ -3,7 +3,7 @@ import { useSelector } from '../../../utils/hooks';
 import NoConnection from '../NoConnection';
 
 const CheckConnection: FunctionComponent = ({ children }) => {
-  const isOnline = useSelector(state => state.network.isOnline);
+  const isOnline = useSelector((state) => state.network.isOnline);
 
   if (isOnline) {
     return <>{children}</>;

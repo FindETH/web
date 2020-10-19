@@ -9,8 +9,8 @@ const NETWORK_OFFLINE = {
 };
 
 const Network: FunctionComponent = () => {
-  const network = useSelector(state => state.network.network);
-  const isOnline = useSelector(state => state.network.isOnline);
+  const network = useSelector((state) => state.network.network);
+  const isOnline = useSelector((state) => state.network.isOnline);
 
   return (
     <NetworkContainer>
