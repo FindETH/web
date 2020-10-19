@@ -48,7 +48,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-create-client-paths',
       options: {
-        prefixes: ['/flow/*', '/search/*']
+        prefixes: ['/flow/*']
       }
     },
     {

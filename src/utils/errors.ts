@@ -1,6 +1,8 @@
 // TODO: Add more errors
 export const ERROR_MAP: Record<string | number, string> = {
-  0x6700: 'Failed to retrieve an address from the device. Make sure you have the right app open on the device.'
+  0x6700: 'Failed to connect to the device. Make sure you have the right app open on the device.',
+  0x6804: 'Failed to connect to the device. Make sure the device is unlocked.',
+  0x6d00: 'Failed to connect to the device. Make sure you have the right app open on the device.'
 };
 
 export interface LedgerError extends Error {

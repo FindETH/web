@@ -6,12 +6,11 @@ export interface Props {
 }
 
 const Container = styled.div<Props>`
-  width: ${({ small = false }) => (small ? '600px' : '1400px')};
+  width: ${({ small = false }) => (small ? '40rem' : '80rem')};
   max-width: 100%;
   height: ${({ fullHeight = false }) => (fullHeight ? '100%' : 'auto')};
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 2rem;
 `;
 
 export default Container;

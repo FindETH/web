@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blockie renders correctly 1`] = `
+.c0 {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+
+<Blockie
+  address="0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+>
+  <styled.img
+    alt="0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+    src="data:image/png;base64,00"
+  >
+    <img
+      alt="0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+      className="c0"
+      src="data:image/png;base64,00"
+    />
+  </styled.img>
+</Blockie>
+`;

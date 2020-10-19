@@ -36,4 +36,6 @@ export const TableHeading = styled(TableCell).attrs({ as: 'th' })`
   box-sizing: border-box;
   text-align: left;
   border-bottom: ${({ theme }) => theme.border};
+  border-top-right-radius: ${({ theme }) => theme.smallBorderRadius};
+  border-top-left-radius: ${({ theme }) => theme.smallBorderRadius};
 `;
