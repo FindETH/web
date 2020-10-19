@@ -1,11 +1,11 @@
 import { DerivationPath, DerivationResult } from '@findeth/wallets';
-import { SagaIterator } from 'redux-saga';
-import { all, call, fork, put, select, takeEvery } from 'redux-saga/effects';
+import { SagaIterator, Task } from 'redux-saga';
+import { all, call, fork, put, select, takeEvery, take, cancel } from 'redux-saga/effects';
 import { ApplicationState } from '../../store';
 import { SearchType } from '../../types/search';
 import { SerialisedWallet } from '../../types/wallet';
 import SearchWorker from './search.worker.ts';
-import { addDerivedAddress, startSearching } from './types';
+import { addDerivedAddress, startSearching, stopSearching } from './types';
 
 const SEARCH_HANDLERS: Record<SearchType, (result: DerivationResult) => SagaIterator> = {
   [SearchType.ALL]: checkAll,
@@ -56,8 +56,10 @@ export function* searchSaga(): SagaIterator {
   const derivationPaths: DerivationPath[] = yield select((state: ApplicationState) => state.search.derivationPaths);
   const depth: number = yield select((state: ApplicationState) => state.search.depth);
 
-  // TODO: Task cancellation
-  /*const task: Task = */ yield fork(getAddresses, { type, wallet, derivationPaths, depth });
+  const task: Task = yield fork(getAddresses, { type, wallet, derivationPaths, depth });
+
+  yield take(stopSearching);
+  yield cancel(task);
 }
 
 export function* rootSaga(): SagaIterator {
