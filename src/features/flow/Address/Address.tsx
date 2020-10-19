@@ -50,7 +50,7 @@ const Address: FunctionComponent<Props> = ({ onNext }) => {
         <Field label="Address" {...getFieldProps('address')}>
           <InputGroup>
             <Input placeholder="0x1234..." {...getInputProps('address')} />
-            <Button data-testid="add" type="primary" onClick={handleAdd}>
+            <Button data-test-id="add" type="primary" onClick={handleAdd}>
               Add
             </Button>
           </InputGroup>
@@ -58,7 +58,7 @@ const Address: FunctionComponent<Props> = ({ onNext }) => {
 
         <AddressList />
 
-        <Button data-testid="submit" onClick={handleSubmit} disabled={addresses.length === 0}>
+        <Button data-test-id="submit" onClick={handleSubmit} disabled={addresses.length === 0}>
           Next
         </Button>
       </CardContent>

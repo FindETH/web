@@ -36,7 +36,9 @@ const Search: FunctionComponent = () => {
     <>
       <Card>
         <CardContent>
-          <Button onClick={handleToggle}>{isSearching ? 'Stop searching' : 'Start searching'}</Button>
+          <Button data-test-id="toggle-search" onClick={handleToggle}>
+            {isSearching ? 'Stop searching' : 'Start searching'}
+          </Button>
         </CardContent>
       </Card>
 
