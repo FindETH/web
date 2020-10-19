@@ -1,4 +1,5 @@
 import { getComponent, mockStore } from '../../../utils/test-utils';
+import NoConnection from '../NoConnection';
 import CheckConnection from './CheckConnection';
 
 describe('CheckConnection', () => {
@@ -24,6 +25,6 @@ describe('CheckConnection', () => {
 
     const component = getComponent(<CheckConnection>Foo bar</CheckConnection>, store);
     expect(component.text()).not.toContain('Foo bar');
-    expect(component.text()).toContain('This functionality requires an internet connection');
+    expect(component.find(NoConnection)).toHaveLength(1);
   });
 });

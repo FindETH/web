@@ -1,18 +1,22 @@
 import { getDefaultNetwork, getSupportedNetworks } from '@findeth/networks';
-import createMockStore from 'redux-mock-store';
 import Button from '../../../components/Button';
 import Dropdown from '../../../components/Dropdown';
 import { DropdownOption } from '../../../components/Dropdown/Dropdown.styles';
-import { getComponent } from '../../../utils/test-utils';
+import { getComponent, mockStore } from '../../../utils/test-utils';
 import { setNetwork } from '../../network';
 import NetworkSelector from './NetworkSelector';
 
-describe('NetworkSelector', () => {
-  const mockStore = createMockStore();
-  const networks = getSupportedNetworks();
+const networks = getSupportedNetworks();
 
+describe('NetworkSelector', () => {
   it('renders a dropdown with all supported networks', () => {
-    const component = getComponent(<NetworkSelector onReset={jest.fn} onNext={jest.fn} />);
+    const store = mockStore({
+      network: {
+        network: getDefaultNetwork()
+      }
+    });
+
+    const component = getComponent(<NetworkSelector onReset={jest.fn} onNext={jest.fn} />, store);
     const dropdown = component.find(Dropdown);
 
     expect(dropdown.find(DropdownOption)).toHaveLength(networks.length);
@@ -40,7 +44,8 @@ describe('NetworkSelector', () => {
   it('calls onNext when the button is pressed', () => {
     const store = mockStore({
       network: {
-        network: getDefaultNetwork()
+        network: getDefaultNetwork(),
+        isConnected: true
       }
     });
 
@@ -51,5 +56,22 @@ describe('NetworkSelector', () => {
     button.simulate('click');
 
     expect(fn).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not call onNext when not connected to a network', () => {
+    const store = mockStore({
+      network: {
+        network: getDefaultNetwork(),
+        isConnected: false
+      }
+    });
+
+    const fn = jest.fn();
+    const component = getComponent(<NetworkSelector onReset={jest.fn} onNext={fn} />, store);
+
+    const button = component.find(Button);
+    button.simulate('click');
+
+    expect(fn).toHaveBeenCalledTimes(0);
   });
 });

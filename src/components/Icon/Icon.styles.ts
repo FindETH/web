@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Image = styled.img`
-  width: 0.75rem;
-  height: 0.75rem;
+interface ImageProps {
+  size?: string;
+}
+
+export const Image = styled.img<ImageProps>`
+  width: ${({ size = '0.75rem' }) => size};
+  height: ${({ size = '0.75rem' }) => size};
 `;
