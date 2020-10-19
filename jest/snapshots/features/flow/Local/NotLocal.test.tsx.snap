@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not renders correctly 1`] = `
+.c5 {
+  display: block;
+  font-size: .875rem;
+  font-family: "Inter",sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #323232;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c6 {
+  font-size: 1.2rem;
+  font-family: "Public Sans",sans-serif;
+  font-weight: normal;
+}
+
+.c0 {
+  margin: 1.5rem auto;
+  width: 40rem;
+  max-width: 100%;
+  background: white;
+  border-radius: .5rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.05);
+}
+
+.c1 {
+  padding: 1.5rem;
+}
+
+.c3 {
+  width: 6rem;
+  height: 6rem;
+}
+
+.c7 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Inter",sans-serif;
+  color: #1eb8e7;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c7:hover {
+  color: #4cc7ec;
+}
+
+.c2 {
+  padding: 5rem 3rem;
+  text-align: center;
+}
+
+.c2 .c4 {
+  margin-bottom: 0;
+}
+
+<NotLocal>
+  <styled.section>
+    <section
+      className="c0"
+    >
+      <Styled(styled.div)>
+        <div
+          className="c1 c2"
+        >
+          <Icon
+            icon="unavailable"
+            size="6rem"
+          >
+            <styled.img
+              alt="Unavailable"
+              size="6rem"
+              src="file-stub"
+            >
+              <img
+                alt="Unavailable"
+                className="c3"
+                size="6rem"
+                src="file-stub"
+              />
+            </styled.img>
+          </Icon>
+          <Styled(styled.p)
+            as="h3"
+          >
+            <h3
+              className="c4 c5 c6"
+            >
+              Not available online
+            </h3>
+          </Styled(styled.p)>
+          <styled.p>
+            <p
+              className="c4 c5"
+            >
+              For security reasons, this feature is only available when you run FindETH locally. For more information, please refer to
+               
+              <Link
+                external={true}
+                to="https://github.com/FindETH/web"
+              >
+                <styled.a
+                  href="https://github.com/FindETH/web"
+                >
+                  <a
+                    className="c7"
+                    href="https://github.com/FindETH/web"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    the GitHub page
+                  </a>
+                </styled.a>
+              </Link>
+              .
+            </p>
+          </styled.p>
+        </div>
+      </Styled(styled.div)>
+    </section>
+  </styled.section>
+</NotLocal>
+`;

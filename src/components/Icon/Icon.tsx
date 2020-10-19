@@ -7,6 +7,7 @@ import ethereumIcon from '../../assets/images/ethereum.svg';
 import ledgerIcon from '../../assets/images/logos/ledger.svg';
 import trezorIcon from '../../assets/images/logos/trezor.svg';
 import offlineIcon from '../../assets/images/offline.svg';
+import unavailableIcon from '../../assets/images/unavailable.svg';
 import walletIcon from '../../assets/images/wallet.svg';
 import { Image } from './Icon.styles';
 
@@ -42,6 +43,10 @@ const SUPPORTED_ICONS = {
   trezor: {
     name: 'Trezor',
     icon: trezorIcon
+  },
+  unavailable: {
+    name: 'Unavailable',
+    icon: unavailableIcon
   },
   wallet: {
     name: 'Wallet',
