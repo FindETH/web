@@ -36,7 +36,7 @@
   ],
   "env": {
     "production": {
-      "plugins": ["babel-plugin-jsx-remove-data-test"]
+      "plugins": ["babel-plugin-jsx-remove-data-test-id"]
     },
     "test": {
       "plugins": ["@babel/plugin-transform-modules-commonjs"]
