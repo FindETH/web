@@ -35,7 +35,6 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
     }
   }, [walletType]);
 
-  // TODO: Handle errors
   const handleNext = () => {
     if (implementation) {
       setError(undefined);
