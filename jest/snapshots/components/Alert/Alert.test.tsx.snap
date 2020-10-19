@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert renders correctly 1`] = `
+.c2 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0 {
+  margin: 0 auto 1.5rem auto;
+  width: 40rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #f8dddd;
+  border-radius: .375rem;
+  padding: 1rem;
+  color: #c81e1d;
+}
+
+.c0 strong {
+  font-weight: 500;
+}
+
+.c0 .sc-gtssRu {
+  color: #c70504;
+  margin: 0;
+}
+
+.c0 .c1 {
+  padding-right: 1rem;
+}
+
+.c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<Alert>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <Icon
+        icon="error-2"
+        size="1.25rem"
+      >
+        <styled.img
+          alt="Error"
+          size="1.25rem"
+          src="file-stub"
+        >
+          <img
+            alt="Error"
+            className="c1 c2"
+            size="1.25rem"
+            src="file-stub"
+          />
+        </styled.img>
+      </Icon>
+      <styled.div>
+        <div
+          className="c3"
+        />
+      </styled.div>
+    </div>
+  </styled.div>
+</Alert>
+`;

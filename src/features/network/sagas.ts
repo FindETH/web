@@ -1,23 +1,23 @@
-import { getChainId, Network } from '@findeth/networks';
+import { getChainId } from '@findeth/networks';
 import { SagaIterator } from 'redux-saga';
-import { all, call, put, select, takeLatest } from 'redux-saga/effects';
-import { ApplicationState } from '../../store';
-import { setConnected, setOnline } from './types';
+import { all, call, put, takeEvery } from 'redux-saga/effects';
+import { setConnected, setNetwork, setNetworkError } from './types';
 
-export function* setOnlineSaga({ payload }: ReturnType<typeof setOnline>): SagaIterator {
-  if (payload) {
-    const network: Network = yield select((state: ApplicationState) => state.network.network);
-    const chainId: number = yield call(getChainId, network);
+export function* setNetworkSaga({ payload }: ReturnType<typeof setNetwork>): SagaIterator {
+  try {
+    const chainId: number = yield call(getChainId, payload);
 
-    if (chainId === network.chainId) {
+    if (chainId === payload.chainId) {
       yield put(setConnected(true));
       return;
     }
-  }
 
-  yield put(setConnected(false));
+    yield put(setConnected(false));
+  } catch (error) {
+    yield put(setNetworkError('FindETH could not connect to the specified network.'));
+  }
 }
 
 export function* rootSaga(): SagaIterator {
-  yield all([takeLatest(setOnline.type, setOnlineSaga)]);
+  yield all([takeEvery(setNetwork.type, setNetworkSaga)]);
 }
