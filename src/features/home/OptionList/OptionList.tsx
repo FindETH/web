@@ -14,7 +14,7 @@ const OPTIONS = [
     title: 'Assets',
     description: "Use this option if you're looking for Ether, ERC-20 tokens, or other supported assets.",
     icon: 'ethereum',
-    type: SearchType.ETHER
+    type: SearchType.ASSETS
   }
 ] as const;
 

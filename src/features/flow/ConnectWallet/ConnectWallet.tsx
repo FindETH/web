@@ -17,8 +17,8 @@ const components = {
 type Props = FlowComponentProps;
 
 const ConnectWallet: FunctionComponent<Props> = ({ onNext }) => {
-  const network = useSelector(state => state.network.network);
-  const walletType = useSelector(state => state.flow.walletType);
+  const network = useSelector((state) => state.network.network);
+  const walletType = useSelector((state) => state.flow.walletType);
   const dispatch = useDispatch();
 
   if (!walletType) {

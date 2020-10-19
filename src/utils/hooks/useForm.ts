@@ -43,10 +43,10 @@ export const useForm = <T extends Record<string, unknown>>(schema: Struct<T>): F
     const name = event.target.name;
     const value = event.target.value;
 
-    setValues(data => ({ ...data, [name]: value }));
+    setValues((data) => ({ ...data, [name]: value }));
 
     if (errors.includes(name)) {
-      setErrors(state => state.filter(current => current !== name));
+      setErrors((state) => state.filter((current) => current !== name));
     }
   };
 

@@ -64,7 +64,7 @@ describe('Address', () => {
 
     const fn = jest.fn();
     const component = getComponent(<Address onReset={jest.fn} onNext={fn} />, store);
-    const button = component.find('[data-testid="submit"]').at(0);
+    const button = component.find('[data-test-id="submit"]').at(0);
     button.simulate('click');
 
     expect(fn).toHaveBeenCalledTimes(1);
@@ -79,7 +79,7 @@ describe('Address', () => {
 
     const fn = jest.fn();
     const component = getComponent(<Address onReset={jest.fn} onNext={fn} />, store);
-    const button = component.find('[data-testid="submit"]').at(0);
+    const button = component.find('[data-test-id="submit"]').at(0);
     button.simulate('click');
 
     expect(fn).not.toHaveBeenCalled();

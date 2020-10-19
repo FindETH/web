@@ -29,7 +29,7 @@ export const waitForComponentToPaint = async <P extends object = {}>(
   amount = 0
 ): Promise<void> => {
   await act(async () => {
-    await new Promise(resolve => setTimeout(resolve, amount));
+    await new Promise((resolve) => setTimeout(resolve, amount));
     wrapper.update();
   });
 };

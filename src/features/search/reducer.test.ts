@@ -1,4 +1,5 @@
 import { LEDGER_DERIVATION_PATHS } from '@findeth/wallets';
+import { SearchType } from '../../types/search';
 import { SerialisedWallet } from '../../types/wallet';
 import { searchReducer } from './reducer';
 import {
@@ -9,6 +10,7 @@ import {
   setDepth,
   setDerivationPaths,
   setSerialisedWallet,
+  setType,
   startSearching,
   stopSearching
 } from './types';
@@ -36,6 +38,13 @@ describe('searchReducer', () => {
     expect(searchReducer(undefined, setSerialisedWallet('{"type":"Trezor"}' as SerialisedWallet))).toEqual({
       ...INITIAL_STATE,
       wallet: '{"type":"Trezor"}'
+    });
+  });
+
+  it('handles setType', () => {
+    expect(searchReducer(undefined, setType(SearchType.ASSETS))).toEqual({
+      ...INITIAL_STATE,
+      type: SearchType.ASSETS
     });
   });
 

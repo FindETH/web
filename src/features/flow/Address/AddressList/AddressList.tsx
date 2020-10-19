@@ -4,7 +4,7 @@ import { useSelector } from '../../../../utils/hooks';
 import AddressItem from './AddressItem';
 
 const AddressList: FunctionComponent = () => {
-  const addresses = useSelector(state => state.search.addresses);
+  const addresses = useSelector((state) => state.search.addresses);
 
   return (
     <Table columns={['Address', 'Remove']}>
@@ -16,7 +16,7 @@ const AddressList: FunctionComponent = () => {
         </tr>
       )}
 
-      {addresses.map(address => (
+      {addresses.map((address) => (
         <AddressItem key={address} address={address} />
       ))}
     </Table>

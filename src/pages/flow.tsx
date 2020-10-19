@@ -1,7 +1,7 @@
 import { Router } from '@reach/router';
 import { FunctionComponent } from 'react';
 import AddressFlow from '../features/flow/AddressFlow';
-import EtherFlow from '../features/flow/EtherFlow';
+import AssetFlow from '../features/flow/AssetFlow';
 import { SearchType } from '../types/search';
 
 const getRoute = (searchType: SearchType) => `/${searchType}`;
@@ -12,7 +12,7 @@ const getRoute = (searchType: SearchType) => `/${searchType}`;
 const FlowRouter: FunctionComponent = () => (
   <Router basepath="/flow">
     <AddressFlow path={getRoute(SearchType.ADDRESS)} />
-    <EtherFlow path={getRoute(SearchType.ETHER)} default={true} />
+    <AssetFlow path={getRoute(SearchType.ASSETS)} default={true} />
   </Router>
 );
 
