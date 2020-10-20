@@ -17,7 +17,7 @@ export interface Props {
 const Heading = styled(Typography)<Props>`
   font-size: ${({ as = 'h1' }) => HEADING_SIZE[as]};
   font-family: ${({ theme }) => theme.headingFont};
-  font-weight: ${({ as = 'h1' }) => (as === 'h1' ? 'bold' : 'normal')};
+  font-weight: ${({ as = 'h1' }) => (as === 'h1' ? '700' : 'normal')};
 `;
 
 export default Heading;

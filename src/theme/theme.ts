@@ -23,7 +23,7 @@ const theme: DefaultTheme = {
   mediumBorderRadius: '.5rem',
 
   font: '"Inter", sans-serif',
-  headingFont: '"Public Sans", sans-serif',
+  headingFont: '"Inter", sans-serif',
 
   smallShadow: '0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .05)',
   largeShadow: '0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)',
