@@ -25,7 +25,7 @@ const NavigationLink: FunctionComponent<Props> = ({ to, children, ref: _, ...res
       </ModalContent>
       <ModalButtons>
         <Button onClick={hideModal}>Back</Button>
-        <Button type="danger" onClick={handleConfirm}>
+        <Button variant="danger" onClick={handleConfirm}>
           Stop
         </Button>
       </ModalButtons>

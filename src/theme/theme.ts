@@ -38,6 +38,7 @@ const theme: DefaultTheme = {
   },
 
   input: {
+    background: 'white',
     shadow: '0 1px 2px 0 rgba(0, 0, 0, .05)',
     border: '#d2d6dc',
     hoverShadow: '0 0 0 3px rgba(164, 202, 254, .45)',

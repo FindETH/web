@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '../Button';
+import StyledButton from '../Button/Button.styles';
 import { InputContainer } from '../Input';
 
 const InputGroup = styled.div`
@@ -9,7 +9,7 @@ const InputGroup = styled.div`
     flex: 1;
   }
 
-  ${Button} {
+  ${StyledButton} {
     margin: 0 0 0 0.5rem !important;
     height: 100%;
   }

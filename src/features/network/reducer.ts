@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { INITIAL_STATE, setConnected, setNetwork, setNetworkError, setOnline } from './types';
+import { INITIAL_STATE, setConnected, setConnecting, setNetwork, setNetworkError, setOnline } from './types';
 
 export const networkReducer = createReducer(INITIAL_STATE, (builder) =>
   builder
@@ -16,6 +16,10 @@ export const networkReducer = createReducer(INITIAL_STATE, (builder) =>
     .addCase(setOnline, (state, action) => ({
       ...state,
       isOnline: action.payload
+    }))
+    .addCase(setConnecting, (state, action) => ({
+      ...state,
+      isConnecting: action.payload
     }))
     .addCase(setConnected, (state, action) => ({
       ...state,

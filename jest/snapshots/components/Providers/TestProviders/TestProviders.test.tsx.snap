@@ -37,6 +37,7 @@ exports[`TestProviders renders correctly 1`] = `
           "font": "\\"Inter\\", sans-serif",
           "headingFont": "\\"Public Sans\\", sans-serif",
           "input": Object {
+            "background": "white",
             "border": "#d2d6dc",
             "errorBorder": "#f8b4b4",
             "hoverBorder": "#a4cafe",

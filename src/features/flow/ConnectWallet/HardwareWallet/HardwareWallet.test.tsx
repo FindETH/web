@@ -1,6 +1,6 @@
 import { WalletType } from '@findeth/wallets';
 import Button from '../../../../components/Button';
-import { getComponent, mockStore, wait, waitForComponentToPaint } from '../../../../utils/test-utils';
+import { getComponent, mockStore, waitForComponentToPaint } from '../../../../utils/test-utils';
 import HardwareWallet from './HardwareWallet';
 
 const mockConnect = jest.fn().mockImplementation(async () => Promise.resolve());
@@ -37,8 +37,7 @@ describe('HardwareWallet', () => {
 
     const button = component.find(Button);
     button.simulate('click');
-
-    await wait();
+    await waitForComponentToPaint(component);
 
     expect(mockConnect).toHaveBeenCalledTimes(1);
     expect(fn).toHaveBeenCalledTimes(1);
@@ -57,8 +56,7 @@ describe('HardwareWallet', () => {
 
     const button = component.find(Button);
     button.simulate('click');
-
-    await wait();
+    await waitForComponentToPaint(component);
 
     expect(mockConnect).toHaveBeenCalledTimes(1);
     expect(fn).toHaveBeenCalledTimes(1);
@@ -80,7 +78,6 @@ describe('HardwareWallet', () => {
 
     const button = component.find(Button);
     button.simulate('click');
-
     await waitForComponentToPaint(component);
     component.update();
 

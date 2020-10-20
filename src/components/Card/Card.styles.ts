@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import StyledButton from '../Button/Button.styles';
 import Heading from '../Heading';
 import Typography from '../Typography';
 
@@ -32,5 +33,9 @@ export const CardContent = styled.div`
 
   ${Typography}:first-of-type {
     margin-top: 0;
+  }
+
+  ${StyledButton} {
+    margin-top: 1rem !important;
   }
 `;
