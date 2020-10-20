@@ -24,7 +24,7 @@ exports[`Providers renders correctly 1`] = `
         },
         "errorColor": "#ed4337",
         "font": "\\"Inter\\", sans-serif",
-        "headingFont": "\\"Public Sans\\", sans-serif",
+        "headingFont": "\\"Inter\\", sans-serif",
         "input": Object {
           "background": "white",
           "border": "#d2d6dc",

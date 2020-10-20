@@ -14,7 +14,7 @@ exports[`NoConnection renders correctly 1`] = `
 
 .c6 {
   font-size: 1.2rem;
-  font-family: "Public Sans",sans-serif;
+  font-family: "Inter",sans-serif;
   font-weight: normal;
 }
 
