@@ -1200,10 +1200,10 @@
     buffer "^5.6.0"
     keccak "^3.0.0"
 
-"@findeth/networks@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.5.0.tgz#61c550b84c653f817346c74f289dfba2d75c6258"
-  integrity sha512-6NEjdGGCIM5NjZtwF4DYDnX2v8C5ksiuRqS8p5OZTqk1PCGAaNSAPG1NzQbsnhO214CeyzxUsxhx/YzsFwN1/g==
+"@findeth/networks@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.5.1.tgz#2d0ca8f658ac9840bf610ee6c39c8ca82e3355d2"
+  integrity sha512-TbwxRIWiW2nbFFS5aKlXmImHRHBjROeBuVmmhS6Cj0dZnhB6qfuFz9r765+yudK7hFH0S4yjsvGJuddm1mxDVA==
   dependencies:
     "@findeth/abi" "^0.3.1"
     "@mycrypto/eth-scan" "^3.0.0"

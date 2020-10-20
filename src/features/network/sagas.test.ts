@@ -1,4 +1,4 @@
-import { getChainId, getDefaultNetwork } from '@findeth/networks';
+import { getDefaultNetwork, getVersion } from '@findeth/networks';
 import { DeepPartial } from 'redux';
 import { ApplicationState } from '../../store';
 import { recordSaga } from '../../utils/saga';
@@ -6,7 +6,7 @@ import { setNetworkSaga } from './sagas';
 import { setConnected, setConnecting, setNetwork, setNetworkError } from './types';
 
 jest.mock('@findeth/networks', () => ({
-  getChainId: jest.fn().mockImplementation(async () => 1),
+  getVersion: jest.fn().mockImplementation(async () => 1),
   getDefaultNetwork: jest.requireActual('@findeth/networks').getDefaultNetwork
 }));
 
@@ -22,14 +22,14 @@ describe('setNetworkSaga', () => {
     expect(dispatched).toContainEqual(setConnected(true));
   });
 
-  it('dispatches setConnected with false if the chain ID is invalid', async () => {
+  it('dispatches setConnected with false if the network ID is invalid', async () => {
     const state: DeepPartial<ApplicationState> = {
       network: {
         network: getDefaultNetwork()
       }
     };
 
-    (getChainId as jest.MockedFunction<typeof getChainId>).mockImplementationOnce(async () => 2);
+    (getVersion as jest.MockedFunction<typeof getVersion>).mockImplementationOnce(async () => 2);
 
     const dispatched = await recordSaga(setNetworkSaga, setNetwork(getDefaultNetwork()), state);
     expect(dispatched).toContainEqual(setConnected(false));
@@ -42,7 +42,7 @@ describe('setNetworkSaga', () => {
       }
     };
 
-    (getChainId as jest.MockedFunction<typeof getChainId>).mockImplementationOnce(async () => {
+    (getVersion as jest.MockedFunction<typeof getVersion>).mockImplementationOnce(async () => {
       throw new Error('foo');
     });
 

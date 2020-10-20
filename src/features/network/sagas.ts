@@ -1,4 +1,4 @@
-import { getChainId } from '@findeth/networks';
+import { getVersion } from '@findeth/networks';
 import { SagaIterator } from 'redux-saga';
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { setConnected, setConnecting, setNetwork, setNetworkError } from './types';
@@ -7,9 +7,9 @@ export function* setNetworkSaga({ payload }: ReturnType<typeof setNetwork>): Sag
   yield put(setConnecting(true));
 
   try {
-    const chainId: number = yield call(getChainId, payload);
+    const networkId: number = yield call(getVersion, payload);
 
-    if (chainId === payload.chainId) {
+    if (networkId === payload.networkId) {
       yield put(setConnected(true));
       return;
     }

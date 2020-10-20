@@ -1,11 +1,19 @@
-import { DerivationPath, DerivationResult } from '@findeth/wallets';
+import { getEtherBalances, Network } from '@findeth/networks';
+import { DerivationPath } from '@findeth/wallets';
 import { SagaIterator } from 'redux-saga';
-import { all, call, put, race, select, take, takeEvery } from 'redux-saga/effects';
+import { all, call, put, race, select, take, takeEvery, fork } from 'redux-saga/effects';
 import { ApplicationState } from '../../store';
-import { SearchType } from '../../types/search';
+import { Balance, DerivationResult, SearchType } from '../../types/search';
 import { SerialisedWallet } from '../../types/wallet';
 import SearchWorker from './search.worker.ts';
-import { addDerivedAddress, startSearching, stopSearching } from './types';
+import {
+  addDerivedAddress,
+  completeSearching,
+  setCurrentDerivationPath,
+  setCurrentIndex,
+  startSearching,
+  stopSearching
+} from './types';
 
 const SEARCH_HANDLERS: Record<SearchType, (result: DerivationResult) => SagaIterator> = {
   [SearchType.ALL]: checkAll,
@@ -27,8 +35,22 @@ export function* checkAddress(result: DerivationResult): SagaIterator {
 }
 
 export function* checkAssets(result: DerivationResult): SagaIterator {
-  // TODO
-  yield put(addDerivedAddress(result));
+  // TODO: Batch addresses
+  const network: Network = yield select((state: ApplicationState) => state.network.network);
+
+  const address = result.address;
+  const { [result.address]: balance } = yield call(getEtherBalances, network, [address]);
+
+  if (balance > 0) {
+    yield put(
+      addDerivedAddress({
+        ...result,
+        balances: {
+          native: String(balance) as Balance
+        }
+      })
+    );
+  }
 }
 
 interface GetAddressesAction {
@@ -43,11 +65,17 @@ export function* getAddresses({ type, wallet, derivationPaths, depth }: GetAddre
   const handler = SEARCH_HANDLERS[type];
 
   for (const derivationPath of derivationPaths) {
+    yield put(setCurrentDerivationPath(derivationPath));
+
     for (let index = 0; index < depth; index++) {
+      yield put(setCurrentIndex(index));
+
       const result = yield call([worker, worker.deriveAddress], wallet, derivationPath, index);
-      yield call(handler, result);
+      yield fork(handler, result);
     }
   }
+
+  yield put(completeSearching());
 }
 
 export function* searchSaga(): SagaIterator {

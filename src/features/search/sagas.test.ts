@@ -1,7 +1,8 @@
+import { getDefaultNetwork } from '@findeth/networks';
 import { DEFAULT_ETH, LEDGER_LIVE_ETH } from '@findeth/wallets';
 import { DeepPartial } from 'redux';
 import { ApplicationState } from '../../store';
-import { SearchType } from '../../types/search';
+import { Balance, SearchType } from '../../types/search';
 import { recordSaga } from '../../utils/saga';
 import { SERIALISED_WALLET } from './__fixtures__/wallet';
 import { checkAddress, checkAll, checkAssets, getAddresses, searchSaga } from './sagas';
@@ -14,6 +15,19 @@ jest.mock(
       deriveAddress = jest.requireActual('./search.worker.ts').deriveAddress;
     }
 );
+
+jest.mock('@findeth/networks', () => ({
+  getDefaultNetwork: jest.requireActual('@findeth/networks').getDefaultNetwork,
+  getEtherBalances: jest.fn().mockImplementation(async (_, addresses: string[]) =>
+    addresses.reduce<Record<string, bigint>>(
+      (object, address) => ({
+        ...object,
+        [address]: 1n
+      }),
+      {}
+    )
+  )
+}));
 
 describe('checkAll', () => {
   it('adds all addresses to the store', async () => {
@@ -67,18 +81,30 @@ describe('checkAddress', () => {
 });
 
 describe('checkAssets', () => {
-  // TODO
   it('adds all addresses with funds to the store', async () => {
-    const result = await recordSaga(checkAssets, {
-      address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf',
-      derivationPath: "m/44'/60'/0'/0/0"
-    });
+    const state: DeepPartial<ApplicationState> = {
+      network: {
+        network: getDefaultNetwork()
+      }
+    };
+
+    const result = await recordSaga(
+      checkAssets,
+      {
+        address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf',
+        derivationPath: "m/44'/60'/0'/0/0"
+      },
+      state
+    );
 
     expect(result).toHaveLength(1);
     expect(result).toContainEqual(
       addDerivedAddress({
         address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf',
-        derivationPath: "m/44'/60'/0'/0/0"
+        derivationPath: "m/44'/60'/0'/0/0",
+        balances: {
+          native: '1' as Balance
+        }
       })
     );
   });
@@ -91,7 +117,7 @@ describe('getAddresses', () => {
       { type: SearchType.ALL, wallet: SERIALISED_WALLET, derivationPaths: [DEFAULT_ETH], depth: 2 },
       {}
     );
-    expect(defaultEth).toHaveLength(2);
+
     expect(defaultEth).toContainEqual(
       addDerivedAddress({
         address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf',
@@ -110,7 +136,7 @@ describe('getAddresses', () => {
       { type: SearchType.ALL, wallet: SERIALISED_WALLET, derivationPaths: [LEDGER_LIVE_ETH], depth: 2 },
       {}
     );
-    expect(ledgerLiveEth).toHaveLength(2);
+
     expect(ledgerLiveEth).toContainEqual(
       addDerivedAddress({
         address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf',
@@ -138,7 +164,7 @@ describe('searchSaga', () => {
     };
 
     const dispatched = await recordSaga(searchSaga, startSearching(), state);
-    expect(dispatched).toHaveLength(2);
+
     expect(dispatched).toContainEqual(
       addDerivedAddress({
         address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf',
