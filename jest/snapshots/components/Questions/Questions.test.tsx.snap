@@ -43,11 +43,6 @@ exports[`Questions renders correctly 1`] = `
   transition: color 0.3s,border-bottom-color 0.3s;
 }
 
-.c4:hover {
-  color: #1eb8e7;
-  border-bottom-color: #1eb8e7;
-}
-
 <Questions>
   <Styled(styled.section)>
     <section

@@ -5,17 +5,12 @@ declare module 'styled-components' {
     primaryColor: string;
     textColor: string;
     invertedText: string;
-    linkColor: string;
-    linkHoverColor: string;
+    link: string;
     borderColor: string;
     warningColor: string;
     errorColor: string;
 
     backgroundColour: string;
-
-    sectionBackground: string;
-    sectionOddBackground: string;
-    modalBackground: string;
 
     smallBorderRadius: string;
     mediumBorderRadius: string;
@@ -78,6 +73,11 @@ declare module 'styled-components' {
 
     pageHeader: {
       font: string;
+      background: string;
+    };
+
+    footer: {
+      text: string;
       background: string;
     };
   }

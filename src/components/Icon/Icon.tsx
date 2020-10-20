@@ -1,11 +1,15 @@
 import { DetailedHTMLProps, FunctionComponent, HTMLAttributes } from 'react';
 import arrowIcon from '../../assets/images/arrow.svg';
 import crossIcon from '../../assets/images/cross.svg';
+import emailIcon from '../../assets/images/email.svg';
 import error2Icon from '../../assets/images/error-2.svg';
 import errorIcon from '../../assets/images/error.svg';
 import ethereumIcon from '../../assets/images/ethereum.svg';
+import githubIcon from '../../assets/images/logos/github.svg';
 import ledgerIcon from '../../assets/images/logos/ledger.svg';
+import mediumIcon from '../../assets/images/logos/medium.svg';
 import trezorIcon from '../../assets/images/logos/trezor.svg';
+import twitterIcon from '../../assets/images/logos/twitter.svg';
 import offlineIcon from '../../assets/images/offline.svg';
 import unavailableIcon from '../../assets/images/unavailable.svg';
 import walletIcon from '../../assets/images/wallet.svg';
@@ -20,6 +24,10 @@ const SUPPORTED_ICONS = {
     name: 'Cross',
     icon: crossIcon
   },
+  email: {
+    name: 'Email',
+    icon: emailIcon
+  },
   error: {
     name: 'Error',
     icon: errorIcon
@@ -32,9 +40,17 @@ const SUPPORTED_ICONS = {
     name: 'Ethereum',
     icon: ethereumIcon
   },
+  github: {
+    name: 'GitHub',
+    icon: githubIcon
+  },
   ledger: {
     name: 'Ledger',
     icon: ledgerIcon
+  },
+  medium: {
+    name: 'Medium',
+    icon: mediumIcon
   },
   offline: {
     name: 'Offline',
@@ -43,6 +59,10 @@ const SUPPORTED_ICONS = {
   trezor: {
     name: 'Trezor',
     icon: trezorIcon
+  },
+  twitter: {
+    name: 'Twitter',
+    icon: twitterIcon
   },
   unavailable: {
     name: 'Unavailable',

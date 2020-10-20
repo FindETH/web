@@ -1,79 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer renders correctly 1`] = `
-.c5 {
-  display: block;
-  font-size: .875rem;
-  font-family: "Inter",sans-serif;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: #323232;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+.c0 {
+  background: #f4f5f7;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.c0 .sc-dlnjPT {
+  color: #727e8b;
+  display: inline-block;
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 .c1 {
-  width: 80rem;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
+  text-align: center;
 }
 
-.c0 {
-  background: #242429;
-  padding: 2rem 0;
+.c1 a {
+  margin: 0 1.5rem;
+  font-size: 0.9rem;
+  color: #242429;
 }
 
-.c0 .c4 {
-  display: inline-block;
-  color: white;
-  margin: 0;
+.c1 a:hover {
+  color: rgba(36,36,41,0.5);
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6 {
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: "Inter",sans-serif;
-  color: #1eb8e7;
+  color: #2c9bbb;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
-.c6:hover {
-  color: #4cc7ec;
-}
-
-.c7 {
-  margin-top: 0.25rem;
-}
-
-.c7 .c4 {
-  font-size: 0.75rem;
+.c2:hover {
+  color: #70c5dd;
 }
 
 .c3 {
-  justify-self: flex-end;
-  text-align: right;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Inter",sans-serif;
+  color: #2c9bbb;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c3:hover {
+  color: #70c5dd;
+}
+
+.c4 {
+  text-align: center;
+  margin: 1.5rem 0 0;
+}
+
+.c4 a {
+  margin: 0 1rem;
+}
+
+.c5 {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 <Footer>
@@ -81,81 +73,289 @@ exports[`Footer renders correctly 1`] = `
     <footer
       className="c0"
     >
-      <Styled(styled.div)>
-        <div
-          className="c1 c2"
-        >
-          <div />
-          <Info>
-            <styled.section>
-              <section
-                className="c3"
+      <Links>
+        <styled.div>
+          <div
+            className="c1"
+          >
+            <Link
+              key="About"
+              to="/info"
+            >
+              <Styled(Component)
+                to="/info"
               >
-                <MadeBy>
-                  <styled.p>
-                    <p
-                      className="c4 c5"
-                    >
-                      Made by
-                       
-                      <Link
-                        external={true}
-                        to="https://github.com/Mrtenz"
+                <ForwardRef
+                  className="c2"
+                  to="/info"
+                >
+                  <GatsbyLink
+                    className="c2"
+                    innerRef={null}
+                    to="/info"
+                  >
+                    <Location>
+                      <LocationProvider
+                        history={
+                          Object {
+                            "_onTransitionComplete": [Function],
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "host": "localhost",
+                              "hostname": "localhost",
+                              "href": "http://localhost/",
+                              "key": "initial",
+                              "origin": "http://localhost",
+                              "pathname": "/",
+                              "port": "",
+                              "protocol": "http:",
+                              "search": "",
+                              "state": null,
+                            },
+                            "navigate": [Function],
+                            "transitioning": false,
+                          }
+                        }
                       >
-                        <styled.a
-                          href="https://github.com/Mrtenz"
+                        <Link
+                          className="c2"
+                          getProps={[Function]}
+                          innerRef={[Function]}
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          to="/info"
                         >
-                          <a
-                            className="c6"
-                            href="https://github.com/Mrtenz"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                          >
-                            Maarten Zuidhoorn
-                          </a>
-                        </styled.a>
-                      </Link>
-                    </p>
-                  </styled.p>
-                </MadeBy>
-                <Donate>
-                  <styled.div>
-                    <div
-                      className="c7"
-                    >
-                      <styled.p>
-                        <p
-                          className="c4 c5"
-                        >
-                          Donate (ETH):
-                          <br />
-                          <Link
-                            external={true}
-                            to="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
-                          >
-                            <styled.a
-                              href="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
+                          <Location>
+                            <a
+                              className="c2"
+                              href="/info"
+                              onClick={[Function]}
+                              onMouseEnter={[Function]}
                             >
-                              <a
-                                className="c6"
-                                href="https://etherscan.io/address/0xDFDD854DaAD30E6E077AEf1c653169968c102E34"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                              >
-                                0xDFDD854DaAD30E6E077AEf1c653169968c102E34
-                              </a>
-                            </styled.a>
-                          </Link>
-                        </p>
-                      </styled.p>
-                    </div>
-                  </styled.div>
-                </Donate>
-              </section>
-            </styled.section>
-          </Info>
-        </div>
-      </Styled(styled.div)>
+                              About
+                            </a>
+                          </Location>
+                        </Link>
+                      </LocationProvider>
+                    </Location>
+                  </GatsbyLink>
+                </ForwardRef>
+              </Styled(Component)>
+            </Link>
+            <Link
+              external={true}
+              key="Blog"
+              to="https://medium.com/findeth"
+            >
+              <styled.a
+                href="https://medium.com/findeth"
+              >
+                <a
+                  className="c3"
+                  href="https://medium.com/findeth"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Blog
+                </a>
+              </styled.a>
+            </Link>
+            <Link
+              external={true}
+              key="Donations"
+              to="https://etherscan.io/address/0xb08b2cae713496217707b8aefee156b49d0fd889"
+            >
+              <styled.a
+                href="https://etherscan.io/address/0xb08b2cae713496217707b8aefee156b49d0fd889"
+              >
+                <a
+                  className="c3"
+                  href="https://etherscan.io/address/0xb08b2cae713496217707b8aefee156b49d0fd889"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Donations
+                </a>
+              </styled.a>
+            </Link>
+            <Link
+              external={true}
+              key="Gitcoin Grant"
+              to="https://gitcoin.co/grants/914/findeth"
+            >
+              <styled.a
+                href="https://gitcoin.co/grants/914/findeth"
+              >
+                <a
+                  className="c3"
+                  href="https://gitcoin.co/grants/914/findeth"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Gitcoin Grant
+                </a>
+              </styled.a>
+            </Link>
+          </div>
+        </styled.div>
+      </Links>
+      <Socials>
+        <styled.div>
+          <div
+            className="c4"
+          >
+            <Link
+              external={true}
+              key="GitHub"
+              to="https://github.com/FindETH"
+            >
+              <styled.a
+                href="https://github.com/FindETH"
+              >
+                <a
+                  className="c3"
+                  href="https://github.com/FindETH"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon
+                    icon="github"
+                    size="1.5rem"
+                    title="GitHub"
+                  >
+                    <styled.img
+                      alt="GitHub"
+                      size="1.5rem"
+                      src="file-stub"
+                      title="GitHub"
+                    >
+                      <img
+                        alt="GitHub"
+                        className="c5"
+                        size="1.5rem"
+                        src="file-stub"
+                        title="GitHub"
+                      />
+                    </styled.img>
+                  </Icon>
+                </a>
+              </styled.a>
+            </Link>
+            <Link
+              external={true}
+              key="Medium"
+              to="https://medium.com/findeth"
+            >
+              <styled.a
+                href="https://medium.com/findeth"
+              >
+                <a
+                  className="c3"
+                  href="https://medium.com/findeth"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon
+                    icon="medium"
+                    size="1.5rem"
+                    title="Medium"
+                  >
+                    <styled.img
+                      alt="Medium"
+                      size="1.5rem"
+                      src="file-stub"
+                      title="Medium"
+                    >
+                      <img
+                        alt="Medium"
+                        className="c5"
+                        size="1.5rem"
+                        src="file-stub"
+                        title="Medium"
+                      />
+                    </styled.img>
+                  </Icon>
+                </a>
+              </styled.a>
+            </Link>
+            <Link
+              external={true}
+              key="Email"
+              to="mailto:info@findeth.io"
+            >
+              <styled.a
+                href="mailto:info@findeth.io"
+              >
+                <a
+                  className="c3"
+                  href="mailto:info@findeth.io"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon
+                    icon="email"
+                    size="1.5rem"
+                    title="Email"
+                  >
+                    <styled.img
+                      alt="Email"
+                      size="1.5rem"
+                      src="file-stub"
+                      title="Email"
+                    >
+                      <img
+                        alt="Email"
+                        className="c5"
+                        size="1.5rem"
+                        src="file-stub"
+                        title="Email"
+                      />
+                    </styled.img>
+                  </Icon>
+                </a>
+              </styled.a>
+            </Link>
+            <Link
+              external={true}
+              key="Twitter"
+              to="https://twitter.com/FindETHio"
+            >
+              <styled.a
+                href="https://twitter.com/FindETHio"
+              >
+                <a
+                  className="c3"
+                  href="https://twitter.com/FindETHio"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon
+                    icon="twitter"
+                    size="1.5rem"
+                    title="Twitter"
+                  >
+                    <styled.img
+                      alt="Twitter"
+                      size="1.5rem"
+                      src="file-stub"
+                      title="Twitter"
+                    >
+                      <img
+                        alt="Twitter"
+                        className="c5"
+                        size="1.5rem"
+                        src="file-stub"
+                        title="Twitter"
+                      />
+                    </styled.img>
+                  </Icon>
+                </a>
+              </styled.a>
+            </Link>
+          </div>
+        </styled.div>
+      </Socials>
     </footer>
   </styled.footer>
 </Footer>

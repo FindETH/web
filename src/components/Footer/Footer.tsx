@@ -1,13 +1,12 @@
 import { FunctionComponent } from 'react';
-import { FlexContainer, FooterContainer } from './Footer.styles';
-import Info from './Info';
+import { FooterContainer } from './Footer.styles';
+import Links from './Links';
+import Socials from './Socials';
 
 const Footer: FunctionComponent = () => (
   <FooterContainer>
-    <FlexContainer>
-      <div />
-      <Info />
-    </FlexContainer>
+    <Links />
+    <Socials />
   </FooterContainer>
 );
 

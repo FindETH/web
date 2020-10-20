@@ -7,17 +7,12 @@ const theme: DefaultTheme = {
   primaryColor: PRIMARY_COLOUR,
   textColor: '#323232',
   invertedText: 'white',
-  linkColor: '#1eb8e7',
-  linkHoverColor: '#4cc7ec',
+  link: '#2c9bbb',
   borderColor: '#e5e5e5',
   warningColor: '#ffcc00',
   errorColor: '#ed4337',
 
   backgroundColour: '#f4f5f7',
-
-  sectionBackground: 'white',
-  sectionOddBackground: '#f6f7f9',
-  modalBackground: 'white',
 
   smallBorderRadius: '.375rem',
   mediumBorderRadius: '.5rem',
@@ -80,6 +75,11 @@ const theme: DefaultTheme = {
   pageHeader: {
     font: '"Inter", sans-serif',
     background: 'white'
+  },
+
+  footer: {
+    text: '#727e8b',
+    background: '#f4f5f7'
   }
 };
 

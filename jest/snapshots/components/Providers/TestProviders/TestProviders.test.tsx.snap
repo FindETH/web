@@ -35,6 +35,10 @@ exports[`TestProviders renders correctly 1`] = `
           },
           "errorColor": "#ed4337",
           "font": "\\"Inter\\", sans-serif",
+          "footer": Object {
+            "background": "#f4f5f7",
+            "text": "#727e8b",
+          },
           "headingFont": "\\"Inter\\", sans-serif",
           "input": Object {
             "background": "white",
@@ -46,15 +50,13 @@ exports[`TestProviders renders correctly 1`] = `
           },
           "invertedText": "white",
           "largeShadow": "0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)",
-          "linkColor": "#1eb8e7",
-          "linkHoverColor": "#4cc7ec",
+          "link": "#2c9bbb",
           "mediumBorderRadius": ".5rem",
           "modal": Object {
             "background": "white",
             "buttonBackground": "#f9fafb",
             "text": "#6b7280",
           },
-          "modalBackground": "white",
           "mutedText": "#6b7280",
           "navigation": Object {
             "activeBackground": "#0c0c0e",
@@ -69,8 +71,6 @@ exports[`TestProviders renders correctly 1`] = `
             "font": "\\"Inter\\", sans-serif",
           },
           "primaryColor": "#242429",
-          "sectionBackground": "white",
-          "sectionOddBackground": "#f6f7f9",
           "smallBorderRadius": ".375rem",
           "smallShadow": "0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .05)",
           "table": Object {
