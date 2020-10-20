@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Dropdown: FunctionComponent<Props> = ({ value, items, onChange }) => {
-  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.value);
   };
 
