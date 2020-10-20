@@ -5,7 +5,7 @@ import createMockStore from 'redux-mock-store';
 import Button from '../../../components/Button';
 import { ApplicationState } from '../../../store';
 import { SerialisedWallet } from '../../../types/wallet';
-import { getComponent, wait, waitForComponentToPaint } from '../../../utils/test-utils';
+import { getComponent, waitForComponentToPaint } from '../../../utils/test-utils';
 import { setDerivationPaths, setSerialisedWallet } from '../../search';
 import InvalidState from '../InvalidState';
 import ConnectWallet from './ConnectWallet';
@@ -97,6 +97,7 @@ describe('ConnectWallet', () => {
     });
 
     const component = getComponent(<ConnectWallet onReset={jest.fn} onNext={jest.fn} />, store);
+    await waitForComponentToPaint(component);
 
     expect(component.find(InvalidState)).toHaveLength(1);
   });
@@ -118,7 +119,7 @@ describe('ConnectWallet', () => {
     const button = wallet.find(Button);
     button.simulate('click');
 
-    await wait();
+    await waitForComponentToPaint(component);
 
     expect(store.getActions()).toContainEqual(
       setSerialisedWallet(

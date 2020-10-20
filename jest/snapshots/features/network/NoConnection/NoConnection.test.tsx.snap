@@ -14,7 +14,7 @@ exports[`NoConnection renders correctly 1`] = `
 
 .c6 {
   font-size: 1.2rem;
-  font-family: "Public Sans",sans-serif;
+  font-family: "Inter",sans-serif;
   font-weight: normal;
 }
 
@@ -33,6 +33,10 @@ exports[`NoConnection renders correctly 1`] = `
 
 .c1 .c4:first-of-type {
   margin-top: 0;
+}
+
+.c1 .sc-hKFyIo {
+  margin-top: 1rem !important;
 }
 
 .c3 {

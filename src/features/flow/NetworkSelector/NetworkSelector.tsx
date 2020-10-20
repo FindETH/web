@@ -4,8 +4,8 @@ import Button from '../../../components/Button';
 import Card, { CardHeader } from '../../../components/Card';
 import { CardContent } from '../../../components/Card/Card.styles';
 import Dropdown from '../../../components/Dropdown';
+import Field from '../../../components/Field';
 import Heading from '../../../components/Heading';
-import Network from '../../../components/Network';
 import Typography from '../../../components/Typography';
 import { useDispatch, useSelector } from '../../../utils/hooks';
 import { setNetwork } from '../../network';
@@ -16,6 +16,7 @@ type Props = FlowComponentProps;
 
 const NetworkSelector: FunctionComponent<Props> = ({ onNext }) => {
   const network = useSelector((state) => state.network.network);
+  const isConnecting = useSelector((state) => state.network.isConnecting);
   const isConnected = useSelector((state) => state.network.isConnected);
   const dispatch = useDispatch();
 
@@ -46,15 +47,15 @@ const NetworkSelector: FunctionComponent<Props> = ({ onNext }) => {
           <Typography>FindETH supports Ethereum, as well as other EVM-compatible networks.</Typography>
         </CardHeader>
         <CardContent>
-          <Dropdown
-            items={getSupportedNetworks().map((network) => network.name)}
-            value={network.name}
-            onChange={handleChange}
-          />
+          <Field label="Network">
+            <Dropdown
+              items={getSupportedNetworks().map((network) => network.name)}
+              value={network.name}
+              onChange={handleChange}
+            />
+          </Field>
 
-          <Network />
-
-          <Button onClick={handleNext} disabled={!isConnected}>
+          <Button onClick={handleNext} disabled={!isConnected} loading={isConnecting}>
             Next
           </Button>
         </CardContent>

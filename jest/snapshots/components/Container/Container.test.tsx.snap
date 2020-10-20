@@ -5,8 +5,9 @@ exports[`Container renders correctly 1`] = `
   width: 80rem;
   max-width: 100%;
   height: auto;
-  box-sizing: border-box;
   margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 <styled.div>

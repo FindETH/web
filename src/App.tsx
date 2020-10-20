@@ -1,5 +1,4 @@
 import { FunctionComponent } from 'react';
-import { hot } from 'react-hot-loader/root';
 import Footer from './components/Footer';
 import GlobalStyle from './components/GlobalStyle';
 import Header from './components/Header/Header';
@@ -19,4 +18,4 @@ export const App: FunctionComponent = ({ children }) => (
   </Providers>
 );
 
-export default hot(App);
+export default App;

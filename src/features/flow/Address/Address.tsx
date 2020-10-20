@@ -50,7 +50,7 @@ const Address: FunctionComponent<Props> = ({ onNext }) => {
         <Field label="Address" {...getFieldProps('address')}>
           <InputGroup>
             <Input placeholder="0x1234..." {...getInputProps('address')} />
-            <Button data-test-id="add" type="primary" onClick={handleAdd}>
+            <Button data-test-id="add" variant="primary" onClick={handleAdd}>
               Add
             </Button>
           </InputGroup>

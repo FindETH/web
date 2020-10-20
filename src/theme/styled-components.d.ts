@@ -36,6 +36,7 @@ declare module 'styled-components' {
     };
 
     input: {
+      background: white;
       shadow: string;
       border: string;
       hoverShadow: string;

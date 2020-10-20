@@ -16,6 +16,7 @@ interface Props {
 const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
   const walletType = useSelector((state) => state.flow.walletType) as WalletType.Ledger | WalletType.Trezor;
   const [implementation, setImplementation] = useState<Ledger<unknown> | Trezor>();
+  const [isLoading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>();
 
   useEffect(() => {
@@ -37,12 +38,14 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
 
   const handleNext = () => {
     if (implementation) {
+      setLoading(true);
       setError(undefined);
 
       implementation
         .connect()
         .then(() => onNext(implementation))
-        .catch((error) => setError(getErrorMessage(error)));
+        .catch((error) => setError(getErrorMessage(error)))
+        .finally(() => setLoading(false));
     }
   };
 
@@ -68,7 +71,9 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
         </CardHeader>
         <CardContent>
           <Typography>Click on "Next" to connect.</Typography>
-          <Button onClick={handleNext}>Next</Button>
+          <Button onClick={handleNext} loading={isLoading}>
+            Next
+          </Button>
         </CardContent>
       </Card>
     </>

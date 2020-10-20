@@ -14,8 +14,8 @@ exports[`Heading renders correctly 1`] = `
 
 .c1 {
   font-size: 3rem;
-  font-family: "Public Sans",sans-serif;
-  font-weight: bold;
+  font-family: "Inter",sans-serif;
+  font-weight: 700;
 }
 
 <Styled(styled.p)
@@ -41,7 +41,7 @@ exports[`Heading renders correctly 2`] = `
 
 .c1 {
   font-size: 1.5rem;
-  font-family: "Public Sans",sans-serif;
+  font-family: "Inter",sans-serif;
   font-weight: normal;
 }
 
@@ -68,7 +68,7 @@ exports[`Heading renders correctly 3`] = `
 
 .c1 {
   font-size: 1.2rem;
-  font-family: "Public Sans",sans-serif;
+  font-family: "Inter",sans-serif;
   font-weight: normal;
 }
 

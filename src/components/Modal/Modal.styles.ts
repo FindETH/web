@@ -1,6 +1,6 @@
 import { transparentize } from 'polished';
 import styled from 'styled-components';
-import Button from '../Button';
+import StyledButton from '../Button/Button.styles';
 import Heading from '../Heading';
 import Typography from '../Typography';
 
@@ -29,7 +29,7 @@ export const ModalWrapper = styled.div<ModalWrapperProps>`
   border-radius: ${({ theme }) => theme.mediumBorderRadius};
   box-shadow: ${({ theme }) => theme.largeShadow};
 
-  ${Button} {
+  ${StyledButton} {
     margin-bottom: 0;
     margin-left: 1rem;
   }

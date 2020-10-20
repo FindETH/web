@@ -14,8 +14,8 @@ exports[`Logo renders correctly 1`] = `
 
 .c1 {
   font-size: 3rem;
-  font-family: "Public Sans",sans-serif;
-  font-weight: bold;
+  font-family: "Inter",sans-serif;
+  font-weight: 700;
 }
 
 <Logo>

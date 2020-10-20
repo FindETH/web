@@ -14,16 +14,17 @@ exports[`Header renders correctly 1`] = `
 
 .c5 {
   font-size: 3rem;
-  font-family: "Public Sans",sans-serif;
-  font-weight: bold;
+  font-family: "Inter",sans-serif;
+  font-weight: 700;
 }
 
 .c2 {
   width: 80rem;
   max-width: 100%;
   height: auto;
-  box-sizing: border-box;
   margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .c6 {

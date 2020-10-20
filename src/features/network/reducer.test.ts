@@ -1,6 +1,6 @@
 import { getDefaultNetwork } from '@findeth/networks';
 import { networkReducer } from './reducer';
-import { INITIAL_STATE, setConnected, setNetwork, setNetworkError, setOnline } from './types';
+import { INITIAL_STATE, setConnected, setConnecting, setNetwork, setNetworkError, setOnline } from './types';
 
 describe('networkReducer', () => {
   it('returns the initial state', () => {
@@ -31,6 +31,18 @@ describe('networkReducer', () => {
     expect(networkReducer(undefined, setOnline(false))).toEqual({
       ...INITIAL_STATE,
       isOnline: false
+    });
+  });
+
+  it('handles setConnecting', () => {
+    expect(networkReducer(undefined, setConnecting(true))).toEqual({
+      ...INITIAL_STATE,
+      isConnecting: true
+    });
+
+    expect(networkReducer(undefined, setConnecting(false))).toEqual({
+      ...INITIAL_STATE,
+      isConnecting: false
     });
   });
 

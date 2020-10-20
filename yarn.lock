@@ -1222,10 +1222,10 @@
     keccak "^3.0.1"
     pbkdf2 "^3.1.1"
 
-"@findeth/wallets@^0.3.6":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.6.tgz#6886c9ddbe69be48f8b0269a8457e505807d987d"
-  integrity sha512-l9z19JFoGYvMpFvH6E6r4hznI8quB0vMabnXi5RdUT2ssxA+Awbkb525ie4SGURCuGL1yNGNfaGN+UvihPnFzg==
+"@findeth/wallets@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.7.tgz#231798336255ca1df12a8247349a92033edeae2f"
+  integrity sha512-C0DtEffASoNtkAW9TCKKcU1bXgfXNUUch2S+MZwp1HjKgTBhB6rlQwEJKadnmXnxrfp1xY1xQJgaOWc/Vn44Lw==
   dependencies:
     "@findeth/hdnode" "^0.3.2"
     "@ledgerhq/hw-app-eth" "^5.2.0"
@@ -1237,7 +1237,7 @@
     "@ledgerhq/hw-transport-webhid" "^5.2.0"
     "@ledgerhq/hw-transport-webusb" "^5.2.0"
     bs58 "^4.0.1"
-    trezor-connect "^8.0.12"
+    trezor-connect "^8.1.16"
 
 "@graphql-tools/delegate@^6.2.4":
   version "6.2.4"
@@ -17352,7 +17352,7 @@ tree-kill@^1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-trezor-connect@^8.0.12:
+trezor-connect@^8.1.16:
   version "8.1.16"
   resolved "https://registry.yarnpkg.com/trezor-connect/-/trezor-connect-8.1.16.tgz#a634b16c436311f3833aa0a6a36089c95ba4f6fd"
   integrity sha512-HYSYsJk0js+OFUjO7ebsUunjYBpoUcjHI5iDBeaDoefBl0FT/Qwf6o1sd2IYVVmVCL/MtqxZ6by+/Z0/GaFBNw==
@@ -17539,21 +17539,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typeface-nunito@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-nunito/-/typeface-nunito-1.1.13.tgz#a57cbd7ff3e74ed99fe60d3361971c61747d130c"
-  integrity sha512-S7tN6pMnJapUxRDNa/RPXtcsxJC0KkBNPFOfGpHCkatVLm+6ltMedgeGtr1lPZsGFXGN890TZmE18bq2pdsmKw==
-
-typeface-open-sans@^0.0.75:
-  version "0.0.75"
-  resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.75.tgz#20d0c330f14c0c40463c334adbedd6005389abe4"
-  integrity sha512-0lLmB7pfj113OP4T78SbpSmC4OCdFQ0vUxdSXQccsSb6qF76F92iEuC/DghFgmPswTyidk8+Hwf+PS/htiJoRQ==
-
-typeface-public-sans@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-public-sans/-/typeface-public-sans-1.1.13.tgz#451ba783150205746506b29ee30272850d584dcb"
-  integrity sha512-cBrpPUvIeaYIacxtxPeCpKM7vAJb27+8E9HAT7R3ZA2zrj9ntm630tpSgBCn/Ip6D11pWSmKVR4eZ8Pr1Yxnog==
 
 typescript-compare@^0.0.2:
   version "0.0.2"

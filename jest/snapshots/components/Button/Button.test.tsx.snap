@@ -39,9 +39,13 @@ exports[`Button renders correctly 1`] = `
   color: #778;
 }
 
-<Styled(styled.p)>
-  <button
-    className="c0 c1"
-  />
-</Styled(styled.p)>
+<Button>
+  <Styled(styled.p)
+    as="button"
+  >
+    <button
+      className="c0 c1"
+    />
+  </Styled(styled.p)>
+</Button>
 `;
