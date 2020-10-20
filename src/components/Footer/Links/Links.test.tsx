@@ -1,9 +1,9 @@
 import { getStyledComponent } from '../../../utils/test-utils';
-import Info from './Info';
+import Links from './Links';
 
-describe('Info', () => {
+describe('Links', () => {
   it('renders correctly', () => {
-    const component = getStyledComponent(<Info />);
+    const component = getStyledComponent(<Links />);
     expect(component).toMatchSnapshot();
   });
 });

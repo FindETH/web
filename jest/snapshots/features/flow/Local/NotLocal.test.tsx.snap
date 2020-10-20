@@ -48,13 +48,13 @@ exports[`Not renders correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-family: "Inter",sans-serif;
-  color: #1eb8e7;
+  color: #2c9bbb;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 .c7:hover {
-  color: #4cc7ec;
+  color: #70c5dd;
 }
 
 .c2 {

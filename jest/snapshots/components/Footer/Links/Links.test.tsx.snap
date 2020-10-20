@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Links renders correctly 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Inter",sans-serif;
+  color: #2c9bbb;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c1:hover {
+  color: #70c5dd;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: "Inter",sans-serif;
+  color: #2c9bbb;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.c2:hover {
+  color: #70c5dd;
+}
+
+.c0 {
+  text-align: center;
+}
+
+.c0 a {
+  margin: 0 1.5rem;
+  font-size: 0.9rem;
+  color: #242429;
+}
+
+.c0 a:hover {
+  color: rgba(36,36,41,0.5);
+}
+
+<Links>
+  <styled.div>
+    <div
+      className="c0"
+    >
+      <Link
+        key="About"
+        to="/info"
+      >
+        <Styled(Component)
+          to="/info"
+        >
+          <ForwardRef
+            className="c1"
+            to="/info"
+          >
+            <GatsbyLink
+              className="c1"
+              innerRef={null}
+              to="/info"
+            >
+              <Location>
+                <LocationProvider
+                  history={
+                    Object {
+                      "_onTransitionComplete": [Function],
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "host": "localhost",
+                        "hostname": "localhost",
+                        "href": "http://localhost/",
+                        "key": "initial",
+                        "origin": "http://localhost",
+                        "pathname": "/",
+                        "port": "",
+                        "protocol": "http:",
+                        "search": "",
+                        "state": null,
+                      },
+                      "navigate": [Function],
+                      "transitioning": false,
+                    }
+                  }
+                >
+                  <Link
+                    className="c1"
+                    getProps={[Function]}
+                    innerRef={[Function]}
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    to="/info"
+                  >
+                    <Location>
+                      <a
+                        className="c1"
+                        href="/info"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                      >
+                        About
+                      </a>
+                    </Location>
+                  </Link>
+                </LocationProvider>
+              </Location>
+            </GatsbyLink>
+          </ForwardRef>
+        </Styled(Component)>
+      </Link>
+      <Link
+        external={true}
+        key="Blog"
+        to="https://medium.com/findeth"
+      >
+        <styled.a
+          href="https://medium.com/findeth"
+        >
+          <a
+            className="c2"
+            href="https://medium.com/findeth"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Blog
+          </a>
+        </styled.a>
+      </Link>
+      <Link
+        external={true}
+        key="Donations"
+        to="https://etherscan.io/address/0xb08b2cae713496217707b8aefee156b49d0fd889"
+      >
+        <styled.a
+          href="https://etherscan.io/address/0xb08b2cae713496217707b8aefee156b49d0fd889"
+        >
+          <a
+            className="c2"
+            href="https://etherscan.io/address/0xb08b2cae713496217707b8aefee156b49d0fd889"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Donations
+          </a>
+        </styled.a>
+      </Link>
+      <Link
+        external={true}
+        key="Gitcoin Grant"
+        to="https://gitcoin.co/grants/914/findeth"
+      >
+        <styled.a
+          href="https://gitcoin.co/grants/914/findeth"
+        >
+          <a
+            className="c2"
+            href="https://gitcoin.co/grants/914/findeth"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Gitcoin Grant
+          </a>
+        </styled.a>
+      </Link>
+    </div>
+  </styled.div>
+</Links>
+`;

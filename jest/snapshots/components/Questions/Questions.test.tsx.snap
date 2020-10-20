@@ -44,8 +44,8 @@ exports[`Questions renders correctly 1`] = `
 }
 
 .c4:hover {
-  color: #1eb8e7;
-  border-bottom-color: #1eb8e7;
+  color: #2c9bbb;
+  border-bottom-color: #2c9bbb;
 }
 
 <Questions>

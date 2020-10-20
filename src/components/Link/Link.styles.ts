@@ -1,14 +1,15 @@
 import { Link } from 'gatsby';
+import { lighten } from 'polished';
 import styled, { css } from 'styled-components';
 
 const linkStyles = css`
   text-decoration: none;
   font-family: ${({ theme }) => theme.font};
-  color: ${({ theme }) => theme.linkColor};
+  color: ${({ theme }) => theme.link};
   transition: color 0.3s;
 
   &:hover {
-    color: ${({ theme }) => theme.linkHoverColor};
+    color: ${({ theme }) => lighten(0.2, theme.link)};
   }
 `;
 
