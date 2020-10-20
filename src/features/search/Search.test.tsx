@@ -1,4 +1,6 @@
+import { DEFAULT_ETH, getFullPath } from '@findeth/wallets';
 import { navigate } from 'gatsby';
+import { CardContent } from '../../components/Card/Card.styles';
 import Table from '../../components/Table';
 import { getComponent, mockStore } from '../../utils/test-utils';
 import Search from './Search';
@@ -27,7 +29,9 @@ describe('Search', () => {
     const store = mockStore({
       search: {
         derivedAddresses: [],
-        isSearching: false
+        isSearching: false,
+        currentDerivationPath: DEFAULT_ETH,
+        currentIndex: 5
       }
     });
 
@@ -42,7 +46,9 @@ describe('Search', () => {
     const store = mockStore({
       search: {
         derivedAddresses: [],
-        isSearching: true
+        isSearching: true,
+        currentDerivationPath: DEFAULT_ETH,
+        currentIndex: 5
       }
     });
 
@@ -53,11 +59,29 @@ describe('Search', () => {
     expect(store.getActions()).toContainEqual(stopSearching());
   });
 
+  it('shows the current derivation path', () => {
+    const store = mockStore({
+      search: {
+        derivedAddresses: [],
+        isSearching: true,
+        currentDerivationPath: DEFAULT_ETH,
+        currentIndex: 5
+      }
+    });
+
+    const component = getComponent(<Search />, store);
+    const content = component.find(CardContent);
+
+    expect(content.text()).toContain(getFullPath(DEFAULT_ETH, 5));
+  });
+
   it('shows a placeholder when no addresses are found yet', () => {
     const store = mockStore({
       search: {
         derivedAddresses: [],
-        isSearching: true
+        isSearching: true,
+        currentDerivationPath: DEFAULT_ETH,
+        currentIndex: 5
       }
     });
 
@@ -76,7 +100,9 @@ describe('Search', () => {
             derivationPath: "m/44'/60'/0'/0/0"
           }
         ],
-        isSearching: true
+        isSearching: true,
+        currentDerivationPath: DEFAULT_ETH,
+        currentIndex: 5
       }
     });
 

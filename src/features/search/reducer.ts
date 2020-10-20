@@ -2,8 +2,11 @@ import { createReducer } from '@reduxjs/toolkit';
 import {
   addAddress,
   addDerivedAddress,
+  completeSearching,
   INITIAL_STATE,
   removeAddress,
+  setCurrentDerivationPath,
+  setCurrentIndex,
   setDepth,
   setDerivationPaths,
   setSerialisedWallet,
@@ -16,11 +19,17 @@ export const searchReducer = createReducer(INITIAL_STATE, (builder) =>
   builder
     .addCase(startSearching, (state) => ({
       ...state,
-      isSearching: true
+      isSearching: true,
+      isComplete: false
     }))
     .addCase(stopSearching, (state) => ({
       ...state,
       isSearching: false
+    }))
+    .addCase(completeSearching, (state) => ({
+      ...state,
+      isSearching: false,
+      isComplete: true
     }))
     .addCase(setSerialisedWallet, (state, action) => ({
       ...state,
@@ -45,6 +54,14 @@ export const searchReducer = createReducer(INITIAL_STATE, (builder) =>
     .addCase(removeAddress, (state, action) => ({
       ...state,
       addresses: state.addresses.filter((address) => address !== action.payload)
+    }))
+    .addCase(setCurrentDerivationPath, (state, action) => ({
+      ...state,
+      currentDerivationPath: action.payload
+    }))
+    .addCase(setCurrentIndex, (state, action) => ({
+      ...state,
+      currentIndex: action.payload
     }))
     .addCase(addDerivedAddress, (state, action) => ({
       ...state,

@@ -1,12 +1,15 @@
-import { LEDGER_DERIVATION_PATHS } from '@findeth/wallets';
+import { LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '@findeth/wallets';
 import { SearchType } from '../../types/search';
 import { SerialisedWallet } from '../../types/wallet';
 import { searchReducer } from './reducer';
 import {
   addAddress,
   addDerivedAddress,
+  completeSearching,
   INITIAL_STATE,
   removeAddress,
+  setCurrentDerivationPath,
+  setCurrentIndex,
   setDepth,
   setDerivationPaths,
   setSerialisedWallet,
@@ -23,7 +26,8 @@ describe('searchReducer', () => {
   it('handles startSearching', () => {
     expect(searchReducer(undefined, startSearching())).toEqual({
       ...INITIAL_STATE,
-      isSearching: true
+      isSearching: true,
+      isComplete: false
     });
   });
 
@@ -31,6 +35,14 @@ describe('searchReducer', () => {
     expect(searchReducer(undefined, stopSearching())).toEqual({
       ...INITIAL_STATE,
       isSearching: false
+    });
+  });
+
+  it('handles completeSearching', () => {
+    expect(searchReducer(undefined, completeSearching())).toEqual({
+      ...INITIAL_STATE,
+      isSearching: false,
+      isComplete: true
     });
   });
 
@@ -108,6 +120,20 @@ describe('searchReducer', () => {
         { address: '0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520', derivationPath: `m/44'/60'/0'/0/0` },
         { address: '0xDFDD854DaAD30E6E077AEf1c653169968c102E34', derivationPath: `m/44'/60'/0'/0/1` }
       ]
+    });
+  });
+
+  it('handles setCurrentDerivationPath', () => {
+    expect(searchReducer(undefined, setCurrentDerivationPath(LEDGER_ETH))).toEqual({
+      ...INITIAL_STATE,
+      currentDerivationPath: LEDGER_ETH
+    });
+  });
+
+  it('handles setCurrentIndex', () => {
+    expect(searchReducer(undefined, setCurrentIndex(1))).toEqual({
+      ...INITIAL_STATE,
+      currentIndex: 1
     });
   });
 });
