@@ -14,20 +14,6 @@ exports[`Footer renders correctly 1`] = `
   font-size: 0.9rem;
 }
 
-.c1 {
-  text-align: center;
-}
-
-.c1 a {
-  margin: 0 1.5rem;
-  font-size: 0.9rem;
-  color: #242429;
-}
-
-.c1 a:hover {
-  color: rgba(36,36,41,0.5);
-}
-
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -54,6 +40,25 @@ exports[`Footer renders correctly 1`] = `
   color: #70c5dd;
 }
 
+.c1 {
+  text-align: center;
+}
+
+.c1 a {
+  margin: 0 1.5rem;
+  font-size: 0.9rem;
+  color: #242429;
+}
+
+.c1 a:hover {
+  color: rgba(36,36,41,0.5);
+}
+
+.c5 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .c4 {
   text-align: center;
   margin: 1.5rem 0 0;
@@ -61,11 +66,6 @@ exports[`Footer renders correctly 1`] = `
 
 .c4 a {
   margin: 0 1rem;
-}
-
-.c5 {
-  width: 1.5rem;
-  height: 1.5rem;
 }
 
 <Footer>

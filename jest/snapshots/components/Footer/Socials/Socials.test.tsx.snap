@@ -1,13 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Socials renders correctly 1`] = `
-.c0 {
-  text-align: center;
-  margin: 1.5rem 0 0;
-}
-
-.c0 a {
-  margin: 0 1rem;
+.c2 {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .c1 {
@@ -23,9 +19,13 @@ exports[`Socials renders correctly 1`] = `
   color: #70c5dd;
 }
 
-.c2 {
-  width: 1.5rem;
-  height: 1.5rem;
+.c0 {
+  text-align: center;
+  margin: 1.5rem 0 0;
+}
+
+.c0 a {
+  margin: 0 1rem;
 }
 
 <Socials>

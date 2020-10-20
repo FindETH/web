@@ -1,20 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Links renders correctly 1`] = `
-.c0 {
-  text-align: center;
-}
-
-.c0 a {
-  margin: 0 1.5rem;
-  font-size: 0.9rem;
-  color: #242429;
-}
-
-.c0 a:hover {
-  color: rgba(36,36,41,0.5);
-}
-
 .c1 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -39,6 +25,20 @@ exports[`Links renders correctly 1`] = `
 
 .c2:hover {
   color: #70c5dd;
+}
+
+.c0 {
+  text-align: center;
+}
+
+.c0 a {
+  margin: 0 1.5rem;
+  font-size: 0.9rem;
+  color: #242429;
+}
+
+.c0 a:hover {
+  color: rgba(36,36,41,0.5);
 }
 
 <Links>

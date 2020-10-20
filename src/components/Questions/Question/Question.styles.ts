@@ -20,13 +20,13 @@ export const QuestionHeading = styled(Heading).attrs<QuestionHeadingProps>({ as:
   ${({ isOpen }: QuestionHeadingProps) =>
     isOpen &&
     css`
-      color: ${({ theme }) => theme.linkColor};
-      border-bottom-color: ${({ theme }) => theme.linkColor};
+      color: ${({ theme }) => theme.link};
+      border-bottom-color: ${({ theme }) => theme.link};
     `};
 
   :hover {
-    color: ${({ theme }) => theme.linkColor};
-    border-bottom-color: ${({ theme }) => theme.linkColor};
+    color: ${({ theme }) => theme.link};
+    border-bottom-color: ${({ theme }) => theme.link};
   }
 `;
 
