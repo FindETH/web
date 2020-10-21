@@ -12,6 +12,7 @@ jest.mock(
   './search.worker.ts',
   () =>
     class SearchWorker {
+      setWallet = jest.requireActual('./search.worker.ts').setWallet;
       deriveAddress = jest.requireActual('./search.worker.ts').deriveAddress;
     }
 );

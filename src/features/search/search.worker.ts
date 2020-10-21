@@ -1,12 +1,13 @@
-import { DerivationPath, DerivationResult, deserialize, getFullPath } from '@findeth/wallets';
+import { DerivationPath, DerivationResult, deserialize, getFullPath, Wallet } from '@findeth/wallets';
 import { SerialisedWallet } from '../../types/wallet';
 
-export const deriveAddress = async (
-  serialised: SerialisedWallet,
-  derivationPath: DerivationPath,
-  index: number
-): Promise<DerivationResult> => {
-  const wallet = deserialize(serialised);
+let wallet: Wallet;
+
+export const setWallet = async (serialised: SerialisedWallet): Promise<void> => {
+  wallet = deserialize(serialised);
+};
+
+export const deriveAddress = async (derivationPath: DerivationPath, index: number): Promise<DerivationResult> => {
   const address = await wallet.getAddress(derivationPath, index);
 
   return {

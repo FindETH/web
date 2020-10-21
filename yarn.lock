@@ -1203,27 +1203,15 @@
     keccak "^3.0.1"
     pbkdf2 "^3.1.1"
 
-"@findeth/networks@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.5.1.tgz#2d0ca8f658ac9840bf610ee6c39c8ca82e3355d2"
-  integrity sha512-TbwxRIWiW2nbFFS5aKlXmImHRHBjROeBuVmmhS6Cj0dZnhB6qfuFz9r765+yudK7hFH0S4yjsvGJuddm1mxDVA==
+"@findeth/networks@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.5.2.tgz#7bf4a47138e900fb0a32dd9bea437ed6c1f65329"
+  integrity sha512-QimWP1jjXd6xX9lTnepnkofCIsfG9+JXPwtVhYjwi4p9M51O/ZDjIo1h3z0hMmgwhmA2j41G/s+C/aVH+ngVdw==
   dependencies:
     "@findeth/abi" "^0.3.1"
     "@mycrypto/eth-scan" "^3.0.0"
     idna-uts46-hx "^3.3.0"
     isomorphic-unfetch "^3.0.0"
-
-"@findeth/secp256k1@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@findeth/secp256k1/-/secp256k1-0.3.1.tgz#c499170c88bd9e56e737d9e8c1879ff17d700010"
-  integrity sha512-ZlydfWUPfgSBoDQswpr0r1VowNOMu55dShAVNLYurKhYxhtXUZ6fg25prf/EW3OsgLAInn3Tao6tFC4SUXtWAw==
-  dependencies:
-    buffer "^5.6.0"
-    create-hash "^1.2.0"
-    create-hmac "^1.1.7"
-    crypto-browserify "^3.12.0"
-    keccak "^3.0.1"
-    pbkdf2 "^3.1.1"
 
 "@findeth/wallets@^0.3.8":
   version "0.3.8"
@@ -5291,7 +5279,7 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.1, cross-spawn@^7.0.2:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-crypto-browserify@^3.11.0, crypto-browserify@^3.12.0:
+crypto-browserify@^3.11.0:
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/crypto-browserify/-/crypto-browserify-3.12.0.tgz#396cf9f3137f03e4b8e532c58f698254e00f80ec"
   integrity sha512-fz4spIh+znjO2VjL+IdhEpRJ3YN6sMzITSBijk6FK2UvTqruSQW+/cCZTSNsMiZNvUeq0CqurF+dAbyiGOY6Wg==
