@@ -28,7 +28,7 @@
     "@babel/runtime-corejs3": "^7.12.1",
     "@findeth/networks": "^0.5.1",
     "@findeth/secp256k1": "^0.3.1",
-    "@findeth/wallets": "^0.3.7",
+    "@findeth/wallets": "^0.3.8",
     "@reach/router": "^1.2.1",
     "@reduxjs/toolkit": "^1.4.0",
     "blockies-ts": "^1.0.0",
