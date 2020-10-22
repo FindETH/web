@@ -88,7 +88,7 @@
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "gatsby": "^2.24.80",
+    "gatsby": "^2.24.84",
     "gatsby-plugin-canonical-urls": "^2.3.4",
     "gatsby-plugin-create-client-paths": "^2.3.4",
     "gatsby-plugin-env-variables": "^2.0.0",
