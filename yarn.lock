@@ -1190,15 +1190,18 @@
   dependencies:
     keccak "^3.0.0"
 
-"@findeth/hdnode@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.3.2.tgz#c5776d747e43072fa98b059de5a37ff2c9aae4c1"
-  integrity sha512-aeszsLzJixoz/zhz54vJW2sWPceN9zGx3t1RQixHbcNpdj8oJHrfRx9qR8/9uGsNKmT+KGrnCt1uAnF13Y22Tg==
+"@findeth/hdnode@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.4.1.tgz#af918ebd7ef6aa5dfcac25ed76b3c5cc260872de"
+  integrity sha512-6/g2oAtJaaN4PDOo743g6oBIh+MPv+zhXdX/jCgWxqJtmKV1yP5HXC9XL7+gDrIXIyyjiUkkT1WR1uo8fKT/Ng==
   dependencies:
-    "@findeth/secp256k1" "^0.3.1"
     base-x "^3.0.8"
     buffer "^5.6.0"
-    keccak "^3.0.0"
+    create-hash "^1.2.0"
+    create-hmac "^1.1.7"
+    elliptic "^6.5.3"
+    keccak "^3.0.1"
+    pbkdf2 "^3.1.1"
 
 "@findeth/networks@^0.5.1":
   version "0.5.1"
@@ -1222,12 +1225,12 @@
     keccak "^3.0.1"
     pbkdf2 "^3.1.1"
 
-"@findeth/wallets@^0.3.7":
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.7.tgz#231798336255ca1df12a8247349a92033edeae2f"
-  integrity sha512-C0DtEffASoNtkAW9TCKKcU1bXgfXNUUch2S+MZwp1HjKgTBhB6rlQwEJKadnmXnxrfp1xY1xQJgaOWc/Vn44Lw==
+"@findeth/wallets@^0.3.8":
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.3.8.tgz#6277285b9e72bb8a4fb401274f5bc0dbe4eda81b"
+  integrity sha512-dt+kTCIVaLyFVUZTSYPWLrPwMBJmxEd2UYiI2EVOlVdYZ8iBiJ97pEG533sNHXf28ct6kFaX/rD0riHQ0TFC9w==
   dependencies:
-    "@findeth/hdnode" "^0.3.2"
+    "@findeth/hdnode" "^0.4.1"
     "@ledgerhq/hw-app-eth" "^5.2.0"
     "@ledgerhq/hw-transport" "^5.2.0"
     "@ledgerhq/hw-transport-mocker" "^5.2.0"
