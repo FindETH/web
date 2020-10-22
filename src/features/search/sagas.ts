@@ -1,7 +1,7 @@
 import { getEtherBalances, Network } from '@findeth/networks';
 import { DerivationPath } from '@findeth/wallets';
 import { SagaIterator } from 'redux-saga';
-import { all, call, put, race, select, take, takeEvery, fork } from 'redux-saga/effects';
+import { all, call, fork, put, race, select, take, takeEvery } from 'redux-saga/effects';
 import { ApplicationState } from '../../store';
 import { Balance, DerivationResult, SearchType } from '../../types/search';
 import { SerialisedWallet } from '../../types/wallet';
@@ -64,13 +64,16 @@ export function* getAddresses({ type, wallet, derivationPaths, depth }: GetAddre
   const worker = new SearchWorker();
   const handler = SEARCH_HANDLERS[type];
 
+  // TODO: Pass variable to worker on construction?
+  yield call([worker, worker.setWallet], wallet);
+
   for (const derivationPath of derivationPaths) {
     yield put(setCurrentDerivationPath(derivationPath));
 
     for (let index = 0; index < depth; index++) {
       yield put(setCurrentIndex(index));
 
-      const result = yield call([worker, worker.deriveAddress], wallet, derivationPath, index);
+      const result = yield call([worker, worker.deriveAddress], derivationPath, index);
       yield fork(handler, result);
     }
   }
