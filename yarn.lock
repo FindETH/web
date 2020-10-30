@@ -17326,10 +17326,10 @@ typescript-tuple@^2.2.1:
   dependencies:
     typescript-compare "^0.0.2"
 
-typescript@^4.1.0-dev.20201027:
-  version "4.1.0-dev.20201027"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.0-dev.20201027.tgz#86442dca7f6edc5e0d3b7eee79c774884996842f"
-  integrity sha512-XBUnP73Hk26DKmpsyF3SB6eamz2CHOCN7gDFRUwAb/z7DTktFJ+oPywrxwMMaJO9bx7M+evkq+p6gHzcn1TvGw==
+typescript@^4.1.0-dev.20201029:
+  version "4.1.0-dev.20201029"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.0-dev.20201029.tgz#c1dcfa06270aeb193494cbdadc98fc3bb2c161bc"
+  integrity sha512-79ZW2B8s4P1ZvR8KLv4gnJfn01oCmHZkhs4CsVR8nnJN1yD6xbbf/rEAD3ROcAvD20oQ+RYEId3B67YqcFPmCg==
 
 u2f-api@0.2.7:
   version "0.2.7"
