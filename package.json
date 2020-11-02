@@ -102,7 +102,7 @@
     "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sitemap": "^2.4.5",
     "gatsby-plugin-styled-components": "^3.3.14",
-    "gatsby-plugin-ts-config": "^1.1.0",
+    "gatsby-plugin-ts-config": "^1.1.1",
     "gatsby-plugin-typescript": "^2.4.23",
     "gatsby-plugin-typescript-checker": "^1.1.1",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
