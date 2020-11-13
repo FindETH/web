@@ -100,7 +100,7 @@
     "gatsby-plugin-remove-dependency-transpilation": "^1.0.0",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-s3": "^0.3.8",
-    "gatsby-plugin-sitemap": "^2.5.1",
+    "gatsby-plugin-sitemap": "^2.6.0",
     "gatsby-plugin-styled-components": "^3.3.14",
     "gatsby-plugin-ts-config": "^1.1.1",
     "gatsby-plugin-typescript": "^2.5.0",

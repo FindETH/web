@@ -7643,10 +7643,10 @@ gatsby-plugin-s3@^0.3.8:
     stream-to-promise "^2.2.0"
     yargs "^15.4.0"
 
-gatsby-plugin-sitemap@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.5.1.tgz#88534ed5d2c8c3274db76d9719ffa51443873596"
-  integrity sha512-GNqsA47bmrRLaoOkRgyVtM6ebqL1ZuaxE8J9NIRcMOuIbSu0cVi4B4jMe5HohVdnEzGB3GLqnUQimwXD4XmDGQ==
+gatsby-plugin-sitemap@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.6.0.tgz#31ebabc43a9455444467ce5a1e4ea3ea7488eb47"
+  integrity sha512-PxzZBKU78bbMFxINtoyNH787FtcnpKvGIVJtWZkQt+7X7BM4+MYiqrAR5aY93YLxj+kxDbMt6j8po7h17TWZFQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
     common-tags "^1.8.0"
