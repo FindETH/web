@@ -7524,12 +7524,12 @@ gatsby-page-utils@^0.3.0:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
-gatsby-plugin-canonical-urls@^2.3.4:
-  version "2.3.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.3.13.tgz#e2571d82478b6acc89234857091c673d3071274c"
-  integrity sha512-pf0x3EoXjH5YxxoxiR8pmysFGQxyUkGOCTaYMGU29NGTICDuq7cph3PEdGMq1f30qBHZtXqURj4OO5EKXeF/PA==
+gatsby-plugin-canonical-urls@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.5.0.tgz#9c8e84df6c3cf0cac468bfdac5a98345ec1e62f1"
+  integrity sha512-COWzQd1FXLO1HlulhPUt97SPkku3+YViMymaI9rJENkL2p+1LdfgkDBhSracx3e/Anspas1RZeqgw3K2MW754A==
   dependencies:
-    "@babel/runtime" "^7.11.2"
+    "@babel/runtime" "^7.12.5"
 
 gatsby-plugin-create-client-paths@^2.3.4:
   version "2.3.13"
