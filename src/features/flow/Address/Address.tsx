@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { object, pattern, refinement, string } from 'superstruct';
+import { object, pattern, refine, string } from 'superstruct';
 import Button from '../../../components/Button';
 import Card, { CardHeader } from '../../../components/Card';
 import { CardContent } from '../../../components/Card/Card.styles';
@@ -17,7 +17,7 @@ type Props = FlowComponentProps;
 
 const Address: FunctionComponent<Props> = ({ onNext }) => {
   const ADDRESS_SCHEMA = object({
-    address: refinement(pattern(string(), /^0x[a-fA-F0-9]{40}$/), 'Unique', (value) => {
+    address: refine(pattern(string(), /^0x[a-fA-F0-9]{40}$/), 'Unique', (value) => {
       return !addresses.includes(value);
     })
   });

@@ -26,7 +26,7 @@ export interface Form<T> {
   clear(): void;
 }
 
-export const getDefaultValue = <T>(schema: Record<string, Struct<unknown>>): T => {
+export const getDefaultValue = <T, S extends Record<string, unknown>>(schema: S): T => {
   return Object.keys(schema).reduce<T>((object, key) => {
     return {
       ...object,
@@ -35,7 +35,9 @@ export const getDefaultValue = <T>(schema: Record<string, Struct<unknown>>): T =
   }, {} as T);
 };
 
-export const useForm = <T extends Record<string, unknown>>(schema: Struct<T>): Form<T> => {
+export const useForm = <T extends Record<string, unknown>, S extends Record<string, unknown>>(
+  schema: Struct<T, S>
+): Form<T> => {
   const [values, setValues] = useState<T>(getDefaultValue(schema.schema));
   const [errors, setErrors] = useState<string[]>([]);
 

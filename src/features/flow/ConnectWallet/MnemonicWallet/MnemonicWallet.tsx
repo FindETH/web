@@ -1,7 +1,7 @@
 import { isValidMnemonic } from '@findeth/hdnode';
 import { MnemonicPhrase, Wallet } from '@findeth/wallets';
 import { FunctionComponent } from 'react';
-import { object, optional, refinement, string } from 'superstruct';
+import { object, optional, refine, string } from 'superstruct';
 import Button from '../../../../components/Button';
 import Card, { CardHeader } from '../../../../components/Card';
 import { CardContent } from '../../../../components/Card/Card.styles';
@@ -13,7 +13,7 @@ import { useForm } from '../../../../utils/hooks';
 import CheckLocal from '../../CheckLocal';
 
 const MNEMONIC_SCHEMA = object({
-  mnemonic: refinement(string(), 'Mnemonic Phrase', (value) => {
+  mnemonic: refine(string(), 'Mnemonic Phrase', (value) => {
     return isValidMnemonic(value);
   }),
   passphrase: optional(string())
