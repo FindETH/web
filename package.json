@@ -98,7 +98,7 @@
     "gatsby-plugin-react-helmet-async": "^1.0.17-0",
     "gatsby-plugin-react-redux": "^1.1.0-0",
     "gatsby-plugin-remove-dependency-transpilation": "^1.0.0",
-    "gatsby-plugin-robots-txt": "^1.5.1",
+    "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sitemap": "^2.11.0",
     "gatsby-plugin-styled-components": "^3.3.14",
