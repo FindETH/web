@@ -25,8 +25,9 @@ const ConnectWallet: FunctionComponent<Props> = ({ onNext }) => {
     return <InvalidState />;
   }
 
-  const handleNext = (wallet: Wallet) => {
-    const defaultDerivationPaths = wallet.getDerivationPaths(network);
+  const handleNext = async (wallet: Wallet) => {
+    // TODO: Error handling
+    const defaultDerivationPaths = await wallet.getDerivationPaths(network);
 
     dispatch(setDerivationPaths(defaultDerivationPaths));
     dispatch(setSerialisedWallet(wallet.serialize() as SerialisedWallet));

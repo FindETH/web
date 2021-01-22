@@ -8,6 +8,7 @@ import Heading from '../../../../components/Heading';
 import Typography from '../../../../components/Typography';
 import { getErrorMessage } from '../../../../utils/errors';
 import { useSelector } from '../../../../utils/hooks';
+import LedgerRecovery from './LedgerRecovery';
 
 interface Props {
   onNext(wallet: Wallet): void;
@@ -68,6 +69,7 @@ const HardwareWallet: FunctionComponent<Props> = ({ onNext }) => {
         <CardHeader>
           <Heading as="h3">Connect to your hardware wallet</Heading>
           <Typography>Make sure your device is unlocked and not in use by any other application.</Typography>
+          {walletType === WalletType.Ledger && <LedgerRecovery />}
         </CardHeader>
         <CardContent>
           <Typography>Click on "Next" to connect.</Typography>
