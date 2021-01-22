@@ -76,7 +76,7 @@
     "babel-plugin-jsx-remove-data-test-id": "^2.1.3",
     "babel-plugin-optimize-hook-destructuring": "^1.3.0",
     "babel-plugin-styled-components": "^1.10.7",
-    "babel-preset-gatsby": "^0.7.0",
+    "babel-preset-gatsby": "^0.11.0",
     "codecov": "^3.8.1",
     "cross-env": "^7.0.2",
     "enzyme": "^3.11.0",
