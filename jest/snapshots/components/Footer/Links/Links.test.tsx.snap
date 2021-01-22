@@ -57,7 +57,7 @@ exports[`Links renders correctly 1`] = `
             className="c1"
             to="/info"
           >
-            <GatsbyLink
+            <GatsbyLinkLocationWrapper
               className="c1"
               innerRef={null}
               to="/info"
@@ -86,28 +86,49 @@ exports[`Links renders correctly 1`] = `
                     }
                   }
                 >
-                  <Link
+                  <GatsbyLink
+                    _location={
+                      Object {
+                        "hash": "",
+                        "host": "localhost",
+                        "hostname": "localhost",
+                        "href": "http://localhost/",
+                        "key": "initial",
+                        "origin": "http://localhost",
+                        "pathname": "/",
+                        "port": "",
+                        "protocol": "http:",
+                        "search": "",
+                        "state": null,
+                      }
+                    }
                     className="c1"
-                    getProps={[Function]}
-                    innerRef={[Function]}
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
+                    innerRef={null}
                     to="/info"
                   >
-                    <Location>
-                      <a
-                        className="c1"
-                        href="/info"
-                        onClick={[Function]}
-                        onMouseEnter={[Function]}
-                      >
-                        About
-                      </a>
-                    </Location>
-                  </Link>
+                    <Link
+                      className="c1"
+                      getProps={[Function]}
+                      innerRef={[Function]}
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      to="/info"
+                    >
+                      <Location>
+                        <a
+                          className="c1"
+                          href="/info"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                        >
+                          About
+                        </a>
+                      </Location>
+                    </Link>
+                  </GatsbyLink>
                 </LocationProvider>
               </Location>
-            </GatsbyLink>
+            </GatsbyLinkLocationWrapper>
           </ForwardRef>
         </Styled(Component)>
       </Link>
