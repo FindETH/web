@@ -30,7 +30,7 @@ exports[`Modal renders correctly 1`] = `
   box-shadow: 0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04);
 }
 
-.c1 .sc-hKFyIo {
+.c1 .sc-hKgILt {
   margin-bottom: 0;
   margin-left: 1rem;
 }
@@ -39,12 +39,12 @@ exports[`Modal renders correctly 1`] = `
   padding: 1.5rem 1.5rem 1rem 1.5rem;
 }
 
-.c2 .sc-dlnjPT {
+.c2 .sc-dlfnbm {
   color: #6b7280;
   margin: 0;
 }
 
-.c2 .sc-eCApGN {
+.c2 .sc-eCssSg {
   color: #242429;
   font-size: 1.125rem;
   line-height: 1.5rem;
