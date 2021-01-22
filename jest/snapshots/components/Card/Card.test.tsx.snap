@@ -15,12 +15,12 @@ exports[`Card renders correctly 1`] = `
   border-bottom: 1px solid #d2d6dc;
 }
 
-.c1 .sc-dlnjPT {
+.c1 .sc-dlfnbm {
   margin: 0.25rem 0 0;
   line-height: 1.5rem;
 }
 
-.c1 .sc-eCApGN {
+.c1 .sc-eCssSg {
   margin: 0;
   font-size: 1.125rem;
   font-weight: 500;
@@ -30,11 +30,11 @@ exports[`Card renders correctly 1`] = `
   padding: 1.5rem;
 }
 
-.c2 .sc-dlnjPT:first-of-type {
+.c2 .sc-dlfnbm:first-of-type {
   margin-top: 0;
 }
 
-.c2 .sc-hKFyIo {
+.c2 .sc-hKgILt {
   margin-top: 1rem !important;
 }
 

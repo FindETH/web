@@ -8,13 +8,13 @@ exports[`InputGroup renders correctly 1`] = `
   display: flex;
 }
 
-.c0 .sc-crzoUp {
+.c0 .sc-crrsfI {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c0 .sc-hKFyIo {
+.c0 .sc-hKgILt {
   margin: 0 0 0 0.5rem !important;
   height: 100%;
 }
