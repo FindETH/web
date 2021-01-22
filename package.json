@@ -90,7 +90,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby": "^2.26.0",
     "gatsby-plugin-canonical-urls": "^2.9.0",
-    "gatsby-plugin-create-client-paths": "^2.3.4",
+    "gatsby-plugin-create-client-paths": "^2.9.0",
     "gatsby-plugin-env-variables": "^2.0.0",
     "gatsby-plugin-layout": "^1.9.0",
     "gatsby-plugin-manifest": "^2.7.0",
