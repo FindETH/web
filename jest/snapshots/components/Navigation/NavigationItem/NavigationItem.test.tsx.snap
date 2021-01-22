@@ -51,7 +51,7 @@ exports[`NavigationItem renders correctly 1`] = `
             onClick={[Function]}
             to="/foo"
           >
-            <GatsbyLink
+            <GatsbyLinkLocationWrapper
               activeClassName="active"
               className=""
               innerRef={null}
@@ -82,28 +82,51 @@ exports[`NavigationItem renders correctly 1`] = `
                     }
                   }
                 >
-                  <Link
+                  <GatsbyLink
+                    _location={
+                      Object {
+                        "hash": "",
+                        "host": "localhost",
+                        "hostname": "localhost",
+                        "href": "http://localhost/",
+                        "key": "initial",
+                        "origin": "http://localhost",
+                        "pathname": "/",
+                        "port": "",
+                        "protocol": "http:",
+                        "search": "",
+                        "state": null,
+                      }
+                    }
+                    activeClassName="active"
                     className=""
-                    getProps={[Function]}
-                    innerRef={[Function]}
+                    innerRef={null}
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
                     to="/foo"
                   >
-                    <Location>
-                      <a
-                        className=""
-                        href="/foo"
-                        onClick={[Function]}
-                        onMouseEnter={[Function]}
-                      >
-                        Foo
-                      </a>
-                    </Location>
-                  </Link>
+                    <Link
+                      className=""
+                      getProps={[Function]}
+                      innerRef={[Function]}
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      to="/foo"
+                    >
+                      <Location>
+                        <a
+                          className=""
+                          href="/foo"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                        >
+                          Foo
+                        </a>
+                      </Location>
+                    </Link>
+                  </GatsbyLink>
                 </LocationProvider>
               </Location>
-            </GatsbyLink>
+            </GatsbyLinkLocationWrapper>
           </ForwardRef>
         </Styled(Component)>
       </NavigationLink>
