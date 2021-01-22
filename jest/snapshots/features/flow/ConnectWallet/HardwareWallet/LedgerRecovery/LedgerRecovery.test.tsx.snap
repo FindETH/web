@@ -33,7 +33,8 @@ exports[`LedgerRecovery renders correctly 1`] = `
       <strong>
         Note:
       </strong>
-       In order for FindETH to be able to scan all of your addresses, it's recommended to use the Ledger ETH Recovery app. For instructions on how to get the ETH Recovery app, please refer to 
+       In order for FindETH to be able to scan all of your addresses, it's recommended to use the Ledger ETH Recovery app. For instructions on how to get the ETH Recovery app, please refer to
+       
       <Link
         external={true}
         to="https://support.mycrypto.com/how-to/hardware-wallets/ledger/how-to-recover-assets-sent-to-the-wrong-address#install-the-eth-recovery-app"
