@@ -7702,10 +7702,10 @@ gatsby-plugin-styled-components@^3.9.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-plugin-ts-config@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-ts-config/-/gatsby-plugin-ts-config-1.1.1.tgz#b9350fa11b68f7075a91d6b5bf609b3fdaf739b1"
-  integrity sha512-RV0twyoeb4HWtOYeX7noYwMO1how5EXzG/yfsSfDa+KqJNjp5k7DqQnwvCyMy5KK2/7jOZvbAQhRodWblIUDSQ==
+gatsby-plugin-ts-config@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-ts-config/-/gatsby-plugin-ts-config-1.1.5.tgz#7e3f01cafc8313b8f1ce0149e8e3cc64ad30591f"
+  integrity sha512-HSacWVXJ/AToj6JUSasH+y3sZsloJUirOb4wA7Qx7JNqouYz43urHSWtMR7WxRbbvjSVB13Kh2CO3tgfb3TfxQ==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.10.1"
     "@babel/plugin-proposal-optional-chaining" "^7.10.3"
