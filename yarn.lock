@@ -1127,10 +1127,10 @@
     keccak "^3.0.1"
     pbkdf2 "^3.1.1"
 
-"@findeth/networks@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.5.2.tgz#7bf4a47138e900fb0a32dd9bea437ed6c1f65329"
-  integrity sha512-QimWP1jjXd6xX9lTnepnkofCIsfG9+JXPwtVhYjwi4p9M51O/ZDjIo1h3z0hMmgwhmA2j41G/s+C/aVH+ngVdw==
+"@findeth/networks@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.5.3.tgz#eb22caf098d51eda4187bcdd1a9c52259c215dc8"
+  integrity sha512-p3Kbu2W6nAFz/lCX45j2CaJpk7cVuLLEYvSyNOAI/91djFPorDgTY8iaXuh+ijQyUzF3MkAed8e/LP8t6MkJKQ==
   dependencies:
     "@findeth/abi" "^0.3.1"
     "@mycrypto/eth-scan" "^3.0.0"
