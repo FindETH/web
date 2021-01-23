@@ -5,6 +5,9 @@ import {
   completeSearching,
   INITIAL_STATE,
   removeAddress,
+  resolveAddress,
+  resolveFailed,
+  resolveSucceeded,
   setCurrentDerivationPath,
   setCurrentIndex,
   setDepth,
@@ -47,14 +50,28 @@ export const searchReducer = createReducer(INITIAL_STATE, (builder) =>
       ...state,
       depth: action.payload
     }))
-    .addCase(addAddress, (state, action) => ({
-      ...state,
-      addresses: [...state.addresses, action.payload]
-    }))
+    .addCase(addAddress, (state, action) => {
+      state.addresses.push({ address: action.payload });
+    })
     .addCase(removeAddress, (state, action) => ({
       ...state,
-      addresses: state.addresses.filter((address) => address !== action.payload)
+      addresses: state.addresses.filter(({ address }) => address !== action.payload)
     }))
+    .addCase(resolveAddress, (state, action) => {
+      const index = state.addresses.findIndex(({ address }) => address === action.payload);
+      state.addresses[index].isResolving = true;
+    })
+    .addCase(resolveSucceeded, (state, action) => {
+      const [name, address] = action.payload;
+      const index = state.addresses.findIndex(({ address }) => address === name);
+      state.addresses[index].isResolving = false;
+      state.addresses[index].address = address;
+    })
+    .addCase(resolveFailed, (state, action) => {
+      const index = state.addresses.findIndex(({ address }) => address === action.payload);
+      state.addresses[index].isResolving = false;
+      state.addresses[index].isInvalid = true;
+    })
     .addCase(setCurrentDerivationPath, (state, action) => ({
       ...state,
       currentDerivationPath: action.payload

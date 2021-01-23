@@ -17,7 +17,7 @@ const AddressList: FunctionComponent = () => {
       )}
 
       {addresses.map((address) => (
-        <AddressItem key={address} address={address} />
+        <AddressItem key={address.address} address={address} />
       ))}
     </Table>
   );
