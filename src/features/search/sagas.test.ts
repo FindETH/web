@@ -1,12 +1,19 @@
-import { getDefaultNetwork } from '@findeth/networks';
+import { getDefaultNetwork, resolveName } from '@findeth/networks';
 import { DEFAULT_ETH, LEDGER_LIVE_ETH } from '@findeth/wallets';
 import { DeepPartial } from 'redux';
 import { ApplicationState } from '../../store';
 import { Balance, SearchType } from '../../types/search';
 import { recordSaga } from '../../utils/saga';
 import { SERIALISED_WALLET } from './__fixtures__/wallet';
-import { checkAddress, checkAll, checkAssets, getAddresses, searchSaga } from './sagas';
-import { addDerivedAddress, startSearching } from './types';
+import { checkAddress, checkAll, checkAssets, getAddresses, resolveAddressSaga, searchSaga } from './sagas';
+import {
+  addDerivedAddress,
+  removeAddress,
+  resolveAddress,
+  resolveFailed,
+  resolveSucceeded,
+  startSearching
+} from './types';
 
 jest.mock(
   './search.worker.ts',
@@ -27,8 +34,69 @@ jest.mock('@findeth/networks', () => ({
       }),
       {}
     )
-  )
+  ),
+  resolveName: jest.fn(async () => '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf')
 }));
+
+describe('resolveAddressSaga', () => {
+  it('resolves an ENS name and calls resolveSucceeded', async () => {
+    const state: DeepPartial<ApplicationState> = {
+      search: {
+        addresses: []
+      }
+    };
+
+    const result = await recordSaga(resolveAddressSaga, resolveAddress('foo.eth'), state);
+    expect(result).toHaveLength(1);
+    expect(result).toContainEqual(resolveSucceeded(['foo.eth', '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf']));
+  });
+
+  it('removes the address if its duplicate', async () => {
+    const state: DeepPartial<ApplicationState> = {
+      search: {
+        addresses: [
+          {
+            address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf'
+          }
+        ]
+      }
+    };
+
+    const result = await recordSaga(resolveAddressSaga, resolveAddress('foo.eth'), state);
+    expect(result).toHaveLength(1);
+    expect(result).toContainEqual(removeAddress('foo.eth'));
+  });
+
+  it('calls resolveFailed on error', async () => {
+    (resolveName as jest.MockedFunction<typeof resolveName>).mockImplementationOnce(async () => {
+      throw new Error();
+    });
+
+    const state: DeepPartial<ApplicationState> = {
+      search: {
+        addresses: []
+      }
+    };
+
+    const result = await recordSaga(resolveAddressSaga, resolveAddress('foo.eth'), state);
+    expect(result).toHaveLength(1);
+    expect(result).toContainEqual(resolveFailed('foo.eth'));
+  });
+
+  it('calls resolveFailed if the name could not be resolved', async () => {
+    (resolveName as jest.MockedFunction<typeof resolveName>).mockImplementationOnce(async () => undefined);
+
+    const state: DeepPartial<ApplicationState> = {
+      search: {
+        addresses: []
+      }
+    };
+
+    const result = await recordSaga(resolveAddressSaga, resolveAddress('foo.eth'), state);
+    expect(result).toHaveLength(1);
+    expect(result).toContainEqual(resolveFailed('foo.eth'));
+  });
+});
 
 describe('checkAll', () => {
   it('adds all addresses to the store', async () => {
@@ -54,7 +122,11 @@ describe('checkAddress', () => {
       { address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf', derivationPath: "m/44'/60'/0'/0/0" },
       {
         search: {
-          addresses: ['0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf']
+          addresses: [
+            {
+              address: '0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf'
+            }
+          ]
         }
       }
     );

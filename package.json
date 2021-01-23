@@ -27,7 +27,7 @@
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
     "@findeth/hdnode": "^0.4.1",
-    "@findeth/networks": "^0.5.2",
+    "@findeth/networks": "^0.5.4",
     "@findeth/wallets": "^0.4.1",
     "@fontsource/inter": "^4.1.0",
     "@reach/router": "^1.2.1",

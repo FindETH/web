@@ -8,6 +8,9 @@ import {
   completeSearching,
   INITIAL_STATE,
   removeAddress,
+  resolveAddress,
+  resolveFailed,
+  resolveSucceeded,
   setCurrentDerivationPath,
   setCurrentIndex,
   setDepth,
@@ -78,12 +81,19 @@ describe('searchReducer', () => {
     const state = searchReducer(undefined, addAddress('0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520'));
     expect(state).toEqual({
       ...INITIAL_STATE,
-      addresses: ['0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520']
+      addresses: [
+        {
+          address: '0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520'
+        }
+      ]
     });
 
     expect(searchReducer(state, addAddress('0xDFDD854DaAD30E6E077AEf1c653169968c102E34'))).toEqual({
       ...INITIAL_STATE,
-      addresses: ['0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520', '0xDFDD854DaAD30E6E077AEf1c653169968c102E34']
+      addresses: [
+        { address: '0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520' },
+        { address: '0xDFDD854DaAD30E6E077AEf1c653169968c102E34' }
+      ]
     });
   });
 
@@ -91,11 +101,61 @@ describe('searchReducer', () => {
     const state = searchReducer(undefined, addAddress('0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520'));
     expect(state).toEqual({
       ...INITIAL_STATE,
-      addresses: ['0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520']
+      addresses: [
+        {
+          address: '0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520'
+        }
+      ]
     });
 
     expect(searchReducer(state, removeAddress('0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520'))).toEqual({
       ...INITIAL_STATE
+    });
+  });
+
+  it('handles resolveAddress', () => {
+    const initialState = searchReducer(undefined, addAddress('foo.eth'));
+    const state = searchReducer(initialState, resolveAddress('foo.eth'));
+    expect(state).toEqual({
+      ...initialState,
+      addresses: [
+        {
+          address: 'foo.eth',
+          isResolving: true
+        }
+      ]
+    });
+  });
+
+  it('handles resolveSucceeded', () => {
+    const initialState = searchReducer(searchReducer(undefined, addAddress('foo.eth')), resolveAddress('foo.eth'));
+    const state = searchReducer(
+      initialState,
+      resolveSucceeded(['foo.eth', '0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520'])
+    );
+    expect(state).toEqual({
+      ...initialState,
+      addresses: [
+        {
+          address: '0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520',
+          isResolving: false
+        }
+      ]
+    });
+  });
+
+  it('handles resolveFailed', () => {
+    const initialState = searchReducer(searchReducer(undefined, addAddress('foo.eth')), resolveAddress('foo.eth'));
+    const state = searchReducer(initialState, resolveFailed('foo.eth'));
+    expect(state).toEqual({
+      ...initialState,
+      addresses: [
+        {
+          address: 'foo.eth',
+          isResolving: false,
+          isInvalid: true
+        }
+      ]
     });
   });
 

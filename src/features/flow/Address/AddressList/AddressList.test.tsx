@@ -6,7 +6,10 @@ describe('AddressList', () => {
   it('renders an AddressItem for each address', () => {
     const store = mockStore({
       search: {
-        addresses: ['0xDFDD854DaAD30E6E077AEf1c653169968c102E34', '0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520']
+        addresses: [
+          { address: '0xDFDD854DaAD30E6E077AEf1c653169968c102E34' },
+          { address: '0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520' }
+        ]
       }
     });
 
