@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, KeyboardEvent } from 'react';
 import { object, pattern, refine, string } from 'superstruct';
 import Button from '../../../components/Button';
 import Card, { CardHeader } from '../../../components/Card';
@@ -27,6 +27,12 @@ const Address: FunctionComponent<Props> = ({ onNext }) => {
   const isLoading = useSelector(isLoadingAddresses);
   const dispatch = useDispatch();
 
+  const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleAdd();
+    }
+  };
+
   const handleAdd = () => {
     const values = validate();
     if (values) {
@@ -54,7 +60,7 @@ const Address: FunctionComponent<Props> = ({ onNext }) => {
       <CardContent>
         <Field label="Address" {...getFieldProps('address')}>
           <InputGroup>
-            <Input placeholder="0x1234..." {...getInputProps('address')} />
+            <Input placeholder="0x1234..." {...getInputProps('address')} onKeyDown={handleKeyPress} />
             <Button data-test-id="add" variant="primary" onClick={handleAdd}>
               Add
             </Button>
