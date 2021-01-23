@@ -1,4 +1,4 @@
-import { getDefaultNetwork, getEtherBalances, Network , resolveName } from '@findeth/networks';
+import { getDefaultNetwork, getEtherBalances, Network, resolveName } from '@findeth/networks';
 import { DerivationPath } from '@findeth/wallets';
 import { SagaIterator } from 'redux-saga';
 import { all, call, fork, put, race, select, take, takeEvery } from 'redux-saga/effects';
@@ -20,7 +20,6 @@ import {
   startSearching,
   stopSearching
 } from './types';
-
 
 export function* resolveAddressSaga({ payload }: ReturnType<typeof resolveAddress>): SagaIterator {
   try {

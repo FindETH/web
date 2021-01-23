@@ -1,4 +1,4 @@
-import { getDefaultNetwork , resolveName } from '@findeth/networks';
+import { getDefaultNetwork, resolveName } from '@findeth/networks';
 import { DEFAULT_ETH, LEDGER_LIVE_ETH } from '@findeth/wallets';
 import { DeepPartial } from 'redux';
 import { ApplicationState } from '../../store';
@@ -14,7 +14,6 @@ import {
   resolveSucceeded,
   startSearching
 } from './types';
-
 
 jest.mock(
   './search.worker.ts',
