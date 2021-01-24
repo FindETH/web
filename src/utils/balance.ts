@@ -9,10 +9,14 @@ import { Balance } from '../types/search';
  * @return {string}
  */
 const divide = (a: bigint, b: bigint, decimals: number): string => {
-  const n = (a * BigInt('1' + '0'.repeat(decimals))) / b;
+  const n = (a * BigInt(`1${'0'.repeat(decimals)}`)) / b;
   const string = n.toString(10);
 
-  return `${string.slice(0, -decimals)}.${string.slice(-decimals).replace(/\.?0+$/, '')}`;
+  const start = (string.slice(0, -decimals) || '0').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+  const end = string.slice(-decimals).replace(/\.?0+$/, '');
+  const paddedEnd = end && string.length < decimals ? end.padStart(end.length + decimals - string.length, '0') : end;
+
+  return `${start}${paddedEnd && `.${paddedEnd}`}`;
 };
 
 /**
