@@ -1114,6 +1114,13 @@
   dependencies:
     keccak "^3.0.0"
 
+"@findeth/abi@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@findeth/abi/-/abi-0.4.1.tgz#267c540321142a5e8b838743d4896b1c20ecd1e2"
+  integrity sha512-kpe0gmZh1QzruJGx4Shj11Xq7XudC3OvqVmzFdOXnaVuPXSOkucJkmpzZYPIZcKlXEtIJ8/JHhfxo/eT7vGGGQ==
+  dependencies:
+    keccak "^3.0.1"
+
 "@findeth/hdnode@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.4.1.tgz#af918ebd7ef6aa5dfcac25ed76b3c5cc260872de"
@@ -1127,12 +1134,12 @@
     keccak "^3.0.1"
     pbkdf2 "^3.1.1"
 
-"@findeth/networks@^0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.5.4.tgz#af60c643b8be3fa8e813f0cbdc5ff7a7dae19489"
-  integrity sha512-7VmCzHa0uF1Qpx5jgFidZF7yKA7CymIDKvSpSyxKJ8F4cmkX8xDhZ0K+QgEgIo+bPQuQXzRm09L5JzCGiRqsPg==
+"@findeth/networks@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.6.2.tgz#b7cba2ff42261bc4d84a3972b69f562ae38be2b4"
+  integrity sha512-jwI5HXOduEtsaLkmH/pAxAkzzd5D9xC5r/6MeomAjpsDi5PvcNiKbTcwWmP086iQtoeg/guv5Y54kFppZYtFMQ==
   dependencies:
-    "@findeth/abi" "^0.3.1"
+    "@findeth/abi" "^0.4.1"
     "@mycrypto/eth-scan" "^3.0.0"
     idna-uts46-hx "^3.3.0"
     isomorphic-unfetch "^3.0.0"
