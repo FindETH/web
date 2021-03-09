@@ -2,16 +2,18 @@ import { Wallet, WalletType } from '@findeth/wallets';
 import { FunctionComponent } from 'react';
 import { SerialisedWallet } from '../../../types/wallet';
 import { useDispatch, useSelector } from '../../../utils/hooks';
-import { setDerivationPaths, setSerialisedWallet } from '../../search';
+import { setCurrentDerivationPath, setDerivationPaths, setSerialisedWallet } from '../../search';
 import { FlowComponentProps } from '../Flow';
 import InvalidState from '../InvalidState';
+import ExtendedKeyWallet from './ExtendedKeyWallet';
 import HardwareWallet from './HardwareWallet';
 import MnemonicWallet from './MnemonicWallet';
 
 const components = {
   [WalletType.Ledger]: HardwareWallet,
   [WalletType.Trezor]: HardwareWallet,
-  [WalletType.MnemonicPhrase]: MnemonicWallet
+  [WalletType.MnemonicPhrase]: MnemonicWallet,
+  [WalletType.ExtendedKey]: ExtendedKeyWallet
 };
 
 type Props = FlowComponentProps;
@@ -30,6 +32,7 @@ const ConnectWallet: FunctionComponent<Props> = ({ onNext }) => {
     const defaultDerivationPaths = await wallet.getDerivationPaths(network);
 
     dispatch(setDerivationPaths(defaultDerivationPaths));
+    dispatch(setCurrentDerivationPath(defaultDerivationPaths[0]));
     dispatch(setSerialisedWallet(wallet.serialize() as SerialisedWallet));
     onNext();
   };

@@ -18,10 +18,11 @@ describe('Wallet', () => {
     const component = getComponent(<Wallet onReset={jest.fn} onNext={jest.fn} />, store);
     const walletItems = component.find(WalletItem);
 
-    expect(walletItems).toHaveLength(3);
+    expect(walletItems).toHaveLength(4);
     expect(walletItems.at(0).text()).toContain('Ledger');
     expect(walletItems.at(1).text()).toContain('Trezor');
     expect(walletItems.at(2).text()).toContain('Mnemonic Phrase');
+    expect(walletItems.at(3).text()).toContain('Extended Key');
   });
 
   it('dispatches setWalletType when a type is selected', () => {
