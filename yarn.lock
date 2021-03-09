@@ -1170,23 +1170,15 @@
   dependencies:
     keccak "^3.0.1"
 
-"@findeth/hdnode@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.4.1.tgz#af918ebd7ef6aa5dfcac25ed76b3c5cc260872de"
-  integrity sha512-6/g2oAtJaaN4PDOo743g6oBIh+MPv+zhXdX/jCgWxqJtmKV1yP5HXC9XL7+gDrIXIyyjiUkkT1WR1uo8fKT/Ng==
-  dependencies:
-    base-x "^3.0.8"
-    buffer "^5.6.0"
-    create-hash "^1.2.0"
-    create-hmac "^1.1.7"
-    elliptic "^6.5.3"
-    keccak "^3.0.1"
-    pbkdf2 "^3.1.1"
+"@findeth/abi@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@findeth/abi/-/abi-0.5.2.tgz#7e619325f2ed54ecd5cafbba0178431576d680e9"
+  integrity sha512-SBov6XUWdMUcYPJCz80G0gQJwDt5sYU5g8KpBUkizNyei3367uEqFINgiB0/bm1DJ1gcv9Yjlb8/OngfbXPVPg==
 
-"@findeth/hdnode@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.5.1.tgz#212df64077b17be5be7d4db5a1a020228de7092a"
-  integrity sha512-ZSSDxQv/jMxmEgiwfpfM6tiDG28CDMwkIADmUIQwf15MYUTKjHQuubtqNQtFQ5iX5lNsXbwIMwMl/eWWbIu4yw==
+"@findeth/hdnode@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.6.1.tgz#3f2a077326b8c908aaff49a73e749f2eb38ec716"
+  integrity sha512-MXndp0qSbuG5rBYuvZF7CQA/fM6jRYHeKRCDx0k5YLXAkH9hKh8ON4YrHHRG5PqHZ8mBOiQxOT/q49xUGkPGtA==
   dependencies:
     base-x "^3.0.8"
     create-hash "^1.2.0"
@@ -1206,12 +1198,13 @@
     idna-uts46-hx "^3.3.0"
     isomorphic-unfetch "^3.0.0"
 
-"@findeth/wallets@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.4.1.tgz#2ff98b6680c6b5342a8b545e0d7fc98e7ed843ee"
-  integrity sha512-KEnrBIiBMAZUc3iLuRm/iyu1e750d9MUZzUb4G9J1fFoJSDthZ3KfMRt8iPPbJoZZj4sd8QP6Skhg6TBmr//yg==
+"@findeth/wallets@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@findeth/wallets/-/wallets-0.5.2.tgz#f6fc400f67091b5cb14f66d6dd51f811a7d5e003"
+  integrity sha512-M+ppEvuQByiGh3QCmtfZxp9RXl1QmPKdl9A9kyc3n8uGBH4DQByARc4/giKEFpx/R9uhIqisQzJKoQRudLS9UA==
   dependencies:
-    "@findeth/hdnode" "^0.4.1"
+    "@findeth/abi" "^0.5.2"
+    "@findeth/hdnode" "^0.6.1"
     "@ledgerhq/hw-app-eth" "^5.2.0"
     "@ledgerhq/hw-transport" "^5.2.0"
     "@ledgerhq/hw-transport-mocker" "^5.2.0"
@@ -4143,7 +4136,7 @@ buffer@4.9.2, buffer@^4.3.0:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
-buffer@^5.5.0, buffer@^5.6.0:
+buffer@^5.5.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.6.0.tgz#a31749dc7d81d84db08abf937b6b8c4033f62786"
   integrity sha512-/gDYp/UtU0eA1ys8bOs9J6a+E/KWIY+DZ+Q2WESNUA0jFRsJOc0SNUO6xJ5SGA1xueg3NL65W6s+NY5l9cunuw==

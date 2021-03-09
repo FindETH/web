@@ -1,5 +1,4 @@
-import { isValidMnemonic } from '@findeth/hdnode';
-import { MnemonicPhrase, Wallet } from '@findeth/wallets';
+import { MnemonicPhrase, Wallet, isValidMnemonic } from '@findeth/wallets';
 import { FunctionComponent } from 'react';
 import { object, optional, refine, string } from 'superstruct';
 import Button from '../../../../components/Button';

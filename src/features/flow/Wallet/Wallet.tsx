@@ -29,6 +29,12 @@ const WALLET_ITEMS = [
     title: 'Mnemonic Phrase',
     description: 'Unlock with your mnemonic phrase. (Not recommended!)',
     type: WalletType.MnemonicPhrase
+  },
+  {
+    icon: 'wallet', // TODO
+    title: 'Extended Key',
+    description: 'Unlock with your extended public or private key. (Private key not recommended!)',
+    type: WalletType.ExtendedKey
   }
 ] as const;
 
