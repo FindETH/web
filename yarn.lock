@@ -1174,10 +1174,10 @@
     bs58 "^4.0.1"
     trezor-connect "^8.1.16"
 
-"@fontsource/inter@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.1.0.tgz#5c5d5411487aca1b7a8caccba5e995b81051a14a"
-  integrity sha512-v1JHGLAejSV0ec6fVR31vrojpM+JUiNVn0xJxL/ngmbyClDEf8qna5NFsu/xef67KT2kQ2YaU+wCuQEQHG55sw==
+"@fontsource/inter@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.2.2.tgz#efe97167aac992db3fadf60ea0dd72aacd3e1fc4"
+  integrity sha512-lvR1PQe+8FTTd3YRW84KGcgUR8leZ7S3aY+51MQ90MQHI0VQe3cDH6T6jjs1qTm+wPmWfdSVjN8ugvNZpGUnvA==
 
 "@graphql-tools/delegate@^6.2.4":
   version "6.2.4"
