@@ -28,7 +28,7 @@ jobs:
           python-version: 3.x
 
       - name: Cache Dependencies
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.6
         with:
           path: |
             node_modules
