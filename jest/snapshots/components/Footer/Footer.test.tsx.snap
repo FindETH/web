@@ -7,13 +7,6 @@ exports[`Footer renders correctly 1`] = `
   text-align: center;
 }
 
-.c0 .sc-dlfnbm {
-  color: #727e8b;
-  display: inline-block;
-  margin: 0;
-  font-size: 0.9rem;
-}
-
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;

@@ -35,11 +35,6 @@ exports[`Field renders correctly 1`] = `
   margin: 0 0 0.25rem;
 }
 
-.c0 > .sc-crrsfI,
-.c0 > .sc-kstrdz {
-  width: 100%;
-}
-
 <Field
   label="Foo bar"
 >
