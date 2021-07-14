@@ -1,0 +1,11 @@
+{
+  "src": ["./src/**/*.test.e2e.ts"],
+  "clientScripts": [
+    {
+      "module": "@testing-library/dom/dist/@testing-library/dom.umd.js"
+    }
+  ],
+  "pageRequestTimeout": 60000,
+  "hostname": "localhost",
+  "retryTestPages": true
+}
