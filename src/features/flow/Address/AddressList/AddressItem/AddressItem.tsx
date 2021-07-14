@@ -17,7 +17,7 @@ const AddressItem: FunctionComponent<Props> = ({ address: { address, isResolving
   };
 
   return (
-    <tr>
+    <tr data-testid="address-table-row">
       <TableCell>
         <AddressWrapper isInvalid={isInvalid ?? false}>
           {isResolving && <Spinner />} {address}
