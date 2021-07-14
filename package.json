@@ -112,7 +112,7 @@
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.20",
     "gatsby-plugin-workerize-loader": "^1.5.0",
     "husky": "^4.3.8",
-    "jest": "^27.0.6",
+    "jest": "^26.6.3",
     "jest-canvas-mock": "^2.3.1",
     "jest-styled-components": "^7.0.0",
     "lint-staged": "^11.0.1",

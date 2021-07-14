@@ -7,5 +7,6 @@ module.exports = {
   setupFiles: ['jest-canvas-mock'],
   setupFilesAfterEnv: ['./jest/setupTests.ts'],
   snapshotResolver: './jest/snapshotResolver.js',
-  snapshotSerializers: ['enzyme-to-json/serializer']
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  testEnvironment: 'jsdom'
 };

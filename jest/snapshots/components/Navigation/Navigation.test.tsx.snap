@@ -15,26 +15,6 @@ exports[`Navigation renders correctly 1`] = `
   margin-left: 1rem;
 }
 
-.c1 .{
-  padding: 0.5rem 0.75rem;
-  border-radius: .5rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #d2d6dc;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.c1 ..active {
-  background: #0c0c0e;
-  color: white;
-}
-
-.c1 .:hover {
-  background: #3c3c44;
-  color: white;
-}
-
 <Navigation>
   <styled.ul>
     <ul

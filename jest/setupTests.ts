@@ -7,6 +7,7 @@ configure({ adapter: new Adapter() });
 
 HelmetProvider.canUseDOM = false;
 
+// @ts-expect-error `___loader` does not exist on type of `global`
 global.___loader = {
   enqueue: jest.fn()
 };

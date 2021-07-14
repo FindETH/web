@@ -1,5 +1,5 @@
 import { lighten, transitions } from 'polished';
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme, StyledComponent } from 'styled-components';
 import Typography from '../Typography';
 
 export type ButtonType = 'default' | 'primary' | 'danger';
@@ -10,7 +10,7 @@ interface Props {
   variant?: ButtonType;
 }
 
-const StyledButton = styled(Typography)<Props>`
+const StyledButton: StyledComponent<'button', DefaultTheme, Props> = styled(Typography)<Props>`
   outline: none;
   border: none;
   border-radius: ${({ theme }) => theme.smallBorderRadius};
